@@ -14,7 +14,8 @@ Feature.destroy_all
 Theme.destroy_all
 CityTheme.destroy_all
 CityFeature.destroy_all
-City.destoy_all
+Climate.destroy_all
+City.destroy_all
 BookingProvider.destroy_all
 Country.destroy_all
 Region.destroy_all
@@ -164,7 +165,7 @@ file19 = URI.open('https://images.unsplash.com/photo-1445368794737-0cf251429ca0?
 usa.photos.attach(io: file19, filename: 'usa2.jpeg', content_type: 'image/jpeg')
 
 argentina = Country.create!(
-  name: "Argentina"
+  name: "Argentina",
   region: south_america
   )
 
@@ -197,18 +198,18 @@ vancouver = City.create!(
   )
 
 vancouver_climate = Climate.create!(
-  January: "10",
-  February: "12",
-  March: "14",
-  April: "17",
-  May: "17",
-  June: "20",
-  July: "24",
-  August: "25",
-  September: "24",
-  October: "18",
-  November: "7",
-  December: "4",
+  january: 10,
+  february: 12,
+  march: 14,
+  april: 17,
+  may: 17,
+  june: 20,
+  july: 24,
+  august: 25,
+  september: 24,
+  october: 18,
+  november: 7,
+  december: 4,
   city: vancouver
   )
 
@@ -226,22 +227,23 @@ vancouver.photos.attach(io: file27, filename: 'vancouver3.jpeg', content_type: '
 
 paris = City.create!(
   name: "Paris",
-  location: "Paris"
+  location: "Paris",
+  country: france
   )
 
 paris_climate = Climate.create!(
-  January: "10",
-  February: "12",
-  March: "14",
-  April: "17",
-  May: "17",
-  June: "20",
-  July: "24",
-  August: "25",
-  September: "24",
-  October: "18",
-  November: "7",
-  December: "4",
+  january: 10,
+  february: 12,
+  march: 14,
+  april: 17,
+  may: 17,
+  june: 20,
+  july: 24,
+  august: 25,
+  september: 24,
+  october: 18,
+  november: 7,
+  december: 4,
   city: paris
   )
 
@@ -258,18 +260,18 @@ melbourne = City.create!(
   )
 
 melbourne_climate = Climate.create!(
-  January: "32",
-  February: "34",
-  March: "28",
-  April: "20",
-  May: "17",
-  June: "20",
-  July: "24",
-  August: "25",
-  September: "20",
-  October: "18",
-  November: "26",
-  December: "27",
+  january: 10,
+  february: 12,
+  march: 14,
+  april: 17,
+  may: 17,
+  june: 20,
+  july: 24,
+  august: 25,
+  september: 24,
+  october: 18,
+  november: 7,
+  december: 4,
   city: melbourne
   )
 
@@ -292,18 +294,18 @@ madrid = City.create!(
   )
 
 madrid_climate = Climate.create!(
-  January: "10",
-  February: "12",
-  March: "14",
-  April: "17",
-  May: "17",
-  June: "20",
-  July: "24",
-  August: "25",
-  September: "24",
-  October: "18",
-  November: "7",
-  December: "4",
+  january: 10,
+  february: 12,
+  march: 14,
+  april: 17,
+  may: 17,
+  june: 20,
+  july: 24,
+  august: 25,
+  september: 24,
+  october: 18,
+  november: 7,
+  december: 4,
   city: madrid
   )
 
@@ -320,18 +322,18 @@ lisbon = City.create!(
   )
 
 lisbon_climate = Climate.create!(
-  January: "10",
-  February: "12",
-  March: "14",
-  April: "17",
-  May: "17",
-  June: "20",
-  July: "24",
-  August: "25",
-  September: "24",
-  October: "18",
-  November: "7",
-  December: "4",
+  january: 10,
+  february: 12,
+  march: 14,
+  april: 17,
+  may: 17,
+  june: 20,
+  july: 24,
+  august: 25,
+  september: 24,
+  october: 18,
+  november: 7,
+  december: 4,
   city: lisbon
   )
 
@@ -344,18 +346,18 @@ new_york = City.create!(
   )
 
 new_york_climate = Climate.create!(
-  January: "10",
-  February: "12",
-  March: "14",
-  April: "17",
-  May: "17",
-  June: "20",
-  July: "24",
-  August: "25",
-  September: "24",
-  October: "18",
-  November: "7",
-  December: "4",
+  january: 10,
+  february: 12,
+  march: 14,
+  april: 17,
+  may: 17,
+  june: 20,
+  july: 24,
+  august: 25,
+  september: 24,
+  october: 18,
+  november: 7,
+  december: 4,
   city: new_york
   )
 
@@ -366,18 +368,18 @@ buenos_aires = City.create!(
   )
 
 buenos_aires_climate = Climate.create!(
-  January: "10",
-  February: "12",
-  March: "14",
-  April: "17",
-  May: "17",
-  June: "20",
-  July: "24",
-  August: "25",
-  September: "24",
-  October: "18",
-  November: "7",
-  December: "4",
+  january: 10,
+  february: 12,
+  march: 14,
+  april: 17,
+  may: 17,
+  june: 20,
+  july: 24,
+  august: 25,
+  september: 24,
+  october: 18,
+  november: 7,
+  december: 4,
   city: buenos_aires
   )
 
@@ -388,18 +390,18 @@ lima = City.create!(
   )
 
 lima_climate = Climate.create!(
-  January: "10",
-  February: "12",
-  March: "14",
-  April: "17",
-  May: "17",
-  June: "20",
-  July: "24",
-  August: "25",
-  September: "24",
-  October: "18",
-  November: "7",
-  December: "4",
+  january: 10,
+  february: 12,
+  march: 14,
+  april: 17,
+  may: 17,
+  june: 20,
+  july: 24,
+  august: 25,
+  september: 24,
+  october: 18,
+  november: 7,
+  december: 4,
   city: lima
   )
 
@@ -424,245 +426,245 @@ skiing = Theme.create!(
 puts "Making City_Themes"
 
 vancouver_themes = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "0",
-  June: "0",
-  July: "0",
-  August: "0",
-  September: "0",
-  October: "0",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 0,
+  june: 0,
+  july: 0,
+  august: 0,
+  september: 0,
+  october: 0,
+  november: 1,
+  december: 1,
   theme: skiing,
   city: vancouver)
 
 vancouver_themes1 = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: romantic,
   city: vancouver)
 
 paris_themes = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: romantic,
   city: paris)
 
 paris_themes1 = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: culture,
   city: paris)
 
 melbourne_themes = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: beach,
   city: melbourne)
 
 melbourne_themes1 = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: city,
   city: melbourne)
 
 madrid_themes = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: romantic,
   city: madrid)
 
 madrid_themes1 = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: city,
   city: madrid)
 
 lisbon_themes = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: beach,
   city: lisbon
   )
 
 lisbon_themes1 = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: romantic,
   city: lisbon
   )
 
 
 new_york_themes = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: romantic,
   city: new_york)
 
 new_york_themes1 = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: city,
   city: new_york)
 
 buenos_aires_themes = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: culture,
   city: buenos_aires)
 
 buenos_aires_themes1 = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: city,
   city: buenos_aires)
 
 lima_themes = CityTheme.create!(
-  January: "1",
-  February: "1",
-  March: "1",
-  April: "1",
-  May: "1",
-  June: "1",
-  July: "1",
-  August: "1",
-  September: "1",
-  October: "1",
-  November: "1",
-  December: "1",
+  january: 1,
+  february: 1,
+  march: 1,
+  april: 1,
+  may: 1,
+  june: 1,
+  july: 1,
+  august: 1,
+  september: 1,
+  october: 1,
+  november: 1,
+  december: 1,
   theme: culture,
   city: lima
   )
@@ -680,12 +682,12 @@ healthcare = Feature.create!(
   )
 
 education = Feature.create!(
-  name: "Education"
+  name: "Education",
   weight: 60
   )
 
 lbgt = Feature.create!(
-  name: "LBGT"
+  name: "LBGT",
   weight: 60
   )
 
