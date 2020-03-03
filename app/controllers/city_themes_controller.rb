@@ -1,0 +1,2 @@
+class CityThemesController < ApplicationController
+end
