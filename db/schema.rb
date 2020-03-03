@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_001220) do
+ActiveRecord::Schema.define(version: 2020_03_03_033006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,18 +51,18 @@ ActiveRecord::Schema.define(version: 2020_03_03_001220) do
 
   create_table "city_themes", force: :cascade do |t|
     t.bigint "city_id"
-    t.string "January"
-    t.string "February"
-    t.string "March"
-    t.string "April"
-    t.string "May"
-    t.string "June"
-    t.string "July"
-    t.string "August"
-    t.string "September"
-    t.string "October"
-    t.string "November"
-    t.string "December"
+    t.integer "january", default: 0
+    t.integer "february", default: 0
+    t.integer "march", default: 0
+    t.integer "april", default: 0
+    t.integer "may", default: 0
+    t.integer "june", default: 0
+    t.integer "july", default: 0
+    t.integer "august", default: 0
+    t.integer "september", default: 0
+    t.integer "october", default: 0
+    t.integer "november", default: 0
+    t.integer "december", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "theme_id"
@@ -72,18 +72,18 @@ ActiveRecord::Schema.define(version: 2020_03_03_001220) do
 
   create_table "climates", force: :cascade do |t|
     t.bigint "city_id"
-    t.string "January"
-    t.string "February"
-    t.string "March"
-    t.string "April"
-    t.string "May"
-    t.string "June"
-    t.string "July"
-    t.string "August"
-    t.string "September"
-    t.string "October"
-    t.string "November"
-    t.string "December"
+    t.integer "january", default: 0
+    t.integer "february", default: 0
+    t.integer "march", default: 0
+    t.integer "april", default: 0
+    t.integer "may", default: 0
+    t.integer "june", default: 0
+    t.integer "july", default: 0
+    t.integer "august", default: 0
+    t.integer "september", default: 0
+    t.integer "october", default: 0
+    t.integer "november", default: 0
+    t.integer "december", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_climates_on_city_id"
