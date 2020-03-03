@@ -1,1 +1,15 @@
 <h1>Hello from the city index page</h1>
+
+
+<%= link_to "City/country double index", cities_path %>
+<p> ^^^^ This button is for when the user clicks 'All' button</p>
+
+<%= link_to "Country index", countries_path %>
+<p> ^^^^ This button is for when the user clicks 'Countries' button</p>
+
+<%= link_to "City index", cities_path %>
+<p> ^^^^ This button is for when the user clicks 'Cities' button</p>
+<p>At the moment this directs to the same index as the All button</p>
+
+<%= link_to "City show", city_path(:id) %>
+<p> ^^^^ This button is for when the user clicks a city card</p>

@@ -1,0 +1,3 @@
+<%= link_to "City show page", city_path(:id) %>
+
+<p> ^^^^ This button is for when the user clicks one of the city cards</p>
