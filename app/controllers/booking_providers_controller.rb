@@ -1,0 +1,2 @@
+class BookingProvidersController < ApplicationController
+end
