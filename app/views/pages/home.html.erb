@@ -11,3 +11,7 @@
 <%= link_to "Country show page", country_path(:id) %>
 
 <p> ^^^^ This button is for when the user clicks one of the country cards</p>
+
+<div>
+  <%= cl_image_tag @city.photo.key, alt: "alttext", class: "card-img-top"  %>
+</div>
