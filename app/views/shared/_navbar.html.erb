@@ -1,0 +1,76 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "logo.png" %>
+  <% end %>
+
+  <div class="search-input">
+    <form action="/action_page.php">
+       <div class="search-input">
+          <input class="search-input-field" type="text" placeholder="Your Destination.." name="search">
+          <button class="search-input-btn" type="submit"><i class="fa fa-search"></i></button>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle navbar-menu-item" type="button"
+        id="navbarDropdown"
+        data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+          Regions
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Europe", "#", class: "dropdown-item" %>
+          <%= link_to "Africa", "#", class: "dropdown-item" %>
+          <%= link_to "Asia", "#", class: "dropdown-item" %>
+          <%= link_to "The Middle East", "#", class: "dropdown-item" %>
+          <%= link_to "Australia and the Pacific", "#", class: "dropdown-item" %>
+          <%= link_to "North America", "#", class: "dropdown-item" %>
+          <%= link_to "Central America and the Carribean", "#", class: "dropdown-item" %>
+          <%= link_to "South America", "#", class: "dropdown-item" %>
+
+
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle navbar-menu-item" type="button"
+        id="navbarDropdown"
+        data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+          Where's hot?
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Where is hot in January", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in February", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in March", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in April", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in May", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in June", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in July", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in August", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in September", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in October", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in November", "#", class: "dropdown-item" %>
+          <%= link_to "Where is hot in December", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle navbar-menu-item navbar-menu-item--faded" type="button"
+        id="navbarDropdown"
+        data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        AUD
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "AUD Australian dollar", "#", class: "dropdown-item" %>
+          <%= link_to "£ Pound sterling", "#", class: "dropdown-item" %>
+          <%= link_to "€ Euro", "#", class: "dropdown-item" %>
+          <%= link_to "$ US dollar", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

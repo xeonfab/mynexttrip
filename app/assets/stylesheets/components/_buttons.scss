@@ -1,0 +1,68 @@
+.btn-main-pink {
+  color: white;
+  padding: 12px 40px;
+  transition: background 0.3s ease;
+  background-color: #FA163F;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  .small {
+    width: 275px;
+    height: 62px;
+  }
+  .large {
+    width: 336px;
+    height: 76px;
+  }
+}
+
+.btn-main-pink:hover {
+  background: #df2244;
+  color: white;
+  text-decoration: none;
+}
+
+
+.btn-white {
+  color: #FA163F;
+  padding: 12px 40px;
+  transition: background 0.3s ease;
+  background: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  border: 1px solid #FA163F;
+  text-decoration: none;
+  .small {
+    width: 275px;
+    height: 62px;
+  }
+  .large {
+    width: 336px;
+    height: 76px;
+  }
+}
+
+.btn-white:hover {
+  text-decoration: none;
+  color: #FA163F;
+}
+
+.btn-map {
+  color: white;
+  background: #0FABBC;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.submitbtn {
+  color: white;
+  background-color: #FA163F;
+  border-radius: 5px;
+  height: 36px;
+  width: 36px;
+  border: none;
+}
