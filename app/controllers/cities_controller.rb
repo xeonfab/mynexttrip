@@ -12,7 +12,6 @@ class CitiesController < ApplicationController
       @cities = City.all
       @countries = Country.all
     end
-    raise
 
     @markers = @cities.map do |city|
       {
@@ -21,7 +20,6 @@ class CitiesController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { city: city })
         # image_url: helpers.asset_url('')
       }
-
     end
   end
 
