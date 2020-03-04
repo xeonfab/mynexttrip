@@ -1,0 +1,8 @@
+.index-container-column-2 {
+  .index-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 8px;
+  }
+}
+
