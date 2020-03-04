@@ -1,4 +1,3 @@
-<h1>Hello from the city index page</h1>
 
 <div class="header">
   <a href="#default" class="logo">My Next Trip</a>
@@ -9,5 +8,37 @@
   </div>
 </div>
 
-<%= link_to "City show", city_path(:id) %>
-<p> ^^^^ This button is for when the user clicks a city card</p>
+<div class="container">
+  <h1>Hello from the city index page</h1>
+
+    <%  @cities.each do |city| %>
+        <section>
+        <h2>City card</h2>
+        <%= link_to "City show page", city_path(city.id) %>
+          <div class="city-card">
+            <img class="city-card-image" src="https://source.unsplash.com/random/500x500/?lisbon" />
+            <h3 class="city-card-temp">25°C</h3>
+            <div class="city-card-content">
+                <h2 class="city-card-title"><%= city.name %></h2>
+                <h3 class="city-card-country"><%= city.country.name %></h3>
+            </div>
+          </div>
+        <section>
+    <% end %>
+
+    <%  @countries.each do |country| %>
+      <section>
+        <h2>Country card</h2>
+        <!-- = link_to "City show page", city_path(:id) do %> -->
+          <div class="country-card">
+            <img class="country-card-image" src="https://source.unsplash.com/random/500x500/?portugal" />
+            <h3 class="country-card-temp">25°C</h3>
+            <div class="country-card-content">
+                <h2 class="country-card-title">Lisbon</h2>
+            </div>
+          </div>
+        <!-- % end %> -->
+
+      </section>
+      <% end %>
+</div>
