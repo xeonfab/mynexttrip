@@ -14,3 +14,8 @@
 
 <%= link_to "Regions", region_path(:id) %>
 <p> ^^^^ This button is for when the user clicks a region card from the home page</p>
+
+<div>
+  <%= cl_image_tag @city.photo.key, alt: "alttext", class: "card-img-top"  %>
+</div>
+
