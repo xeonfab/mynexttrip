@@ -1,0 +1,14 @@
+.index-container {
+  background: #eee;
+  width: 100%;
+  position: relative;
+  .index-container-column {
+    display: flex;
+  }
+  .index-container-column-1 {
+    flex: 1;
+  }
+  .index-container-column-2 {
+    flex: 3;
+  }
+}
