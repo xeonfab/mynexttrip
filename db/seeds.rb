@@ -258,78 +258,91 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   puts taxi["currency_dollar_value"]
 
 
-
+  #Languages speaking
   city_languages_details = city_details["categories"].select { |data| data["id"] == "LANGUAGE"}
-  #  #Languages speaking
-  # language = city_details["categories"][11]["data"].select { |detail| detail["id"] == "SPOKEN-LANGUAGES"}
+
   spoken_language = city_languages_details[0]["data"].select {|element| element["id"] == "SPOKEN-LANGUAGES"}[0]
   puts spoken_language["label"]
   puts spoken_language["string_value"]
 
-  #  #Internet Access_Download
-  # download = city_details["categories"][13]["data"].select { |detail| detail["id"] == "NETWORK-DOWNLOAD"}
-  # puts download["label"]
-  # puts download["float_value"]
 
-  #  #Internet Access_Upload
-  # upload = city_details["categories"][13]["data"].select { |detail| detail["id"] == "NETWORK-UPLOAD"}
-  # puts upload["label"]
-  # puts upload["float_value"]
+  #Internet Access_Download
+  city_download_details = city_details["categories"].select { |data| data["id"] == "NETWORK"}
 
-  #  #Air Quality
-  # air = city_details["categories"][15]["data"].select { |detail| detail["id"] == "AIR-POLLUTION-TELESCORE"}
-  # puts air["label"]
-  # puts air["float_value"]
+  download = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-DOWNLOAD"}[0]
+  puts download["label"]
+  puts download["float_value"]
 
-  # #Cleanliness
-  # clean = city_details["categories"][15]["data"].select { |detail| detail["id"] == "CLEANLINESS-TELESCORE"}
-  # puts clean["label"]
-  # puts clean["float_value"]
+  #Internet Access_Upload
+  upload = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-UPLOAD"}[0]
+  puts upload["label"]
+  puts upload["float_value"]
+
+
+  #Air Quality
+  city_air_details = city_details["categories"].select { |data| data["id"] == "POLLUTION"}
+
+  air = city_air_details[0]["data"].select {|element| element["id"] == "AIR-POLLUTION-TELESCORE"}[0]
+  puts air["label"]
+  puts air["float_value"]
+
+  #Cleanliness
+  clean = city_air_details[0]["data"].select {|element| element["id"] == "CLEANLINESS-TELESCORE"}[0]
+  puts clean["label"]
+  puts clean["float_value"]
 
   # #Drinking water quality
-  # water = city_details["categories"][15]["data"].select { |detail| detail["id"] == "DRINKING-WATER-QUALITY-TELESCORE"}
-  # puts water["label"]
-  # puts water["float_value"]
+  water = city_air_details[0]["data"].select {|element| element["id"] == "DRINKING-WATER-QUALITY-TELESCORE"}[0]
+  puts water["label"]
+  puts water["float_value"]
 
   # #Crime rate score
-  # crime = city_details["categories"][16]["data"].select { |detail| detail["id"] == "CRIME-RATE-TELESCORE"}
-  # puts crime["label"]
-  # puts crime["float_value"]
+  city_safety_details = city_details["categories"].select { |data| data["id"] == "SAFETY"}
+
+  crime = city_safety_details[0]["data"].select {|element| element["id"] == "CRIME-RATE-TELESCORE"}[0]
+  puts crime["label"]
+  puts crime["float_value"]
 
   # #Coworking score
-  # coworking = city_details["categories"][17]["data"].select { |detail| detail["id"] == "COWORKING-SPACES-TELESCORE"}
-  # puts coworking["label"]
-  # puts coworking["float_value"]
+  city_space_details = city_details["categories"].select { |data| data["id"] == "STARTUPS"}
+
+  coworking = city_space_details[0]["data"].select {|element| element["id"] == "COWORKING-SPACES-TELESCORE"}[0]
+  puts coworking["label"]
+  puts coworking["float_value"]
 
   # #Heathlcare quality score
-  # heathl = city_details["categories"][7]["data"].select { |detail| detail["id"] == "HEALTHCARE-QUALITY-TELESCORE"}
-  # puts heathl["label"]
-  # puts heathl["float_value"]
+  city_care_details = city_details["categories"].select { |data| data["id"] == "HEALTHCARE"}
+
+  heathl = city_care_details[0]["data"].select {|element| element["id"] == "HEALTHCARE-QUALITY-TELESCORE"}[0]
+  puts heathl["label"]
+  puts heathl["float_value"]
 
   # #Culture Art galleries  score
-  # art = city_details["categories"][4]["data"].select { |detail| detail["id"] == "CULTURE-ART-GALLERIES-TELESCORE"}
-  # puts art["label"]
-  # puts art["float_value"]
+  city_culture_details = city_details["categories"].select { |data| data["id"] == "CULTURE"}
+
+  art = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-ART-GALLERIES-TELESCORE"}[0]
+  puts art["label"]
+  puts art["float_value"]
 
   # #Culture Concerts score
-  # concert = city_details["categories"][4]["data"].select { |detail| detail["id"] == "CULTURE-CONCERTS-TELESCORE"}
-  # puts concert["label"]
-  # puts concert["float_value"]
+  concert = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-CONCERTS-TELESCORE"}[0]
+  puts concert["label"]
+  puts concert["float_value"]
 
   #  #Culture historical sites score
-  # site = city_details["categories"][4]["data"].select { |detail| detail["id"] == "CULTURE-HISTORICAL-SITES-TELESCORE"}
-  # puts site["label"]
-  # puts site["float_value"]
+  site = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-HISTORICAL-SITES-TELESCORE"}[0]
+  puts site["label"]
+  puts site["float_value"]
 
   #  #Culture museum score
-  # museum = city_details["categories"][4]["data"].select { |detail| detail["id"] == "CULTURE-MUSEUMS-TELESCORE"}
-  # puts museum["label"]
-  # puts museum["float_value"]
+  museum = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-MUSEUMS-TELESCORE"}[0]
+  puts museum["label"]
+  puts museum["float_value"]
 
   #    #Culture sports score
-  # sport = city_details["categories"][4]["data"].select { |detail| detail["id"] == "CULTURE-SPORTS-TELESCORE"}
-  # puts sport["label"]
-  # puts sport["float_value"]
+  sport = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-SPORTS-TELESCORE"}[0]
+  puts sport["label"]
+  puts sport["float_value"]
 
 
 
