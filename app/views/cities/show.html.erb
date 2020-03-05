@@ -1,6 +1,22 @@
 <%= render 'shared/banner' %>
 
 
+
+
+<div class="my-city">
+  <label for="your-name">city</label>
+  <input type="text" name="content" id="your-name" class="form-control" placeholder="Bob">
+  </div>
+  <input type="submit" value="Send" class="btn btn-primary">
+</div>
+
+<div>
+<ul class="list">
+</ul>
+  </div>
+
+
+
 <div class="container">
   <h1>Hello from the city show page</h1>
   <h2>This page will display all the features of a given city.</h2>
@@ -23,3 +39,4 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 </div>
+
