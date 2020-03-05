@@ -1,8 +1,6 @@
 require 'json'
 require 'open-uri'
-require 'byebug'
 require 'date'
-require "open-uri"
 
 puts 'Cleaning database...'
 Feature.destroy_all
