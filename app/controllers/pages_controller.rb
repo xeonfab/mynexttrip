@@ -3,7 +3,6 @@ class PagesController < ApplicationController
   end
 
   def home
-
       @cities = City.all
       @countries = Country.all
       @regions = Region

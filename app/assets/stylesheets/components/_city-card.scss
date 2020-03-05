@@ -1,12 +1,13 @@
 .city-card {
     background-color: black;
-    width: 250px;
+    max-width: 400px;
     min-height: 250px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px 0; // Safe zone for the temperature.
+    overflow: hidden;
 
   .city-card-image {
     position: absolute;
@@ -14,6 +15,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: all 0.8s ease;
   }
 
   .city-card-content {
@@ -48,5 +50,8 @@
     position: absolute;
     left: 10px;
     bottom: 6px;
+  }
+   &:hover .city-card-image {
+    transform: scale(1.1)
   }
 }

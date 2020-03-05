@@ -28,6 +28,9 @@
 
   .banner-underlay-column-1 {
     flex: 1;
+    margin-right: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
   .banner-underlay-column-2 {
     display: flex;
@@ -42,13 +45,16 @@
 
   .banner-underlay-row-column-1 {
     flex: 1.5;
+    margin: 1px;
   }
 
   .banner-underlay-row-column-2 {
     flex: 1;
+    margin: 1px;
   }
    .banner-underlay-row-column-3 {
     flex: 1;
+    margin: 1px;
   }
 
   .banner-underlay-image-cover {
