@@ -1,13 +1,7 @@
 class CitiesController < ApplicationController
 
   def index
-
     @cities = City.geocoded
-
-
-
-
-
     if params[:query].present?
       # make the index filtered by those params
       @cities = City.global_search(params[:query])
