@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def home
       @cities = City.all
       @countries = Country.all
-      @regions = Region
+      @regions = Region.all
 
     if params[:query].present?
       # make the index filtered by those params

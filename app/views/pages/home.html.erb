@@ -63,7 +63,7 @@
 
 <%= simple_form_for :filter_results, url: cities_path, method: :get do |f| %>
   <%= f.input :themes, collection: %w[Skiing Romantic City Beach Culture], input_html: { multiple: true }, as: :check_boxes %>
-  <%= f.input :month, collection: %w(January February March April May June July August September October November December) %>
+  <%= f.input :month, input_html: {required: true}, collection: %w(January February March April May June July August September October November December) %>
   <%= f.button :submit, "search", class: "btn btn-flat"%>
 <% end %>
 
