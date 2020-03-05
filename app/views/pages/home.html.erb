@@ -1,16 +1,66 @@
-<h1>Hello from the home page. This should display 8 popular destination cards, plus the search bar.</h1>
+<div class="home-banner" style="background-image: url(<%= asset_path 'homepage.png' %>);">
+  <div class="inner-banner-container">
+    <div class="col">
+      <h1>What's the plan for your next trip?</h1>
+      <h2>Find, compare and easily plan your next travel destination</h2>
+    </div>
+    <div class="row">
+      <div class="card">
+            fswerdaadfsadsfa
+      </div>
 
-<%= link_to "City/country double index", cities_path %>
+    </div>
+    <div class="col">
+      <h2>350 Cities 190 Countries</h2>
 
-<p> ^^^^ This button is for when the user clicks the smart search button but they haven't put in any search filters - aka "Top travel destinations page"</p>
+    </div>
 
-<%= link_to "City show page", city_path(:id) %>
+  </div>
+</div>
 
-<p> ^^^^ This button is for when the user clicks one of the city cards</p>
+<div class="container mt-5">
+  <div class="row">
+    <%  @regions.each do |region| %>
+      <div class="col-md-3 mb-3">
+        <%= render partial: 'shared/regioncard', locals: { region: region } %>
+      </div>
+    <% end %>
+  </div>
+  <div class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-4 text-center">
+          <div>
+            <img class="home-thumbnail" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
+            <h5>Personalized Experiences</h5>
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div>
+            <img class="home-thumbnail" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
+            <h5>Photos and practical information inspiring you</h5>
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div>
+            <img class="home-thumbnail" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
+            <h5>Booking Partners</h5>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="index-grid">
+    <%  @cities.each do |city| %>
+      <%= render partial: 'shared/citycard', locals: { city: city } %>
+    <% end %>
+  </div>
+  <br>
+  <div class="index-grid">
+    <%  @countries.each do |country| %>
+      <%= render partial: 'shared/countrycard', locals: { country: country } %>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to "Country show page", country_path(:id) %>
 
-<p> ^^^^ This button is for when the user clicks one of the country cards</p>
 
-<%= link_to "Regions", region_path(:id) %>
-<p> ^^^^ This button is for when the user clicks a region card from the home page</p>
+

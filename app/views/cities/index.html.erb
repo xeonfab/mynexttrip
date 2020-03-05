@@ -17,35 +17,14 @@
 
       <div class="index-grid">
         <%  @cities.each do |city| %>
-          <section>
-            <%= link_to "City show page", city_path(city.id) %>
-              <div class="city-card">
-                <img class="city-card-image" src="https://source.unsplash.com/random/500x500/?city" />
-                <h3 class="city-card-temp">25°C</h3>
-                <div class="city-card-content">
-                    <h2 class="city-card-title"> <%= city.name %></h2>
-                    <h3 class="city-card-country"><%= city.country.name %></h3>
-                </div>
-              </div>
-
-          </section>
-          <% end %>
+          <%= render partial: 'shared/citycard', locals: { city: city } %>
+        <% end %>
       </div>
 
       <div class="index-grid">
         <%  @countries.each do |country| %>
-          <section>
-            <%= link_to "Country show page", country_path(country.id) %>
-              <div class="country-card">
-                <img class="country-card-image" src="https://source.unsplash.com/random/500x500/?country" />
-                <h3 class="country-card-temp">25°C</h3>
-                <div class="country-card-content">
-                    <h2 class="country-card-title"> <%= country.name %></h2>
-                </div>
-              </div>
-
-          </section>
-          <% end %>
+          <%= render partial: 'shared/countrycard', locals: { country: country } %>
+        <% end %>
       </div>
       <div
       id="map"

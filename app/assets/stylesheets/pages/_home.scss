@@ -1,1 +1,27 @@
 // Specific CSS for your home-page
+.home-banner {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner-banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+}
+
+.index-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 8px;
+}
+
+.home-thumbnail {
+  border-radius: 50%;
+  max-width: 150px;
+}

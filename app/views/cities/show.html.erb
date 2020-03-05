@@ -1,25 +1,97 @@
 <%= render 'shared/banner' %>
 
 
-<div class="container">
-  <h1>Hello from the city show page</h1>
-  <h2>This page will display all the features of a given city.</h2>
+<div class="container-show container mt-5">
+  <div class="row">
+    <div class="container-show-inner col-md-9">
+          <div>
+            <h2>Cost of Living</h2>
+            <div class="card">
+              Cost of Living Input
+            </div>
+          </div>
+          <div>
+            <h2>Climate</h2>
+            <div class="card">
+              Climate Input
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-6">
+            <h2>Environment Quality</h2>
+            <div class="card p-3">
+              <div class="row">
+                  <div class="col-md-8">
+                    Air quality
+                  </div>
+                  <div class="col-md-4 text-right">
+                    <span class="badge badge-success">Very good</span>
+                  </div>
+              </div>
+               <div class="row">
+                  <div class="col-md-8">
+                    Drinking water quality
+                  </div>
+                  <div class="col-md-4 text-right">
+                    <span class="badge badge-success">Very good</span>
+                  </div>
+              </div>
+               <div class="row">
+                  <div class="col-md-8">
+                    Cleanliness
+                  </div>
+                  <div class="col-md-4 text-right">
+                    <span class="badge badge-success">Very good</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <h2>Safety</h2>
+            <div class="card">
+              Safety Input
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h2>Leisure & Culture</h2>
+            <div class="card">
+              Leisure Input
+            </div>
+          </div>
+          <div class="col-6">
+            <h2>Internet Access</h2>
+            <div class="card">
+              Internet Input
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+          id="map"
+          style="width: 100%;
+          height: 600px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div>
+        <div class="card p-3 mb-5">
+          <h2>X booking providers</h2>
+          <h3>available for your travel</h3>
+          <%= link_to "Booking providers", city_booking_providers_path(:id) , class: "btn-main-pink large" %>
+        </div>
 
-  <%= link_to "Booking providers", city_booking_providers_path(:id) %>
-  <p> ^^^^ This button is for when the user clicks 'Show booking parnters' button</p>
+      </div>
+      <div>
+        <div data-skyscanner-widget="SearchWidget"></div>
+        <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+      </div>
+    </div>
 
-  <div data-skyscanner-widget="SearchWidget"></div>
-  <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
-
+  </div>
 </div>
 
-
-<div>
-    <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-</div>
