@@ -3,4 +3,5 @@ class Country < ApplicationRecord
   has_many :cities
   has_many :booking_providers
   has_many_attached :photos
+
 end

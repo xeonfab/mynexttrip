@@ -1,3 +1,52 @@
 .country-card {
+    background-color: black;
+    width: 250px;
+    min-height: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0; // Safe zone for the temperature.
 
+  .country-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .country-card-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0px 0px 10px black;
+  }
+
+
+  .country-card-title {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Montserrat;
+
+  }
+  .country-card-country {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Montserrat;
+  }
+
+  .country-card-temp {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Montserrat;
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+  }
 }

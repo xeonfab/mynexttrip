@@ -1,8 +1,6 @@
-<h1>Hello from the city show page</h1>
-<h2>This page will display all the features of a given city.</h2>
+<%= render 'shared/banner' %>
 
-<div data-skyscanner-widget="SearchWidget"></div>
-<script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+
 
 
 <div class="my-city">
@@ -17,4 +15,28 @@
 </ul>
   </div>
 
+
+
+<div class="container">
+  <h1>Hello from the city show page</h1>
+  <h2>This page will display all the features of a given city.</h2>
+
+  <%= link_to "Booking providers", city_booking_providers_path(:id) %>
+  <p> ^^^^ This button is for when the user clicks 'Show booking parnters' button</p>
+
+  <div data-skyscanner-widget="SearchWidget"></div>
+  <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+
+</div>
+
+
+<div>
+    <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>
 

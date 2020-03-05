@@ -1,2 +1,19 @@
 <h1>Hello from the country show page</h1>
 <h2>This page should also display all cities of the country, and some features. The design will be different to the city index page.</h2>
+
+<%= link_to "Booking providers", country_booking_providers_path(:id) %>
+<p> ^^^^ This button is for when the user clicks 'Show booking parnters' button</p>
+
+<div data-skyscanner-widget="SearchWidget"></div>
+<script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+
+
+<div>
+    <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>

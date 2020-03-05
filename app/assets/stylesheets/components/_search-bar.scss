@@ -1,0 +1,28 @@
+.search-input {
+  position: relative;
+  max-width: 200px;
+
+  .search-input-btn {
+    appearance: none;
+    background: none;
+    border: 0;
+    position: absolute;
+    top: 0px;
+    right: 6px;
+    bottom: 0px;
+    }
+  .search-input-field {
+    width: 100%;
+    padding: 8px;
+    padding-right: 25px;
+    border-radius: 5px;
+    border: 0;
+
+    &:focus {
+      background: #eee;
+    }
+  }
+}
+
+
+

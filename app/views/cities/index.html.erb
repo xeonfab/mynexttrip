@@ -1,15 +1,55 @@
-<h1>Hello from the city index page</h1>
+<div class="index-container">
+  <div class="index-container-column">
+    <div class="index-container-column-1">
+      SideBar
+    </div>
+    <div class="index-container-column-2">
+      <div class="header">
+        <a href="#default" class="logo">My Next Trip</a>
+        <div class="header-right">
+          <%= link_to "All", cities_path %>
+          <%= link_to "Countries", countries_path %>
+          <%= link_to "Cities", cities_path %><p> <<< At the moment the "cities" button directs to the same index as the "All" button</p>
+        </div>
+      </div>
 
+      <h1>Hello from the city index page</h1>
 
-<%= link_to "City/country double index", cities_path %>
-<p> ^^^^ This button is for when the user clicks 'All' button</p>
+      <div class="index-grid">
+        <%  @cities.each do |city| %>
+          <section>
+            <%= link_to "City show page", city_path(city.id) %>
+              <div class="city-card">
+                <img class="city-card-image" src="https://source.unsplash.com/random/500x500/?city" />
+                <h3 class="city-card-temp">25°C</h3>
+                <div class="city-card-content">
+                    <h2 class="city-card-title"> <%= city.name %></h2>
+                    <h3 class="city-card-country"><%= city.country.name %></h3>
+                </div>
+              </div>
 
-<%= link_to "Country index", countries_path %>
-<p> ^^^^ This button is for when the user clicks 'Countries' button</p>
+      <div class="index-grid">
+        <%  @countries.each do |country| %>
+          <section>
+            <%= link_to "Country show page", country_path(country.id) %>
+              <div class="country-card">
+                <img class="country-card-image" src="https://source.unsplash.com/random/500x500/?country" />
+                <h3 class="country-card-temp">25°C</h3>
+                <div class="country-card-content">
+                    <h2 class="country-card-title"> <%= country.name %></h2>
+                </div>
+              </div>
 
-<%= link_to "City index", cities_path %>
-<p> ^^^^ This button is for when the user clicks 'Cities' button</p>
-<p>At the moment this directs to the same index as the All button</p>
-
-<%= link_to "City show", city_path(:id) %>
-<p> ^^^^ This button is for when the user clicks a city card</p>
+          </section>
+          <% end %>
+      </div>
+      <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
+  </div>
+</div>
