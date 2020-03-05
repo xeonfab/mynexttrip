@@ -251,7 +251,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
       name: country_name,
       region: Region.find_by(name: region_name)
       )
-      photo_country = URI.open("https://source.unsplash.com/1600x900/?#{country_name}")
+      photo_country = URI.open("https://source.unsplash.com/1024x700/?#{country_name},landscape")
       new_country.photos.attach(io: photo_country, filename: "#{country_name}.jpeg", content_type: 'image/jpeg')
   end
 
@@ -264,7 +264,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     longitude: longitude_name
     )
 
-  photo_city = URI.open("https://source.unsplash.com/1600x900/?#{city_name}")
+  photo_city = URI.open("https://source.unsplash.com/1024x700/?#{city_name},landscape")
   #photo = URI.open("https://source.unsplash.com/random?#{city_name}")
   new_city.photos.attach(io: photo_city, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
 
