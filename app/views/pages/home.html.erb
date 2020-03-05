@@ -6,7 +6,13 @@
     </div>
     <div class="row">
       <div class="card">
-            fswerdaadfsadsfa
+          <%= simple_form_for :filter_results, url: cities_path, method: :get do |f| %>
+          <div>
+          <%= f.input :themes, collection: %w[Skiing Romantic City Beach Culture], input_html: { multiple: true }, as: :check_boxes %>
+          <%= f.input :month, collection: %w(January February March April May June July August September October November December) %>
+          </div>
+          <%= f.button :submit, "Submit", class: "btn btn-flat"%>
+          <% end %>
       </div>
 
     </div>
@@ -19,6 +25,7 @@
 </div>
 
 <div class="container mt-5">
+  <h1 class="text-center mb-3">Regions to Discover</h1>
   <div class="row">
     <%  @regions.each do |region| %>
       <div class="col-md-3 mb-3">
@@ -30,40 +37,41 @@
       <div class="row align-items-center">
         <div class="col-4 text-center">
           <div>
-            <img class="home-thumbnail" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
+            <img class="home-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
             <h5>Personalized Experiences</h5>
           </div>
         </div>
         <div class="col-4 text-center">
           <div>
-            <img class="home-thumbnail" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
+            <img class="home-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
             <h5>Photos and practical information inspiring you</h5>
           </div>
         </div>
         <div class="col-4 text-center">
           <div>
-            <img class="home-thumbnail" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
+            <img class="home-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?lama" / alt="home">
             <h5>Booking Partners</h5>
           </div>
         </div>
       </div>
   </div>
-  <div class="index-grid">
-    <%  @cities.each do |city| %>
-      <%= render partial: 'shared/citycard', locals: { city: city } %>
+  <h1 class="text-center mb-3">Countries to Discover</h1>
+  <div class="row">
+    <%  @countries.each do |country| %>
+    <div class="col-md-3 mb-3">
+      <%= render partial: 'shared/countrycard', locals: { country: country } %>
+    </div>
     <% end %>
   </div>
-  <br>
-  <div class="index-grid">
-    <%  @countries.each do |country| %>
-      <%= render partial: 'shared/countrycard', locals: { country: country } %>
+  <h1 class="text-center mb-3">Cities to Discover</h1>
+  <div class="row">
+    <%  @cities.each do |city| %>
+      <div class="col-md-3 mb-3">
+      <%= render partial: 'shared/citycard', locals: { city: city } %>
+      </div>
     <% end %>
   </div>
 </div>
 
-<%= simple_form_for :filter_results, url: cities_path, method: :get do |f| %>
-  <%= f.input :themes, collection: %w[Skiing Romantic City Beach Culture], input_html: { multiple: true }, as: :check_boxes %>
-  <%= f.input :month, collection: %w(January February March April May June July August September October November December) %>
-  <%= f.button :submit, "search", class: "btn btn-flat"%>
-<% end %>
+
 

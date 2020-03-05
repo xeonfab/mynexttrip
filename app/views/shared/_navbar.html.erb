@@ -4,14 +4,16 @@
   <% end %>
 
   <div class="search-input">
-    <form action="/action_page.php">
-       <div class="search-input">
-          <input class="search-input-field" type="text" placeholder="Your Destination.." name="search">
-          <button class="search-input-btn" type="submit"><i class="fa fa-search"></i></button>
-      </div>
-    </form>
+   <%= form_tag cities_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      placeholder: "Your Destination..",
+      class: "search-input-field" %>
+      <%= button_tag(type: 'submit', class: "search-input-btn") do %>
+      <i class="fa fa-search"></i>
+      <% end %>
+    <% end %>
   </div>
-
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -70,11 +72,5 @@
         </div>
       </li>
     </ul>
-    <%= form_tag cities_path, method: :get do %>
-      <%= text_field_tag :query,
-      params[:query],
-      placeholder: "Search for a destination" %>
-      <%= submit_tag "Search", class: "btn btn-flat" %>
-    <% end %>
   </div>
 </div>

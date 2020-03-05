@@ -1,3 +1,26 @@
-<h1>Hello from the booking provider index page</h1>
-<p>This page will have information from booking providers at either a country-wide or city-wide level. If the user has not input any filters, the user should see a list of our top booking partners.</p>
+<div class="index-container">
+  <div class="header">
+    <a href="#default" class="logo">My Next Trip</a>
+    <div class="">
+      <%= link_to "All", cities_path %>
+      <%= link_to "Countries", countries_path %>
+      <%= link_to "Cities", cities_path %>
+    </div>
+  </div>
+
+  <div class="index-container-column">
+    <div class="index-container-column-1">
+      SideBar
+    </div>
+    <div class="index-container-column-2">
+      <div class="row">
+        <%  @bookingproviders.each do |bookingprovider| %>
+          <div class="col-md-3 mb-3">
+            <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
