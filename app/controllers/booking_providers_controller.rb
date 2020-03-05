@@ -1,4 +1,12 @@
 class BookingProvidersController < ApplicationController
+  def index
+    @bookingproviders = BookingProvider.all
+  end
+
+  def show
+    @bookingprovider = BookingProvider.find(params[:id])
+  end
+
 end
 
 

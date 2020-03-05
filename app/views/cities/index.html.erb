@@ -13,17 +13,19 @@
         </div>
       </div>
 
-      <h1>Hello from the city index page</h1>
-
-      <div class="index-grid">
+      <div class="row">
         <%  @cities.each do |city| %>
+        <div class="col-md-3 mb-3">
           <%= render partial: 'shared/citycard', locals: { city: city } %>
+        </div>
         <% end %>
       </div>
 
-      <div class="index-grid">
+      <div class="row">
         <%  @countries.each do |country| %>
-          <%= render partial: 'shared/countrycard', locals: { country: country } %>
+          <div class="col-md-3 mb-3">
+            <%= render partial: 'shared/countrycard', locals: { country: country } %>
+          </div>
         <% end %>
       </div>
       <div

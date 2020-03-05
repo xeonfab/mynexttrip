@@ -1,14 +1,22 @@
 <div class="container">
-  <h1><%= @region.name %></h1>
-  <div class="index-grid">
+  <h1 class="text-center mt-5 mb-5"><%= @region.name %></h1>
+
+  <h2 class="mb-3">Countries to Discover</h1>
+  <div class="row">
       <%  @countries.each do |country| %>
+      <div class="col-md-3 mb-3">
         <%= render partial: 'shared/countrycard', locals: { country: country } %>
+      </div>
       <% end %>
   </div>
-  <div class="index-grid">
-  <%  @cities.each do |city| %>
-    <%= render partial: 'shared/citycard', locals: { city: city } %>
-  <% end %>
+
+  <h2 class="mb-3">Cities to Discover</h1>
+  <div class="row">
+    <%  @cities.each do |city| %>
+    <div class="col-md-3 mb-3">
+      <%= render partial: 'shared/citycard', locals: { city: city } %>
+    </div>
+    <% end %>
   </div>
 
 </div>
