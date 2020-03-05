@@ -5,29 +5,32 @@ require 'date'
 require "open-uri"
 
 puts 'Cleaning database...'
-# Feature.destroy_all
-# Theme.destroy_all
-# CityTheme.destroy_all
-# CityFeature.destroy_all
-# Climate.destroy_all
-# City.destroy_all
-# BookingProvider.destroy_all
-# Country.destroy_all
-# Region.destroy_all
+Feature.destroy_all
+Theme.destroy_all
 
-# puts "Making the Booking Providers"
+CityTheme.destroy_all
+CityFeature.destroy_all
+Climate.destroy_all
 
-# wicked_campers = BookingProvider.create!(
-#   name: "Wicked Campers",
-#   website: "https://www.wickedcampers.ca/",
-#   description: "Looking for a campervan in Vancouver? Our campervan is the most flexible way to get around Canada and North America. Cheaper than a package tour or bus and hostels! With a giant bed, a sexy kitchen and a paintjob that would make Van Gogh cut off his other ear – Wicked Campers are the BEST way of cruising around America and Canada! Cheaper than an RV and sexier than your Dads new girlfriend – these vans are decked out with everything you need for a kickass roadtrip!",
-#   category: "Transport")
+City.destroy_all
+BookingProvider.destroy_all
 
-# comptoir = BookingProvider.create!(
-#   name: "Conptoir",
-#   website: "https://www.comptoir.fr/",
-#   description: "Over 30 years of experience have enabled us to refine the list of ingredients essential to the success of an authentic and personalized trip. Follow the recipe!",
-#   category: "Travel Agency")
+Country.destroy_all
+Region.destroy_all
+
+puts "Making the Booking Providers"
+
+wicked_campers = BookingProvider.create!(
+  name: "Wicked Campers",
+  website: "https://www.wickedcampers.ca/",
+  description: "Looking for a campervan in Vancouver? Our campervan is the most flexible way to get around Canada and North America. Cheaper than a package tour or bus and hostels! With a giant bed, a sexy kitchen and a paintjob that would make Van Gogh cut off his other ear – Wicked Campers are the BEST way of cruising around America and Canada! Cheaper than an RV and sexier than your Dads new girlfriend – these vans are decked out with everything you need for a kickass roadtrip!",
+  category: "Transport")
+
+comptoir = BookingProvider.create!(
+  name: "Conptoir",
+  website: "https://www.comptoir.fr/",
+  description: "Over 30 years of experience have enabled us to refine the list of ingredients essential to the success of an authentic and personalized trip. Follow the recipe!",
+  category: "Travel Agency")
 
 puts "Making the Regions"
 
@@ -251,7 +254,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   new_city = City.create!(
     name: city_name,
     location: city_name,
-    country: Country.find_by(name: country_name)
+    country: Country.find_by(name: country_name),
     latitude: latitude_name,
     longitude: longitude_name
     )
@@ -342,7 +345,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
       #puts taxi["currency_dollar_value"]
     else
     end
-    end
+  end
 
 
   #Languages speaking
@@ -467,7 +470,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   health = city_care_details[0]["data"].select {|element| element["id"] == "HEALTHCARE-QUALITY-TELESCORE"}[0]
   CityFeature.create!(
   score: health["float_value"]*100,
-  feature: health_feature,
+  feature: healthcare_feature,
   city: new_city
   )
   #puts health["label"]
