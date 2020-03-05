@@ -1,0 +1,11 @@
+.booking-provider-card {
+    background-color: black;
+    max-width: 250px;
+    min-height: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0; // Safe zone for the temperature.
+    overflow: hidden;
+  }
