@@ -87,7 +87,10 @@ central_america = Region.create!(
 file6 = URI.open('https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1648&q=80')
 central_america.photo.attach(io: file6, filename: 'CentralAmerica1.jpeg', content_type: 'image/jpeg')
 
-# Creating all the features used in CityFeatures
+
+
+
+# Creating all the features used in CityFeatures (because it is a join table)
 
 puts " Creating features"
 
@@ -115,27 +118,102 @@ taxi_feature = Feature.create!(
   weight: 80
   )
 
-city_languages_feature = Feature.create!(
-  name: "Taxi ride",
+language_feature = Feature.create!(
+  name: "Spoken languages",
   weight: 80
   )
+
+download_feature = Feature.create!(
+  name: "Internet download",
+  weight: 80
+  )
+
+upload_feature = Feature.create!(
+  name: "Internet upload",
+  weight: 80
+  )
+
+air_feature = Feature.create!(
+  name: "Air pollution",
+  weight: 80
+  )
+
+cleanliness_feature = Feature.create!(
+  name: "Cleanliness",
+  weight: 80
+  )
+
+water_feature = Feature.create!(
+  name: "Drinking water",
+  weight: 80
+  )
+
+crime_feature = Feature.create!(
+  name: "Crime rate",
+  weight: 80
+  )
+
+coworking_feature = Feature.create!(
+  name: "Coworking spaces",
+  weight: 80
+  )
+
+healthcare_feature = Feature.create!(
+  name: "healtcare",
+  weight: 80
+  )
+
+coworking_feature = Feature.create!(
+  name: "Coworking spaces",
+  weight: 80
+  )
+
+art_feature = Feature.create!(
+  name: "Art Galleries",
+  weight: 80
+  )
+
+site_feature = Feature.create!(
+  name: "Historical sites",
+  weight: 80
+  )
+
+concert_feature = Feature.create!(
+  name: "Concerts",
+  weight: 80
+  )
+
+museum_feature = Feature.create!(
+  name: "Museums",
+  weight: 80
+  )
+
+sport_feature = Feature.create!(
+  name: "Sports",
+  weight: 80
+  )
+
+
+
 # ---------------------------------------------------
 
 
 
 puts "Making the Countries"
 
-# cities list with name and url
+# cities list with name and url for teleport API
 url = 'https://api.teleport.org/api/urban_areas/'
 user_serialized = open(url).read
 cities = JSON.parse(user_serialized)
 
+#loop for each cities in teleport API
 urban_areas_link = cities["_links"]["ua:item"].each do |city|
   puts "--------------------------------------"
 
   # city name
   city_name = city["name"]
   puts city["name"]
+  #if the city already created, go next city item
   next if City.find_by(name: city_name)
   # --------------------------
 
@@ -158,8 +236,10 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   latitude_name = city_location["location"]["latlon"]["latitude"]
   longitude_name = city_location["location"]["latlon"]["longitude"]
 
+
   puts "--------------------------------------"
 
+  # create the country table
   if Country.find_by(name: country_name).nil?
     Country.create!(
       name: country_name,
@@ -167,10 +247,13 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
       )
   end
 
+  # Create the city table
   new_city = City.create!(
     name: city_name,
     location: city_name,
     country: Country.find_by(name: country_name)
+    latitude: latitude_name,
+    longitude: longitude_name
     )
 
   photo = URI.open("https://source.unsplash.com/random?#{city_name}")
@@ -178,25 +261,29 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
 
   puts "#{new_city.name} created!"
 
+
+
   #Population
   puts city_location["population"]
 
 
-   # Details with a new URL https://api.teleport.org/api/urban_areas/slug:amsterdam/details/
+   # FEATURES : Details with a new URL https://api.teleport.org/api/urban_areas/slug:amsterdam/details/
   details_url = city_info["_links"]["ua:details"]["href"]
   details_serialized = open(details_url).read
   city_details = JSON.parse(details_serialized)
 
+  # Select all data for each feature
 
+  #COST OF LIVING
   city_living_details = city_details["categories"].select { |data| data["id"] == "COST-OF-LIVING"}
   if city_living_details.empty?
   else
-
-    #bread = city_living_details["data"].select { |detail| detail["id"] == "COST-BREAD"}
+    # Bread price
     bread = city_living_details[0]["data"].select {|element| element["id"] == "COST-BREAD"}[0]
     if bread == []
       CityFeature.create!(
         score: bread["currency_dollar_value"],
+        # Link to the features table
         feature: bread_feature,
         city: new_city
       )
@@ -206,12 +293,13 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     end
 
     # #Price Cappucino
-    # cappucino = city_living_details["data"].select { |detail| detail["id"] == "COST-CAPPUCCINO"}
     cappucino = city_living_details[0]["data"].select {|element| element["id"] == "COST-CAPPUCCINO"}[0]
     if cappucino == []
       CityFeature.create!(
-      name: "Cappucino",
-      weight: cappucino["currency_dollar_value"]
+      score: cappucino["currency_dollar_value"],
+      # Link to the features table
+      feature: cappucino_feature,
+      city: new_city
       )
     #puts cappucino["label"]
     #puts cappucino["currency_dollar_value"]
@@ -219,12 +307,13 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     end
 
     # #Price Beer
-    # beer = city_living_details["data"].select { |detail| detail["id"] == "COST-IMPORT-BEER"}
     beer = city_living_details[0]["data"].select {|element| element["id"] == "COST-IMPORT-BEER"}[0]
     if beer == []
       CityFeature.create!(
-      name: "Beer",
-      weight: beer["currency_dollar_value"]
+      score: beer["currency_dollar_value"],
+      feature: beer_feature,
+      city: new_city
+
       )
     #puts beer["label"]
     #puts beer["currency_dollar_value"]
@@ -232,22 +321,22 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
       end
 
     # #Price Lunch
-    # lunch = city_living_details["data"].select { |detail| detail["id"] == "COST-RESTAURANT-MEAL"}
     lunch = city_living_details[0]["data"].select {|element| element["id"] == "COST-RESTAURANT-MEAL"}[0]
       CityFeature.create!(
-      name: "Lunch",
-      weight: lunch["currency_dollar_value"]
+      score: lunch["currency_dollar_value"],
+      feature: lunch_feature,
+      city: new_city
       )
     #puts lunch["label"]
     #puts lunch["currency_dollar_value"]
 
     #  #Price Taxi
-    # taxi = city_living_details["data"].select { |detail| detail["id"] == "COST-TAXI"}
     taxi = city_living_details[0]["data"].select {|element| element["id"] == "COST-TAXI"}[0]
     if taxi == []
       CityFeature.create!(
-      name: "Taxi ride",
-      weight: taxi["currency_dollar_value"]*100
+      score: taxi["currency_dollar_value"]*100,
+      feature: taxi_feature,
+      city: new_city
       )
       #puts taxi["label"]
       #puts taxi["currency_dollar_value"]
@@ -263,8 +352,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     spoken_language = city_languages_details[0]["data"].select {|element| element["id"] == "SPOKEN-LANGUAGES"}[0]
     if spoken_language == []
     CityFeature.create!(
-    name: "Spoken languages",
-    weight: spoken_language["string_value"]
+    score: spoken_language["string_value"],
+    feature: language_feature,
+    city: new_city
     )
     else
     end
@@ -280,8 +370,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     download = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-DOWNLOAD"}[0]
     if download == []
     CityFeature.create!(
-    name: "Internet download",
-    weight: download["float_value"]*100
+    score: download["float_value"]*100,
+    feature: download_feature,
+    city: new_city
     )
     else
     end
@@ -292,8 +383,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     upload = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-UPLOAD"}[0]
     if download == []
     CityFeature.create!(
-    name: "Internet upload",
-    weight: upload["float_value"]*100
+    score: upload["float_value"]*100,
+    feature: upload_feature,
+    city: new_city
     )
     else
     end
@@ -309,8 +401,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
 
   air = city_air_details[0]["data"].select {|element| element["id"] == "AIR-POLLUTION-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Air Pollution",
-  weight: air["float_value"]*100
+  score: air["float_value"]*100,
+  feature: air_feature,
+  city: new_city
   )
   #puts air["label"]
   #puts air["float_value"]
@@ -318,8 +411,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   #Cleanliness
   clean = city_air_details[0]["data"].select {|element| element["id"] == "CLEANLINESS-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Cleanliness",
-  weight: clean["float_value"]*100
+  score: clean["float_value"]*100,
+  feature: cleanliness_feature,
+  city: new_city
   )
   #puts clean["label"]
   #puts clean["float_value"]
@@ -328,8 +422,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   water = city_air_details[0]["data"].select {|element| element["id"] == "DRINKING-WATER-QUALITY-TELESCORE"}[0]
     if water == []
       CityFeature.create!(
-      name: "Drinking water",
-      weight: water["float_value"]*100
+      score: water["float_value"]*100,
+      feature: water_feature,
+      city: new_city
       )
     else
     end
@@ -343,8 +438,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   else
   crime = city_safety_details[0]["data"].select {|element| element["id"] == "CRIME-RATE-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Crime rate",
-  weight: crime["float_value"]*100
+  score: crime["float_value"]*100,
+  feature: crime_feature,
+  city: new_city
   )
   #puts crime["label"]
   #puts crime["float_value"]
@@ -356,8 +452,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   else
   coworking = city_space_details[0]["data"].select {|element| element["id"] == "COWORKING-SPACES-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Coworking spaces",
-  weight: coworking["float_value"]*100
+  score: coworking["float_value"]*100,
+  feature: coworking_feature,
+  city: new_city
   )
   #puts coworking["label"]
   #puts coworking["float_value"]
@@ -369,8 +466,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   else
   health = city_care_details[0]["data"].select {|element| element["id"] == "HEALTHCARE-QUALITY-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Healthcare",
-  weight: health["float_value"]*100
+  score: health["float_value"]*100,
+  feature: health_feature,
+  city: new_city
   )
   #puts health["label"]
   #puts health["float_value"]
@@ -383,18 +481,20 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   else
   art = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-ART-GALLERIES-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Art Galleries",
-  weight: art["float_value"]*100
+  score: art["float_value"]*100,
+  feature: art_feature,
+  city: new_city
   )
   #puts art["label"]
   #puts art["float_value"]
 
 
-  # #Culture Concerts score
+  #Culture Concerts score
   concert = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-CONCERTS-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Concerts",
-  weight: concert["float_value"]*100
+  score: concert["float_value"]*100,
+  feature: concert_feature,
+  city: new_city
   )
   #puts concert["label"]
   #puts concert["float_value"]
@@ -402,8 +502,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   #  #Culture historical sites score
   site = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-HISTORICAL-SITES-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Historical sites",
-  weight: site["float_value"]*100
+  score: site["float_value"]*100,
+  feature: site_feature,
+  city: new_city
   )
   #puts site["label"]
   #puts site["float_value"]
@@ -411,17 +512,19 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   #  #Culture museum score
   museum = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-MUSEUMS-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Museums",
-  weight: museum["float_value"]*100
+  score: museum["float_value"]*100,
+  feature: museum_feature,
+  city: new_city
   )
   #puts museum["label"]
   #puts museum["float_value"]
 
-  #    #Culture sports score
+  #Culture sports score
   sport = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-SPORTS-TELESCORE"}[0]
   CityFeature.create!(
-  name: "Sports",
-  weight: sport["float_value"]*100
+  score: sport["float_value"]*100,
+  feature: sport_feature,
+  city: new_city
   )
   #puts sport["label"]
   #puts sport["float_value"]
