@@ -9,4 +9,14 @@ class City < ApplicationRecord
   has_many :city_features
   has_many :features, through: :city_features
   has_many_attached :photos
+
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :name ],
+    associated_against: {
+      country: [ :name ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
 end
