@@ -1,3 +1,10 @@
-<%= link_to "City show page", city_path(:id) %>
-
-<p> ^^^^ This button is for when the user clicks one of the city cards</p>
+<%= link_to city_path(city) do %>
+  <div class="city-card">
+    <img class="city-card-image" src="https://source.unsplash.com/random/500x500/?city" />
+    <h3 class="city-card-temp">25°C</h3>
+    <div class="city-card-content">
+        <h2 class="city-card-title"> <%= city.name %></h2>
+        <h3 class="city-card-country"><%= city.country.name %></h3>
+    </div>
+  </div>
+<% end %>
