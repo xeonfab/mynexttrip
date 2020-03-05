@@ -14,3 +14,10 @@
 
 <%= link_to "Regions", region_path(:id) %>
 <p> ^^^^ This button is for when the user clicks a region card from the home page</p>
+
+
+<%= simple_form_for :filter_results, url: cities_path, method: :get do |f| %>
+  <%= f.input :themes, collection: %w[Skiing Romantic City Beach Culture], input_html: { multiple: true }, as: :check_boxes %>
+  <%= f.input :month, collection: %w(January February March April May June July August September October November December) %>
+  <%= f.button :submit, "search", class: "btn btn-flat"%>
+<% end %>
