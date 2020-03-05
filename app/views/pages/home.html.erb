@@ -5,15 +5,20 @@
       <h2>Find, compare and easily plan your next travel destination</h2>
     </div>
     <div class="row">
-      <div class="card">
+      <div class="home-search-card">
           <%= simple_form_for :filter_results, url: cities_path, method: :get do |f| %>
-          <div>
-          <%= f.input :themes, collection: %w[Skiing Romantic City Beach Culture], input_html: { multiple: true }, as: :check_boxes %>
-          <%= f.input :month, collection: %w(January February March April May June July August September October November December) %>
-          </div>
-          <%= f.button :submit, "Submit", class: "btn btn-flat"%>
+            <div>
+              <%= f.input :month, collection: %w(January February March April May June July August September October November December) %>
+            </div>
+            <div class="d-flex">
+              <%= f.input :themes, collection: %w[Skiing Romantic City Beach Culture], input_html: { multiple: true}, as: :check_boxes %>
+              <%= button_tag(type: 'submit', class: "submitbtn") do %>
+              <i class="fa fa-search"></i>
+              <% end %>
+            </div>
           <% end %>
       </div>
+
 
     </div>
     <div class="col">
@@ -72,6 +77,3 @@
     <% end %>
   </div>
 </div>
-
-
-

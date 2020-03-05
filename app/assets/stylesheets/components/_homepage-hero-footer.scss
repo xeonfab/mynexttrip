@@ -1,0 +1,34 @@
+.home-page__footer-hero {
+    width: 100vw;
+    min-height: 70vh;
+    background-color: #816d54;
+    background-image: url(beach.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    margin-top: 80px;
+  .home-page__footer-hero-content {
+        max-width: 1000px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  .home-page__footer-hero-content-title {
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+  }
+  .home-page__footer-hero-content-subtitle {
+    font-weight: 250;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
