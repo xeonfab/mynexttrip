@@ -4,10 +4,29 @@ class CitiesController < ApplicationController
 
     @cities = City.geocoded
 
+
+
+
+
     if params[:query].present?
       # make the index filtered by those params
       @cities = City.global_search(params[:query])
       @countries = [@cities.first.country]
+    elsif params[:filter_results].present?
+      params[:filter_results][:themes].delete("")
+      if params[:filter_results][:themes].present?
+        terms = params[:filter_results][:themes]
+        city_themes_with_month = []
+        terms.each do |term|
+          theme = Theme.global_search(term)
+          # cities.where( month.downcase.to_sym => 1)
+
+          city_themes = CityTheme.where(theme: theme)
+          city_themes_with_month << city_themes.where(params[:filter_results][:month].downcase.to_sym => 1)
+        end
+        @cities = city_themes_with_month.map { |city_theme| city_theme.first.city}
+        @countries = Country.all
+      end
     else
       @cities = City.all
       @countries = Country.all
