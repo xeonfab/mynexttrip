@@ -207,6 +207,11 @@ url = 'https://api.teleport.org/api/urban_areas/'
 user_serialized = open(url).read
 cities = JSON.parse(user_serialized)
 
+#Install API Google for photos of countries and cities
+# url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Melbourne'
+# places_serialized = open(url).read
+# places = JSON.parse(places_serialized)
+
 #loop for each cities in teleport API
 urban_areas_link = cities["_links"]["ua:item"].each do |city|
   puts "--------------------------------------"
@@ -242,10 +247,12 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
 
   # create the country table
   if Country.find_by(name: country_name).nil?
-    Country.create!(
+    new_country = Country.create!(
       name: country_name,
       region: Region.find_by(name: region_name)
       )
+      photo_country = URI.open("https://source.unsplash.com/1024x700/?#{country_name},landscape")
+      new_country.photos.attach(io: photo_country, filename: "#{country_name}.jpeg", content_type: 'image/jpeg')
   end
 
   # Create the city table
@@ -257,8 +264,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     longitude: longitude_name
     )
 
-  photo = URI.open("https://source.unsplash.com/random?#{city_name}")
-  new_city.photos.attach(io: photo, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
+  photo_city = URI.open("https://source.unsplash.com/1024x700/?#{city_name},landscape")
+  #photo = URI.open("https://source.unsplash.com/random?#{city_name}")
+  new_city.photos.attach(io: photo_city, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
 
   puts "#{new_city.name} created!"
 
