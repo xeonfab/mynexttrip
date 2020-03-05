@@ -3,6 +3,7 @@ class CitiesController < ApplicationController
   def index
 
     @cities = City.geocoded
+    raise
 
     if params[:query].present?
       @cities = City.global_search(params[:query])
@@ -23,6 +24,7 @@ class CitiesController < ApplicationController
 
         (@cities = city_themes_with_month.map { |city_theme| city_theme.first.city}) if !city_themes_with_month.first.empty?
         @countries = Country.all
+        # the line above this should ideally throw an error message as well as showing all the city and countries to tell the user that their filters yeilded no results
 
       end
 
