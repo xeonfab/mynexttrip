@@ -1,8 +1,6 @@
 require 'json'
 require 'open-uri'
 require 'byebug'
-
-
 require 'date'
 require "open-uri"
 
@@ -12,12 +10,12 @@ puts 'Cleaning database...'
 # CityTheme.destroy_all
 # CityFeature.destroy_all
 # Climate.destroy_all
-City.destroy_all
+# City.destroy_all
 # BookingProvider.destroy_all
 # Country.destroy_all
 # Region.destroy_all
 
-puts "Making the Booking Providers"
+# puts "Making the Booking Providers"
 
 # wicked_campers = BookingProvider.create!(
 #   name: "Wicked Campers",
@@ -31,165 +29,106 @@ puts "Making the Booking Providers"
 #   description: "Over 30 years of experience have enabled us to refine the list of ingredients essential to the success of an authentic and personalized trip. Follow the recipe!",
 #   category: "Travel Agency")
 
-# puts "Making the Regions"
+puts "Making the Regions"
 
-# europe = Region.create!(
-#   name: "Europe",
-#   )
+europe = Region.create!(
+  name: "Europe",
+  )
 
-# file7 = URI.open('https://images.unsplash.com/photo-1542379950-b3fc716c16f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
-# europe.photo.attach(io: file7, filename: 'Europe1.jpeg', content_type: 'image/jpeg')
+file7 = URI.open('https://images.unsplash.com/photo-1542379950-b3fc716c16f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+europe.photo.attach(io: file7, filename: 'Europe1.jpeg', content_type: 'image/jpeg')
 
-# north_america = Region.create!(
-#   name: "North America",
-#   )
+north_america = Region.create!(
+  name: "North America",
+  )
 
-# file = URI.open('https://images.unsplash.com/photo-1501861481341-4496c34620bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80')
-# north_america.photo.attach(io: file, filename: 'North_America1.jpeg', content_type: 'image/jpeg')
+file = URI.open('https://images.unsplash.com/photo-1501861481341-4496c34620bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80')
+north_america.photo.attach(io: file, filename: 'North_America1.jpeg', content_type: 'image/jpeg')
 
-# south_america = Region.create!(
-#   name: "South America",
-#   )
+south_america = Region.create!(
+  name: "South America",
+  )
 
-# file1 = URI.open('https://images.unsplash.com/photo-1529476488885-3159d45ab78b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
-# south_america.photo.attach(io: file1, filename: 'South_America1.jpeg', content_type: 'image/jpeg')
+file1 = URI.open('https://images.unsplash.com/photo-1529476488885-3159d45ab78b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+south_america.photo.attach(io: file1, filename: 'South_America1.jpeg', content_type: 'image/jpeg')
 
-# africa = Region.create!(
-#   name: "Africa",
-#   )
+africa = Region.create!(
+  name: "Africa",
+  )
 
-# file2 = URI.open('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80')
-# africa.photo.attach(io: file2, filename: 'Africa1.jpeg', content_type: 'image/jpeg')
+file2 = URI.open('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80')
+africa.photo.attach(io: file2, filename: 'Africa1.jpeg', content_type: 'image/jpeg')
 
-# asia = Region.create!(
-#   name: "Asia",
-#   )
+asia = Region.create!(
+  name: "Asia",
+  )
 
-# file3 = URI.open('https://images.unsplash.com/photo-1441839438427-ad31d742a202?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1647&q=80')
-# asia.photo.attach(io: file3, filename: 'Asia1.jpeg', content_type: 'image/jpeg')
+file3 = URI.open('https://images.unsplash.com/photo-1441839438427-ad31d742a202?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1647&q=80')
+asia.photo.attach(io: file3, filename: 'Asia1.jpeg', content_type: 'image/jpeg')
 
-# the_middle_east = Region.create!(
-#   name: "The Middle East",
-#   )
+the_middle_east = Region.create!(
+  name: "The Middle East",
+  )
 
-# file4 = URI.open('https://images.unsplash.com/photo-1570206913724-17f67ed3a6d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1556&q=80')
-# the_middle_east.photo.attach(io: file4, filename: 'MiddleEast1.jpeg', content_type: 'image/jpeg')
+file4 = URI.open('https://images.unsplash.com/photo-1570206913724-17f67ed3a6d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1556&q=80')
+the_middle_east.photo.attach(io: file4, filename: 'MiddleEast1.jpeg', content_type: 'image/jpeg')
 
-# australia_and_pacific = Region.create!(
-#   name: "Oceania",
-#   )
+australia_and_pacific = Region.create!(
+  name: "Oceania",
+  )
 
-# file5 = URI.open('https://images.unsplash.com/photo-1528163308254-5852067f0a1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
-# australia_and_pacific.photo.attach(io: file5, filename: 'AustraliaP1.jpeg', content_type: 'image/jpeg')
+file5 = URI.open('https://images.unsplash.com/photo-1528163308254-5852067f0a1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+australia_and_pacific.photo.attach(io: file5, filename: 'AustraliaP1.jpeg', content_type: 'image/jpeg')
 
-# central_america = Region.create!(
-#   name: "Central America",
-#   )
+central_america = Region.create!(
+  name: "Central America",
+  )
 
-# file6 = URI.open('https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1648&q=80')
-# central_america.photo.attach(io: file6, filename: 'CentralAmerica1.jpeg', content_type: 'image/jpeg')
+file6 = URI.open('https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1648&q=80')
+central_america.photo.attach(io: file6, filename: 'CentralAmerica1.jpeg', content_type: 'image/jpeg')
 
+# Creating all the features used in CityFeatures
 
+puts " Creating features"
 
+bread_feature = Feature.create!(
+  name: "Bread",
+  weight: 80
+  )
 
-# puts "Making the Countries"
+capuccino_feature = Feature.create!(
+  name: "Cappucino",
+  weight: 80
+  )
 
-# canada = Country.create!(
-#   name: "Canada",
-#   region: north_america
-#   )
+beer_feature = Feature.create!(
+  name: "Beer",
+  weight: 80
+  )
+lunch_feature = Feature.create!(
+  name: "Lunch",
+  weight: 80
+  )
 
-# file8 = URI.open('https://images.com/photo-1506104489822-562ca25152fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60')
-# canada.photos.attach(io: file8, filename: 'Canada1.jpeg', content_type: 'image/jpeg')
+taxi_feature = Feature.create!(
+  name: "Taxi ride",
+  weight: 80
+  )
 
-# file9 = URI.open('https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60')
-# canada.photos.attach(io: file9, filename: 'Canada2.jpeg', content_type: 'image/jpeg')
-
-# australia = Country.create!(
-#   name: "Australia",
-#   region: australia_and_pacific
-#   )
-
-# file10 = URI.open('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60')
-# australia.photos.attach(io: file10, filename: 'Aus1.jpeg', content_type: 'image/jpeg')
-
-# file11 = URI.open('https://images.unsplash.com/photo-1548296404-93c7694b2f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60')
-# australia.photos.attach(io: file11, filename: 'Aus2.jpeg', content_type: 'image/jpeg')
-
-# spain = Country.create!(
-#   name: "Spain",
-#   region: europe
-#   )
-
-# file12 = URI.open('https://images.unsplash.com/photo-1558642084-fd07fae5282e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# spain.photos.attach(io: file12, filename: 'Spain1.jpeg', content_type: 'image/jpeg')
-
-# file13 = URI.open('https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# spain.photos.attach(io: file13, filename: 'Spain2.jpeg', content_type: 'image/jpeg')
-
-# france = Country.create!(
-#   name: "France",
-#   region: europe
-#   )
-
-# file14 = URI.open('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# france.photos.attach(io: file14, filename: 'France1.jpeg', content_type: 'image/jpeg')
-
-# file15 = URI.open('https://images.unsplash.com/photo-1495442358998-961b69f45703?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# france.photos.attach(io: file15, filename: 'France2.jpeg', content_type: 'image/jpeg')
-
-# portugal = Country.create!(
-#   name: "Portugal",
-#   region: europe
-#   )
-
-# file16 = URI.open('https://images.unsplash.com/photo-1513377888081-794d8e958972?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# portugal.photos.attach(io: file16, filename: 'Portugal1.jpeg', content_type: 'image/jpeg')
-
-# file17 = URI.open('https://images.unsplash.com/photo-1555881400-69a2384edcd4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# portugal.photos.attach(io: file17, filename: 'Portugal2.jpeg', content_type: 'image/jpeg')
-
-# usa = Country.create!(
-#   name: "United States of America",
-#   region: north_america
-#   )
-
-# file18 = URI.open('https://images.unsplash.com/photo-1471306224500-6d0d218be372?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# usa.photos.attach(io: file18, filename: 'usa1.jpeg', content_type: 'image/jpeg')
-
-# file19 = URI.open('https://images.unsplash.com/photo-1445368794737-0cf251429ca0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# usa.photos.attach(io: file19, filename: 'usa2.jpeg', content_type: 'image/jpeg')
-
-# argentina = Country.create!(
-#   name: "Argentina",
-#   region: south_america
-#   )
-
-# file20 = URI.open('https://images.unsplash.com/photo-1508710285745-edc8137d6b5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# argentina.photos.attach(io: file20, filename: 'argentina1.jpeg', content_type: 'image/jpeg')
-
-# file21 = URI.open('https://images.unsplash.com/photo-1545889238-ae8ff5ab582f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# argentina.photos.attach(io: file21, filename: 'argentina2.jpeg', content_type: 'image/jpeg')
-
-# peru = Country.create!(
-#   name: "Peru",
-#   region: south_america
-#   )
-
-# file22 = URI.open('https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1296&q=60')
-# peru.photos.attach(io: file22, filename: 'peru1.jpeg', content_type: 'image/jpeg')
-
-# file23 = URI.open('https://images.unsplash.com/photo-1531968455001-5c5272a41129?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# peru.photos.attach(io: file23, filename: 'peru2.jpeg', content_type: 'image/jpeg')
+city_languages_feature = Feature.create!(
+  name: "Taxi ride",
+  weight: 80
+  )
+# ---------------------------------------------------
 
 
+
+puts "Making the Countries"
 
 # cities list with name and url
 url = 'https://api.teleport.org/api/urban_areas/'
 user_serialized = open(url).read
 cities = JSON.parse(user_serialized)
-
-
 
 urban_areas_link = cities["_links"]["ua:item"].each do |city|
   puts "--------------------------------------"
@@ -197,6 +136,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   # city name
   city_name = city["name"]
   puts city["name"]
+  next if City.find_by(name: city_name)
   # --------------------------
 
   # city continent and country
@@ -205,6 +145,8 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   city_info = JSON.parse(city_serialized)
   region_name = city_info["_links"]["ua:continent"]["name"]
   country_name = city_info["_links"]["ua:countries"][0]["name"]
+  puts region_name
+  puts country_name
   # --------------------------
 
   # City Location with a new URL https://api.teleport.org/api/cities/geonameid:2759794/
@@ -215,6 +157,26 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   #city location
   latitude_name = city_location["location"]["latlon"]["latitude"]
   longitude_name = city_location["location"]["latlon"]["longitude"]
+
+  puts "--------------------------------------"
+
+  if Country.find_by(name: country_name).nil?
+    Country.create!(
+      name: country_name,
+      region: Region.find_by(name: region_name)
+      )
+  end
+
+  new_city = City.create!(
+    name: city_name,
+    location: city_name,
+    country: Country.find_by(name: country_name)
+    )
+
+  photo = URI.open("https://source.unsplash.com/random?#{city_name}")
+  new_city.photos.attach(io: photo, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
+
+  puts "#{new_city.name} created!"
 
   #Population
   puts city_location["population"]
@@ -227,203 +189,318 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
 
 
   city_living_details = city_details["categories"].select { |data| data["id"] == "COST-OF-LIVING"}
+  if city_living_details.empty?
+  else
 
-  #bread = city_living_details["data"].select { |detail| detail["id"] == "COST-BREAD"}
-  bread = city_living_details[0]["data"].select {|element| element["id"] == "COST-BREAD"}[0]
-  puts bread["label"]
-  puts bread["currency_dollar_value"]
+    #bread = city_living_details["data"].select { |detail| detail["id"] == "COST-BREAD"}
+    bread = city_living_details[0]["data"].select {|element| element["id"] == "COST-BREAD"}[0]
+    if bread == []
+      CityFeature.create!(
+        score: bread["currency_dollar_value"],
+        feature: bread_feature,
+        city: new_city
+      )
+      #puts bread["label"]
+      #puts bread["currency_dollar_value"]
+    else
+    end
 
-  # #Price Cappucino
-  # cappucino = city_living_details["data"].select { |detail| detail["id"] == "COST-CAPPUCCINO"}
-  cappucino = city_living_details[0]["data"].select {|element| element["id"] == "COST-CAPPUCCINO"}[0]
-  puts cappucino["label"]
-  puts cappucino["currency_dollar_value"]
+    # #Price Cappucino
+    # cappucino = city_living_details["data"].select { |detail| detail["id"] == "COST-CAPPUCCINO"}
+    cappucino = city_living_details[0]["data"].select {|element| element["id"] == "COST-CAPPUCCINO"}[0]
+    if cappucino == []
+      CityFeature.create!(
+      name: "Cappucino",
+      weight: cappucino["currency_dollar_value"]
+      )
+    #puts cappucino["label"]
+    #puts cappucino["currency_dollar_value"]
+    else
+    end
 
-  # #Price Beer
-  # beer = city_living_details["data"].select { |detail| detail["id"] == "COST-IMPORT-BEER"}
-  beer = city_living_details[0]["data"].select {|element| element["id"] == "COST-IMPORT-BEER"}[0]
-  puts beer["label"]
-  puts beer["currency_dollar_value"]
+    # #Price Beer
+    # beer = city_living_details["data"].select { |detail| detail["id"] == "COST-IMPORT-BEER"}
+    beer = city_living_details[0]["data"].select {|element| element["id"] == "COST-IMPORT-BEER"}[0]
+    if beer == []
+      CityFeature.create!(
+      name: "Beer",
+      weight: beer["currency_dollar_value"]
+      )
+    #puts beer["label"]
+    #puts beer["currency_dollar_value"]
+    else
+      end
 
-  # #Price Lunch
-  # lunch = city_living_details["data"].select { |detail| detail["id"] == "COST-RESTAURANT-MEAL"}
-  lunch = city_living_details[0]["data"].select {|element| element["id"] == "COST-RESTAURANT-MEAL"}[0]
-  puts lunch["label"]
-  puts lunch["currency_dollar_value"]
+    # #Price Lunch
+    # lunch = city_living_details["data"].select { |detail| detail["id"] == "COST-RESTAURANT-MEAL"}
+    lunch = city_living_details[0]["data"].select {|element| element["id"] == "COST-RESTAURANT-MEAL"}[0]
+      CityFeature.create!(
+      name: "Lunch",
+      weight: lunch["currency_dollar_value"]
+      )
+    #puts lunch["label"]
+    #puts lunch["currency_dollar_value"]
 
-  #  #Price Taxi
-  # taxi = city_living_details["data"].select { |detail| detail["id"] == "COST-TAXI"}
-  taxi = city_living_details[0]["data"].select {|element| element["id"] == "COST-TAXI"}[0]
-  puts taxi["label"]
-  puts taxi["currency_dollar_value"]
+    #  #Price Taxi
+    # taxi = city_living_details["data"].select { |detail| detail["id"] == "COST-TAXI"}
+    taxi = city_living_details[0]["data"].select {|element| element["id"] == "COST-TAXI"}[0]
+    if taxi == []
+      CityFeature.create!(
+      name: "Taxi ride",
+      weight: taxi["currency_dollar_value"]*100
+      )
+      #puts taxi["label"]
+      #puts taxi["currency_dollar_value"]
+    else
+    end
+    end
 
 
   #Languages speaking
   city_languages_details = city_details["categories"].select { |data| data["id"] == "LANGUAGE"}
-
-  spoken_language = city_languages_details[0]["data"].select {|element| element["id"] == "SPOKEN-LANGUAGES"}[0]
-  puts spoken_language["label"]
-  puts spoken_language["string_value"]
+  if city_languages_details.empty?
+  else
+    spoken_language = city_languages_details[0]["data"].select {|element| element["id"] == "SPOKEN-LANGUAGES"}[0]
+    if spoken_language == []
+    CityFeature.create!(
+    name: "Spoken languages",
+    weight: spoken_language["string_value"]
+    )
+    else
+    end
+    #puts spoken_language["label"]
+    #puts spoken_language["string_value"]
+  end
 
 
   #Internet Access_Download
   city_download_details = city_details["categories"].select { |data| data["id"] == "NETWORK"}
-
-  download = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-DOWNLOAD"}[0]
-  puts download["label"]
-  puts download["float_value"]
+  if city_download_details.empty?
+  else
+    download = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-DOWNLOAD"}[0]
+    if download == []
+    CityFeature.create!(
+    name: "Internet download",
+    weight: download["float_value"]*100
+    )
+    else
+    end
+    #puts download["label"]
+    #puts download["float_value"]
 
   #Internet Access_Upload
-  upload = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-UPLOAD"}[0]
-  puts upload["label"]
-  puts upload["float_value"]
+    upload = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-UPLOAD"}[0]
+    if download == []
+    CityFeature.create!(
+    name: "Internet upload",
+    weight: upload["float_value"]*100
+    )
+    else
+    end
+    #puts upload["label"]
+    #puts upload["float_value"]
+  end
 
 
   #Air Quality
   city_air_details = city_details["categories"].select { |data| data["id"] == "POLLUTION"}
+  if city_air_details.empty?
+  else
 
   air = city_air_details[0]["data"].select {|element| element["id"] == "AIR-POLLUTION-TELESCORE"}[0]
-  puts air["label"]
-  puts air["float_value"]
+  CityFeature.create!(
+  name: "Air Pollution",
+  weight: air["float_value"]*100
+  )
+  #puts air["label"]
+  #puts air["float_value"]
 
   #Cleanliness
   clean = city_air_details[0]["data"].select {|element| element["id"] == "CLEANLINESS-TELESCORE"}[0]
-  puts clean["label"]
-  puts clean["float_value"]
+  CityFeature.create!(
+  name: "Cleanliness",
+  weight: clean["float_value"]*100
+  )
+  #puts clean["label"]
+  #puts clean["float_value"]
 
   # #Drinking water quality
   water = city_air_details[0]["data"].select {|element| element["id"] == "DRINKING-WATER-QUALITY-TELESCORE"}[0]
-  puts water["label"]
-  puts water["float_value"]
+    if water == []
+      CityFeature.create!(
+      name: "Drinking water",
+      weight: water["float_value"]*100
+      )
+    else
+    end
+  #puts water["label"]
+  #puts water["float_value"]
+  end
 
   # #Crime rate score
   city_safety_details = city_details["categories"].select { |data| data["id"] == "SAFETY"}
-
+  if city_safety_details.empty?
+  else
   crime = city_safety_details[0]["data"].select {|element| element["id"] == "CRIME-RATE-TELESCORE"}[0]
-  puts crime["label"]
-  puts crime["float_value"]
+  CityFeature.create!(
+  name: "Crime rate",
+  weight: crime["float_value"]*100
+  )
+  #puts crime["label"]
+  #puts crime["float_value"]
+  end
 
   # #Coworking score
   city_space_details = city_details["categories"].select { |data| data["id"] == "STARTUPS"}
-
+  if city_space_details.empty?
+  else
   coworking = city_space_details[0]["data"].select {|element| element["id"] == "COWORKING-SPACES-TELESCORE"}[0]
-  puts coworking["label"]
-  puts coworking["float_value"]
+  CityFeature.create!(
+  name: "Coworking spaces",
+  weight: coworking["float_value"]*100
+  )
+  #puts coworking["label"]
+  #puts coworking["float_value"]
+  end
 
   # #Heathlcare quality score
   city_care_details = city_details["categories"].select { |data| data["id"] == "HEALTHCARE"}
+  if city_care_details.empty?
+  else
+  health = city_care_details[0]["data"].select {|element| element["id"] == "HEALTHCARE-QUALITY-TELESCORE"}[0]
+  CityFeature.create!(
+  name: "Healthcare",
+  weight: health["float_value"]*100
+  )
+  #puts health["label"]
+  #puts health["float_value"]
+  end
 
-  heathl = city_care_details[0]["data"].select {|element| element["id"] == "HEALTHCARE-QUALITY-TELESCORE"}[0]
-  puts heathl["label"]
-  puts heathl["float_value"]
 
   # #Culture Art galleries  score
   city_culture_details = city_details["categories"].select { |data| data["id"] == "CULTURE"}
-
+  if city_culture_details.empty?
+  else
   art = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-ART-GALLERIES-TELESCORE"}[0]
-  puts art["label"]
-  puts art["float_value"]
+  CityFeature.create!(
+  name: "Art Galleries",
+  weight: art["float_value"]*100
+  )
+  #puts art["label"]
+  #puts art["float_value"]
+
 
   # #Culture Concerts score
   concert = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-CONCERTS-TELESCORE"}[0]
-  puts concert["label"]
-  puts concert["float_value"]
+  CityFeature.create!(
+  name: "Concerts",
+  weight: concert["float_value"]*100
+  )
+  #puts concert["label"]
+  #puts concert["float_value"]
 
   #  #Culture historical sites score
   site = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-HISTORICAL-SITES-TELESCORE"}[0]
-  puts site["label"]
-  puts site["float_value"]
+  CityFeature.create!(
+  name: "Historical sites",
+  weight: site["float_value"]*100
+  )
+  #puts site["label"]
+  #puts site["float_value"]
 
   #  #Culture museum score
   museum = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-MUSEUMS-TELESCORE"}[0]
-  puts museum["label"]
-  puts museum["float_value"]
+  CityFeature.create!(
+  name: "Museums",
+  weight: museum["float_value"]*100
+  )
+  #puts museum["label"]
+  #puts museum["float_value"]
 
   #    #Culture sports score
   sport = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-SPORTS-TELESCORE"}[0]
-  puts sport["label"]
-  puts sport["float_value"]
-
-
-
-  #weather now
-  # url_weather = `http://api.openweathermap.org/data/2.5/weather?q=#{city_name}&appid=ec7e53d090ba26a48cffe7b676e88bc5`
-  # if url_weather != ""
-  # weather_serialized = open(url_weather).read
-  # weather = JSON.parse(weather_serialized)
-  # p weather
-  # else
-  # end
-
-
-  puts "--------------------------------------"
-
-puts region_name
-puts country_name
-
-if Country.find_by(name: country_name).nil?
-  Country.create!(
-    name: country_name,
-    region: Region.find_by(name: region_name)
-    )
-end
-
-
-new_city = City.create!(
-  name: city_name,
-  location: city_name,
-  country: Country.find_by(name: country_name)
+  CityFeature.create!(
+  name: "Sports",
+  weight: sport["float_value"]*100
   )
-
-# vancouver_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: vancouver
-#   )
-
-photo = URI.open("https://source.unsplash.com/random?#{city_name}")
-new_city.photos.attach(io: photo, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
-
-# file25 = URI.open('https://images.unsplash.com/photo-1560813962-ff3d8fcf59ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# vancouver.photos.attach(io: file25, filename: 'vancouver2.jpeg', content_type: 'image/jpeg')
-
-# file26 = URI.open('https://images.unsplash.com/photo-1567705781280-0e03ffb323f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# vancouver.photos.attach(io: file26, filename: 'vancouver3.jpeg', content_type: 'image/jpeg')
-
-# file27 = URI.open('https://images.unsplash.com/photo-1560814304-4f05b62af116?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# vancouver.photos.attach(io: file27, filename: 'vancouver3.jpeg', content_type: 'image/jpeg')
+  #puts sport["label"]
+  #puts sport["float_value"]
+  end
 
 
 end
 
 
 
+puts "Making Climates"
+
+City.all.each do |city|
+  Climate.create!(
+    january: 10,
+    february: 12,
+    march: 14,
+    april: 17,
+    may: 17,
+    june: 20,
+    july: 24,
+    august: 25,
+    september: 24,
+    october: 18,
+    november: 7,
+    december: 4,
+    city: city
+  )
+end
+
+
+puts "Making the Themes"
+
+romantic = Theme.create!(
+  name: "Romantic")
+
+city = Theme.create!(
+  name: "City")
+
+beach = Theme.create!(
+  name: "Beach")
+
+culture = Theme.create!(
+  name: "Culture")
+
+skiing = Theme.create!(
+  name: "Skiing")
+
+puts "Making City_Themes"
+
+City.all.each do |city|
+
+  CityTheme.create!(
+    january: rand(0..1),
+    february: rand(0..1),
+    march: rand(0..1),
+    april: rand(0..1),
+    may: rand(0..1),
+    june: rand(0..1),
+    july: rand(0..1),
+    august: rand(0..1),
+    september: rand(0..1),
+    october: rand(0..1),
+    november: rand(0..1),
+    december: rand(0..1),
+    theme: Theme.all.sample,
+    city: city)
+end
 
 
 
 
-
-
-
-
-
-# # This file should contain all the record creation needed to seed the database with its default values.
-# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-# #
-# # Examples:
-# #
-# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-# #   Character.create(name: 'Luke', movie: movies.first)
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
 
 
 
@@ -663,23 +740,6 @@ end
 # skiing = Theme.create!(
 #   name: "Skiing")
 
-# puts "Making City_Themes"
-
-# vancouver_themes = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 0,
-#   june: 0,
-#   july: 0,
-#   august: 0,
-#   september: 0,
-#   october: 0,
-#   november: 1,
-#   december: 1,
-#   theme: skiing,
-#   city: vancouver)
 
 # vancouver_themes1 = CityTheme.create!(
 #   january: 1,
