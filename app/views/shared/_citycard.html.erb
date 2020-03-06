@@ -1,8 +1,9 @@
 <%= link_to city_path(city) do %>
   <div class="city-card">
      <img class="city-card-image" src="https://source.unsplash.com/random/500x500/?city" />
-    <%= cl_image_tag city.photos.first.key, class: "city-card-image"  %>
-
+    <% if (city.photos.length > 0) %>
+      <%= cl_image_tag city.photos.first.key, class: "city-card-image"  %>
+    <% end %>
 
     <h3 class="city-card-temp">25°C</h3>
     <div class="city-card-content">
