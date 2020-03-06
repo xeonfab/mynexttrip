@@ -4,18 +4,24 @@ require 'date'
 require 'csv'
 
 puts 'Cleaning database...'
-#Feature.destroy_all
-Theme.destroy_all
-
+puts 'Destroying City Features'
+CityFeature.destroy_all
+puts 'Destroying Features'
+Feature.destroy_all
+puts 'Destroying City Themes'
 CityTheme.destroy_all
-#CityFeature.destroy_all
+puts 'Destroying Themes'
+Theme.destroy_all
+puts 'Destroying Climates'
 Climate.destroy_all
-
-#City.destroy_all
+puts 'Destroying Cities'
+City.destroy_all
+puts 'Destroying Booking Providers'
 BookingProvider.destroy_all
-
-# Country.destroy_all
-# Region.destroy_all
+puts 'Destroying Countries'
+Country.destroy_all
+puts 'Destroying Regions'
+Region.destroy_all
 
 puts "Making the Booking Providers"
 
@@ -48,13 +54,12 @@ comptoir = BookingProvider.create!(
 
 puts "Making the Regions"
 
-if Region.find_by(name: "Europe")
-  europe = Region.find_by(name: "Europe")
-else
-  Region.create!(name: "Europe")
-  file7 = URI.open('https://images.unsplash.com/photo-1542379950-b3fc716c16f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+europe = Region.create!(
+  name: "Europe",
+  )
+file7 = URI.open('https://images.unsplash.com/photo-1542379950-b3fc716c16f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
   europe.photo.attach(io: file7, filename: 'Europe1.jpeg', content_type: 'image/jpeg')
-end
+
 
 north_america = Region.create!(
   name: "North America",
