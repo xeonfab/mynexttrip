@@ -13,7 +13,7 @@ class CityFeaturesController < ApplicationController
       "good"
     when (0.80..1)
       "very_good"
-
+    end
   end
 
 end
