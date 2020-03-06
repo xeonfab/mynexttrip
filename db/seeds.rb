@@ -1,55 +1,35 @@
 require 'json'
 require 'open-uri'
+require 'byebug'
 require 'date'
-require 'csv'
+require "open-uri"
 
 puts 'Cleaning database...'
-puts 'Destroying City Features'
-CityFeature.destroy_all
-puts 'Destroying Features'
 Feature.destroy_all
-puts 'Destroying City Themes'
-CityTheme.destroy_all
-puts 'Destroying Themes'
 Theme.destroy_all
-puts 'Destroying Climates'
+
+CityTheme.destroy_all
+CityFeature.destroy_all
 Climate.destroy_all
-puts 'Destroying Cities'
+
 City.destroy_all
-puts 'Destroying Booking Providers'
 BookingProvider.destroy_all
-puts 'Destroying Countries'
+
 Country.destroy_all
-puts 'Destroying Regions'
 Region.destroy_all
 
 puts "Making the Booking Providers"
 
-
-# csv_options = { col_sep: ',', headers: :first_row }
-# filepath = 'data/booking_providers.csv'
-
-# CSV.foreach(filepath, csv_options) do |row|
-#   BookingProvider.create!(
-#   name: row['name'],
-#   website: row['url'],
-#   #description: row['description'],
-#   category: row['category'])
-# end
-
-# puts "Booking providers created"
-
-
 wicked_campers = BookingProvider.create!(
   name: "Wicked Campers",
   website: "https://www.wickedcampers.ca/",
-  description: "Looking for a campervan in Vancouver? ",
+  description: "Looking for a campervan in Vancouver? Our campervan is the most flexible way to get around Canada and North America. Cheaper than a package tour or bus and hostels! With a giant bed, a sexy kitchen and a paintjob that would make Van Gogh cut off his other ear – Wicked Campers are the BEST way of cruising around America and Canada! Cheaper than an RV and sexier than your Dads new girlfriend – these vans are decked out with everything you need for a kickass roadtrip!",
   category: "Transport")
 
 comptoir = BookingProvider.create!(
-  name: "skyscanner",
+  name: "Conptoir",
   website: "https://www.comptoir.fr/",
-  description: "Over 30 years of experience have enabled us to.",
+  description: "Over 30 years of experience have enabled us to refine the list of ingredients essential to the success of an authentic and personalized trip. Follow the recipe!",
   category: "Travel Agency")
 
 puts "Making the Regions"
@@ -57,9 +37,9 @@ puts "Making the Regions"
 europe = Region.create!(
   name: "Europe",
   )
-file7 = URI.open('https://images.unsplash.com/photo-1542379950-b3fc716c16f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
-  europe.photo.attach(io: file7, filename: 'Europe1.jpeg', content_type: 'image/jpeg')
 
+file7 = URI.open('https://images.unsplash.com/photo-1542379950-b3fc716c16f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+europe.photo.attach(io: file7, filename: 'Europe1.jpeg', content_type: 'image/jpeg')
 
 north_america = Region.create!(
   name: "North America",
@@ -111,7 +91,9 @@ file6 = URI.open('https://images.unsplash.com/photo-1518638150340-f706e86654de?i
 central_america.photo.attach(io: file6, filename: 'CentralAmerica1.jpeg', content_type: 'image/jpeg')
 
 
-#Creating all the features used in CityFeatures (because it is a join table)
+
+
+# Creating all the features used in CityFeatures (because it is a join table)
 
 puts " Creating features"
 
@@ -214,7 +196,11 @@ sport_feature = Feature.create!(
   weight: 80
   )
 
+
+
 # ---------------------------------------------------
+
+
 
 puts "Making the Countries"
 
@@ -222,11 +208,6 @@ puts "Making the Countries"
 url = 'https://api.teleport.org/api/urban_areas/'
 user_serialized = open(url).read
 cities = JSON.parse(user_serialized)
-
-#Install API Google for photos of countries and cities
-# url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Melbourne'
-# places_serialized = open(url).read
-# places = JSON.parse(places_serialized)
 
 #loop for each cities in teleport API
 urban_areas_link = cities["_links"]["ua:item"].each do |city|
@@ -263,19 +244,13 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
 
   # create the country table
   if Country.find_by(name: country_name).nil?
-    puts "Creating country"
-    new_country = Country.create!(
+    Country.create!(
       name: country_name,
       region: Region.find_by(name: region_name)
       )
-    puts "Finding a picture country"
-    photo_country = URI.open("https://source.unsplash.com/1024x700/?#{country_name},landscape")
-    new_country.photos.attach(io: photo_country, filename: "#{country_name}.jpeg", content_type: 'image/jpeg')
-    puts "#{new_country.name} created!"
   end
 
   # Create the city table
-  puts "Creating city"
   new_city = City.create!(
     name: city_name,
     location: city_name,
@@ -283,10 +258,9 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     latitude: latitude_name,
     longitude: longitude_name
     )
-  puts "Finding picture for city"
-  photo_city = URI.open("https://source.unsplash.com/1024x700/?#{city_name},landscape")
-  #photo = URI.open("https://source.unsplash.com/random?#{city_name}")
-  new_city.photos.attach(io: photo_city, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
+
+  photo = URI.open("https://source.unsplash.com/random?#{city_name}")
+  new_city.photos.attach(io: photo, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
 
   puts "#{new_city.name} created!"
 
@@ -558,10 +532,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   #puts sport["label"]
   #puts sport["float_value"]
   end
-
-
 end
-
 
 
 puts "Making Climates"
