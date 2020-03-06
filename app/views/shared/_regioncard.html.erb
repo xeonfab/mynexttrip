@@ -1,6 +1,7 @@
 <%= link_to region_path(region) do %>
   <div class="region-card">
-    <img class="region-card-image" src="https://source.unsplash.com/random/500x500/?city" />
+    <%= cl_image_tag region.photo.key, class: "region-card-image" %>
+
     <div class="region-card-content">
       <h2 class="region-card-title"><%= region.name %></h2>
     </div>
