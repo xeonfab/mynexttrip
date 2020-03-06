@@ -2,6 +2,11 @@
   <div class="index-container-column">
     <div class="index-container-column-1">
       SideBar
+      <%= simple_form_for :filter_results, url: cities_path, method: :get do |f| %>
+        <%= f.input :features, collection: %w[Bread Cappucino Beer Lunch Taxi\ ride Spoken\ languages Internet\ download Internet\ upload Air\ pollution Cleanliness Drinking\ water Crime\ rate Coworking\ spaces Art\ galleries Historical\ sites Concerts Museums Sports], input_html: { multiple: true }, as: :check_boxes %>
+        <%= f.input :month, input_html: {required: true}, collection: %w(January February March April May June July August September October November December) %>
+        <%= f.button :submit, "search", class: "btn btn-flat"%>
+      <% end %>
     </div>
     <div class="index-container-column-2">
       <div class="header">
