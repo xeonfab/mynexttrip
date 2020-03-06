@@ -4,18 +4,18 @@ require 'date'
 require 'csv'
 
 puts 'Cleaning database...'
-#Feature.destroy_all
+Feature.destroy_all
 Theme.destroy_all
 
 CityTheme.destroy_all
-#CityFeature.destroy_all
+CityFeature.destroy_all
 Climate.destroy_all
 
-#City.destroy_all
+City.destroy_all
 BookingProvider.destroy_all
 
-# Country.destroy_all
-# Region.destroy_all
+Country.destroy_all
+Region.destroy_all
 
 puts "Making the Booking Providers"
 
