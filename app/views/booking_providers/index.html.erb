@@ -1,19 +1,14 @@
 <div class="index-container">
-  <div class="header">
-    <a href="#default" class="logo">My Next Trip</a>
-    <div class="">
-      <%= link_to "All", cities_path %>
-      <%= link_to "Countries", countries_path %>
-      <%= link_to "Cities", cities_path %>
-    </div>
-  </div>
-
   <div class="index-container-column">
     <div class="index-container-column-1">
       SideBar
       <%= render 'shared/sidebarfilter' %>
     </div>
     <div class="index-container-column-2">
+      <div class="header d-flex align-items-baseline">
+          <h2 class="booking-provider-h2 pr-2"><%= @booking_place.name %> </h2>
+          <h3 class="booking-provider-h3"><%= @booking_place.country.name if @booking_place.class == City %></h3>
+      </div>
       <div class="row">
         <%  @bookingproviders.each do |bookingprovider| %>
           <div class="col-md-3 mb-3">
@@ -25,3 +20,14 @@
   </div>
 </div>
 
+
+
+
+<div class="header">
+  <a href="#default" class="logo">My Next Trip</a>
+  <div class="">
+    <%= link_to "All", cities_path %>
+    <%= link_to "Countries", countries_path %>
+    <%= link_to "Cities", cities_path %>
+  </div>
+</div>

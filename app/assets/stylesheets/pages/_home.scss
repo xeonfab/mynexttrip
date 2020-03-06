@@ -23,7 +23,11 @@
 
 .home-thumbnail {
   border-radius: 50%;
-  max-width: 150px;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(200, 200, 200, 0.2);
+  padding: 5px;
 }
 
 .home-search-card {
