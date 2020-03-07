@@ -3,6 +3,7 @@ require 'open-uri'
 require 'byebug'
 require 'date'
 require "open-uri"
+require 'csv'
 
 puts 'Cleaning database...'
 Feature.destroy_all
@@ -13,24 +14,46 @@ CityFeature.destroy_all
 Climate.destroy_all
 
 City.destroy_all
-BookingProvider.destroy_all
+# BookingProvider.destroy_all
 
-Country.destroy_all
-Region.destroy_all
+# Country.destroy_all
+# Region.destroy_all
 
 puts "Making the Booking Providers"
 
-wicked_campers = BookingProvider.create!(
-  name: "Wicked Campers",
-  website: "https://www.wickedcampers.ca/",
-  description: "Looking for a campervan in Vancouver? Our campervan is the most flexible way to get around Canada and North America. Cheaper than a package tour or bus and hostels! With a giant bed, a sexy kitchen and a paintjob that would make Van Gogh cut off his other ear – Wicked Campers are the BEST way of cruising around America and Canada! Cheaper than an RV and sexier than your Dads new girlfriend – these vans are decked out with everything you need for a kickass roadtrip!",
-  category: "Transport")
+csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+#filepath = 'data/booking_providers.csv'
+filepath = File.join(__dir__, 'data/booking_providers.csv')
 
-comptoir = BookingProvider.create!(
-  name: "Conptoir",
-  website: "https://www.comptoir.fr/",
-  description: "Over 30 years of experience have enabled us to refine the list of ingredients essential to the success of an authentic and personalized trip. Follow the recipe!",
-  category: "Travel Agency")
+CSV.foreach(filepath, csv_options) do |row|
+  wicked_campers = BookingProvider.create!(
+  name: row['name'],
+  category: row['category'],
+  website: row['url']
+  # city_id: case row['city']
+  # when "all"
+  #   City.all
+  # when "melbourne"
+  #   City["melbourne"]
+  # end
+  )
+  end
+
+
+
+# wicked_campers = BookingProvider.create!(
+#   name: "Wicked Campers",
+#   website: "https://www.wickedcampers.ca/",
+#   description: "Looking for a campervan in Vancouver? Our campervan is the most flexible way to get around Canada and North America. Cheaper than a package tour or bus and hostels! With a giant bed, a sexy kitchen and a paintjob that would make Van Gogh cut off his other ear – Wicked Campers are the BEST way of cruising around America and Canada! Cheaper than an RV and sexier than your Dads new girlfriend – these vans are decked out with everything you need for a kickass roadtrip!",
+#   category: "Transport")
+
+# comptoir = BookingProvider.create!(
+#   name: "Conptoir",
+#   website: "https://www.comptoir.fr/",
+#   description: "Over 30 years of experience have enabled us to refine the list of ingredients essential to the success of an authentic and personalized trip. Follow the recipe!",
+#   category: "Travel Agency")
+
+
 
 puts "Making the Regions"
 
@@ -166,11 +189,6 @@ healthcare_feature = Feature.create!(
   weight: 80
   )
 
-coworking_feature = Feature.create!(
-  name: "Coworking spaces",
-  weight: 80
-  )
-
 art_feature = Feature.create!(
   name: "Art Galleries",
   weight: 80
@@ -196,6 +214,21 @@ sport_feature = Feature.create!(
   weight: 80
   )
 
+cost_living_feature = Feature.create!(
+  name: "Cost of living",
+  weight: 80
+  )
+
+culture_feature = Feature.create!(
+  name: "Culture",
+  weight: 80
+  )
+
+internet_feature = Feature.create!(
+  name: "Internet",
+  weight: 80
+  )
+
 
 
 # ---------------------------------------------------
@@ -210,7 +243,7 @@ user_serialized = open(url).read
 cities = JSON.parse(user_serialized)
 
 #loop for each cities in teleport API
-urban_areas_link = cities["_links"]["ua:item"].each do |city|
+urban_areas_link = cities["_links"]["ua:item"].first(5).each do |city|
   puts "--------------------------------------"
 
   # city name
@@ -228,6 +261,20 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   country_name = city_info["_links"]["ua:countries"][0]["name"]
   puts region_name
   puts country_name
+
+  # Cost of living with new link "https://api.teleport.org/api/urban_areas/slug:amsterdam/scores/"
+  cost_living = city_info["_links"]["ua:scores"]["href"]
+  cost_living_serialized = open(cost_living).read
+  cost = JSON.parse(cost_living_serialized)
+
+  cost_of_living = cost["categories"][1]["score_out_of_10"]
+  puts cost_of_living
+  culture_score = cost["categories"][14]["score_out_of_10"]
+  puts culture_score
+  internet_score = cost["categories"][13]["score_out_of_10"]
+  puts internet_score
+
+
   # --------------------------
 
   # City Location with a new URL https://api.teleport.org/api/cities/geonameid:2759794/
@@ -278,6 +325,17 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   # Select all data for each feature
 
   #COST OF LIVING
+   CityFeature.create!(
+        score: cost_of_living,
+        feature: cost_living_feature,
+        city: new_city
+      )
+  puts "cost of living score feature created"
+
+
+
+
+
   city_living_details = city_details["categories"].select { |data| data["id"] == "COST-OF-LIVING"}
   if city_living_details.empty?
   else
@@ -365,6 +423,13 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     #puts spoken_language["string_value"]
   end
 
+    #Internet score
+    CityFeature.create!(
+        score: internet_score,
+        feature: internet_feature,
+        city: new_city
+      )
+  puts "Internet score feature created"
 
   #Internet Access_Download
   city_download_details = city_details["categories"].select { |data| data["id"] == "NETWORK"}
@@ -477,6 +542,13 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   #puts health["float_value"]
   end
 
+  # Create the Culture score
+  CityFeature.create!(
+        score: culture_score,
+        feature: culture_feature,
+        city: new_city
+      )
+  puts "Culture score feature created"
 
   # #Culture Art galleries  score
   city_culture_details = city_details["categories"].select { |data| data["id"] == "CULTURE"}
@@ -570,8 +642,18 @@ beach = Theme.create!(
 culture = Theme.create!(
   name: "Culture")
 
-skiing = Theme.create!(
-  name: "Skiing")
+mountains = Theme.create!(
+  name: "Moutains")
+
+shopping = Theme.create!(
+  name: "Shopping")
+
+luxury = Theme.create!(
+  name: "Luxury")
+
+countryside = Theme.create!(
+  name: "Countryside")
+
 
 puts "Making City_Themes"
 
