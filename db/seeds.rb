@@ -243,7 +243,7 @@ user_serialized = open(url).read
 cities = JSON.parse(user_serialized)
 
 #loop for each cities in teleport API
-urban_areas_link = cities["_links"]["ua:item"].first(5).each do |city|
+urban_areas_link = cities["_links"]["ua:item"].first.each do |city|
   puts "--------------------------------------"
 
   # city name

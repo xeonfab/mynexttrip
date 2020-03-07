@@ -1,9 +1,9 @@
 name,category,url,city
-Booking,Accomodation,https://www.booking.com/,all
-Hostelworld,Accomodation,https://www.hostelworld.com/,all
-Homeway,Accomodation,https://www.homeaway.com/,all
-Roadtrippers,Accomodation,https://roadtrippers.com/australia/,melbourne
-Momondo,Accomodation,https://www.momondo.com.au/?ispredir=true,melbourne
+Booking,Accomodation,https://www.booking.com/
+Hostelworld,Accomodation,https://www.hostelworld.com/
+Homeway,Accomodation,https://www.homeaway.com/
+Roadtrippers,Accomodation,https://roadtrippers.com/australia/
+Momondo,Accomodation,https://www.momondo.com.au/?ispredir=true
 Couchsurfing,Accomodation,https://www.couchsurfing.com/
 Agoda,Accomodation,https://www.agoda.com/?cid=-218
 WickedCampers ,Transport,https://www.wickedcampers.ca/
