@@ -14,10 +14,10 @@ CityFeature.destroy_all
 Climate.destroy_all
 
 City.destroy_all
-# BookingProvider.destroy_all
+BookingProvider.destroy_all
 
-# Country.destroy_all
-# Region.destroy_all
+Country.destroy_all
+Region.destroy_all
 
 puts "Making the Booking Providers"
 
