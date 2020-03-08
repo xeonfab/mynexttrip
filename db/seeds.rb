@@ -3,7 +3,6 @@ require 'open-uri'
 require 'byebug'
 require 'date'
 require "open-uri"
-require 'csv'
 
 puts 'Cleaning database...'
 Feature.destroy_all
@@ -38,22 +37,6 @@ CSV.foreach(filepath, csv_options) do |row|
   # end
   )
   end
-
-
-
-# wicked_campers = BookingProvider.create!(
-#   name: "Wicked Campers",
-#   website: "https://www.wickedcampers.ca/",
-#   description: "Looking for a campervan in Vancouver? Our campervan is the most flexible way to get around Canada and North America. Cheaper than a package tour or bus and hostels! With a giant bed, a sexy kitchen and a paintjob that would make Van Gogh cut off his other ear – Wicked Campers are the BEST way of cruising around America and Canada! Cheaper than an RV and sexier than your Dads new girlfriend – these vans are decked out with everything you need for a kickass roadtrip!",
-#   category: "Transport")
-
-# comptoir = BookingProvider.create!(
-#   name: "Conptoir",
-#   website: "https://www.comptoir.fr/",
-#   description: "Over 30 years of experience have enabled us to refine the list of ingredients essential to the success of an authentic and personalized trip. Follow the recipe!",
-#   category: "Travel Agency")
-
-
 
 puts "Making the Regions"
 
@@ -189,6 +172,7 @@ healthcare_feature = Feature.create!(
   weight: 80
   )
 
+
 art_feature = Feature.create!(
   name: "Art Galleries",
   weight: 80
@@ -231,6 +215,7 @@ internet_feature = Feature.create!(
 
 
 
+
 # ---------------------------------------------------
 
 
@@ -243,7 +228,7 @@ user_serialized = open(url).read
 cities = JSON.parse(user_serialized)
 
 #loop for each cities in teleport API
-urban_areas_link = cities["_links"]["ua:item"].first.each do |city|
+urban_areas_link = cities["_links"]["ua:item"].each do |city|
   puts "--------------------------------------"
 
   # city name
@@ -261,8 +246,9 @@ urban_areas_link = cities["_links"]["ua:item"].first.each do |city|
   country_name = city_info["_links"]["ua:countries"][0]["name"]
   puts region_name
   puts country_name
+  # --------------------------
 
-  # Cost of living with new link "https://api.teleport.org/api/urban_areas/slug:amsterdam/scores/"
+    # Cost of living with new link "https://api.teleport.org/api/urban_areas/slug:amsterdam/scores/"
   cost_living = city_info["_links"]["ua:scores"]["href"]
   cost_living_serialized = open(cost_living).read
   cost = JSON.parse(cost_living_serialized)
@@ -274,8 +260,6 @@ urban_areas_link = cities["_links"]["ua:item"].first.each do |city|
   internet_score = cost["categories"][13]["score_out_of_10"]
   puts internet_score
 
-
-  # --------------------------
 
   # City Location with a new URL https://api.teleport.org/api/cities/geonameid:2759794/
   more_info_url = city_info["_links"]["ua:identifying-city"]["href"]
@@ -291,11 +275,15 @@ urban_areas_link = cities["_links"]["ua:item"].first.each do |city|
 
   # create the country table
   if Country.find_by(name: country_name).nil?
-    Country.create!(
+    new_country = Country.create!(
       name: country_name,
       region: Region.find_by(name: region_name)
       )
+      photo_country = URI.open("https://source.unsplash.com/1024x700/?#{country_name},landscape")
+      new_country.photos.attach(io: photo_country, filename: "#{country_name}.jpeg", content_type: 'image/jpeg')
   end
+
+  #puts "#{new_country.name} created!"
 
   # Create the city table
   new_city = City.create!(
@@ -306,15 +294,11 @@ urban_areas_link = cities["_links"]["ua:item"].first.each do |city|
     longitude: longitude_name
     )
 
-  photo = URI.open("https://source.unsplash.com/random?#{city_name}")
+  photo = URI.open("https://source.unsplash.com/1024x700/?#{city_name},landscape")
   new_city.photos.attach(io: photo, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
 
   puts "#{new_city.name} created!"
 
-
-
-  #Population
-  puts city_location["population"]
 
 
    # FEATURES : Details with a new URL https://api.teleport.org/api/urban_areas/slug:amsterdam/details/
@@ -325,16 +309,12 @@ urban_areas_link = cities["_links"]["ua:item"].first.each do |city|
   # Select all data for each feature
 
   #COST OF LIVING
-   CityFeature.create!(
+  CityFeature.create!(
         score: cost_of_living,
         feature: cost_living_feature,
         city: new_city
       )
   puts "cost of living score feature created"
-
-
-
-
 
   city_living_details = city_details["categories"].select { |data| data["id"] == "COST-OF-LIVING"}
   if city_living_details.empty?
@@ -423,8 +403,8 @@ urban_areas_link = cities["_links"]["ua:item"].first.each do |city|
     #puts spoken_language["string_value"]
   end
 
-    #Internet score
-    CityFeature.create!(
+  #Internet score
+  CityFeature.create!(
         score: internet_score,
         feature: internet_feature,
         city: new_city
@@ -659,6 +639,26 @@ puts "Making City_Themes"
 
 City.all.each do |city|
 
+  if city.name === "New zealand"
+      CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.all.sample,
+    city: City.find_by(name: 'New zealand')
+    )
+      puts "New zeland themes created"
+  else
+
   CityTheme.create!(
     january: rand(0..1),
     february: rand(0..1),
@@ -674,6 +674,8 @@ City.all.each do |city|
     december: rand(0..1),
     theme: Theme.all.sample,
     city: city)
+    puts "Other theme created"
+  end
 end
 
 
@@ -788,432 +790,3 @@ end
 
 # file33 = URI.open('https://images.unsplash.com/photo-1543557211-135d718a528c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
 # melbourne.photos.attach(io: file33, filename: 'melbourne4.jpeg', content_type: 'image/jpeg')
-
-# madrid = City.create!(
-#   name: "Madrid",
-#   location: "Madrid",
-#   country: spain
-#   )
-
-# madrid_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: madrid
-#   )
-
-# file34 = URI.open('https://images.unsplash.com/photo-1570698473651-b2de99bae12f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# madrid.photos.attach(io: file34, filename: 'madrid1.png', content_type: 'image/jpeg')
-
-# file35 = URI.open('https://images.unsplash.com/photo-1558370781-d6196949e317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# madrid.photos.attach(io: file35, filename: 'madrid2.png', content_type: 'image/jpeg')
-
-# lisbon = City.create!(
-#   name: "Lisbon",
-#   location: "Lisbon",
-#   country: portugal
-#   )
-
-# lisbon_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: lisbon
-#   )
-
-
-
-# new_york = City.create!(
-#   name: "New York",
-#   location: "New York",
-#   country: usa
-#   )
-
-# new_york_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: new_york
-#   )
-
-# buenos_aires = City.create!(
-#   name: "Buenos Aires",
-#   location: "Buenos Aires",
-#   country: argentina
-#   )
-
-# buenos_aires_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: buenos_aires
-#   )
-
-# lima = City.create!(
-#   name: "Lima",
-#   location: "Lima",
-#   country: peru
-#   )
-
-# lima_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: lima
-#   )
-
-
-# puts "Making the Themes"
-
-# romantic = Theme.create!(
-#   name: "Romantic")
-
-# city = Theme.create!(
-#   name: "City")
-
-# beach = Theme.create!(
-#   name: "Beach")
-
-# culture = Theme.create!(
-#   name: "Culture")
-
-# skiing = Theme.create!(
-#   name: "Skiing")
-
-
-# vancouver_themes1 = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: romantic,
-#   city: vancouver)
-
-# paris_themes = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: romantic,
-#   city: paris)
-
-# paris_themes1 = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: culture,
-#   city: paris)
-
-# melbourne_themes = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: beach,
-#   city: melbourne)
-
-# melbourne_themes1 = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: city,
-#   city: melbourne)
-
-# madrid_themes = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: romantic,
-#   city: madrid)
-
-# madrid_themes1 = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: city,
-#   city: madrid)
-
-# lisbon_themes = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: beach,
-#   city: lisbon
-#   )
-
-# lisbon_themes1 = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: romantic,
-#   city: lisbon
-#   )
-
-
-# new_york_themes = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: romantic,
-#   city: new_york)
-
-# new_york_themes1 = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: city,
-#   city: new_york)
-
-# buenos_aires_themes = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: culture,
-#   city: buenos_aires)
-
-# buenos_aires_themes1 = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: city,
-#   city: buenos_aires)
-
-# lima_themes = CityTheme.create!(
-#   january: 1,
-#   february: 1,
-#   march: 1,
-#   april: 1,
-#   may: 1,
-#   june: 1,
-#   july: 1,
-#   august: 1,
-#   september: 1,
-#   october: 1,
-#   november: 1,
-#   december: 1,
-#   theme: culture,
-#   city: lima
-#   )
-
-# puts "Making the Features"
-
-# humidity = Feature.create!(
-#   name: "Humidity",
-#   weight: 40
-#   )
-
-# healthcare = Feature.create!(
-#   name: "Healthcare",
-#   weight: 80
-#   )
-
-# education = Feature.create!(
-#   name: "Education",
-#   weight: 60
-#   )
-
-# lbgt = Feature.create!(
-#   name: "LBGT",
-#   weight: 60
-#   )
-
-# vancouver_features = CityFeature.create!(
-#   feature: humidity,
-#   city: vancouver,
-#   score: 32)
-
-# vancouver_features1 = CityFeature.create!(
-#   feature: education,
-#   city: vancouver,
-#   score: 76)
-
-# vancouver_features2 = CityFeature.create!(
-#   feature: lbgt,
-#   city: vancouver,
-#   score: 85)
-
-# vancouver_features3 = CityFeature.create!(
-#   feature: healthcare,
-#   city: vancouver,
-#   score: 85)
-
-# melbourne_features = CityFeature.create!(
-#   feature: humidity,
-#   city: melbourne,
-#   score: 70)
-
-# melbourne_features1 = CityFeature.create!(
-#   feature: education,
-#   city: melbourne,
-#   score: 76)
-
-# melbourne_features2 = CityFeature.create!(
-#   feature: lbgt,
-#   city: melbourne,
-#   score: 50)
-
-# melbourne_features3 = CityFeature.create!(
-#   feature: healthcare,
-#   city: melbourne,
-#   score: 90)
-
-# puts "Yeah Baby! Seeds are done. Didi you the man."
