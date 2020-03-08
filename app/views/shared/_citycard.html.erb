@@ -1,5 +1,6 @@
-<%= link_to city_path(city) do %>
+<%= link_to city_path(city), target: :_blank do %>
   <div class="city-card">
+
      <img class="city-card-image" src="https://source.unsplash.com/random/500x500/?city" />
     <% if (city.photos.length > 0) %>
       <%= cl_image_tag city.photos.first.key, class: "city-card-image"  %>

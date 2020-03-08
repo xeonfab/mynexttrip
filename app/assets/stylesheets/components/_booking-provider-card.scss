@@ -1,2 +1,51 @@
 .booking-provider-card {
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+
+  .booking-provider-image {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+
+  }
+
+  .booking-provider-content {
+    background-color: #eee;
+    height: 60%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .booking-provider-title {
+    font-size: 12px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+  }
+
+  .booking-provider-text {
+    font-size: 12px;
+  }
 }
+
+
+.booking-provider-h2{
+  padding: 12px;
+  margin: 0px;
+}
+
+.booking-provider-h3 {
+  padding: 12px;
+  margin: 0px;
+}
+
+.badges-booking-provider {
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 2px;
+  background-color: #FA163F;
+}
+
+
