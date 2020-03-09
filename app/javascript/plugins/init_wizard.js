@@ -4,8 +4,8 @@ export const initWizard = () => {
       return;
     }
 
-  const nextBtnEl = wizardEl.querySelector('.js-wizard-next');
-  const previousBtnEl = wizardEl.querySelector('.js-wizard-previous')
+  const nextBtnEls = wizardEl.querySelectorAll('.js-wizard-next');
+  const previousBtnEls = wizardEl.querySelectorAll('.js-wizard-previous')
   const wizardStepsEl = wizardEl.querySelector('.js-wizard-steps');
 
   let stepNumber = 0;
@@ -20,13 +20,17 @@ export const initWizard = () => {
     wizardStepsEl.classList.add(`is--step-${stepNumber}`);
   }
 
-  nextBtnEl.addEventListener('click', () => {
-    stepNumber += 1;
-    updateDisplay();
-  });
-  previousBtnEl.addEventListener('click', () => {
-    stepNumber -= 1;
-    updateDisplay();
+  nextBtnEls.forEach((nextBtnEl) => {
+    nextBtnEl.addEventListener('click', () => {
+      stepNumber += 1;
+      updateDisplay();
+    });
   });
 
+  previousBtnEls.forEach((previousBtnEl) => {
+    previousBtnEl.addEventListener('click', () => {
+      stepNumber -= 1;
+      updateDisplay();
+    });
+  });
 }

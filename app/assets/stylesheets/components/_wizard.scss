@@ -3,20 +3,33 @@
   position: relative;
   color: white;
   text-align: center;
+  min-height: 80vh;
+  height: 100%;
+  overflow: hidden;
 
   .wizard-steps-container {
-    width: 100%;
-    min-height: 500px;
+    width: 4000px;
+    height: 2800px;
+    transition: transform 1.5s;
+    transform: translate3d(0, 0, 0);
   }
 
-  .wizard-steps-step {
-    opacity: 0;
-    transition: opacity 1s;
+  .wizard-background-img {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    height: 2800px;
+    width: 4000px;
+  }
+
+
+  .wizard-steps-step {
+    width: 700px;
+    height: 500px;
+    // border: 2px solid white;
+    opacity: 1;
+    transition: opacity 1s;
+    position: absolute;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -25,30 +38,49 @@
     padding: 0 50px;
   }
 
-  .wizard-steps-container.is--step-0 .wizard-steps-step-0 {
-    opacity: 1;
-    left: 0;
+  .wizard-steps-step-1 {
+    top: 374px;
+    left: 528px;
   }
-  .wizard-steps-container.is--step-1 .wizard-steps-step-1 {
-    opacity: 1;
-    left: 0;
+
+  .wizard-steps-step-2 {
+    top: 1400px;
+    left: 1400px;
+    transform: rotate(-10deg);
   }
-  .wizard-steps-container.is--step-2 .wizard-steps-step-2 {
-    opacity: 1;
-    left: 0;
+
+    .wizard-steps-step-3 {
+    top: 200px;
+    left: 2100px;
   }
-  .wizard-steps-container.is--step-3 .wizard-steps-step-3 {
-    opacity: 1;
-    left: 0;
+
+    .wizard-steps-step-4 {
+    top: 2200px;
+    left: 2200px;
+    transform: rotate(-10deg)
   }
-  .wizard-steps-container.is--step-4 .wizard-steps-step-4 {
-    opacity: 1;
-    left: 0;
+
+
+  .wizard-steps-container.is--step-0 {
+
+
+  }
+  .wizard-steps-container.is--step-1 {
+    transform: translate3d(-500px, -340px, 0);
+  }
+  .wizard-steps-container.is--step-2 {
+    transform: translate3d(-1370px, -1345px, 0) rotate(10deg);
+  }
+  .wizard-steps-container.is--step-3 {
+    transform: translate3d(-2100px, -200px, 0);
+  }
+  .wizard-steps-container.is--step-4 {
+    transform: translate3d(-2200px, -1890px, 0) rotate(10deg);
   }
   .wizard-actions {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -120,6 +152,9 @@
     }
     .month-checkboxes-input:checked + .month-checkboxes-label {
       opacity: 1;
+      background: rgba(255,255,255,0.8);
+      color: $blue;
+      font-weight: bold;
     }
   }
 

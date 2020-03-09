@@ -1,6 +1,6 @@
 <form class="wizard js-wizard">
-  <img src="" alt="">
-  <div class="wizard-steps-container js-wizard-steps is--step-4">
+  <div class="wizard-steps-container js-wizard-steps is--step-1">
+    <img src="<%= asset_path "travel-stuff.svg" %>" alt="background" class="wizard-background-img"/>
     <div class="wizard-steps-step wizard-steps-step-0">
       My next Trip is awesome etc
     </div>
@@ -31,6 +31,10 @@
           <input type="checkbox" name="theme" id="countryside" value="countryside" class="sentence-checkboxes-input">
           <label class="sentence-checkboxes-label" for="countryside">the outdoors.</label>
 
+      </div>
+      <div class="wizard-actions">
+        <!-- <button class="js-wizard-previous" type="button">Previous</button> -->
+        <button class="js-wizard-next" type="button">Next</button>
       </div>
         <!-- <p><input type="submit" value="Submit"></p> -->
     </div>
@@ -89,8 +93,10 @@
 
         </div>
         <div>
-          <!-- <p><input type="submit" value="Submit"></p> -->
-
+        </div>
+        <div class="wizard-actions">
+          <button class="js-wizard-previous" type="button">Previous</button>
+          <button class="js-wizard-next" type="button">Next</button>
         </div>
       </div>
     </div>
@@ -117,6 +123,10 @@
           </div>
         </div>
       </div>
+      <div class="wizard-actions">
+          <button class="js-wizard-previous" type="button">Previous</button>
+          <button class="js-wizard-next" type="button">Next</button>
+        </div>
       <!-- <p><input type="submit" value="Submit"></p> -->
     </div>
 
@@ -162,11 +172,10 @@
       </div>
       <!-- <p><input type="submit" value="Submit"></p> -->
     </div>
-  </div>
-
-  <div class="wizard-actions">
-    <button class="js-wizard-previous" type="button">Previous</button>
-    <button class="js-wizard-next" type="button">Next</button>
+    <div class="wizard-actions">
+          <button class="js-wizard-previous" type="button">Previous</button>
+          <button class="js-wizard-next" type="button">Next</button>
+        </div>
   </div>
 </form>
 
