@@ -32,10 +32,14 @@ require 'csv'
       cost_living_serialized = open(cost_living).read
       cost = JSON.parse(cost_living_serialized)
 
-      cost_of_living = cost["categories"][1]["score_out_of_10"]
-      culture_score = cost["categories"][14]["score_out_of_10"]
-      internet_score = cost["categories"][13]["score_out_of_10"]
+      cost_of_living = cost["categories"][1]["score_out_of_10"]*10
+      culture_score = cost["categories"][14]["score_out_of_10"]*10
+      internet_score = cost["categories"][13]["score_out_of_10"]*10
       puts city["name"]
+
+       #city location
+      latitude_name = city_location["location"]["latlon"]["latitude"]
+      longitude_name = city_location["location"]["latlon"]["longitude"]
 
       # FEATURES : Details with a new URL https://api.teleport.org/api/urban_areas/slug:amsterdam/details/
       details_url = city_info["_links"]["ua:details"]["href"]

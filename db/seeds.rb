@@ -5,18 +5,18 @@ require 'date'
 require 'csv'
 
 puts 'Cleaning database...'
-# Feature.destroy_all
-# Theme.destroy_all
+Feature.destroy_all
+Theme.destroy_all
 
-# CityTheme.destroy_all
-# CityFeature.destroy_all
+CityTheme.destroy_all
+CityFeature.destroy_all
 Climate.destroy_all
 
-# City.destroy_all
-# BookingProvider.destroy_all
+City.destroy_all
+BookingProvider.destroy_all
 
-# Country.destroy_all
-# Region.destroy_all
+Country.destroy_all
+Region.destroy_all
 
 puts "Making the Booking Providers"
 
@@ -213,93 +213,96 @@ internet_feature = Feature.create!(
   weight: 80
   )
 
-
-
-
 # ---------------------------------------------------
 
 
 
 puts "Making the Countries"
 
-# cities list with name and url for teleport API
-url = 'https://api.teleport.org/api/urban_areas/'
-user_serialized = open(url).read
-cities = JSON.parse(user_serialized)
+# # cities list with name and url for teleport API
+# url = 'https://api.teleport.org/api/urban_areas/'
+# user_serialized = open(url).read
+# cities = JSON.parse(user_serialized)
 
-#loop for each cities in teleport API
-urban_areas_link = cities["_links"]["ua:item"].each do |city|
+# #loop for each cities in teleport API
+# urban_areas_link = cities["_links"]["ua:item"].each do |city|
+#   puts "--------------------------------------"
+
+  # # city name
+  # city_name = city["name"]
+  # puts city["name"]
+  # #if the city already created, go next city item
+  # next if City.find_by(name: city_name)
+  # # --------------------------
+
+  # # city continent and country
+  # city_url = city["href"]
+  # city_serialized = open(city_url).read
+  # city_info = JSON.parse(city_serialized)
+  # region_name = city_info["_links"]["ua:continent"]["name"]
+  # country_name = city_info["_links"]["ua:countries"][0]["name"]
+  # puts region_name
+  # puts country_name
+  # # --------------------------
+
+  #   # Cost of living with new link "https://api.teleport.org/api/urban_areas/slug:amsterdam/scores/"
+  # cost_living = city_info["_links"]["ua:scores"]["href"]
+  # cost_living_serialized = open(cost_living).read
+  # cost = JSON.parse(cost_living_serialized)
+
+  # cost_of_living = cost["categories"][1]["score_out_of_10"]
+  # puts cost_of_living
+  # culture_score = cost["categories"][14]["score_out_of_10"]
+  # puts culture_score
+  # internet_score = cost["categories"][13]["score_out_of_10"]
+  # puts internet_score
+
+
+  # # City Location with a new URL https://api.teleport.org/api/cities/geonameid:2759794/
+  # more_info_url = city_info["_links"]["ua:identifying-city"]["href"]
+  # more_info_serialized = open(more_info_url).read
+  # city_location = JSON.parse(more_info_serialized)
+
+  # #city location
+  # latitude_name = city_location["location"]["latlon"]["latitude"]
+  # longitude_name = city_location["location"]["latlon"]["longitude"]
+
+
   puts "--------------------------------------"
 
-  # city name
-  city_name = city["name"]
-  puts city["name"]
-  #if the city already created, go next city item
-  next if City.find_by(name: city_name)
-  # --------------------------
+  csv_options = { headers: :first_row, header_converters: :symbol }
+  filepath = File.join(__dir__, 'data/city.csv')
 
-  # city continent and country
-  city_url = city["href"]
-  city_serialized = open(city_url).read
-  city_info = JSON.parse(city_serialized)
-  region_name = city_info["_links"]["ua:continent"]["name"]
-  country_name = city_info["_links"]["ua:countries"][0]["name"]
-  puts region_name
-  puts country_name
-  # --------------------------
+  CSV.foreach(filepath, csv_options) do |row|
 
-    # Cost of living with new link "https://api.teleport.org/api/urban_areas/slug:amsterdam/scores/"
-  cost_living = city_info["_links"]["ua:scores"]["href"]
-  cost_living_serialized = open(cost_living).read
-  cost = JSON.parse(cost_living_serialized)
+    # CREATE COUNTRY
+    if Country.find_by(name: row[:country_name]).nil?
+      new_country = Country.create!(
+        name: row[:country_name],
+        region: Region.find_by(name: row[:region_name])
+        )
+        photo_country = URI.open("https://source.unsplash.com/1024x700/?#{row[:country_name]},landscape")
+        #new_country.photo.key = [TAKE FROM CSV KEY]
+        new_country.photos.attach(io: photo_country, filename: "#{row[:country_name]}.jpeg", content_type: 'image/jpeg')
+    end
 
-  cost_of_living = cost["categories"][1]["score_out_of_10"]
-  puts cost_of_living
-  culture_score = cost["categories"][14]["score_out_of_10"]
-  puts culture_score
-  internet_score = cost["categories"][13]["score_out_of_10"]
-  puts internet_score
+    #puts "#{new_country.name} created!"
 
 
-  # City Location with a new URL https://api.teleport.org/api/cities/geonameid:2759794/
-  more_info_url = city_info["_links"]["ua:identifying-city"]["href"]
-  more_info_serialized = open(more_info_url).read
-  city_location = JSON.parse(more_info_serialized)
-
-  #city location
-  latitude_name = city_location["location"]["latlon"]["latitude"]
-  longitude_name = city_location["location"]["latlon"]["longitude"]
-
-
-  puts "--------------------------------------"
-
-  # create the country table
-  if Country.find_by(name: country_name).nil?
-    new_country = Country.create!(
-      name: country_name,
-      region: Region.find_by(name: region_name)
+    # CREATE CITY
+    new_city = City.create!(
+      name: row[:city_name],
+      location:row[:location],
+      country: Country.find_by(name: row[:country_name]),
+      latitude: row[:latitude],
+      longitude: row[:longitude]
       )
-      photo_country = URI.open("https://source.unsplash.com/1024x700/?#{country_name},landscape")
-      new_country.photo.key = [TAKE FROM CSV KEY]
-      new_country.photos.attach(io: photo_country, filename: "#{country_name}.jpeg", content_type: 'image/jpeg')
+
+    photo = URI.open("https://source.unsplash.com/1024x700/?#{row[:city_name]},landscape")
+    new_city.photos.attach(io: photo, filename: "#{row[:city_name]}.jpeg", content_type: 'image/jpeg')
+
+    puts "#{new_city.name} created!"
   end
-
-  #puts "#{new_country.name} created!"
-
-  # Create the city table
-  new_city = City.create!(
-    name: city_name,
-    location: city_name,
-    country: Country.find_by(name: country_name),
-    latitude: latitude_name,
-    longitude: longitude_name
-    )
-
-  photo = URI.open("https://source.unsplash.com/1024x700/?#{city_name},landscape")
-  new_city.photos.attach(io: photo, filename: "#{city_name}.jpeg", content_type: 'image/jpeg')
-
-  puts "#{new_city.name} created!"
-
 
 
    # FEATURES : Details with a new URL https://api.teleport.org/api/urban_areas/slug:amsterdam/details/
@@ -315,280 +318,170 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
 
 
     CSV.foreach(filepath, csv_options) do |row|
-  CityFeature.create!(
+      CityFeature.create!(
         score: row[:cost_of_living_score],
         feature: cost_living_feature,
-        city: City.find_by(name: row[:name]
+        city: City.find_by(name: row[:name])
       )
-      end
-  puts "cost of living score feature created"
+      puts "cost of living score feature created"
 
-  city_living_details = city_details["categories"].select { |data| data["id"] == "COST-OF-LIVING"}
-  if city_living_details.empty?
-  else
-    # Bread price
-    bread = city_living_details[0]["data"].select {|element| element["id"] == "COST-BREAD"}[0]
-    if bread == []
+
+    #Bread price
       CityFeature.create!(
-        score: bread["currency_dollar_value"],
+        score: row[:bread_price],
         # Link to the features table
         feature: bread_feature,
-        city: new_city
+        city: City.find_by(name: row[:name])
       )
-    else
-    end
 
-    # #Price Cappucino
-    cappucino = city_living_details[0]["data"].select {|element| element["id"] == "COST-CAPPUCCINO"}[0]
-    if cappucino == []
+    #Price Cappucino
       CityFeature.create!(
-      score: cappucino["currency_dollar_value"],
+      score: row[:cappucino_price],
       # Link to the features table
       feature: cappucino_feature,
-      city: new_city
+      city: City.find_by(name: row[:name])
       )
-    else
-    end
 
-    # #Price Beer
-    beer = city_living_details[0]["data"].select {|element| element["id"] == "COST-IMPORT-BEER"}[0]
-    if beer == []
+    #Price Beer
       CityFeature.create!(
-      score: beer["currency_dollar_value"],
+      score: brow[:beer_price],
       feature: beer_feature,
-      city: new_city
-
+      city: City.find_by(name: row[:name])
       )
-    #puts beer["label"]
-    #puts beer["currency_dollar_value"]
-    else
-      end
 
-    # #Price Lunch
-    lunch = city_living_details[0]["data"].select {|element| element["id"] == "COST-RESTAURANT-MEAL"}[0]
+    #Price Lunch
       CityFeature.create!(
-      score: lunch["currency_dollar_value"],
+      score: row[:lunch_price],
       feature: lunch_feature,
-      city: new_city
+      city: City.find_by(name: row[:name])
       )
-    #puts lunch["label"]
-    #puts lunch["currency_dollar_value"]
 
     #  #Price Taxi
-    taxi = city_living_details[0]["data"].select {|element| element["id"] == "COST-TAXI"}[0]
-    if taxi == []
       CityFeature.create!(
-      score: taxi["currency_dollar_value"]*100,
+      score: row[:taxi_price],
       feature: taxi_feature,
-      city: new_city
+      city: City.find_by(name: row[:name])
       )
-      #puts taxi["label"]
-      #puts taxi["currency_dollar_value"]
-    else
-    end
-  end
 
-
-  #Languages speaking
-  city_languages_details = city_details["categories"].select { |data| data["id"] == "LANGUAGE"}
-  if city_languages_details.empty?
-  else
-    spoken_language = city_languages_details[0]["data"].select {|element| element["id"] == "SPOKEN-LANGUAGES"}[0]
-    if spoken_language == []
+    #Languages speaking
     CityFeature.create!(
-    score: spoken_language["string_value"],
+    score: row[:spoken_languages],
     feature: language_feature,
-    city: new_city
+    city: City.find_by(name: row[:name])
     )
-    else
-    end
-  end
 
-  #Internet score
-  CityFeature.create!(
-        score: internet_score,
+    #Internet score
+    CityFeature.create!(
+        score: row[:internet_score],
         feature: internet_feature,
-        city: new_city
+        city: City.find_by(name: row[:name])
       )
-  puts "Internet score feature created"
+    puts "Internet score feature created"
 
   #Internet Access_Download
-  city_download_details = city_details["categories"].select { |data| data["id"] == "NETWORK"}
-  if city_download_details.empty?
-  else
-    download = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-DOWNLOAD"}[0]
-    if download == []
     CityFeature.create!(
-    score: download["float_value"]*100,
+    score: row[:download_speed],
     feature: download_feature,
-    city: new_city
+    city: City.find_by(name: row[:name])
     )
-    else
-    end
-    #puts download["label"]
-    #puts download["float_value"]
 
   #Internet Access_Upload
-    upload = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-UPLOAD"}[0]
-    if download == []
     CityFeature.create!(
-    score: upload["float_value"]*100,
+    score: row[:upload_speed],
     feature: upload_feature,
-    city: new_city
+    city: City.find_by(name: row[:name])
     )
-    else
-    end
-    #puts upload["label"]
-    #puts upload["float_value"]
-  end
 
 
   #Air Quality
-  city_air_details = city_details["categories"].select { |data| data["id"] == "POLLUTION"}
-  if city_air_details.empty?
-  else
-
-  air = city_air_details[0]["data"].select {|element| element["id"] == "AIR-POLLUTION-TELESCORE"}[0]
   CityFeature.create!(
-  score: air["float_value"],
+  score: row[:air_quality],
   feature: air_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts air["label"]
-  #puts air["float_value"]
+
 
   #Cleanliness
-  clean = city_air_details[0]["data"].select {|element| element["id"] == "CLEANLINESS-TELESCORE"}[0]
   CityFeature.create!(
-  score: clean["float_value"],
+  score: row[:cleanliness],
   feature: cleanliness_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts clean["label"]
-  #puts clean["float_value"]
 
   # #Drinking water quality
-  water = city_air_details[0]["data"].select {|element| element["id"] == "DRINKING-WATER-QUALITY-TELESCORE"}[0]
-    if water == []
       CityFeature.create!(
-      score: water["float_value"]*100,
+      score: row[:water_score],
       feature: water_feature,
-      city: new_city
+      city: City.find_by(name: row[:name])
       )
-    else
-    end
 
-  end
-
-  # #Crime rate score
-  city_safety_details = city_details["categories"].select { |data| data["id"] == "SAFETY"}
-  if city_safety_details.empty?
-  else
-  crime = city_safety_details[0]["data"].select {|element| element["id"] == "CRIME-RATE-TELESCORE"}[0]
+  #safety score
   CityFeature.create!(
-  score: crime["float_value"]*100,
+  score: row[:safety],
   feature: crime_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts crime["label"]
-  #puts crime["float_value"]
-  end
 
   #Coworking score
-  city_space_details = city_details["categories"].select { |data| data["id"] == "STARTUPS"}
-  if city_space_details.empty?
-  else
-  coworking = city_space_details[0]["data"].select {|element| element["id"] == "COWORKING-SPACES-TELESCORE"}[0]
   CityFeature.create!(
-  score: coworking["float_value"]*100,
+  score: row[:coworking_score],
   feature: coworking_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts coworking["label"]
-  #puts coworking["float_value"]
-  end
 
   # #Heathlcare quality score
-  city_care_details = city_details["categories"].select { |data| data["id"] == "HEALTHCARE"}
-  if city_care_details.empty?
-  else
-  health = city_care_details[0]["data"].select {|element| element["id"] == "HEALTHCARE-QUALITY-TELESCORE"}[0]
   CityFeature.create!(
-  score: health["float_value"]*100,
+  score: row[:health_score],
   feature: healthcare_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts health["label"]
-  #puts health["float_value"]
-  end
 
   # Create the Culture score
   CityFeature.create!(
-        score: culture_score,
+        score: row[:culture_score],
         feature: culture_feature,
-        city: new_city
+        city: City.find_by(name: row[:name])
       )
   puts "Culture score feature created"
 
   # #Culture Art galleries  score
-  city_culture_details = city_details["categories"].select { |data| data["id"] == "CULTURE"}
-  if city_culture_details.empty?
-  else
-  art = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-ART-GALLERIES-TELESCORE"}[0]
   CityFeature.create!(
-  score: art["float_value"]*100,
+  score: row[:art_score],
   feature: art_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts art["label"]
-  #puts art["float_value"]
-
 
   #Culture Concerts score
-  concert = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-CONCERTS-TELESCORE"}[0]
   CityFeature.create!(
-  score: concert["float_value"]*100,
+  score: row[:concert_score],
   feature: concert_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts concert["label"]
-  #puts concert["float_value"]
 
-  #  #Culture historical sites score
-  site = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-HISTORICAL-SITES-TELESCORE"}[0]
+  #Culture historical sites score
   CityFeature.create!(
-  score: site["float_value"]*100,
+  score: row[:site_score],
   feature: site_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts site["label"]
-  #puts site["float_value"]
 
-  #  #Culture museum score
-  museum = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-MUSEUMS-TELESCORE"}[0]
+  #Culture museum score
   CityFeature.create!(
-  score: museum["float_value"]*100,
+  score: row[:museum_score],
   feature: museum_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts museum["label"]
-  #puts museum["float_value"]
 
   #Culture sports score
-  sport = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-SPORTS-TELESCORE"}[0]
   CityFeature.create!(
-  score: sport["float_value"]*100,
+  score: row[:sport_score],
   feature: sport_feature,
-  city: new_city
+  city: City.find_by(name: row[:name])
   )
-  #puts sport["label"]
-  #puts sport["float_value"]
-  end
 end
 
 
 puts "Making Climates"
-
   csv_options = { headers: :first_row, header_converters: :symbol }
   filepath = File.join(__dir__, 'data/weather.csv')
 
