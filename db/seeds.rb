@@ -168,7 +168,7 @@ coworking_feature = Feature.create!(
   )
 
 healthcare_feature = Feature.create!(
-  name: "healtcare",
+  name: "Healthcare",
   weight: 80
   )
 
@@ -239,7 +239,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   # --------------------------
 
   # city continent and country
-  city_url = city["href"]
+  city_url =  ["href"]
   city_serialized = open(city_url).read
   city_info = JSON.parse(city_serialized)
   region_name = city_info["_links"]["ua:continent"]["name"]
@@ -253,11 +253,11 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   cost_living_serialized = open(cost_living).read
   cost = JSON.parse(cost_living_serialized)
 
-  cost_of_living = cost["categories"][1]["score_out_of_10"]
+  cost_of_living = cost["categories"][1]["score_out_of_10"]*10
   puts cost_of_living
-  culture_score = cost["categories"][14]["score_out_of_10"]
+  culture_score = cost["categories"][14]["score_out_of_10"]*10
   puts culture_score
-  internet_score = cost["categories"][13]["score_out_of_10"]
+  internet_score = cost["categories"][13]["score_out_of_10"]*10
   puts internet_score
 
 
