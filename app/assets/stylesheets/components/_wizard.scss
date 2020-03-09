@@ -222,10 +222,10 @@
     }
   }
   .continent-checkboxes {
-    width: 1000px;
-    height: 1000px;
+    width: 748px;
+    height: 396px;
     position: relative;
-    background-color: red;
+    background-color: #003F5C;
 
     .continent-checkboxes-input {
       opacity: 0;
@@ -251,35 +251,66 @@
     .continent-checkboxes-input:checked + .continent-checkboxes-label {
       opacity: 1;
     }
-    .continent-checkboxes-label-europe {
-      width: 24.5%;
-      height: 31.21%;
-    }
     .continent-checkboxes-label-north-america {
       width: 46.25%;
       height: 53.03%;
-      left: 11.73%;
-      top: 2.35%;
+      left: 0%;
+      top: 0%;
+            span {
+      top: -10%;
+      left: 5%;
+      }
 
     }
     .continent-checkboxes-label-south-america {
       width: 16.17%;
       height: 50.25%;
-      left: 30.94%;
-      top: 51.38%;
+      left: 19.44%;
+      top: 49.36%;
+            span {
+      left: -90%;
+      top: 70%;
+      }
     }
     .continent-checkboxes-label-africa {
       width: 23.74%;
       height: 53.5%;
-
+      top: 30.87%;
+      left: 41.61%;
+            span {
+      left: 0%;
+      top: 60%;
+      }
     }
     .continent-checkboxes-label-asia {
       width: 42.2%;
-      height: 64.64%
+      height: 64.64%;
+      top: 1.88%;
+      left: 56.08%;
+            span {
+      left: 96%;
+      top: 40%;
+      }
     }
     .continent-checkboxes-label-europe {
       width: 24.5%;
       height: 31.21%;
+      top: 1.99%;
+      left: 42.31%;
+      span {
+      top: -20%;
+      left: 50%;
+      }
+    }
+    .continent-checkboxes-label-oceania {
+      width: 14.3%;
+      height: 32.07%;
+      top: 58.81%;
+      left: 85.47%;
+      span {
+      top: 90%;
+      left: 78%;
+      }
     }
   }
 }
