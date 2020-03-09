@@ -280,6 +280,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
       region: Region.find_by(name: region_name)
       )
       photo_country = URI.open("https://source.unsplash.com/1024x700/?#{country_name},landscape")
+      new_country.photo.key = [TAKE FROM CSV KEY]
       new_country.photos.attach(io: photo_country, filename: "#{country_name}.jpeg", content_type: 'image/jpeg')
   end
 
@@ -309,11 +310,17 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   # Select all data for each feature
 
   #COST OF LIVING
+  csv_options = { headers: :first_row, header_converters: :symbol }
+  filepath = File.join(__dir__, 'data/features_api.csv')
+
+
+    CSV.foreach(filepath, csv_options) do |row|
   CityFeature.create!(
-        score: cost_of_living,
+        score: row[:cost_of_living_score],
         feature: cost_living_feature,
-        city: new_city
+        city: City.find_by(name: row[:name]
       )
+      end
   puts "cost of living score feature created"
 
   city_living_details = city_details["categories"].select { |data| data["id"] == "COST-OF-LIVING"}
@@ -328,8 +335,6 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
         feature: bread_feature,
         city: new_city
       )
-      #puts bread["label"]
-      #puts bread["currency_dollar_value"]
     else
     end
 
@@ -342,8 +347,6 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
       feature: cappucino_feature,
       city: new_city
       )
-    #puts cappucino["label"]
-    #puts cappucino["currency_dollar_value"]
     else
     end
 
@@ -399,8 +402,6 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
     )
     else
     end
-    #puts spoken_language["label"]
-    #puts spoken_language["string_value"]
   end
 
   #Internet score
@@ -449,7 +450,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
 
   air = city_air_details[0]["data"].select {|element| element["id"] == "AIR-POLLUTION-TELESCORE"}[0]
   CityFeature.create!(
-  score: air["float_value"]*100,
+  score: air["float_value"],
   feature: air_feature,
   city: new_city
   )
@@ -459,7 +460,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   #Cleanliness
   clean = city_air_details[0]["data"].select {|element| element["id"] == "CLEANLINESS-TELESCORE"}[0]
   CityFeature.create!(
-  score: clean["float_value"]*100,
+  score: clean["float_value"],
   feature: cleanliness_feature,
   city: new_city
   )
@@ -476,8 +477,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
       )
     else
     end
-  #puts water["label"]
-  #puts water["float_value"]
+
   end
 
   # #Crime rate score
@@ -494,7 +494,7 @@ urban_areas_link = cities["_links"]["ua:item"].each do |city|
   #puts crime["float_value"]
   end
 
-  # #Coworking score
+  #Coworking score
   city_space_details = city_details["categories"].select { |data| data["id"] == "STARTUPS"}
   if city_space_details.empty?
   else
