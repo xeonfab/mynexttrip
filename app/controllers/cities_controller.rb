@@ -58,40 +58,31 @@ class CitiesController < ApplicationController
       end
   end
 
-def search_by_feature_filter(user_feature_filtered_list)
+    def no_search
+      @cities = City.all
+      @countries = Country.all
+    end
 
+    def city_params
+      params.require(:city).permit(:name, :photo)
+    end
 
+    def search_by_feature_filter(user_feature_filtered_list)
+    end
 
-end
-
-  def no_search
-    @cities = City.all
-    @countries = Country.all
-  end
-
-  def city_params
-    params.require(:city).permit(:name, :photo)
-  end
-
-  def air_polution_score(air_polution_score)
-    case score
-    when (0..0.19)
-      "very_bad"
-    when (0.20..0.39)
-      "bad"
-    when (0.40..1)
-      "average"
-    when (0.60..1)
-      "good"
-    when (0.80..1)
-      "very_good"
-  end
-
+    def air_polution_score(air_polution_score)
+      case score
+      when (0..0.19)
+        "very_bad"
+      when (0.20..0.39)
+        "bad"
+      when (0.40..1)
+        "average"
+      when (0.60..1)
+        "good"
+      when (0.80..1)
+        "very_good"
+    end
 end
 
 
-user inputs sting using slider
-after user input match selection
-...
-get cities from the rnge
-...
