@@ -2,7 +2,6 @@
 "Aarhus","https://api.teleport.org/api/urban_areas/slug:aarhus/","Aarhus","Denmark","Europe","56.15674","10.21076","4.015000000000001","8.373","3.187"
 "Adelaide","https://api.teleport.org/api/urban_areas/slug:adelaide/","Adelaide","Australia","Oceania","-34.92866","138.59863","4.692","4.341","4.3285"
 "Albuquerque","https://api.teleport.org/api/urban_areas/slug:albuquerque/","Albuquerque","United States","North America","35.08449","-106.65114","6.059","5.396000000000001","4.890000000000001"
-"city_name","city_url","location","country_name","region_name","latitude","longitude","cost_of_living","internet_score","culture_score"
 "Aarhus","https://api.teleport.org/api/urban_areas/slug:aarhus/","Aarhus","Denmark","Europe","56.15674","10.21076","40.150000000000006","83.72999999999999","31.869999999999997"
 "Adelaide","https://api.teleport.org/api/urban_areas/slug:adelaide/","Adelaide","Australia","Oceania","-34.92866","138.59863","46.92","43.410000000000004","43.285"
 "Albuquerque","https://api.teleport.org/api/urban_areas/slug:albuquerque/","Albuquerque","United States","North America","35.08449","-106.65114","60.59","53.96000000000001","48.900000000000006"

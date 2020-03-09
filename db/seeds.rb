@@ -12,31 +12,15 @@ CityTheme.destroy_all
 CityFeature.destroy_all
 Climate.destroy_all
 
+
 City.destroy_all
 BookingProvider.destroy_all
+
 
 Country.destroy_all
 Region.destroy_all
 
-puts "Making the Booking Providers"
 
-csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
-#filepath = 'data/booking_providers.csv'
-filepath = File.join(__dir__, 'data/booking_providers.csv')
-
-CSV.foreach(filepath, csv_options) do |row|
-  wicked_campers = BookingProvider.create!(
-  name: row['name'],
-  category: row['category'],
-  website: row['url']
-  # city_id: case row['city']
-  # when "all"
-  #   City.all
-  # when "melbourne"
-  #   City["melbourne"]
-  # end
-  )
-  end
 
 puts "Making the Regions"
 
@@ -281,7 +265,8 @@ puts "Making the Countries"
         name: row[:country_name],
         region: Region.find_by(name: row[:region_name])
         )
-        photo_country = URI.open("https://source.unsplash.com/1024x700/?#{row[:country_name]},landscape")
+
+        photo_country = URI.open("https://source.unsplash.com/700x400/?#{row[:country_name]},landscape")
         #new_country.photo.key = [TAKE FROM CSV KEY]
         new_country.photos.attach(io: photo_country, filename: "#{row[:country_name]}.jpeg", content_type: 'image/jpeg')
     end
@@ -290,7 +275,8 @@ puts "Making the Countries"
 
 
     # CREATE CITY
-    new_city = City.create!(
+    next if City.find_by(name: row[:city_name])
+      new_city = City.create!(
       name: row[:city_name],
       location:row[:location],
       country: Country.find_by(name: row[:country_name]),
@@ -298,7 +284,7 @@ puts "Making the Countries"
       longitude: row[:longitude]
       )
 
-    photo = URI.open("https://source.unsplash.com/1024x700/?#{row[:city_name]},landscape")
+    photo = URI.open("https://source.unsplash.com/700x400/?#{row[:city_name]},landscape")
     new_city.photos.attach(io: photo, filename: "#{row[:city_name]}.jpeg", content_type: 'image/jpeg')
 
     puts "#{new_city.name} created!"
@@ -306,15 +292,15 @@ puts "Making the Countries"
 
 
    # FEATURES : Details with a new URL https://api.teleport.org/api/urban_areas/slug:amsterdam/details/
-  details_url = city_info["_links"]["ua:details"]["href"]
-  details_serialized = open(details_url).read
-  city_details = JSON.parse(details_serialized)
+  # details_url = city_info["_links"]["ua:details"]["href"]
+  # details_serialized = open(details_url).read
+  # city_details = JSON.parse(details_serialized)
 
   # Select all data for each feature
 
   #COST OF LIVING
   csv_options = { headers: :first_row, header_converters: :symbol }
-  filepath = File.join(__dir__, 'data/features_api.csv')
+  filepath = File.join(__dir__, 'data/features.csv')
 
 
     CSV.foreach(filepath, csv_options) do |row|
@@ -554,7 +540,7 @@ City.all.each do |city|
     theme: Theme.find_by(name: 'Countryside'),
     city: city
     )
-          CityTheme.create!(
+    CityTheme.create!(
     january: 1,
     february: 1,
     march: 1,
@@ -571,7 +557,7 @@ City.all.each do |city|
     city: city
     )
 
-        CityTheme.create!(
+    CityTheme.create!(
     january: 1,
     february: 1,
     march: 1,
@@ -588,6 +574,371 @@ City.all.each do |city|
     city: city
     )
       puts "New zealand themes created"
+
+  elsif city.country.name === "Indonesia"
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Countryside'),
+    city: city
+    )
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Mountains'),
+    city: city
+    )
+
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Culture'),
+    city: city
+    )
+      puts "Indonesia themes created"
+
+  elsif city.country.name === "Thailand"
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Countryside'),
+    city: city
+    )
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Mountains'),
+    city: city
+    )
+
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Culture'),
+    city: city
+    )
+      puts "Thailand themes created"
+
+      elsif city.country.name === "Nepal"
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Countryside'),
+    city: city
+    )
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Mountains'),
+    city: city
+    )
+
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Culture'),
+    city: city
+    )
+      puts "Nepal themes created"
+
+  elsif city.country.name === "Australia"
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Countryside'),
+    city: city
+    )
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Mountains'),
+    city: city
+    )
+
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Culture'),
+    city: city
+    )
+      puts "Australia themes created"
+
+elsif city.country.name === "Vietnam"
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Countryside'),
+    city: city
+    )
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Mountains'),
+    city: city
+    )
+
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Culture'),
+    city: city
+    )
+      puts "Vietnam themes created"
+
+    elsif city.country.name === "Japan"
+      CityTheme.create!(
+      january: 1,
+      february: 1,
+      march: 1,
+      april: 1,
+      may: 1,
+      june: 0,
+      july: 0,
+      august: 0,
+      september: 0,
+      october: 0,
+      november: 1,
+      december: 1,
+      theme: Theme.find_by(name: 'Countryside'),
+      city: city
+      )
+      CityTheme.create!(
+      january: 1,
+      february: 1,
+      march: 1,
+      april: 1,
+      may: 1,
+      june: 0,
+      july: 0,
+      august: 0,
+      september: 0,
+      october: 0,
+      november: 1,
+      december: 1,
+      theme: Theme.find_by(name: 'Mountains'),
+      city: city
+      )
+
+      CityTheme.create!(
+      january: 1,
+      february: 1,
+      march: 1,
+      april: 1,
+      may: 1,
+      june: 0,
+      july: 0,
+      august: 0,
+      september: 0,
+      october: 0,
+      november: 1,
+      december: 1,
+      theme: Theme.find_by(name: 'Culture'),
+      city: city
+      )
+      puts "Japan themes created"
+
+  elsif city.country.name === "Cambodia"
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Countryside'),
+    city: city
+    )
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Mountains'),
+    city: city
+    )
+
+    CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Culture'),
+    city: city
+    )
+      puts "Cambodia themes created"
+
   else
 
   CityTheme.create!(
@@ -609,115 +960,21 @@ City.all.each do |city|
   end
 end
 
+puts "Making the Booking Providers"
+
+csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+#filepath = 'data/booking_providers.csv'
+filepath = File.join(__dir__, 'data/booking_providers.csv')
+
+CSV.foreach(filepath, csv_options) do |row|
+
+  BookingProvider.create!(
+  name: row['name'],
+  category: row['category'],
+  website: row['url'],
+  city_id: row['city'],
+  country_id: row['country']
+  )
+  end
 
 
-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-
-
-# puts "Making the Cities/Climates"
-
-
-# vancouver = City.create!(
-#   name: "Vancouver",
-#   location: "Vancouver",
-#   country: canada
-#   )
-
-# vancouver_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: vancouver
-#   )
-
-# file24 = URI.open('https://images.unsplash.com/photo-1559511260-66a654ae982a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# vancouver.photos.attach(io: file24, filename: 'vancouver1.jpeg', content_type: 'image/jpeg')
-
-# file25 = URI.open('https://images.unsplash.com/photo-1560813962-ff3d8fcf59ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# vancouver.photos.attach(io: file25, filename: 'vancouver2.jpeg', content_type: 'image/jpeg')
-
-# file26 = URI.open('https://images.unsplash.com/photo-1567705781280-0e03ffb323f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# vancouver.photos.attach(io: file26, filename: 'vancouver3.jpeg', content_type: 'image/jpeg')
-
-# file27 = URI.open('https://images.unsplash.com/photo-1560814304-4f05b62af116?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# vancouver.photos.attach(io: file27, filename: 'vancouver3.jpeg', content_type: 'image/jpeg')
-
-# paris = City.create!(
-#   name: "Paris",
-#   location: "Paris",
-#   country: france
-#   )
-
-# paris_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: paris
-#   )
-
-# file28 = URI.open('https://images.unsplash.com/photo-1549144511-f099e773c147?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# paris.photos.attach(io: file28, filename: 'paris1.jpeg', content_type: 'image/jpeg')
-
-# file29 = URI.open('https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# paris.photos.attach(io: file29, filename: 'paris2.jpeg', content_type: 'image/jpeg')
-
-# melbourne = City.create!(
-#   name: "Melbourne",
-#   location: "Melbourne",
-#   country: australia
-#   )
-
-# melbourne_climate = Climate.create!(
-#   january: 10,
-#   february: 12,
-#   march: 14,
-#   april: 17,
-#   may: 17,
-#   june: 20,
-#   july: 24,
-#   august: 25,
-#   september: 24,
-#   october: 18,
-#   november: 7,
-#   december: 4,
-#   city: melbourne
-#   )
-
-# file30 = URI.open('https://images.unsplash.com/photo-1514395462725-fb4566210144?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# melbourne.photos.attach(io: file30, filename: 'melbourne1.jpeg', content_type: 'image/jpeg')
-
-# file31 = URI.open('https://images.unsplash.com/photo-1494236472818-d35e50e604cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# melbourne.photos.attach(io: file31, filename: 'melbourne2.jpeg', content_type: 'image/jpeg')
-
-# file32 = URI.open('https://images.unsplash.com/photo-1544419751-cb964c35c9a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# melbourne.photos.attach(io: file32, filename: 'melbourne3.jpeg', content_type: 'image/jpeg')
-
-# file33 = URI.open('https://images.unsplash.com/photo-1543557211-135d718a528c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60')
-# melbourne.photos.attach(io: file33, filename: 'melbourne4.jpeg', content_type: 'image/jpeg')
