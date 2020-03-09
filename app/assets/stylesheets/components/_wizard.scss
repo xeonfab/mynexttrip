@@ -1,0 +1,96 @@
+.wizard {
+  background: #003F5C;
+  position: relative;
+  color: white;
+  text-align: center;
+
+  .wizard-steps-container {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .wizard-steps-step {
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 999999px;
+    padding: 0 50px;
+  }
+
+  .wizard-steps-container.is--step-0 .wizard-steps-step-0 {
+    opacity: 1;
+    left: 0;
+  }
+  .wizard-steps-container.is--step-1 .wizard-steps-step-1 {
+    opacity: 1;
+    left: 0;
+  }
+  .wizard-steps-container.is--step-2 .wizard-steps-step-2 {
+    opacity: 1;
+    left: 0;
+  }
+  .wizard-steps-container.is--step-3 .wizard-steps-step-3 {
+    opacity: 1;
+    left: 0;
+  }
+  .wizard-steps-container.is--step-4 .wizard-steps-step-4 {
+    opacity: 1;
+    left: 0;
+  }
+  .wizard-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .horizontal-checkboxes {
+    font-size: 25px;
+    diplay: inline-block;
+
+    > * {
+      display: inline-block;
+    }
+
+    .horizontal-checkboxes-input {
+      opacity: 0;
+      position: absolute;
+      height: 0;
+      width: 0;
+    }
+    .horizontal-checkboxes-label {
+      opacity: 0.5;
+      transition: opacity 0.3s;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: calc(100% - 5px);
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: width 0.3s;
+      }
+    }
+    .horizontal-checkboxes-input:checked + .horizontal-checkboxes-label {
+      opacity: 1;
+
+      &:after {
+        width: calc(100% - 8px);
+      }
+    }
+  }
+}
+
