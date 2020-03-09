@@ -2,21 +2,21 @@ require 'json'
 require 'open-uri'
 require 'byebug'
 require 'date'
-require "open-uri"
+require 'csv'
 
 puts 'Cleaning database...'
-Feature.destroy_all
-Theme.destroy_all
+# Feature.destroy_all
+# Theme.destroy_all
 
-CityTheme.destroy_all
-CityFeature.destroy_all
+# CityTheme.destroy_all
+# CityFeature.destroy_all
 Climate.destroy_all
 
-City.destroy_all
-BookingProvider.destroy_all
+# City.destroy_all
+# BookingProvider.destroy_all
 
-Country.destroy_all
-Region.destroy_all
+# Country.destroy_all
+# Region.destroy_all
 
 puts "Making the Booking Providers"
 
@@ -589,23 +589,28 @@ end
 
 puts "Making Climates"
 
-City.all.each do |city|
-  Climate.create!(
-    january: 10,
-    february: 12,
-    march: 14,
-    april: 17,
-    may: 17,
-    june: 20,
-    july: 24,
-    august: 25,
-    september: 24,
-    october: 18,
-    november: 7,
-    december: 4,
-    city: city
-  )
-end
+  csv_options = { headers: :first_row, header_converters: :symbol }
+  filepath = File.join(__dir__, 'data/weather.csv')
+
+
+    CSV.foreach(filepath, csv_options) do |row|
+      climate = Climate.create!(
+      january: row[:january],
+      february: row[:february],
+      march: row[:march],
+      april: row[:april],
+      may: row[:may],
+      june: row[:june],
+      july: row[:july],
+      august: row[:august],
+      september: row[:september],
+      october: row[:october],
+      november: row[:november],
+      december: row[:december],
+      city: City.find_by(name: row[:name])
+    )
+    puts "#{climate.city.name} weather climate created"
+  end
 
 
 puts "Making the Themes"
@@ -623,7 +628,7 @@ culture = Theme.create!(
   name: "Culture")
 
 mountains = Theme.create!(
-  name: "Moutains")
+  name: "Mountains")
 
 shopping = Theme.create!(
   name: "Shopping")
@@ -639,7 +644,7 @@ puts "Making City_Themes"
 
 City.all.each do |city|
 
-  if city.name === "New zealand"
+  if city.country.name === "New Zealand"
       CityTheme.create!(
     january: 1,
     february: 1,
@@ -653,10 +658,43 @@ City.all.each do |city|
     october: 0,
     november: 1,
     december: 1,
-    theme: Theme.all.sample,
-    city: City.find_by(name: 'New zealand')
+    theme: Theme.find_by(name: 'Countryside'),
+    city: city
     )
-      puts "New zeland themes created"
+          CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Mountains'),
+    city: city
+    )
+
+        CityTheme.create!(
+    january: 1,
+    february: 1,
+    march: 1,
+    april: 1,
+    may: 1,
+    june: 0,
+    july: 0,
+    august: 0,
+    september: 0,
+    october: 0,
+    november: 1,
+    december: 1,
+    theme: Theme.find_by(name: 'Culture'),
+    city: city
+    )
+      puts "New zealand themes created"
   else
 
   CityTheme.create!(
