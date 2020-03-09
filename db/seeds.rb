@@ -962,19 +962,19 @@ end
 
 puts "Making the Booking Providers"
 
-csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+csv_options = { headers: :first_row, header_converters: :symbol }
 #filepath = 'data/booking_providers.csv'
 filepath = File.join(__dir__, 'data/booking_providers.csv')
 
 CSV.foreach(filepath, csv_options) do |row|
 
   BookingProvider.create!(
-  name: row['name'],
-  category: row['category'],
-  website: row['url'],
-  city_id: row['city'],
-  country_id: row['country']
+  name: row[:name],
+  category: row[:category],
+  website: row[:url],
+  city: City.find_by(name: row[:city]),
+  country: Country.find_by(name: row[:country])
   )
-  end
+end
 
 
