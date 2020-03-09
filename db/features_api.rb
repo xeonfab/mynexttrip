@@ -39,7 +39,11 @@ require 'byebug'
   else
     # Bread price
     bread = city_living_details[0]["data"].select {|element| element["id"] == "COST-BREAD"}[0]
-    bread_price = bread["currency_dollar_value"]
+    if bread.class == Hash
+      bread_price = bread["currency_dollar_value"]
+    else
+      bread_price = nil
+    end
 
     #Price Cappucino
     cappucino = city_living_details[0]["data"].select {|element| element["id"] == "COST-CAPPUCCINO"}[0]
@@ -47,7 +51,11 @@ require 'byebug'
 
     #Price Beer
     beer = city_living_details[0]["data"].select {|element| element["id"] == "COST-IMPORT-BEER"}[0]
-    beer_price = beer["currency_dollar_value"]
+    if beer.class == Hash
+      beer_price = beer["currency_dollar_value"]
+    else
+      beer_price = nil
+    end
 
     #Price Lunch
     lunch = city_living_details[0]["data"].select {|element| element["id"] == "COST-RESTAURANT-MEAL"}[0]
@@ -55,7 +63,6 @@ require 'byebug'
 
     #Price Taxi
     taxi = city_living_details[0]["data"].select {|element| element["id"] == "COST-TAXI"}[0]
-
        if taxi.class == Hash
         taxi_price = taxi["currency_dollar_value"]
       else
@@ -69,11 +76,11 @@ require 'byebug'
   if city_languages_details.empty?
   else
     spoken_language = city_languages_details[0]["data"].select {|element| element["id"] == "SPOKEN-LANGUAGES"}[0]
-    #if spoken_language == Hash
+    if spoken_language.class == Hash
       languages = spoken_language["string_value"]
-    #else
-    #  languages = nil
-    #end
+    else
+       languages = nil
+    end
   end
 
   #Internet Access_Download
@@ -81,19 +88,19 @@ require 'byebug'
   if city_download_details.empty?
   else
     download = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-DOWNLOAD"}[0]
-    #if download == Hash
+    if download.class == Hash
         download_speed = download["float_value"]
-    #else
-     # download_speed = nil
-    #end
+    else
+       download_speed = nil
+    end
 
       #Internet Access_Upload
     upload = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-UPLOAD"}[0]
-   # if upload == Hash
+   if upload.class == Hash
       upload_speed = upload["float_value"]
-   # else
-   #   upload_speed = nil
-   # end
+    else
+      upload_speed = nil
+    end
   end
 
     #Air Quality
@@ -110,11 +117,11 @@ require 'byebug'
 
       #Drinking water quality
     water = city_air_details[0]["data"].select {|element| element["id"] == "DRINKING-WATER-QUALITY-TELESCORE"}[0]
-    #if water == Hash
+    if water.class == Hash
       water_score = water["float_value"]
-    #else
-     # water_score = nil
-    #end
+    else
+      water_score = nil
+    end
   end
 
     # Safety score
