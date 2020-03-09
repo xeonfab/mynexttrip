@@ -8,6 +8,7 @@
     justify-content: center;
     padding: 40px 0; // Safe zone for the temperature.
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(200, 200, 200, 0.2);
 
   .country-card-image {
     position: absolute;
@@ -53,6 +54,7 @@
     bottom: 6px;
   }
    &:hover .country-card-image {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    text-decoration: none;
   }
 }

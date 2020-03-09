@@ -103,14 +103,6 @@
                     <span class="badge badge-success">Very good</span>
                   </div>
               </div>
-               <div class="row">
-                  <div class="col-md-8">
-                   Sex Rate
-                  </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-danger">Very Expensive</span>
-                  </div>
-              </div>
           </div>
         </div>
       </div>
@@ -139,10 +131,13 @@
     </div>
     <div class="col-md-3">
       <div>
-        <div class="card p-3 mb-5">
-          <h2>X booking providers</h2>
-          <h3>available for your travel</h3>
-          <%= link_to "Booking providers", city_booking_providers_path(:id) , class: "btn-main-pink large" %>
+        <div class="card justify-content-center p-3 mb-5">
+          <div>
+            <h2>X booking providers</h2>
+            <h3>available for your travel</h3>
+          </div>
+          <div class="avatar"></div>
+          <%= link_to "Booking providers", country_booking_providers_path(@country) , class: "btn-main-pink large" %>
         </div>
 
       </div>
