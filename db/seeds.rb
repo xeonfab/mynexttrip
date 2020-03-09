@@ -51,7 +51,7 @@ puts "Making the Regions"
 if Region.find_by(name: "Europe")
   europe = Region.find_by(name: "Europe")
 else
-  Region.create!(name: "Europe")
+  europe = Region.create!(name: "Europe")
   file7 = URI.open('https://images.unsplash.com/photo-1542379950-b3fc716c16f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
   europe.photo.attach(io: file7, filename: 'Europe1.jpeg', content_type: 'image/jpeg')
 end
