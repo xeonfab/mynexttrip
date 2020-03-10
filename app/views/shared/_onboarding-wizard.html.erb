@@ -1,8 +1,25 @@
-<form class="wizard js-wizard">
-  <div class="wizard-steps-container js-wizard-steps is--step-1">
+<form action="" class="wizard js-wizard">
+  <div class="wizard-steps-container js-wizard-steps is--step-0">
     <img src="<%= asset_path "travel-stuff.svg" %>" alt="background" class="wizard-background-img"/>
-    <div class="wizard-steps-step wizard-steps-step-0">
-      My next Trip is awesome etc
+    <div class="wizard-steps-step wizard-steps-step-0 js-intro-step">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="onboard-left">
+            <img src="<%= asset_path "logo2.png" %>" alt="" class="onboard-logo">
+            <p class="onboard-title">What's the plan for your next trip?</p>
+            <p class="onboard-subtitle">Find, compare and easily plan your next travel destination</p>
+            <div class="onboard-bottom d-flex justify-content-around">
+              <p><strong>350</strong> cities</p>
+              <p><strong>190</strong> countries</p>
+              <p><strong>500+</strong> booking providers</p>
+            </div>
+            <div class="onboard-btn">
+              <button class="js-wizard-next btn-main-yellow large" type="button">Find your next trip.</button>
+            </div>
+          </div>
+          <div class="onboard-img-div">
+            <img src="<%= asset_path "onboard.png" %>" alt="" class="onboard-img">
+          </div>
+        </div>
     </div>
     <div class="wizard-steps-step wizard-steps-step-1">
       <div class="sentence-checkboxes">
@@ -34,7 +51,8 @@
       </div>
       <div class="wizard-actions">
         <!-- <button class="js-wizard-previous" type="button">Previous</button> -->
-        <button class="js-wizard-next" type="button">Next</button>
+        <button class="js-wizard-previous btn-ghost" type="button">Previous</button>
+        <button class="js-wizard-next btn-ghost" type="button">Next</button>
       </div>
         <!-- <p><input type="submit" value="Submit"></p> -->
     </div>
@@ -43,61 +61,46 @@
       Step 2
       <p>When do you want to travel?</p>
       <div class="month-checkboxes">
-        <div>
-        <input type="checkbox" name="month" id="january" value="January" class="month-checkboxes-input">
-        <label class="month-checkboxes-label" for="january">January</label>
-        </div>
-        <div>
+
+          <input type="checkbox" name="month" id="january" value="January" class="month-checkboxes-input">
+          <label class="month-checkboxes-label" for="january">January</label>
+
           <input type="checkbox" name="month" id="february" value="February" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="february">February</label>
-        </div>
-        <div>
+
           <input type="checkbox" name="month" id="march" value="March" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="march">March</label>
-        </div>
-        <div>
+
           <input type="checkbox" name="month" id="april" value="April" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="april">April</label>
-        </div>
-        <div>
+
           <input type="checkbox" name="month" id="may" value="May" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="may">May</label>
-        </div>
-        <div>
+
          <input type="checkbox" name="month" id="june" value="June" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="june">June</label>
-        </div>
-        <div>
+
           <input type="checkbox" name="month" id="july" value="July" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="july">July</label>
-        </div>
-        <div>
+
          <input type="checkbox" name="month" id="august" value="August" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="august">August</label>
-        </div>
-        <div>
+
          <input type="checkbox" name="month" id="september" value="September" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="september">September</label>
-        </div>
-        <div>
+
           <input type="checkbox" name="month" id="october" value="October" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="october">October</label>
-        </div>
-        <div>
+
          <input type="checkbox" name="month" id="november" value="November" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="november">November</label>
-        </div>
-        <div>
+
          <input type="checkbox" name="month" id="december" value="December" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="december">December</label>
-
-        </div>
-        <div>
-        </div>
-        <div class="wizard-actions">
-          <button class="js-wizard-previous" type="button">Previous</button>
-          <button class="js-wizard-next" type="button">Next</button>
-        </div>
+      </div>
+      <div class="wizard-actions">
+        <button class="js-wizard-previous btn-ghost" type="button">Previous</button>
+        <button class="js-wizard-next btn-ghost" type="button">Next</button>
       </div>
     </div>
 
@@ -124,8 +127,8 @@
         </div>
       </div>
       <div class="wizard-actions">
-          <button class="js-wizard-previous" type="button">Previous</button>
-          <button class="js-wizard-next" type="button">Next</button>
+          <button class="js-wizard-previous btn-ghost" type="button">Previous</button>
+          <button class="js-wizard-next btn-ghost" type="button">Next</button>
         </div>
       <!-- <p><input type="submit" value="Submit"></p> -->
     </div>
@@ -169,13 +172,13 @@
             <img src="<%= asset_path 'australia.svg' %>" alt="Oceania"/>
             <span>Oceania</span>
           </label>
-      </div>
-      <!-- <p><input type="submit" value="Submit"></p> -->
+
     </div>
     <div class="wizard-actions">
-          <button class="js-wizard-previous" type="button">Previous</button>
-          <button class="js-wizard-next" type="button">Next</button>
-        </div>
+      <button class="js-wizard-previous btn-ghost" type="button">Previous</button>
+      <button class="btn-ghost" type="submit">Submit</button>
+    </div>
+
   </div>
 </form>
 
