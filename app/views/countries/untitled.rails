@@ -1,15 +1,10 @@
-<%= render 'shared/banner' %>
-
 <div class="container-show container mt-5">
 
-  <h1 class="banner-heading-city"><%= @city.name %></h1>
-  <h2 class="banner-heading-country"><%= @city.country.name %></h2>
+  <h1 class="banner-heading-city"><%= @country.name %></h1>
 
   <div class="row">
     <div class="container-show-inner col-md-9">
-          <p class="city-show-description"><%= @city.name %> besides being the biggest city in <%= @city.country.name %> and home to more than 50 volcanoes, is also ranked as one of the top 5 cities to live in when it comes to quality of life. One of the coolest things about this place is the amazing hiking route from the Pacific Ocean to the Tasman Sea in only 4 hours.  It is 16km long and attracts thousands of tourists each year. If you are searching for high-quality dining, you will be happy to discover that <%= @city.name %> has over 800 restaurants with many award-winning chefs from all over the world preparing delicious meals.
-
-The sky tower offers an amazing panoramic view over the city and has many awesome bars and restaurants. For a real <%= @city.name %> experience, there is the <%= @city.country.name %> Maritime Museum that includes 14 galleries and tells stories of the country’s maritime heritage. If you are on vacation with children, Kelly Tarlton’s Sea Life Aquarium with its friendly sea creatures such as penguins and sharks is a must-visit tourist spot. For a class in history in art, it is best to head out to the <%= @city.name %> War Memorial Museum and the <%= @city.name %> art gallery.</p>
+          <p class="city-show-description"></p>
 
           <div>
             <h2 class="city-show-sub-headers">Climate</h2>
@@ -224,6 +219,18 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                     <p class="show-subtitle-data">DATA</p>
                   </div>
               </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100 city-info-content-text">
+                    <p class="show-subtitle">Lunch</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100 city-info-content-text">
+                    <p class="show-subtitle">One-way Taxi</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
             </div>
           </div>
           <div class="col-6">
@@ -269,6 +276,16 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
             </div>
           </div>
         </div>
+        <div class="col">
+          <h2 class="my-3">Cities of <%= @country.name %></h2>
+          <div class="row">
+            <%  @cities.each do |city| %>
+              <div class="col-md-3 mb-3">
+                <%= render partial: 'shared/citycard', locals: { city: city } %>
+              </div>
+            <% end %>
+        </div>
+
         <div class="my-4">
           <div
           id="map"
@@ -284,15 +301,12 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
         <div class="card p-3 mb-5">
           <h2>X booking providers</h2>
           <h3>available for your travel</h3>
-          <%= link_to "Booking providers", city_booking_providers_path(@city) , class: "btn-main-pink large" %>
-        </div>
+          <%= link_to "Booking providers", country_booking_providers_path(@country) , class: "btn-main-pink large" %>        </div>
       </div>
       <div>
         <div data-skyscanner-widget="SearchWidget"></div>
         <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
       </div>
     </div>
-
   </div>
 </div>
-
