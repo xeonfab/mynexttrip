@@ -16,4 +16,8 @@ class PagesController < ApplicationController
       @countries = [@cities.first.country]
     end
   end
+
+  def onboarding
+
+  end
 end

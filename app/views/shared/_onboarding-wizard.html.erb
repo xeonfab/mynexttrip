@@ -1,0 +1,181 @@
+<form class="wizard js-wizard">
+  <div class="wizard-steps-container js-wizard-steps is--step-1">
+    <img src="<%= asset_path "travel-stuff.svg" %>" alt="background" class="wizard-background-img"/>
+    <div class="wizard-steps-step wizard-steps-step-0">
+      My next Trip is awesome etc
+    </div>
+    <div class="wizard-steps-step wizard-steps-step-1">
+      <div class="sentence-checkboxes">
+        I like
+          <input type="checkbox" name="theme" id="romantic" value="romantic" checked class="sentence-checkboxes-input">
+          <label class="sentence-checkboxes-label" for="romantic">romance,</label>
+
+          <input type="checkbox" name="theme" id="city" value="city" class="sentence-checkboxes-input">
+          <label class="sentence-checkboxes-label" for="city">cities,</label>
+
+          <input type="checkbox" name="theme" id="beach" checked value="beach" class="sentence-checkboxes-input">
+          <label class="sentence-checkboxes-label" for="beach">beaches,</label>
+
+          <input type="checkbox" name="theme" id="culture" value="culture" class="sentence-checkboxes-input">
+          <label class="sentence-checkboxes-label" for="culture">culture,</label>
+
+          <input type="checkbox" name="theme" id="mountains" value="mountains" class="sentence-checkboxes-input">
+          <label class="sentence-checkboxes-label" for="mountains">mountains,</label>
+
+          <input type="checkbox" name="theme" id="shopping" checked value="shopping" class="sentence-checkboxes-input">
+          <label class="sentence-checkboxes-label" for="shopping">shopping,</label>
+
+          <input type="checkbox" name="theme" id="luxury" value="luxury" class="sentence-checkboxes-input">
+          <label class="sentence-checkboxes-label" for="luxury">luxury,</label>
+
+          <input type="checkbox" name="theme" id="countryside" value="countryside" class="sentence-checkboxes-input">
+          <label class="sentence-checkboxes-label" for="countryside">the outdoors.</label>
+
+      </div>
+      <div class="wizard-actions">
+        <!-- <button class="js-wizard-previous" type="button">Previous</button> -->
+        <button class="js-wizard-next" type="button">Next</button>
+      </div>
+        <!-- <p><input type="submit" value="Submit"></p> -->
+    </div>
+
+    <div class="wizard-steps-step wizard-steps-step-2">
+      Step 2
+      <p>When do you want to travel?</p>
+      <div class="month-checkboxes">
+        <div>
+        <input type="checkbox" name="month" id="january" value="January" class="month-checkboxes-input">
+        <label class="month-checkboxes-label" for="january">January</label>
+        </div>
+        <div>
+          <input type="checkbox" name="month" id="february" value="February" class="month-checkboxes-input">
+          <label class="month-checkboxes-label" for="february">February</label>
+        </div>
+        <div>
+          <input type="checkbox" name="month" id="march" value="March" class="month-checkboxes-input">
+          <label class="month-checkboxes-label" for="march">March</label>
+        </div>
+        <div>
+          <input type="checkbox" name="month" id="april" value="April" class="month-checkboxes-input">
+          <label class="month-checkboxes-label" for="april">April</label>
+        </div>
+        <div>
+          <input type="checkbox" name="month" id="may" value="May" class="month-checkboxes-input">
+          <label class="month-checkboxes-label" for="may">May</label>
+        </div>
+        <div>
+         <input type="checkbox" name="month" id="june" value="June" class="month-checkboxes-input">
+         <label class="month-checkboxes-label" for="june">June</label>
+        </div>
+        <div>
+          <input type="checkbox" name="month" id="july" value="July" class="month-checkboxes-input">
+          <label class="month-checkboxes-label" for="july">July</label>
+        </div>
+        <div>
+         <input type="checkbox" name="month" id="august" value="August" class="month-checkboxes-input">
+         <label class="month-checkboxes-label" for="august">August</label>
+        </div>
+        <div>
+         <input type="checkbox" name="month" id="september" value="September" class="month-checkboxes-input">
+         <label class="month-checkboxes-label" for="september">September</label>
+        </div>
+        <div>
+          <input type="checkbox" name="month" id="october" value="October" class="month-checkboxes-input">
+          <label class="month-checkboxes-label" for="october">October</label>
+        </div>
+        <div>
+         <input type="checkbox" name="month" id="november" value="November" class="month-checkboxes-input">
+         <label class="month-checkboxes-label" for="november">November</label>
+        </div>
+        <div>
+         <input type="checkbox" name="month" id="december" value="December" class="month-checkboxes-input">
+         <label class="month-checkboxes-label" for="december">December</label>
+
+        </div>
+        <div>
+        </div>
+        <div class="wizard-actions">
+          <button class="js-wizard-previous" type="button">Previous</button>
+          <button class="js-wizard-next" type="button">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wizard-steps-step wizard-steps-step-3">
+      Step 3
+      <p>How hot?</p>
+      <div class="temp-checkboxes">
+        <div class="temp-checkboxes-thermometer">
+          <div class="temp-checkboxes-options">
+            <input type="radio" name="temp" id="hot" value="hot" class="temp-checkboxes-input">
+            <label class="temp-checkboxes-label temp-checkboxes-label-top" for="hot">Hot 25°C+</label>
+
+            <input type="radio" name="temp" id="warm" value="warm" class="temp-checkboxes-input">
+            <label class="temp-checkboxes-label" for="warm">Warm 20°C+</label>
+
+            <input type="radio" name="temp" id="mild" value="mild" class="temp-checkboxes-input">
+            <label class="temp-checkboxes-label" for="mild">Mild 15°C+</label>
+
+            <input type="radio" name="temp" id="cool" value="cool" class="temp-checkboxes-input">
+            <label class="temp-checkboxes-label" for="cool">Cool 10°C+</label>
+
+            <div class="temp-checkboxes-thermometer-inner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="wizard-actions">
+          <button class="js-wizard-previous" type="button">Previous</button>
+          <button class="js-wizard-next" type="button">Next</button>
+        </div>
+      <!-- <p><input type="submit" value="Submit"></p> -->
+    </div>
+
+    <div class="wizard-steps-step wizard-steps-step-4 ">
+      Step 4
+      <p>How hot?</p>
+      <div class="continent-checkboxes">
+          <input type="checkbox" name="region" id="europe" value="europe" class="continent-checkboxes-input">
+          <label class="continent-checkboxes-label continent-checkboxes-label-europe" for="europe">
+            <img src="<%= asset_path 'europe.svg' %>" alt="Europe"/>
+            <span>Europe</span>
+          </label>
+
+          <input type="checkbox" name="region" id="north_america" value="north america" class="continent-checkboxes-input">
+          <label class="continent-checkboxes-label continent-checkboxes-label-north-america" for="north_america">
+            <img src="<%= asset_path 'north_america.svg' %>" alt="North America"/>
+            <span>North America</span>
+          </label>
+
+          <input type="checkbox" name="region" id="south_america" value="south america" class="continent-checkboxes-input">
+          <label class="continent-checkboxes-label continent-checkboxes-label-south-america" for="south_america">
+            <img src="<%= asset_path 'south_america.svg' %>" alt="South America"/>
+            <span>South America</span>
+          </label>
+
+          <input type="checkbox" name="region" id="africa" value="africa" class="continent-checkboxes-input">
+          <label class="continent-checkboxes-label continent-checkboxes-label-africa" for="africa">
+            <img src="<%= asset_path 'africa.svg' %>" alt="Africa"/>
+            <span>Africa</span>
+          </label>
+
+          <input type="checkbox" name="region" id="asia" value="asia" class="continent-checkboxes-input">
+          <label class="continent-checkboxes-label continent-checkboxes-label-asia" for="asia">
+            <img src="<%= asset_path 'asia.svg' %>" alt="Asia"/>
+            <span>Asia</span>
+          </label>
+
+          <input type="checkbox" name="region" id="oceania" value="oceania" class="continent-checkboxes-input">
+          <label class="continent-checkboxes-label continent-checkboxes-label-oceania" for="oceania">
+            <img src="<%= asset_path 'australia.svg' %>" alt="Oceania"/>
+            <span>Oceania</span>
+          </label>
+      </div>
+      <!-- <p><input type="submit" value="Submit"></p> -->
+    </div>
+    <div class="wizard-actions">
+          <button class="js-wizard-previous" type="button">Previous</button>
+          <button class="js-wizard-next" type="button">Next</button>
+        </div>
+  </div>
+</form>
+

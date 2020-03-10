@@ -1,13 +1,33 @@
 <div class="index-container">
   <div class="index-container-column">
+
+
     <div class="index-container-column-1">
-      SideBar
-      <%= simple_form_for :filter_results, url: cities_path, method: :get do |f| %>
-        <%= f.input :features, collection: %w[Bread Cappucino Beer Lunch Taxi\ ride Spoken\ languages Internet\ download Internet\ upload Air\ pollution Cleanliness Drinking\ water Crime\ rate Coworking\ spaces Art\ galleries Historical\ sites Concerts Museums Sports], input_html: { multiple: true }, as: :check_boxes %>
+
+      <%= simple_form_for :feature_results, remote: true, url: cities_path, method: :get do |f| %>
+
+    <!-- to add once re-seeded: cost_of_living culture  -->
+    <!-- need to 'defailt sliders' so that your search goes back to what you filtered it to -->
+        <% filters = %i(air_pollution drinking_water cleanliness crime_rate internet) %>
+        <% filters.each do |filter| %>
+          <% default_score = params.dig(:feature_results, filter) || 50 %>
+          <i class="fas fa-star"></i>
+          <%= f.label filter, required: false, class: "label" %>
+          <br>
+          <%= f.range_field filter, min: 1, max: 100, value: default_score,  class: "slider", id: "slider_#{filter}" %>
+          <br>
+        <% end %>
+
+        <%= f.input :languages, collection: %w[English Spanish French], input_html: { multiple: true }, as: :check_boxes %>
+
+
         <%= f.input :month, input_html: {required: true}, collection: %w(January February March April May June July August September October November December) %>
         <%= f.button :submit, "search", class: "btn btn-flat"%>
+
       <% end %>
     </div>
+
+
     <div class="index-container-column-2">
       <div class="header">
         <a href="#default" class="logo">My Next Trip</a>

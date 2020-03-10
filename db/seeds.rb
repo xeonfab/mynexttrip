@@ -154,7 +154,7 @@ coworking_feature = Feature.create!(
   )
 
 healthcare_feature = Feature.create!(
-  name: "healtcare",
+  name: "Healthcare",
   weight: 80
   )
 
@@ -254,7 +254,9 @@ puts "Making the Countries"
   # longitude_name = city_location["location"]["latlon"]["longitude"]
 
 
+
   puts "--------------------------------------"
+
 
   csv_options = { headers: :first_row, header_converters: :symbol }
   filepath = File.join(__dir__, 'data/city.csv')
