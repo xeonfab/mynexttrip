@@ -7,6 +7,20 @@
   height: 100%;
   overflow: hidden;
 
+  .btn-ghost {
+    color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-ghost:hover {
+    opacity: 1;
+  }
+
   .wizard-steps-container {
     width: 4000px;
     height: 2800px;
@@ -38,9 +52,82 @@
     padding: 0 50px;
   }
 
+
+  .wizard-steps-step-0 {
+    width: 95vw;
+    height: 90vh;
+    top: -750px;
+    left: 2060px;
+    display: flex;
+    .onboard-left {
+      text-align: left;
+      width: 50%;
+      .onboard-logo {
+      width: 184px;
+      height: 71px;
+      margin-bottom: 37px;
+      }
+      .onboard-title {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 50px;
+      line-height: 61px;
+      }
+      .onboard-subtitle {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 30px;
+      margin-top: 18px;
+      }
+      .onboard-bottom {
+        width: 80%;
+      }
+      .onboard-btn {
+        text-align: left;
+
+        .btn-main-yellow {
+          margin-top: 35px;
+          color: #003F5C;
+          padding: 12px 40px;
+          transition: background 0.3s ease;
+          background-color: #F8B400;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.13);
+          border-radius: 5px;
+          text-align: left;
+          .large {
+            width: 336px;
+            height: 76px;
+          }
+        }
+      }
+
+      .btn-main-yellow:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+      .onboard-img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+     .onboard-img {
+    background-blend-mode: soft-light, normal;
+    border-radius: 10px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    height: 505px;
+    width: 550px;
+    }
+  }
+  }
+
   .wizard-steps-step-1 {
-    top: 374px;
-    left: 528px;
+    top: 410px;
+    left: 428px;
   }
 
   .wizard-steps-step-2 {
@@ -50,32 +137,33 @@
   }
 
     .wizard-steps-step-3 {
-    top: 200px;
-    left: 2100px;
+    top: 350px;
+    left: 1800px;
   }
 
     .wizard-steps-step-4 {
-    top: 2200px;
-    left: 2200px;
+    top: 1960px;
+    left: 2175px;
     transform: rotate(-10deg)
   }
 
 
   .wizard-steps-container.is--step-0 {
+    transform: translate3d(-2000px, 700px, 0);
 
 
   }
   .wizard-steps-container.is--step-1 {
-    transform: translate3d(-500px, -340px, 0);
+    transform: translate3d(-500px, -440px, 0);
   }
   .wizard-steps-container.is--step-2 {
-    transform: translate3d(-1370px, -1345px, 0) rotate(10deg);
+    transform: translate3d(-1370px, -1290px, 0) rotate(10deg);
   }
   .wizard-steps-container.is--step-3 {
-    transform: translate3d(-2100px, -200px, 0);
+    transform: translate3d(-1800px, -320px, 0);
   }
   .wizard-steps-container.is--step-4 {
-    transform: translate3d(-2200px, -1890px, 0) rotate(10deg);
+    transform: translate3d(-1950px, -1995px, 0) rotate(10deg);
   }
   .wizard-actions {
     // position: absolute;
@@ -85,6 +173,8 @@
     display: flex;
     justify-content: center;
   }
+
+
 
   .sentence-checkboxes {
     font-size: 25px;
@@ -130,10 +220,6 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    > div {
-      padding: 0 10px;
-    }
-
     .month-checkboxes-input {
       opacity: 0;
       position: absolute;
@@ -149,12 +235,16 @@
       display: block;
       line-height: 120px;
       width: 140px;
+      padding: 0 20px;
     }
     .month-checkboxes-input:checked + .month-checkboxes-label {
       opacity: 1;
       background: rgba(255,255,255,0.8);
       color: $blue;
       font-weight: bold;
+    }
+    .month-checkboxes button {
+      padding-top: 20px;
     }
   }
 
