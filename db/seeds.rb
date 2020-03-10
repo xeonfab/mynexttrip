@@ -5,20 +5,20 @@ require 'date'
 require 'csv'
 
 puts 'Cleaning database...'
-Feature.destroy_all
+#Feature.destroy_all
 Theme.destroy_all
 
 CityTheme.destroy_all
-CityFeature.destroy_all
+#CityFeature.destroy_all
 Climate.destroy_all
 
 
-City.destroy_all
+#City.destroy_all
 BookingProvider.destroy_all
 
 
-Country.destroy_all
-Region.destroy_all
+# Country.destroy_all
+# Region.destroy_all
 
 
 
@@ -92,7 +92,7 @@ bread_feature = Feature.create!(
   weight: 80
   )
 
-capuccino_feature = Feature.create!(
+cappucino_feature = Feature.create!(
   name: "Cappucino",
   weight: 80
   )
@@ -265,10 +265,11 @@ puts "Making the Countries"
         name: row[:country_name],
         region: Region.find_by(name: row[:region_name])
         )
+      p new_country
 
-        photo_country = URI.open("https://source.unsplash.com/700x400/?#{row[:country_name]},landscape")
-        #new_country.photo.key = [TAKE FROM CSV KEY]
-        new_country.photos.attach(io: photo_country, filename: "#{row[:country_name]}.jpeg", content_type: 'image/jpeg')
+        # photo_country = URI.open("https://source.unsplash.com/700x400/?#{row[:country_name]},landscape")
+        # #new_country.photo.key = [TAKE FROM CSV KEY]
+        # new_country.photos.attach(io: photo_country, filename: "#{row[:country_name]}.jpeg", content_type: 'image/jpeg')
     end
 
     #puts "#{new_country.name} created!"
@@ -284,11 +285,10 @@ puts "Making the Countries"
       longitude: row[:longitude]
       )
 
-    photo = URI.open("https://source.unsplash.com/700x400/?#{row[:city_name]},landscape")
-    new_city.photos.attach(io: photo, filename: "#{row[:city_name]}.jpeg", content_type: 'image/jpeg')
-
-    puts "#{new_city.name} created!"
-  end
+      # photo = URI.open("https://source.unsplash.com/700x400/?#{row[:city_name]},landscape")
+      # new_city.photos.attach(io: photo, filename: "#{row[:city_name]}.jpeg", content_type: 'image/jpeg')
+      puts "#{new_city.name} created!"
+    end
 
 
    # FEATURES : Details with a new URL https://api.teleport.org/api/urban_areas/slug:amsterdam/details/
@@ -307,7 +307,7 @@ puts "Making the Countries"
       CityFeature.create!(
         score: row[:cost_of_living_score],
         feature: cost_living_feature,
-        city: City.find_by(name: row[:name])
+        city: City.find_by(name: row[:city_name])
       )
       puts "cost of living score feature created"
 
@@ -317,7 +317,7 @@ puts "Making the Countries"
         score: row[:bread_price],
         # Link to the features table
         feature: bread_feature,
-        city: City.find_by(name: row[:name])
+        city: City.find_by(name: row[:city_name])
       )
 
     #Price Cappucino
@@ -325,42 +325,42 @@ puts "Making the Countries"
       score: row[:cappucino_price],
       # Link to the features table
       feature: cappucino_feature,
-      city: City.find_by(name: row[:name])
+      city: City.find_by(name: row[:city_name])
       )
 
     #Price Beer
       CityFeature.create!(
-      score: brow[:beer_price],
+      score: row[:beer_price],
       feature: beer_feature,
-      city: City.find_by(name: row[:name])
+      city: City.find_by(name: row[:city_name])
       )
 
     #Price Lunch
       CityFeature.create!(
       score: row[:lunch_price],
       feature: lunch_feature,
-      city: City.find_by(name: row[:name])
+      city: City.find_by(name: row[:city_name])
       )
 
     #  #Price Taxi
       CityFeature.create!(
       score: row[:taxi_price],
       feature: taxi_feature,
-      city: City.find_by(name: row[:name])
+      city: City.find_by(name: row[:city_name])
       )
 
     #Languages speaking
     CityFeature.create!(
     score: row[:spoken_languages],
     feature: language_feature,
-    city: City.find_by(name: row[:name])
+    city: City.find_by(name: row[:city_name])
     )
 
     #Internet score
     CityFeature.create!(
         score: row[:internet_score],
         feature: internet_feature,
-        city: City.find_by(name: row[:name])
+        city: City.find_by(name: row[:city_name])
       )
     puts "Internet score feature created"
 
@@ -368,14 +368,14 @@ puts "Making the Countries"
     CityFeature.create!(
     score: row[:download_speed],
     feature: download_feature,
-    city: City.find_by(name: row[:name])
+    city: City.find_by(name: row[:city_name])
     )
 
   #Internet Access_Upload
     CityFeature.create!(
     score: row[:upload_speed],
     feature: upload_feature,
-    city: City.find_by(name: row[:name])
+    city: City.find_by(name: row[:city_name])
     )
 
 
@@ -383,7 +383,7 @@ puts "Making the Countries"
   CityFeature.create!(
   score: row[:air_quality],
   feature: air_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
 
@@ -391,78 +391,78 @@ puts "Making the Countries"
   CityFeature.create!(
   score: row[:cleanliness],
   feature: cleanliness_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
   # #Drinking water quality
       CityFeature.create!(
       score: row[:water_score],
       feature: water_feature,
-      city: City.find_by(name: row[:name])
+      city: City.find_by(name: row[:city_name])
       )
 
   #safety score
   CityFeature.create!(
   score: row[:safety],
   feature: crime_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
   #Coworking score
   CityFeature.create!(
   score: row[:coworking_score],
   feature: coworking_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
   # #Heathlcare quality score
   CityFeature.create!(
   score: row[:health_score],
   feature: healthcare_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
   # Create the Culture score
   CityFeature.create!(
         score: row[:culture_score],
         feature: culture_feature,
-        city: City.find_by(name: row[:name])
+        city: City.find_by(name: row[:city_name])
       )
-  puts "Culture score feature created"
+  puts "Culture score feature created - #{row[:city_name]}"
 
   # #Culture Art galleries  score
   CityFeature.create!(
   score: row[:art_score],
   feature: art_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
   #Culture Concerts score
   CityFeature.create!(
   score: row[:concert_score],
   feature: concert_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
   #Culture historical sites score
   CityFeature.create!(
   score: row[:site_score],
   feature: site_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
   #Culture museum score
   CityFeature.create!(
   score: row[:museum_score],
   feature: museum_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 
   #Culture sports score
   CityFeature.create!(
   score: row[:sport_score],
   feature: sport_feature,
-  city: City.find_by(name: row[:name])
+  city: City.find_by(name: row[:city_name])
   )
 end
 

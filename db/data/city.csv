@@ -1,270 +1,270 @@
-"city_name","city_url","location","country_name","region_name","latitude","longitude","cost_of_living","internet_score","culture_score"
-"Aarhus","https://api.teleport.org/api/urban_areas/slug:aarhus/","Aarhus","Denmark","Europe","56.15674","10.21076","4.015000000000001","8.373","3.187"
-"Adelaide","https://api.teleport.org/api/urban_areas/slug:adelaide/","Adelaide","Australia","Oceania","-34.92866","138.59863","4.692","4.341","4.3285"
-"Albuquerque","https://api.teleport.org/api/urban_areas/slug:albuquerque/","Albuquerque","United States","North America","35.08449","-106.65114","6.059","5.396000000000001","4.890000000000001"
-"Aarhus","https://api.teleport.org/api/urban_areas/slug:aarhus/","Aarhus","Denmark","Europe","56.15674","10.21076","40.150000000000006","83.72999999999999","31.869999999999997"
-"Adelaide","https://api.teleport.org/api/urban_areas/slug:adelaide/","Adelaide","Australia","Oceania","-34.92866","138.59863","46.92","43.410000000000004","43.285"
-"Albuquerque","https://api.teleport.org/api/urban_areas/slug:albuquerque/","Albuquerque","United States","North America","35.08449","-106.65114","60.59","53.96000000000001","48.900000000000006"
-"Almaty","https://api.teleport.org/api/urban_areas/slug:almaty/","Almaty","Kazakhstan","Asia","43.25667","76.92861","93.33","28.86","29.370000000000005"
-"Amsterdam","https://api.teleport.org/api/urban_areas/slug:amsterdam/","Amsterdam","Netherlands","Europe","52.37403","4.88969","38.24000000000001","45.230000000000004","88.74000000000001"
-"Anchorage","https://api.teleport.org/api/urban_areas/slug:anchorage/","Anchorage","United States","North America","61.21806","-149.90028","31.41","49.645","32.660000000000004"
-"Andorra","https://api.teleport.org/api/urban_areas/slug:andorra/","Andorra","Andorra","Europe","42.50779","1.52109","0.0","71.86","21.32"
-"Ankara","https://api.teleport.org/api/urban_areas/slug:ankara/","Ankara","Turkey","Asia","39.91987","32.85427","91.25","23.160000000000004","86.38499999999999"
-"Asheville","https://api.teleport.org/api/urban_areas/slug:asheville/","Asheville","United States","North America","35.60095","-82.55402","53.11","47.875","50.629999999999995"
-"Asuncion","https://api.teleport.org/api/urban_areas/slug:asuncion/","Asuncion","Paraguay","South America","-25.30066","-57.63591","92.95000000000002","14.790000000000001","59.91999999999999"
-"Athens","https://api.teleport.org/api/urban_areas/slug:athens/","Athens","Greece","Europe","37.97945","23.71622","65.0","22.279999999999994","78.76000000000002"
-"Atlanta","https://api.teleport.org/api/urban_areas/slug:atlanta/","Atlanta","United States","North America","33.749","-84.38798","52.41","64.805","77.655"
-"Auckland","https://api.teleport.org/api/urban_areas/slug:auckland/","Auckland","New Zealand","Oceania","-36.84853","174.76349","44.7","68.5","43.959999999999994"
-"Austin","https://api.teleport.org/api/urban_areas/slug:austin/","Austin","United States","North America","30.26715","-97.74306","53.55","90.49","66.97999999999999"
-"Baku","https://api.teleport.org/api/urban_areas/slug:baku/","Baku","Azerbaijan","Asia","40.37767","49.89201","98.06","14.420000000000002","62.195"
-"Bali","https://api.teleport.org/api/urban_areas/slug:bali/","Bali","Indonesia","Asia","-8.65","115.21667","0.0","32.375","63.335"
-"Baltimore","https://api.teleport.org/api/urban_areas/slug:baltimore/","Baltimore","United States","North America","39.29038","-76.61219","49.82","49.88","0.0"
-"Bangkok","https://api.teleport.org/api/urban_areas/slug:bangkok/","Bangkok","Thailand","Asia","13.75398","100.50144","72.22","48.26499999999999","90.89"
-"Barcelona","https://api.teleport.org/api/urban_areas/slug:barcelona/","Barcelona","Spain","Europe","41.38879","2.15899","60.74000000000001","64.67999999999999","85.91499999999998"
-"Beijing","https://api.teleport.org/api/urban_areas/slug:beijing/","Beijing","China","Asia","39.9075","116.39723","81.01","34.93","72.685"
-"Beirut","https://api.teleport.org/api/urban_areas/slug:beirut/","Beirut","Lebanon","Asia","33.89332","35.50157","63.0","15.905000000000001","33.995000000000005"
-"Belfast","https://api.teleport.org/api/urban_areas/slug:belfast/","Belfast","United Kingdom","Europe","54.59682","-5.92541","60.140000000000015","55.955","49.57000000000001"
-"Belgrade","https://api.teleport.org/api/urban_areas/slug:belgrade/","Belgrade","Serbia","Europe","44.80401","20.46513","85.46000000000001","38.63","64.97"
-"Belize City","https://api.teleport.org/api/urban_areas/slug:belize-city/","Belize City","Belize","North America","17.49952","-88.19756","0.0","38.074999999999996","10.645"
-"Bengaluru","https://api.teleport.org/api/urban_areas/slug:bengaluru/","Bengaluru","India","Asia","12.97194","77.59369","100.0","28.409999999999997","32.215"
-"Bergen","https://api.teleport.org/api/urban_areas/slug:bergen/","Bergen","Norway","Europe","60.39299","5.32415","18.05","65.37","44.875"
-"Berlin","https://api.teleport.org/api/urban_areas/slug:berlin/","Berlin","Germany","Europe","52.52437","13.41053","55.24","46.77999999999999","88.81"
-"Bern","https://api.teleport.org/api/urban_areas/slug:bern/","Bern","Switzerland","Europe","46.94809","7.44744","10.0","61.145","42.45"
-"Bilbao","https://api.teleport.org/api/urban_areas/slug:bilbao/","Bilbao","Spain","Europe","43.26271","-2.92528","56.379999999999995","57.56","60.13999999999999"
-"Birmingham","https://api.teleport.org/api/urban_areas/slug:birmingham/","Birmingham","United Kingdom","Europe","52.48142","-1.89983","58.14","59.40000000000001","44.35000000000001"
-"Birmingham, AL","https://api.teleport.org/api/urban_areas/slug:birmingham-al/","Birmingham, AL","United States","North America","33.52066","-86.80249","51.33","51.605","53.834999999999994"
-"Bogota","https://api.teleport.org/api/urban_areas/slug:bogota/","Bogota","Colombia","South America","4.60971","-74.08175","90.79999999999998","29.760000000000005","62.15"
-"Boise","https://api.teleport.org/api/urban_areas/slug:boise/","Boise","United States","North America","43.6135","-116.20345","65.78","34.42","41.995"
-"Bologna","https://api.teleport.org/api/urban_areas/slug:bologna/","Bologna","Italy","Europe","44.49381","11.33875","51.89","77.10499999999999","57.36000000000001"
-"Bordeaux","https://api.teleport.org/api/urban_areas/slug:bordeaux/","Bordeaux","France","Europe","44.84044","-0.5805","45.83","38.75","53.005"
-"Boston","https://api.teleport.org/api/urban_areas/slug:boston/","Boston","United States","North America","42.35843","-71.05977","42.59","57.00500000000001","85.64"
-"Boulder","https://api.teleport.org/api/urban_areas/slug:boulder/","Boulder","United States","North America","40.01499","-105.27055","45.309999999999995","62.78","25.649999999999995"
-"Bozeman","https://api.teleport.org/api/urban_areas/slug:bozeman/","Bozeman","United States","North America","45.67965","-111.03856","0.0","51.56","19.069999999999997"
-"Bratislava","https://api.teleport.org/api/urban_areas/slug:bratislava/","Bratislava","Slovakia","Europe","48.14816","17.10674","76.18","45.83500000000001","61.86"
-"Brighton","https://api.teleport.org/api/urban_areas/slug:brighton/","Brighton","United Kingdom","Europe","50.82838","-0.13947","53.239999999999995","47.584999999999994","48.69500000000001"
-"Brisbane","https://api.teleport.org/api/urban_areas/slug:brisbane/","Brisbane","Australia","Oceania","-27.46794","153.02809","51.77","44.075","40.099999999999994"
-"Bristol","https://api.teleport.org/api/urban_areas/slug:bristol/","Bristol","United Kingdom","Europe","51.45523","-2.59665","52.42","64.78","38.625"
-"Brno","https://api.teleport.org/api/urban_areas/slug:brno/","Brno","Czechia","Europe","49.19522","16.60796","79.25999999999999","70.20500000000001","53.525"
-"Brussels","https://api.teleport.org/api/urban_areas/slug:brussels/","Brussels","Belgium","Europe","50.85045","4.34878","44.77","75.715","81.43999999999998"
-"Bucharest","https://api.teleport.org/api/urban_areas/slug:bucharest/","Bucharest","Romania","Europe","44.43225","26.10626","85.16","96.38","69.595"
-"Budapest","https://api.teleport.org/api/urban_areas/slug:budapest/","Budapest","Hungary","Europe","47.49801","19.03991","79.47999999999999","67.59","82.53000000000002"
-"Buenos Aires","https://api.teleport.org/api/urban_areas/slug:buenos-aires/","Buenos Aires","Argentina","South America","-34.61315","-58.37723","77.63999999999999","15.274999999999999","76.735"
-"Buffalo","https://api.teleport.org/api/urban_areas/slug:buffalo/","Buffalo","United States","North America","42.88645","-78.87837","52.28000000000001","67.57999999999998","43.2"
-"Cairo","https://api.teleport.org/api/urban_areas/slug:cairo/","Cairo","Egypt","Africa","30.06263","31.24967","100.0","24.050000000000004","61.855000000000004"
-"Calgary","https://api.teleport.org/api/urban_areas/slug:calgary/","Calgary","Canada","North America","51.05011","-114.08529","54.17999999999999","56.705000000000005","42.68"
-"Cambridge","https://api.teleport.org/api/urban_areas/slug:cambridge/","Cambridge","United Kingdom","Europe","52.2","0.11667","48.51","58.095","24.55"
-"Cape Town","https://api.teleport.org/api/urban_areas/slug:cape-town/","Cape Town","South Africa","Africa","-33.92584","18.42322","79.55","56.12500000000001","47.36000000000001"
-"Caracas","https://api.teleport.org/api/urban_areas/slug:caracas/","Caracas","Venezuela","South America","10.48801","-66.87919","98.2","16.415000000000003","43.8"
-"Cardiff","https://api.teleport.org/api/urban_areas/slug:cardiff/","Cardiff","United Kingdom","Europe","51.48","-3.18","60.82","51.01","50.285000000000004"
-"Casablanca","https://api.teleport.org/api/urban_areas/slug:casablanca/","Casablanca","Morocco","Africa","33.58831","-7.61138","90.88000000000001","20.67","26.830000000000002"
-"Charleston","https://api.teleport.org/api/urban_areas/slug:charleston/","Charleston","United States","North America","32.77657","-79.93092","35.67","60.93","65.95"
-"Charlotte","https://api.teleport.org/api/urban_areas/slug:charlotte/","Charlotte","United States","North America","35.22709","-80.84313","49.870000000000005","63.870000000000005","56.06"
-"Chattanooga","https://api.teleport.org/api/urban_areas/slug:chattanooga/","Chattanooga","United States","North America","35.04563","-85.30968","61.21000000000001","83.65","41.625"
-"Chennai","https://api.teleport.org/api/urban_areas/slug:chennai/","Chennai","India","Asia","13.08784","80.27847","100.0","68.25500000000001","22.275"
-"Chiang Mai","https://api.teleport.org/api/urban_areas/slug:chiang-mai/","Chiang Mai","Thailand","Asia","18.79038","98.98468","84.95000000000002","42.865","68.47500000000001"
-"Chicago","https://api.teleport.org/api/urban_areas/slug:chicago/","Chicago","United States","North America","41.85003","-87.65005","47.66000000000001","65.99499999999999","81.92999999999999"
-"Chisinau","https://api.teleport.org/api/urban_areas/slug:chisinau/","Chisinau","Moldova","Europe","47.00556","28.8575","93.43","53.615","27.120000000000005"
-"Christchurch","https://api.teleport.org/api/urban_areas/slug:christchurch/","Christchurch","New Zealand","Oceania","-43.53333","172.63333","50.96","59.22","32.23500000000001"
-"Cincinnati","https://api.teleport.org/api/urban_areas/slug:cincinnati/","Cincinnati","United States","North America","39.12711","-84.51439","61.080000000000005","65.12000000000002","61.180000000000014"
-"Cleveland","https://api.teleport.org/api/urban_areas/slug:cleveland/","Cleveland","United States","North America","41.4995","-81.69541","55.949999999999996","54.76500000000001","56.96500000000001"
-"Cluj-Napoca","https://api.teleport.org/api/urban_areas/slug:cluj-napoca/","Cluj-Napoca","Romania","Europe","46.76667","23.6","87.94","86.655","26.275000000000006"
-"Cologne","https://api.teleport.org/api/urban_areas/slug:cologne/","Cologne","Germany","Europe","50.93333","6.95","56.06999999999999","56.660000000000004","53.224999999999994"
-"Colorado Springs","https://api.teleport.org/api/urban_areas/slug:colorado-springs/","Colorado Springs","United States","North America","38.83388","-104.82136","53.75","59.225","38.120000000000005"
-"Columbus","https://api.teleport.org/api/urban_areas/slug:columbus/","Columbus","United States","North America","39.96118","-82.99879","57.460000000000015","45.535","64.66"
-"Copenhagen","https://api.teleport.org/api/urban_areas/slug:copenhagen/","Copenhagen","Denmark","Europe","55.67594","12.56553","34.260000000000005","72.39500000000001","70.63000000000001"
-"Cork","https://api.teleport.org/api/urban_areas/slug:cork/","Cork","Ireland","Europe","51.89797","-8.47061","49.02","91.43999999999998","25.314999999999998"
-"Curitiba","https://api.teleport.org/api/urban_areas/slug:curitiba/","Curitiba","Brazil","South America","-25.42778","-49.27306","84.33","31.42","71.875"
-"Dallas","https://api.teleport.org/api/urban_areas/slug:dallas/","Dallas","United States","North America","32.78306","-96.80667","60.91","64.60999999999999","71.685"
-"Dar es Salaam","https://api.teleport.org/api/urban_areas/slug:dar-es-salaam/","Dar es Salaam","Tanzania","Africa","-6.82349","39.26951","80.25999999999999","11.100000000000001","12.05"
-"Delhi","https://api.teleport.org/api/urban_areas/slug:delhi/","Delhi","India","Asia","28.65195","77.23149","98.69","35.88","56.83"
-"Denver","https://api.teleport.org/api/urban_areas/slug:denver/","Denver","United States","North America","39.73915","-104.9847","51.02","54.18500000000001","62.235"
-"Des Moines","https://api.teleport.org/api/urban_areas/slug:des-moines/","Des Moines","United States","North America","41.60054","-93.60911","63.269999999999996","56.98","60.665000000000006"
-"Detroit","https://api.teleport.org/api/urban_areas/slug:detroit/","Detroit","United States","North America","42.33143","-83.04575","60.32","61.670000000000016","74.78"
-"Doha","https://api.teleport.org/api/urban_areas/slug:doha/","Doha","Qatar","Asia","25.28545","51.53096","61.83","32.45","46.205"
-"Dresden","https://api.teleport.org/api/urban_areas/slug:dresden/","Dresden","Germany","Europe","51.05089","13.73832","60.28","56.035000000000004","66.38499999999999"
-"Dubai","https://api.teleport.org/api/urban_areas/slug:dubai/","Dubai","United Arab Emirates","Asia","25.0657","55.17128","54.900000000000006","31.509999999999998","46.705"
-"Dublin","https://api.teleport.org/api/urban_areas/slug:dublin/","Dublin","Ireland","Europe","53.33306","-6.24889","40.05000000000001","83.435","71.34500000000001"
-"Dusseldorf","https://api.teleport.org/api/urban_areas/slug:dusseldorf/","Dusseldorf","Germany","Europe","51.22172","6.77616","51.339999999999996","56.660000000000004","46.64000000000001"
-"Edinburgh","https://api.teleport.org/api/urban_areas/slug:edinburgh/","Edinburgh","United Kingdom","Europe","55.95206","-3.19648","51.14","51.755","72.00500000000001"
-"Edmonton","https://api.teleport.org/api/urban_areas/slug:edmonton/","Edmonton","Canada","North America","53.55014","-113.46871","55.22","46.099999999999994","39.739999999999995"
-"Eindhoven","https://api.teleport.org/api/urban_areas/slug:eindhoven/","Eindhoven","Netherlands","Europe","51.44083","5.47778","51.25","76.58999999999999","43.33500000000001"
-"Eugene","https://api.teleport.org/api/urban_areas/slug:eugene/","Eugene","United States","North America","44.05207","-123.08675","50.21","47.56000000000001","29.560000000000002"
-"Florence","https://api.teleport.org/api/urban_areas/slug:florence/","Florence","Italy","Europe","43.77925","11.24626","46.49","44.41499999999999","85.035"
-"Florianopolis","https://api.teleport.org/api/urban_areas/slug:florianopolis/","Florianopolis","Brazil","South America","-27.59667","-48.54917","83.31000000000002","31.85","53.3"
-"Fort Collins","https://api.teleport.org/api/urban_areas/slug:fort-collins/","Fort Collins","United States","North America","40.58526","-105.08442","0.0","53.01999999999999","27.46"
-"Frankfurt","https://api.teleport.org/api/urban_areas/slug:frankfurt/","Frankfurt","Germany","Europe","50.11552","8.68417","51.43","40.79","64.92"
-"Fukuoka","https://api.teleport.org/api/urban_areas/slug:fukuoka/","Fukuoka","Japan","Asia","33.6","130.41667","0.0","45.750000000000014","58.605000000000004"
-"Galway","https://api.teleport.org/api/urban_areas/slug:gaillimh/","Galway","Ireland","Europe","53.27194","-9.04889","49.27","76.375","11.150000000000002"
-"Gdansk","https://api.teleport.org/api/urban_areas/slug:gdansk/","Gdansk","Poland","Europe","54.35205","18.64637","81.26999999999998","50.36","55.15"
-"Geneva","https://api.teleport.org/api/urban_areas/slug:geneva/","Geneva","Switzerland","Europe","46.20222","6.14569","10.0","83.785","52.440000000000005"
-"Gibraltar","https://api.teleport.org/api/urban_areas/slug:gibraltar/","Gibraltar","Gibraltar","Europe","36.14474","-5.35257","0.0","42.96","22.349999999999998"
-"Glasgow","https://api.teleport.org/api/urban_areas/slug:glasgow/","Glasgow","United Kingdom","Europe","55.86515","-4.25763","56.230000000000004","42.529999999999994","46.71000000000001"
-"Gothenburg","https://api.teleport.org/api/urban_areas/slug:gothenburg/","Gothenburg","Sweden","Europe","57.70716","11.96679","50.46000000000001","61.925","40.045"
-"Grenoble","https://api.teleport.org/api/urban_areas/slug:grenoble/","Grenoble","France","Europe","45.17155","5.72239","43.17","37.58","31.785"
-"Guadalajara","https://api.teleport.org/api/urban_areas/slug:guadalajara/","Guadalajara","Mexico","North America","20.66682","-103.39182","94.9","40.925000000000004","76.57"
-"Guatemala City","https://api.teleport.org/api/urban_areas/slug:guatemala-city/","Guatemala City","Guatemala","North America","14.64072","-90.51327","81.75","25.06","51.645"
-"Halifax","https://api.teleport.org/api/urban_areas/slug:halifax/","Halifax","Canada","North America","44.64533","-63.57239","49.43000000000001","61.23500000000001","39.42"
-"Hamburg","https://api.teleport.org/api/urban_areas/slug:hamburg/","Hamburg","Germany","Europe","53.57532","10.01534","49.04","55.60499999999999","63.525"
-"Hannover","https://api.teleport.org/api/urban_areas/slug:hannover/","Hannover","Germany","Europe","52.37052","9.73322","60.00000000000001","56.660000000000004","35.255"
-"Havana","https://api.teleport.org/api/urban_areas/slug:havana/","Havana","Cuba","North America","23.13302","-82.38304","76.07999999999998","17.03","20.700000000000003"
-"Helsinki","https://api.teleport.org/api/urban_areas/slug:helsinki/","Helsinki","Finland","Europe","60.16952","24.93545","41.21000000000001","51.035","70.54500000000002"
-"Ho Chi Minh City","https://api.teleport.org/api/urban_areas/slug:ho-chi-minh-city/","Ho Chi Minh City","Vietnam","Asia","10.82302","106.62965","88.44000000000001","45.650000000000006","58.740000000000016"
-"Hong Kong","https://api.teleport.org/api/urban_areas/slug:hong-kong/","Hong Kong","China","Asia","22.27832","114.17469","49.669999999999995","62.275","70.585"
-"Honolulu","https://api.teleport.org/api/urban_areas/slug:honolulu/","Honolulu","United States","North America","21.30694","-157.85833","28.67","61.580000000000005","76.22999999999999"
-"Houston","https://api.teleport.org/api/urban_areas/slug:houston/","Houston","United States","North America","29.76328","-95.36327","61.62","62.48499999999999","71.44"
-"Hyderabad","https://api.teleport.org/api/urban_areas/slug:hyderabad/","Hyderabad","India","Asia","17.38405","78.45636","100.0","55.400000000000006","42.71"
-"Indianapolis","https://api.teleport.org/api/urban_areas/slug:indianapolis/","Indianapolis","United States","North America","39.76838","-86.15804","54.78","58.75500000000001","72.99"
-"Innsbruck","https://api.teleport.org/api/urban_areas/slug:innsbruck/","Innsbruck","Austria","Europe","47.26266","11.39454","47.32","50.595","44.245000000000005"
-"Istanbul","https://api.teleport.org/api/urban_areas/slug:istanbul/","Istanbul","Turkey","Asia","41.01384","28.94966","87.87","35.005","100.0"
-"Jacksonville","https://api.teleport.org/api/urban_areas/slug:jacksonville/","Jacksonville","United States","North America","30.33218","-81.65565","53.59","61.575","56.545"
-"Jakarta","https://api.teleport.org/api/urban_areas/slug:jakarta/","Jakarta","Indonesia","Asia","-6.21462","106.84513","84.71000000000001","44.98999999999999","81.46000000000001"
-"Johannesburg","https://api.teleport.org/api/urban_areas/slug:johannesburg/","Johannesburg","South Africa","Africa","-26.20227","28.04363","75.75000000000001","28.375","44.01499999999999"
-"Kansas City","https://api.teleport.org/api/urban_areas/slug:kansas-city/","Kansas City","United States","North America","39.09973","-94.57857","58.440000000000005","81.88500000000002","66.745"
-"Karlsruhe","https://api.teleport.org/api/urban_areas/slug:karlsruhe/","Karlsruhe","Germany","Europe","49.00937","8.40444","52.94","45.945","39.865"
-"Kathmandu","https://api.teleport.org/api/urban_areas/slug:kathmandu/","Kathmandu","Nepal","Asia","27.70169","85.3206","94.45","22.01","50.39"
-"Kiev","https://api.teleport.org/api/urban_areas/slug:kiev/","Kiev","Ukraine","Europe","50.45466","30.5238","98.17","60.41499999999999","84.19500000000001"
-"Kingston","https://api.teleport.org/api/urban_areas/slug:kingston/","Kingston","Jamaica","North America","17.99702","-76.79358","59.370000000000005","44.834999999999994","42.78"
-"Knoxville","https://api.teleport.org/api/urban_areas/slug:knoxville/","Knoxville","United States","North America","35.96064","-83.92074","64.47000000000001","70.925","44.955000000000005"
-"Krakow","https://api.teleport.org/api/urban_areas/slug:krakow/","Krakow","Poland","Europe","50.06143","19.93658","85.09","57.875","78.39999999999999"
-"Kuala Lumpur","https://api.teleport.org/api/urban_areas/slug:kuala-lumpur/","Kuala Lumpur","Malaysia","Asia","3.1412","101.68653","82.38","54.615","71.66"
-"Kyoto","https://api.teleport.org/api/urban_areas/slug:kyoto/","Kyoto","Japan","Asia","35.02107","135.75385","0.0","37.12","81.53500000000001"
-"Lagos","https://api.teleport.org/api/urban_areas/slug:lagos/","Lagos","Nigeria","Africa","6.45407","3.39467","90.98","16.34","13.585"
-"La Paz","https://api.teleport.org/api/urban_areas/slug:la-paz/","La Paz","Bolivia","South America","-16.5","-68.15","0.0","15.48","15.25"
-"Las Palmas de Gran Canaria","https://api.teleport.org/api/urban_areas/slug:las-palmas-de-gran-canaria/","Las Palmas de Gran Canaria","Spain","Europe","28.09973","-15.41343","77.17","61.95500000000001","28.145000000000003"
-"Las Vegas","https://api.teleport.org/api/urban_areas/slug:las-vegas/","Las Vegas","United States","North America","36.17497","-115.13722","57.589999999999996","53.035","63.685"
-"Lausanne","https://api.teleport.org/api/urban_areas/slug:lausanne/","Lausanne","Switzerland","Europe","46.516","6.63282","10.0","41.46","42.220000000000006"
-"Leeds","https://api.teleport.org/api/urban_areas/slug:leeds/","Leeds","United Kingdom","Europe","53.79648","-1.54785","53.629999999999995","73.29499999999999","37.434999999999995"
-"Leipzig","https://api.teleport.org/api/urban_areas/slug:leipzig/","Leipzig","Germany","Europe","51.33962","12.37129","59.11000000000001","56.46500000000002","45.26499999999999"
-"Lille","https://api.teleport.org/api/urban_areas/slug:lille/","Lille","France","Europe","50.63297","3.05858","53.99000000000001","38.26999999999999","51.09500000000001"
-"Lima","https://api.teleport.org/api/urban_areas/slug:lima/","Lima","Peru","South America","-12.04318","-77.02824","84.96000000000001","24.1","68.08500000000001"
-"Lisbon","https://api.teleport.org/api/urban_areas/slug:lisbon/","Lisbon","Portugal","Europe","38.71667","-9.13333","70.04000000000002","63.94000000000001","78.33500000000001"
-"Liverpool","https://api.teleport.org/api/urban_areas/slug:liverpool/","Liverpool","United Kingdom","Europe","53.41058","-2.97794","60.199999999999996","89.94","53.93"
-"Ljubljana","https://api.teleport.org/api/urban_areas/slug:ljubljana/","Ljubljana","Slovenia","Europe","46.05108","14.50513","67.49000000000001","54.895","47.989999999999995"
-"London","https://api.teleport.org/api/urban_areas/slug:london/","London","United Kingdom","Europe","51.50853","-0.12574","39.400000000000006","58.455000000000005","94.555"
-"Los Angeles","https://api.teleport.org/api/urban_areas/slug:los-angeles/","Los Angeles","United States","North America","34.05223","-118.24368","45.56000000000001","54.96500000000001","91.96"
-"Louisville","https://api.teleport.org/api/urban_areas/slug:louisville/","Louisville","United States","North America","38.25424","-85.75941","63.58000000000001","55.269999999999996","56.935"
-"Luxembourg","https://api.teleport.org/api/urban_areas/slug:luxembourg/","Luxembourg","Luxembourg","Europe","49.61167","6.13","34.11","54.58","44.955000000000005"
-"Lviv","https://api.teleport.org/api/urban_areas/slug:lviv/","Lviv","Ukraine","Europe","49.83826","24.02324","100.0","50.55999999999999","70.585"
-"Lyon","https://api.teleport.org/api/urban_areas/slug:lyon/","Lyon","France","Europe","45.74846","4.84671","43.49","94.03","59.87500000000001"
-"Madison","https://api.teleport.org/api/urban_areas/slug:madison/","Madison","United States","North America","43.07305","-89.40123","61.730000000000004","49.925","44.220000000000006"
-"Madrid","https://api.teleport.org/api/urban_areas/slug:madrid/","Madrid","Spain","Europe","40.4165","-3.70256","62.49000000000001","62.41","93.38"
-"Malaga","https://api.teleport.org/api/urban_areas/slug:malaga/","Malaga","Spain","Europe","36.72016","-4.42034","73.75","61.894999999999996","63.89"
-"Malmo","https://api.teleport.org/api/urban_areas/slug:malmo/","Malmo","Sweden","Europe","55.60587","13.00073","55.7","82.19999999999999","23.445"
-"Managua","https://api.teleport.org/api/urban_areas/slug:managua/","Managua","Nicaragua","North America","12.13282","-86.2504","0.0","11.77","18.37"
-"Manchester","https://api.teleport.org/api/urban_areas/slug:manchester/","Manchester","United Kingdom","Europe","53.48095","-2.23743","50.49000000000001","58.14","49.75000000000001"
-"Manila","https://api.teleport.org/api/urban_areas/slug:manila/","Manila","Philippines","Asia","14.6042","120.9822","87.51999999999998","46.08","75.84"
-"Marseille","https://api.teleport.org/api/urban_areas/slug:marseille/","Marseille","France","Europe","43.29695","5.38107","60.26000000000002","55.425000000000004","54.430000000000014"
-"Medellin","https://api.teleport.org/api/urban_areas/slug:medellin/","Medellin","Colombia","South America","6.25184","-75.56359","93.15","41.485","50.29"
-"Melbourne","https://api.teleport.org/api/urban_areas/slug:melbourne/","Melbourne","Australia","Oceania","-37.814","144.96332","47.98000000000001","58.96000000000001","64.61"
-"Memphis","https://api.teleport.org/api/urban_areas/slug:memphis/","Memphis","United States","North America","35.14953","-90.04898","58.29","60.7","68.60499999999999"
-"Mexico City","https://api.teleport.org/api/urban_areas/slug:mexico-city/","Mexico City","Mexico","North America","19.42847","-99.12766","92.44","58.405","99.62"
-"Miami","https://api.teleport.org/api/urban_areas/slug:miami/","Miami","United States","North America","25.77427","-80.19366","44.97","58.239999999999995","67.675"
-"Milan","https://api.teleport.org/api/urban_areas/slug:milan/","Milan","Italy","Europe","45.46427","9.18951","48.01000000000001","50.13999999999999","79.17"
-"Milwaukee","https://api.teleport.org/api/urban_areas/slug:milwaukee/","Milwaukee","United States","North America","43.0389","-87.90647","55.26","43.46","68.375"
-"Minneapolis-Saint Paul","https://api.teleport.org/api/urban_areas/slug:minneapolis-saint-paul/","Minneapolis-Saint Paul","United States","North America","44.97997","-93.26384","50.42000000000001","62.58499999999999","68.505"
-"Minsk","https://api.teleport.org/api/urban_areas/slug:minsk/","Minsk","Belarus","Europe","53.9","27.56667","92.89000000000001","48.63","69.5"
-"Montevideo","https://api.teleport.org/api/urban_areas/slug:montevideo/","Montevideo","Uruguay","South America","-34.90328","-56.18816","61.97","21.785","49.465"
-"Montreal","https://api.teleport.org/api/urban_areas/slug:montreal/","Montreal","Canada","North America","45.50884","-73.58781","59.480000000000004","44.78000000000001","69.175"
-"Moscow","https://api.teleport.org/api/urban_areas/slug:moscow/","Moscow","Russia","Europe","55.75222","37.61556","80.99000000000001","65.71","88.755"
-"Mumbai","https://api.teleport.org/api/urban_areas/slug:mumbai/","Mumbai","India","Asia","19.07283","72.88261","98.25","34.29","49.68499999999999"
-"Munich","https://api.teleport.org/api/urban_areas/slug:munich/","Munich","Germany","Europe","48.13743","11.57549","46.48","51.55000000000001","73.36"
-"Nairobi","https://api.teleport.org/api/urban_areas/slug:nairobi/","Nairobi","Kenya","Africa","-1.28333","36.81667","84.32","18.89","26.7"
-"Nantes","https://api.teleport.org/api/urban_areas/slug:nantes/","Nantes","France","Europe","47.21725","-1.55336","50.21","48.67","43.510000000000005"
-"Naples","https://api.teleport.org/api/urban_areas/slug:naples/","Naples","Italy","Europe","40.85216","14.26811","58.099999999999994","53.14000000000001","60.45"
-"Nashville","https://api.teleport.org/api/urban_areas/slug:nashville/","Nashville","United States","North America","36.16589","-86.78444","57.42000000000001","66.37","70.2"
-"New Orleans","https://api.teleport.org/api/urban_areas/slug:new-orleans/","New Orleans","United States","North America","29.95465","-90.07507","49.91999999999999","64.53000000000002","71.985"
-"New York","https://api.teleport.org/api/urban_areas/slug:new-york/","New York","United States","North America","40.71427","-74.00597","23.42","70.985","100.0"
-"Nice","https://api.teleport.org/api/urban_areas/slug:nice/","Nice","France","Europe","43.70313","7.26608","44.75","64.72","47.794999999999995"
-"Nicosia","https://api.teleport.org/api/urban_areas/slug:nicosia/","Nicosia","Cyprus","Europe","35.17531","33.3642","63.010000000000005","26.545","69.49"
-"Oklahoma City","https://api.teleport.org/api/urban_areas/slug:oklahoma-city/","Oklahoma City","United States","North America","35.46756","-97.51643","63.94","76.89","53.76000000000001"
-"Omaha","https://api.teleport.org/api/urban_areas/slug:omaha/","Omaha","United States","North America","41.25626","-95.94043","59.940000000000005","63.065","49.42"
-"Orlando","https://api.teleport.org/api/urban_areas/slug:orlando/","Orlando","United States","North America","28.53834","-81.37924","52.839999999999996","48.86","59.295"
-"Osaka","https://api.teleport.org/api/urban_areas/slug:osaka/","Osaka","Japan","Asia","34.69374","135.50218","48.19","37.24","72.265"
-"Oslo","https://api.teleport.org/api/urban_areas/slug:oslo/","Oslo","Norway","Europe","59.91273","10.74609","10.380000000000003","79.705","58.99"
-"Ottawa","https://api.teleport.org/api/urban_areas/slug:ottawa/","Ottawa","Canada","North America","45.41117","-75.69812","60.27","62.67499999999999","60.92"
-"Oulu","https://api.teleport.org/api/urban_areas/slug:oulu/","Oulu","Finland","Europe","65.01236","25.46816","0.0","57.22999999999999","20.060000000000002"
-"Oxford","https://api.teleport.org/api/urban_areas/slug:oxford/","Oxford","United Kingdom","Europe","51.75222","-1.25596","49.41000000000001","61.545","54.95"
-"Palo Alto","https://api.teleport.org/api/urban_areas/slug:palo-alto/","Palo Alto","United States","North America","37.44188","-122.14302","0.0","71.42","0.0"
-"Panama","https://api.teleport.org/api/urban_areas/slug:panama/","Panama","Panama","North America","8.9936","-79.51973","0.0","31.900000000000006","55.565"
-"Paris","https://api.teleport.org/api/urban_areas/slug:paris/","Paris","France","Europe","48.85341","2.3488","36.64","97.16000000000001","98.16499999999999"
-"Perth","https://api.teleport.org/api/urban_areas/slug:perth/","Perth","Australia","Oceania","-31.95224","115.8614","47.95","41.785","45.114999999999995"
-"Philadelphia","https://api.teleport.org/api/urban_areas/slug:philadelphia/","Philadelphia","United States","North America","39.95233","-75.16379","44.220000000000006","74.42999999999999","84.92000000000002"
-"Phnom Penh","https://api.teleport.org/api/urban_areas/slug:phnom-penh/","Phnom Penh","Cambodia","Asia","11.56245","104.91601","80.01000000000002","33.949999999999996","54.07"
-"Phoenix","https://api.teleport.org/api/urban_areas/slug:phoenix/","Phoenix","United States","North America","33.44838","-112.07404","62.08","61.78","68.10000000000001"
-"Phuket","https://api.teleport.org/api/urban_areas/slug:phuket/","Phuket","Thailand","Asia","7.89059","98.3981","76.02000000000001","36.150000000000006","48.13499999999999"
-"Pittsburgh","https://api.teleport.org/api/urban_areas/slug:pittsburgh/","Pittsburgh","United States","North America","40.44062","-79.99589","47.95","86.69500000000001","68.59"
-"Portland, ME","https://api.teleport.org/api/urban_areas/slug:portland-me/","Portland, ME","United States","North America","43.66147","-70.25533","0.0","35.465","33.05"
-"Portland, OR","https://api.teleport.org/api/urban_areas/slug:portland-or/","Portland, OR","United States","North America","45.52345","-122.67621","49.24","59.685","62.195"
-"Porto","https://api.teleport.org/api/urban_areas/slug:porto/","Porto","Portugal","Europe","41.14961","-8.61099","74.22","44.94500000000001","56.25"
-"Porto Alegre","https://api.teleport.org/api/urban_areas/slug:porto-alegre/","Porto Alegre","Brazil","South America","-30.03306","-51.23","81.20000000000002","21.96","77.035"
-"Prague","https://api.teleport.org/api/urban_areas/slug:prague/","Prague","Czechia","Europe","50.08804","14.42076","75.69","60.904999999999994","84.64500000000001"
-"Providence","https://api.teleport.org/api/urban_areas/slug:providence/","Providence","United States","North America","41.82399","-71.41283","0.0","89.345","39.18500000000001"
-"Quebec","https://api.teleport.org/api/urban_areas/slug:quebec/","Quebec","Canada","Europe","46.81228","-71.21454","60.37","32.985","56.36500000000001"
-"Quito","https://api.teleport.org/api/urban_areas/slug:quito/","Quito","Ecuador","South America","-0.22985","-78.52495","78.22","34.815","48.015"
-"Raleigh","https://api.teleport.org/api/urban_areas/slug:raleigh/","Raleigh","United States","North America","35.7721","-78.63861","56.10000000000001","79.515","66.13"
-"Reykjavik","https://api.teleport.org/api/urban_areas/slug:reykjavik/","Reykjavik","Iceland","Europe","64.13548","-21.89541","10.0","67.42","50.205"
-"Richmond","https://api.teleport.org/api/urban_areas/slug:richmond/","Richmond","United States","North America","37.55376","-77.46026","59.489999999999995","76.455","63.385"
-"Riga","https://api.teleport.org/api/urban_areas/slug:riga/","Riga","Latvia","Europe","56.946","24.10589","73.28999999999999","58.41000000000001","77.065"
-"Rio De Janeiro","https://api.teleport.org/api/urban_areas/slug:rio-de-janeiro/","Rio De Janeiro","Brazil","South America","-22.90642","-43.18223","77.51","23.380000000000003","86.67500000000001"
-"Riyadh","https://api.teleport.org/api/urban_areas/slug:riyadh/","Riyadh","Saudi Arabia","Asia","24.68773","46.72185","78.06","41.3","58.435"
-"Rochester","https://api.teleport.org/api/urban_areas/slug:rochester/","Rochester","United States","North America","43.15478","-77.61556","54.879999999999995","55.510000000000005","53.35"
-"Rome","https://api.teleport.org/api/urban_areas/slug:rome/","Rome","Italy","Europe","41.89193","12.51133","53.230000000000004","44.91","91.1"
-"Rotterdam","https://api.teleport.org/api/urban_areas/slug:rotterdam/","Rotterdam","Netherlands","Europe","51.9225","4.47917","49.34000000000001","58.525000000000006","54.27499999999999"
-"Saint Petersburg","https://api.teleport.org/api/urban_areas/slug:saint-petersburg/","Saint Petersburg","Russia","Europe","59.93863","30.31413","86.73","56.425","96.53500000000001"
-"Salt Lake City","https://api.teleport.org/api/urban_areas/slug:salt-lake-city/","Salt Lake City","United States","North America","40.76078","-111.89105","61.720000000000006","68.10500000000002","59.32000000000001"
-"San Antonio","https://api.teleport.org/api/urban_areas/slug:san-antonio/","San Antonio","United States","North America","29.42412","-98.49363","66.83","80.745","66.955"
-"San Diego","https://api.teleport.org/api/urban_areas/slug:san-diego/","San Diego","United States","North America","32.71533","-117.15726","51.56","59.989999999999995","82.10000000000001"
-"San Francisco Bay Area","https://api.teleport.org/api/urban_areas/slug:san-francisco-bay-area/","San Francisco Bay Area","United States","North America","37.77493","-122.41942","26.18","56.05500000000001","94.07"
-"San Jose","https://api.teleport.org/api/urban_areas/slug:san-jose/","San Jose","Costa Rica","North America","9.93333","-84.08333","67.28","15.155000000000003","68.665"
-"San Juan","https://api.teleport.org/api/urban_areas/slug:san-juan/","San Juan","Puerto Rico","North America","18.46633","-66.10572","59.8","42.73499999999999","68.39500000000001"
-"San Luis Obispo","https://api.teleport.org/api/urban_areas/slug:san-luis-obispo/","San Luis Obispo","United States","North America","35.28275","-120.65962","0.0","79.35500000000002","27.765"
-"San Salvador","https://api.teleport.org/api/urban_areas/slug:san-salvador/","San Salvador","El Salvador","North America","13.68935","-89.18718","77.42999999999998","18.310000000000002","48.584999999999994"
-"Santiago","https://api.teleport.org/api/urban_areas/slug:santiago/","Santiago","Chile","South America","-33.45694","-70.64827","72.37","10.0","75.56"
-"Santo Domingo","https://api.teleport.org/api/urban_areas/slug:santo-domingo/","Santo Domingo","Dominican Republic","North America","18.47186","-69.89232","80.76000000000002","42.21","57.96500000000001"
-"Sao Paulo","https://api.teleport.org/api/urban_areas/slug:sao-paulo/","Sao Paulo","Brazil","South America","-23.5475","-46.63611","78.23000000000002","33.895","87.89499999999998"
-"Sarajevo","https://api.teleport.org/api/urban_areas/slug:sarajevo/","Sarajevo","Bosnia and Herzegovina","Europe","43.84864","18.35644","86.59","46.475","59.345"
-"Saskatoon","https://api.teleport.org/api/urban_areas/slug:saskatoon/","Saskatoon","Canada","North America","52.13238","-106.66892","50.42000000000001","48.900000000000006","10.0"
-"Seattle","https://api.teleport.org/api/urban_areas/slug:seattle/","Seattle","United States","North America","47.60621","-122.33207","37.9","49.404999999999994","81.155"
-"Seoul","https://api.teleport.org/api/urban_areas/slug:seoul/","Seoul","South Korea","Asia","37.566","126.9784","36.98000000000001","76.37","82.00000000000001"
-"Seville","https://api.teleport.org/api/urban_areas/slug:seville/","Seville","Spain","Europe","37.38283","-5.97317","69.61","61.894999999999996","74.16"
-"Shanghai","https://api.teleport.org/api/urban_areas/slug:shanghai/","Shanghai","China","Asia","31.22222","121.45806","71.79","26.36","66.93499999999999"
-"Singapore","https://api.teleport.org/api/urban_areas/slug:singapore/","Singapore","Singapore","Asia","1.28967","103.85007","34.89","84.47","74.225"
-"Skopje","https://api.teleport.org/api/urban_areas/slug:skopje/","Skopje","Macedonia","Europe","41.99646","21.43141","91.10000000000001","45.20499999999999","62.08000000000001"
-"Sofia","https://api.teleport.org/api/urban_areas/slug:sofia/","Sofia","Bulgaria","Europe","42.69751","23.32415","85.5","62.72500000000001","53.184999999999995"
-"St. Louis","https://api.teleport.org/api/urban_areas/slug:st-louis/","St. Louis","United States","North America","38.62727","-90.19789","55.03999999999999","89.09","76.42500000000001"
-"Stockholm","https://api.teleport.org/api/urban_areas/slug:stockholm/","Stockholm","Sweden","Europe","59.33258","18.0649","43.6","76.135","67.975"
-"Stuttgart","https://api.teleport.org/api/urban_areas/slug:stuttgart/","Stuttgart","Germany","Europe","48.78232","9.17702","56.73000000000002","51.239999999999995","55.56"
-"Sydney","https://api.teleport.org/api/urban_areas/slug:sydney/","Sydney","Australia","Oceania","-33.86785","151.20732","41.28","47.365","62.275"
-"Taipei","https://api.teleport.org/api/urban_areas/slug:taipei/","Taipei","Taiwan","Asia","25.04776","121.53185","56.44","52.315000000000005","72.63499999999999"
-"Tallinn","https://api.teleport.org/api/urban_areas/slug:tallinn/","Tallinn","Estonia","Europe","59.43696","24.75353","69.31","52.019999999999996","70.235"
-"Tampa Bay Area","https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/","Tampa Bay Area","United States","North America","27.94752","-82.45843","52.53","71.95","64.33999999999999"
-"Tampere","https://api.teleport.org/api/urban_areas/slug:tampere/","Tampere","Finland","Europe","61.49911","23.78712","46.22","57.92000000000001","41.87000000000001"
-"Tartu","https://api.teleport.org/api/urban_areas/slug:tartu/","Tartu","Estonia","Europe","58.38062","26.72509","74.7","43.004999999999995","40.81"
-"Tashkent","https://api.teleport.org/api/urban_areas/slug:tashkent/","Tashkent","Uzbekistan","Asia","41.26465","69.21627","0.0","12.425","31.760000000000005"
-"Tbilisi","https://api.teleport.org/api/urban_areas/slug:tbilisi/","Tbilisi","Georgia","Europe","41.69411","44.83368","97.65","40.87","49.19"
-"Tehran","https://api.teleport.org/api/urban_areas/slug:tehran/","Tehran","Iran","Asia","35.69439","51.42151","95.44","15.759999999999998","65.21"
-"Tel Aviv","https://api.teleport.org/api/urban_areas/slug:tel-aviv/","Tel Aviv","Israel","Asia","32.08088","34.78057","43.70000000000001","25.659999999999997","53.335"
-"The Hague","https://api.teleport.org/api/urban_areas/slug:the-hague/","The Hague","Netherlands","Europe","52.07667","4.29861","46.529999999999994","65.135","50.144999999999996"
-"Thessaloniki","https://api.teleport.org/api/urban_areas/slug:thessaloniki/","Thessaloniki","Greece","Europe","40.64361","22.93086","66.0","25.96","76.89000000000001"
-"Tokyo","https://api.teleport.org/api/urban_areas/slug:tokyo/","Tokyo","Japan","Asia","35.6895","139.69171","34.31","48.35000000000001","93.42000000000002"
-"Toronto","https://api.teleport.org/api/urban_areas/slug:toronto/","Toronto","Canada","North America","43.70011","-79.4163","52.71","43.83","78.25999999999999"
-"Toulouse","https://api.teleport.org/api/urban_areas/slug:toulouse/","Toulouse","France","Europe","43.60426","1.44367","45.519999999999996","46.220000000000006","41.370000000000005"
-"Tunis","https://api.teleport.org/api/urban_areas/slug:tunis/","Tunis","Tunisia","Africa","36.81897","10.16579","99.98000000000002","10.725","57.425000000000004"
-"Turin","https://api.teleport.org/api/urban_areas/slug:turin/","Turin","Italy","Europe","45.07049","7.68682","56.120000000000005","23.689999999999998","70.61"
-"Turku","https://api.teleport.org/api/urban_areas/slug:turku/","Turku","Finland","Europe","60.45148","22.26869","50.7","66.825","50.975"
-"Uppsala","https://api.teleport.org/api/urban_areas/slug:uppsala/","Uppsala","Sweden","Europe","59.85882","17.63889","54.42","58.54","34.27"
-"Utrecht","https://api.teleport.org/api/urban_areas/slug:utrecht/","Utrecht","Netherlands","Europe","52.09083","5.12222","46.04","66.76","53.730000000000004"
-"Valencia","https://api.teleport.org/api/urban_areas/slug:valencia/","Valencia","Spain","Europe","39.46975","-0.37739","68.72","91.4","70.78000000000002"
-"Valletta","https://api.teleport.org/api/urban_areas/slug:valletta/","Valletta","Malta","Europe","35.89972","14.51472","0.0","32.015","58.269999999999996"
-"Vancouver","https://api.teleport.org/api/urban_areas/slug:vancouver/","Vancouver","Canada","North America","49.24966","-123.11934","52.59","45.50500000000001","57.17"
-"Victoria","https://api.teleport.org/api/urban_areas/slug:victoria/","Victoria","Canada","North America","48.43294","-123.3693","57.03","61.949999999999996","45.230000000000004"
-"Vienna","https://api.teleport.org/api/urban_areas/slug:vienna/","Vienna","Austria","Europe","48.20849","16.37208","51.11","61.730000000000004","85.21500000000002"
-"Vilnius","https://api.teleport.org/api/urban_areas/slug:vilnius/","Vilnius","Lithuania","Europe","54.68916","25.2798","75.76","79.265","51.985000000000014"
-"Warsaw","https://api.teleport.org/api/urban_areas/slug:warsaw/","Warsaw","Poland","Europe","52.22977","21.01178","81.92","60.0","73.35500000000002"
-"Washington, D.C.","https://api.teleport.org/api/urban_areas/slug:washington-dc/","Washington, D.C.","United States","North America","38.89511","-77.03637","35.949999999999996","38.25500000000001","100.0"
-"Wellington","https://api.teleport.org/api/urban_areas/slug:wellington/","Wellington","New Zealand","Oceania","-41.28664","174.77557","51.61","51.745000000000005","45.99"
-"Winnipeg","https://api.teleport.org/api/urban_areas/slug:winnipeg/","Winnipeg","Canada","North America","49.8844","-97.14704","58.81999999999999","49.025000000000006","46.879999999999995"
-"Wroclaw","https://api.teleport.org/api/urban_areas/slug:wroclaw/","Wroclaw","Poland","Europe","51.1","17.03333","84.34","57.61500000000001","47.495000000000005"
-"Yerevan","https://api.teleport.org/api/urban_areas/slug:yerevan/","Yerevan","Armenia","Asia","40.18111","44.51361","94.31","38.99999999999999","47.37000000000001"
-"Zagreb","https://api.teleport.org/api/urban_areas/slug:zagreb/","Zagreb","Croatia","Europe","45.81444","15.97798","71.94","50.335","49.94500000000001"
-"Zurich","https://api.teleport.org/api/urban_areas/slug:zurich/","Zurich","Switzerland","Europe","47.36667","8.55","10.0","72.675","49.655"
+city_name,city_url,location,country_name,region_name,latitude,longitude,cost_of_living,internet_score,culture_score
+Aarhus,https://api.teleport.org/api/urban_areas/slug:aarhus/,Aarhus,Denmark,Europe,56.15674,10.21076,4.015000000000001,8.373,3.187
+Adelaide,https://api.teleport.org/api/urban_areas/slug:adelaide/,Adelaide,Australia,Oceania,-34.92866,138.59863,4.692,4.341,4.3285
+Albuquerque,https://api.teleport.org/api/urban_areas/slug:albuquerque/,Albuquerque,United States,North America,35.08449,-106.65114,6.059,5.396000000000001,4.890000000000001
+Aarhus,https://api.teleport.org/api/urban_areas/slug:aarhus/,Aarhus,Denmark,Europe,56.15674,10.21076,40.150000000000006,83.72999999999999,31.869999999999997
+Adelaide,https://api.teleport.org/api/urban_areas/slug:adelaide/,Adelaide,Australia,Oceania,-34.92866,138.59863,46.92,43.410000000000004,43.285
+Albuquerque,https://api.teleport.org/api/urban_areas/slug:albuquerque/,Albuquerque,United States,North America,35.08449,-106.65114,60.59,53.96000000000001,48.900000000000006
+Almaty,https://api.teleport.org/api/urban_areas/slug:almaty/,Almaty,Kazakhstan,Asia,43.25667,76.92861,93.33,28.86,29.370000000000005
+Amsterdam,https://api.teleport.org/api/urban_areas/slug:amsterdam/,Amsterdam,Netherlands,Europe,52.37403,4.88969,38.24000000000001,45.230000000000004,88.74000000000001
+Anchorage,https://api.teleport.org/api/urban_areas/slug:anchorage/,Anchorage,United States,North America,61.21806,-149.90028,31.41,49.645,32.660000000000004
+Andorra,https://api.teleport.org/api/urban_areas/slug:andorra/,Andorra,Andorra,Europe,42.50779,1.52109,0.0,71.86,21.32
+Ankara,https://api.teleport.org/api/urban_areas/slug:ankara/,Ankara,Turkey,Asia,39.91987,32.85427,91.25,23.160000000000004,86.38499999999999
+Asheville,https://api.teleport.org/api/urban_areas/slug:asheville/,Asheville,United States,North America,35.60095,-82.55402,53.11,47.875,50.629999999999995
+Asuncion,https://api.teleport.org/api/urban_areas/slug:asuncion/,Asuncion,Paraguay,South America,-25.30066,-57.63591,92.95000000000002,14.790000000000001,59.91999999999999
+Athens,https://api.teleport.org/api/urban_areas/slug:athens/,Athens,Greece,Europe,37.97945,23.71622,65.0,22.279999999999994,78.76000000000002
+Atlanta,https://api.teleport.org/api/urban_areas/slug:atlanta/,Atlanta,United States,North America,33.749,-84.38798,52.41,64.805,77.655
+Auckland,https://api.teleport.org/api/urban_areas/slug:auckland/,Auckland,New Zealand,Oceania,-36.84853,174.76349,44.7,68.5,43.959999999999994
+Austin,https://api.teleport.org/api/urban_areas/slug:austin/,Austin,United States,North America,30.26715,-97.74306,53.55,90.49,66.97999999999999
+Baku,https://api.teleport.org/api/urban_areas/slug:baku/,Baku,Azerbaijan,Asia,40.37767,49.89201,98.06,14.420000000000002,62.195
+Bali,https://api.teleport.org/api/urban_areas/slug:bali/,Bali,Indonesia,Asia,-8.65,115.21667,0.0,32.375,63.335
+Baltimore,https://api.teleport.org/api/urban_areas/slug:baltimore/,Baltimore,United States,North America,39.29038,-76.61219,49.82,49.88,0.0
+Bangkok,https://api.teleport.org/api/urban_areas/slug:bangkok/,Bangkok,Thailand,Asia,13.75398,100.50144,72.22,48.26499999999999,90.89
+Barcelona,https://api.teleport.org/api/urban_areas/slug:barcelona/,Barcelona,Spain,Europe,41.38879,2.15899,60.74000000000001,64.67999999999999,85.91499999999998
+Beijing,https://api.teleport.org/api/urban_areas/slug:beijing/,Beijing,China,Asia,39.9075,116.39723,81.01,34.93,72.685
+Beirut,https://api.teleport.org/api/urban_areas/slug:beirut/,Beirut,Lebanon,Asia,33.89332,35.50157,63.0,15.905000000000001,33.995000000000005
+Belfast,https://api.teleport.org/api/urban_areas/slug:belfast/,Belfast,United Kingdom,Europe,54.59682,-5.92541,60.140000000000015,55.955,49.57000000000001
+Belgrade,https://api.teleport.org/api/urban_areas/slug:belgrade/,Belgrade,Serbia,Europe,44.80401,20.46513,85.46000000000001,38.63,64.97
+Belize City,https://api.teleport.org/api/urban_areas/slug:belize-city/,Belize City,Belize,North America,17.49952,-88.19756,0.0,38.074999999999996,10.645
+Bengaluru,https://api.teleport.org/api/urban_areas/slug:bengaluru/,Bengaluru,India,Asia,12.97194,77.59369,100.0,28.409999999999997,32.215
+Bergen,https://api.teleport.org/api/urban_areas/slug:bergen/,Bergen,Norway,Europe,60.39299,5.32415,18.05,65.37,44.875
+Berlin,https://api.teleport.org/api/urban_areas/slug:berlin/,Berlin,Germany,Europe,52.52437,13.41053,55.24,46.77999999999999,88.81
+Bern,https://api.teleport.org/api/urban_areas/slug:bern/,Bern,Switzerland,Europe,46.94809,7.44744,10.0,61.145,42.45
+Bilbao,https://api.teleport.org/api/urban_areas/slug:bilbao/,Bilbao,Spain,Europe,43.26271,-2.92528,56.379999999999995,57.56,60.13999999999999
+Birmingham,https://api.teleport.org/api/urban_areas/slug:birmingham/,Birmingham,United Kingdom,Europe,52.48142,-1.89983,58.14,59.40000000000001,44.35000000000001
+Birmingham AL,https://api.teleport.org/api/urban_areas/slug:birmingham-al/,Birmingham AL,United States,North America,33.52066,-86.80249,51.33,51.605,53.834999999999994
+Bogota,https://api.teleport.org/api/urban_areas/slug:bogota/,Bogota,Colombia,South America,4.60971,-74.08175,90.79999999999998,29.760000000000005,62.15
+Boise,https://api.teleport.org/api/urban_areas/slug:boise/,Boise,United States,North America,43.6135,-116.20345,65.78,34.42,41.995
+Bologna,https://api.teleport.org/api/urban_areas/slug:bologna/,Bologna,Italy,Europe,44.49381,11.33875,51.89,77.10499999999999,57.36000000000001
+Bordeaux,https://api.teleport.org/api/urban_areas/slug:bordeaux/,Bordeaux,France,Europe,44.84044,-0.5805,45.83,38.75,53.005
+Boston,https://api.teleport.org/api/urban_areas/slug:boston/,Boston,United States,North America,42.35843,-71.05977,42.59,57.00500000000001,85.64
+Boulder,https://api.teleport.org/api/urban_areas/slug:boulder/,Boulder,United States,North America,40.01499,-105.27055,45.309999999999995,62.78,25.649999999999995
+Bozeman,https://api.teleport.org/api/urban_areas/slug:bozeman/,Bozeman,United States,North America,45.67965,-111.03856,0.0,51.56,19.069999999999997
+Bratislava,https://api.teleport.org/api/urban_areas/slug:bratislava/,Bratislava,Slovakia,Europe,48.14816,17.10674,76.18,45.83500000000001,61.86
+Brighton,https://api.teleport.org/api/urban_areas/slug:brighton/,Brighton,United Kingdom,Europe,50.82838,-0.13947,53.239999999999995,47.584999999999994,48.69500000000001
+Brisbane,https://api.teleport.org/api/urban_areas/slug:brisbane/,Brisbane,Australia,Oceania,-27.46794,153.02809,51.77,44.075,40.099999999999994
+Bristol,https://api.teleport.org/api/urban_areas/slug:bristol/,Bristol,United Kingdom,Europe,51.45523,-2.59665,52.42,64.78,38.625
+Brno,https://api.teleport.org/api/urban_areas/slug:brno/,Brno,Czechia,Europe,49.19522,16.60796,79.25999999999999,70.20500000000001,53.525
+Brussels,https://api.teleport.org/api/urban_areas/slug:brussels/,Brussels,Belgium,Europe,50.85045,4.34878,44.77,75.715,81.43999999999998
+Bucharest,https://api.teleport.org/api/urban_areas/slug:bucharest/,Bucharest,Romania,Europe,44.43225,26.10626,85.16,96.38,69.595
+Budapest,https://api.teleport.org/api/urban_areas/slug:budapest/,Budapest,Hungary,Europe,47.49801,19.03991,79.47999999999999,67.59,82.53000000000002
+Buenos Aires,https://api.teleport.org/api/urban_areas/slug:buenos-aires/,Buenos Aires,Argentina,South America,-34.61315,-58.37723,77.63999999999999,15.274999999999999,76.735
+Buffalo,https://api.teleport.org/api/urban_areas/slug:buffalo/,Buffalo,United States,North America,42.88645,-78.87837,52.28000000000001,67.57999999999998,43.2
+Cairo,https://api.teleport.org/api/urban_areas/slug:cairo/,Cairo,Egypt,Africa,30.06263,31.24967,100.0,24.050000000000004,61.855000000000004
+Calgary,https://api.teleport.org/api/urban_areas/slug:calgary/,Calgary,Canada,North America,51.05011,-114.08529,54.17999999999999,56.705000000000005,42.68
+Cambridge,https://api.teleport.org/api/urban_areas/slug:cambridge/,Cambridge,United Kingdom,Europe,52.2,0.11667,48.51,58.095,24.55
+Cape Town,https://api.teleport.org/api/urban_areas/slug:cape-town/,Cape Town,South Africa,Africa,-33.92584,18.42322,79.55,56.12500000000001,47.36000000000001
+Caracas,https://api.teleport.org/api/urban_areas/slug:caracas/,Caracas,Venezuela,South America,10.48801,-66.87919,98.2,16.415000000000003,43.8
+Cardiff,https://api.teleport.org/api/urban_areas/slug:cardiff/,Cardiff,United Kingdom,Europe,51.48,-3.18,60.82,51.01,50.285000000000004
+Casablanca,https://api.teleport.org/api/urban_areas/slug:casablanca/,Casablanca,Morocco,Africa,33.58831,-7.61138,90.88000000000001,20.67,26.830000000000002
+Charleston,https://api.teleport.org/api/urban_areas/slug:charleston/,Charleston,United States,North America,32.77657,-79.93092,35.67,60.93,65.95
+Charlotte,https://api.teleport.org/api/urban_areas/slug:charlotte/,Charlotte,United States,North America,35.22709,-80.84313,49.870000000000005,63.870000000000005,56.06
+Chattanooga,https://api.teleport.org/api/urban_areas/slug:chattanooga/,Chattanooga,United States,North America,35.04563,-85.30968,61.21000000000001,83.65,41.625
+Chennai,https://api.teleport.org/api/urban_areas/slug:chennai/,Chennai,India,Asia,13.08784,80.27847,100.0,68.25500000000001,22.275
+Chiang Mai,https://api.teleport.org/api/urban_areas/slug:chiang-mai/,Chiang Mai,Thailand,Asia,18.79038,98.98468,84.95000000000002,42.865,68.47500000000001
+Chicago,https://api.teleport.org/api/urban_areas/slug:chicago/,Chicago,United States,North America,41.85003,-87.65005,47.66000000000001,65.99499999999999,81.92999999999999
+Chisinau,https://api.teleport.org/api/urban_areas/slug:chisinau/,Chisinau,Moldova,Europe,47.00556,28.8575,93.43,53.615,27.120000000000005
+Christchurch,https://api.teleport.org/api/urban_areas/slug:christchurch/,Christchurch,New Zealand,Oceania,-43.53333,172.63333,50.96,59.22,32.23500000000001
+Cincinnati,https://api.teleport.org/api/urban_areas/slug:cincinnati/,Cincinnati,United States,North America,39.12711,-84.51439,61.080000000000005,65.12000000000002,61.180000000000014
+Cleveland,https://api.teleport.org/api/urban_areas/slug:cleveland/,Cleveland,United States,North America,41.4995,-81.69541,55.949999999999996,54.76500000000001,56.96500000000001
+Cluj-Napoca,https://api.teleport.org/api/urban_areas/slug:cluj-napoca/,Cluj-Napoca,Romania,Europe,46.76667,23.6,87.94,86.655,26.275000000000006
+Cologne,https://api.teleport.org/api/urban_areas/slug:cologne/,Cologne,Germany,Europe,50.93333,6.95,56.06999999999999,56.660000000000004,53.224999999999994
+Colorado Springs,https://api.teleport.org/api/urban_areas/slug:colorado-springs/,Colorado Springs,United States,North America,38.83388,-104.82136,53.75,59.225,38.120000000000005
+Columbus,https://api.teleport.org/api/urban_areas/slug:columbus/,Columbus,United States,North America,39.96118,-82.99879,57.460000000000015,45.535,64.66
+Copenhagen,https://api.teleport.org/api/urban_areas/slug:copenhagen/,Copenhagen,Denmark,Europe,55.67594,12.56553,34.260000000000005,72.39500000000001,70.63000000000001
+Cork,https://api.teleport.org/api/urban_areas/slug:cork/,Cork,Ireland,Europe,51.89797,-8.47061,49.02,91.43999999999998,25.314999999999998
+Curitiba,https://api.teleport.org/api/urban_areas/slug:curitiba/,Curitiba,Brazil,South America,-25.42778,-49.27306,84.33,31.42,71.875
+Dallas,https://api.teleport.org/api/urban_areas/slug:dallas/,Dallas,United States,North America,32.78306,-96.80667,60.91,64.60999999999999,71.685
+Dar es Salaam,https://api.teleport.org/api/urban_areas/slug:dar-es-salaam/,Dar es Salaam,Tanzania,Africa,-6.82349,39.26951,80.25999999999999,11.100000000000001,12.05
+Delhi,https://api.teleport.org/api/urban_areas/slug:delhi/,Delhi,India,Asia,28.65195,77.23149,98.69,35.88,56.83
+Denver,https://api.teleport.org/api/urban_areas/slug:denver/,Denver,United States,North America,39.73915,-104.9847,51.02,54.18500000000001,62.235
+Des Moines,https://api.teleport.org/api/urban_areas/slug:des-moines/,Des Moines,United States,North America,41.60054,-93.60911,63.269999999999996,56.98,60.665000000000006
+Detroit,https://api.teleport.org/api/urban_areas/slug:detroit/,Detroit,United States,North America,42.33143,-83.04575,60.32,61.670000000000016,74.78
+Doha,https://api.teleport.org/api/urban_areas/slug:doha/,Doha,Qatar,Asia,25.28545,51.53096,61.83,32.45,46.205
+Dresden,https://api.teleport.org/api/urban_areas/slug:dresden/,Dresden,Germany,Europe,51.05089,13.73832,60.28,56.035000000000004,66.38499999999999
+Dubai,https://api.teleport.org/api/urban_areas/slug:dubai/,Dubai,United Arab Emirates,Asia,25.0657,55.17128,54.900000000000006,31.509999999999998,46.705
+Dublin,https://api.teleport.org/api/urban_areas/slug:dublin/,Dublin,Ireland,Europe,53.33306,-6.24889,40.05000000000001,83.435,71.34500000000001
+Dusseldorf,https://api.teleport.org/api/urban_areas/slug:dusseldorf/,Dusseldorf,Germany,Europe,51.22172,6.77616,51.339999999999996,56.660000000000004,46.64000000000001
+Edinburgh,https://api.teleport.org/api/urban_areas/slug:edinburgh/,Edinburgh,United Kingdom,Europe,55.95206,-3.19648,51.14,51.755,72.00500000000001
+Edmonton,https://api.teleport.org/api/urban_areas/slug:edmonton/,Edmonton,Canada,North America,53.55014,-113.46871,55.22,46.099999999999994,39.739999999999995
+Eindhoven,https://api.teleport.org/api/urban_areas/slug:eindhoven/,Eindhoven,Netherlands,Europe,51.44083,5.47778,51.25,76.58999999999999,43.33500000000001
+Eugene,https://api.teleport.org/api/urban_areas/slug:eugene/,Eugene,United States,North America,44.05207,-123.08675,50.21,47.56000000000001,29.560000000000002
+Florence,https://api.teleport.org/api/urban_areas/slug:florence/,Florence,Italy,Europe,43.77925,11.24626,46.49,44.41499999999999,85.035
+Florianopolis,https://api.teleport.org/api/urban_areas/slug:florianopolis/,Florianopolis,Brazil,South America,-27.59667,-48.54917,83.31000000000002,31.85,53.3
+Fort Collins,https://api.teleport.org/api/urban_areas/slug:fort-collins/,Fort Collins,United States,North America,40.58526,-105.08442,0.0,53.01999999999999,27.46
+Frankfurt,https://api.teleport.org/api/urban_areas/slug:frankfurt/,Frankfurt,Germany,Europe,50.11552,8.68417,51.43,40.79,64.92
+Fukuoka,https://api.teleport.org/api/urban_areas/slug:fukuoka/,Fukuoka,Japan,Asia,33.6,130.41667,0.0,45.750000000000014,58.605000000000004
+Galway,https://api.teleport.org/api/urban_areas/slug:gaillimh/,Galway,Ireland,Europe,53.27194,-9.04889,49.27,76.375,11.150000000000002
+Gdansk,https://api.teleport.org/api/urban_areas/slug:gdansk/,Gdansk,Poland,Europe,54.35205,18.64637,81.26999999999998,50.36,55.15
+Geneva,https://api.teleport.org/api/urban_areas/slug:geneva/,Geneva,Switzerland,Europe,46.20222,6.14569,10.0,83.785,52.440000000000005
+Gibraltar,https://api.teleport.org/api/urban_areas/slug:gibraltar/,Gibraltar,Gibraltar,Europe,36.14474,-5.35257,0.0,42.96,22.349999999999998
+Glasgow,https://api.teleport.org/api/urban_areas/slug:glasgow/,Glasgow,United Kingdom,Europe,55.86515,-4.25763,56.230000000000004,42.529999999999994,46.71000000000001
+Gothenburg,https://api.teleport.org/api/urban_areas/slug:gothenburg/,Gothenburg,Sweden,Europe,57.70716,11.96679,50.46000000000001,61.925,40.045
+Grenoble,https://api.teleport.org/api/urban_areas/slug:grenoble/,Grenoble,France,Europe,45.17155,5.72239,43.17,37.58,31.785
+Guadalajara,https://api.teleport.org/api/urban_areas/slug:guadalajara/,Guadalajara,Mexico,North America,20.66682,-103.39182,94.9,40.925000000000004,76.57
+Guatemala City,https://api.teleport.org/api/urban_areas/slug:guatemala-city/,Guatemala City,Guatemala,North America,14.64072,-90.51327,81.75,25.06,51.645
+Halifax,https://api.teleport.org/api/urban_areas/slug:halifax/,Halifax,Canada,North America,44.64533,-63.57239,49.43000000000001,61.23500000000001,39.42
+Hamburg,https://api.teleport.org/api/urban_areas/slug:hamburg/,Hamburg,Germany,Europe,53.57532,10.01534,49.04,55.60499999999999,63.525
+Hannover,https://api.teleport.org/api/urban_areas/slug:hannover/,Hannover,Germany,Europe,52.37052,9.73322,60.00000000000001,56.660000000000004,35.255
+Havana,https://api.teleport.org/api/urban_areas/slug:havana/,Havana,Cuba,North America,23.13302,-82.38304,76.07999999999998,17.03,20.700000000000003
+Helsinki,https://api.teleport.org/api/urban_areas/slug:helsinki/,Helsinki,Finland,Europe,60.16952,24.93545,41.21000000000001,51.035,70.54500000000002
+Ho Chi Minh City,https://api.teleport.org/api/urban_areas/slug:ho-chi-minh-city/,Ho Chi Minh City,Vietnam,Asia,10.82302,106.62965,88.44000000000001,45.650000000000006,58.740000000000016
+Hong Kong,https://api.teleport.org/api/urban_areas/slug:hong-kong/,Hong Kong,China,Asia,22.27832,114.17469,49.669999999999995,62.275,70.585
+Honolulu,https://api.teleport.org/api/urban_areas/slug:honolulu/,Honolulu,United States,North America,21.30694,-157.85833,28.67,61.580000000000005,76.22999999999999
+Houston,https://api.teleport.org/api/urban_areas/slug:houston/,Houston,United States,North America,29.76328,-95.36327,61.62,62.48499999999999,71.44
+Hyderabad,https://api.teleport.org/api/urban_areas/slug:hyderabad/,Hyderabad,India,Asia,17.38405,78.45636,100.0,55.400000000000006,42.71
+Indianapolis,https://api.teleport.org/api/urban_areas/slug:indianapolis/,Indianapolis,United States,North America,39.76838,-86.15804,54.78,58.75500000000001,72.99
+Innsbruck,https://api.teleport.org/api/urban_areas/slug:innsbruck/,Innsbruck,Austria,Europe,47.26266,11.39454,47.32,50.595,44.245000000000005
+Istanbul,https://api.teleport.org/api/urban_areas/slug:istanbul/,Istanbul,Turkey,Asia,41.01384,28.94966,87.87,35.005,100.0
+Jacksonville,https://api.teleport.org/api/urban_areas/slug:jacksonville/,Jacksonville,United States,North America,30.33218,-81.65565,53.59,61.575,56.545
+Jakarta,https://api.teleport.org/api/urban_areas/slug:jakarta/,Jakarta,Indonesia,Asia,-6.21462,106.84513,84.71000000000001,44.98999999999999,81.46000000000001
+Johannesburg,https://api.teleport.org/api/urban_areas/slug:johannesburg/,Johannesburg,South Africa,Africa,-26.20227,28.04363,75.75000000000001,28.375,44.01499999999999
+Kansas City,https://api.teleport.org/api/urban_areas/slug:kansas-city/,Kansas City,United States,North America,39.09973,-94.57857,58.440000000000005,81.88500000000002,66.745
+Karlsruhe,https://api.teleport.org/api/urban_areas/slug:karlsruhe/,Karlsruhe,Germany,Europe,49.00937,8.40444,52.94,45.945,39.865
+Kathmandu,https://api.teleport.org/api/urban_areas/slug:kathmandu/,Kathmandu,Nepal,Asia,27.70169,85.3206,94.45,22.01,50.39
+Kiev,https://api.teleport.org/api/urban_areas/slug:kiev/,Kiev,Ukraine,Europe,50.45466,30.5238,98.17,60.41499999999999,84.19500000000001
+Kingston,https://api.teleport.org/api/urban_areas/slug:kingston/,Kingston,Jamaica,North America,17.99702,-76.79358,59.370000000000005,44.834999999999994,42.78
+Knoxville,https://api.teleport.org/api/urban_areas/slug:knoxville/,Knoxville,United States,North America,35.96064,-83.92074,64.47000000000001,70.925,44.955000000000005
+Krakow,https://api.teleport.org/api/urban_areas/slug:krakow/,Krakow,Poland,Europe,50.06143,19.93658,85.09,57.875,78.39999999999999
+Kuala Lumpur,https://api.teleport.org/api/urban_areas/slug:kuala-lumpur/,Kuala Lumpur,Malaysia,Asia,3.1412,101.68653,82.38,54.615,71.66
+Kyoto,https://api.teleport.org/api/urban_areas/slug:kyoto/,Kyoto,Japan,Asia,35.02107,135.75385,0.0,37.12,81.53500000000001
+Lagos,https://api.teleport.org/api/urban_areas/slug:lagos/,Lagos,Nigeria,Africa,6.45407,3.39467,90.98,16.34,13.585
+La Paz,https://api.teleport.org/api/urban_areas/slug:la-paz/,La Paz,Bolivia,South America,-16.5,-68.15,0.0,15.48,15.25
+Las Palmas de Gran Canaria,https://api.teleport.org/api/urban_areas/slug:las-palmas-de-gran-canaria/,Las Palmas de Gran Canaria,Spain,Europe,28.09973,-15.41343,77.17,61.95500000000001,28.145000000000003
+Las Vegas,https://api.teleport.org/api/urban_areas/slug:las-vegas/,Las Vegas,United States,North America,36.17497,-115.13722,57.589999999999996,53.035,63.685
+Lausanne,https://api.teleport.org/api/urban_areas/slug:lausanne/,Lausanne,Switzerland,Europe,46.516,6.63282,10.0,41.46,42.220000000000006
+Leeds,https://api.teleport.org/api/urban_areas/slug:leeds/,Leeds,United Kingdom,Europe,53.79648,-1.54785,53.629999999999995,73.29499999999999,37.434999999999995
+Leipzig,https://api.teleport.org/api/urban_areas/slug:leipzig/,Leipzig,Germany,Europe,51.33962,12.37129,59.11000000000001,56.46500000000002,45.26499999999999
+Lille,https://api.teleport.org/api/urban_areas/slug:lille/,Lille,France,Europe,50.63297,3.05858,53.99000000000001,38.26999999999999,51.09500000000001
+Lima,https://api.teleport.org/api/urban_areas/slug:lima/,Lima,Peru,South America,-12.04318,-77.02824,84.96000000000001,24.1,68.08500000000001
+Lisbon,https://api.teleport.org/api/urban_areas/slug:lisbon/,Lisbon,Portugal,Europe,38.71667,-9.13333,70.04000000000002,63.94000000000001,78.33500000000001
+Liverpool,https://api.teleport.org/api/urban_areas/slug:liverpool/,Liverpool,United Kingdom,Europe,53.41058,-2.97794,60.199999999999996,89.94,53.93
+Ljubljana,https://api.teleport.org/api/urban_areas/slug:ljubljana/,Ljubljana,Slovenia,Europe,46.05108,14.50513,67.49000000000001,54.895,47.989999999999995
+London,https://api.teleport.org/api/urban_areas/slug:london/,London,United Kingdom,Europe,51.50853,-0.12574,39.400000000000006,58.455000000000005,94.555
+Los Angeles,https://api.teleport.org/api/urban_areas/slug:los-angeles/,Los Angeles,United States,North America,34.05223,-118.24368,45.56000000000001,54.96500000000001,91.96
+Louisville,https://api.teleport.org/api/urban_areas/slug:louisville/,Louisville,United States,North America,38.25424,-85.75941,63.58000000000001,55.269999999999996,56.935
+Luxembourg,https://api.teleport.org/api/urban_areas/slug:luxembourg/,Luxembourg,Luxembourg,Europe,49.61167,6.13,34.11,54.58,44.955000000000005
+Lviv,https://api.teleport.org/api/urban_areas/slug:lviv/,Lviv,Ukraine,Europe,49.83826,24.02324,100.0,50.55999999999999,70.585
+Lyon,https://api.teleport.org/api/urban_areas/slug:lyon/,Lyon,France,Europe,45.74846,4.84671,43.49,94.03,59.87500000000001
+Madison,https://api.teleport.org/api/urban_areas/slug:madison/,Madison,United States,North America,43.07305,-89.40123,61.730000000000004,49.925,44.220000000000006
+Madrid,https://api.teleport.org/api/urban_areas/slug:madrid/,Madrid,Spain,Europe,40.4165,-3.70256,62.49000000000001,62.41,93.38
+Malaga,https://api.teleport.org/api/urban_areas/slug:malaga/,Malaga,Spain,Europe,36.72016,-4.42034,73.75,61.894999999999996,63.89
+Malmo,https://api.teleport.org/api/urban_areas/slug:malmo/,Malmo,Sweden,Europe,55.60587,13.00073,55.7,82.19999999999999,23.445
+Managua,https://api.teleport.org/api/urban_areas/slug:managua/,Managua,Nicaragua,North America,12.13282,-86.2504,0.0,11.77,18.37
+Manchester,https://api.teleport.org/api/urban_areas/slug:manchester/,Manchester,United Kingdom,Europe,53.48095,-2.23743,50.49000000000001,58.14,49.75000000000001
+Manila,https://api.teleport.org/api/urban_areas/slug:manila/,Manila,Philippines,Asia,14.6042,120.9822,87.51999999999998,46.08,75.84
+Marseille,https://api.teleport.org/api/urban_areas/slug:marseille/,Marseille,France,Europe,43.29695,5.38107,60.26000000000002,55.425000000000004,54.430000000000014
+Medellin,https://api.teleport.org/api/urban_areas/slug:medellin/,Medellin,Colombia,South America,6.25184,-75.56359,93.15,41.485,50.29
+Melbourne,https://api.teleport.org/api/urban_areas/slug:melbourne/,Melbourne,Australia,Oceania,-37.814,144.96332,47.98000000000001,58.96000000000001,64.61
+Memphis,https://api.teleport.org/api/urban_areas/slug:memphis/,Memphis,United States,North America,35.14953,-90.04898,58.29,60.7,68.60499999999999
+Mexico City,https://api.teleport.org/api/urban_areas/slug:mexico-city/,Mexico City,Mexico,North America,19.42847,-99.12766,92.44,58.405,99.62
+Miami,https://api.teleport.org/api/urban_areas/slug:miami/,Miami,United States,North America,25.77427,-80.19366,44.97,58.239999999999995,67.675
+Milan,https://api.teleport.org/api/urban_areas/slug:milan/,Milan,Italy,Europe,45.46427,9.18951,48.01000000000001,50.13999999999999,79.17
+Milwaukee,https://api.teleport.org/api/urban_areas/slug:milwaukee/,Milwaukee,United States,North America,43.0389,-87.90647,55.26,43.46,68.375
+Minneapolis-Saint Paul,https://api.teleport.org/api/urban_areas/slug:minneapolis-saint-paul/,Minneapolis-Saint Paul,United States,North America,44.97997,-93.26384,50.42000000000001,62.58499999999999,68.505
+Minsk,https://api.teleport.org/api/urban_areas/slug:minsk/,Minsk,Belarus,Europe,53.9,27.56667,92.89000000000001,48.63,69.5
+Montevideo,https://api.teleport.org/api/urban_areas/slug:montevideo/,Montevideo,Uruguay,South America,-34.90328,-56.18816,61.97,21.785,49.465
+Montreal,https://api.teleport.org/api/urban_areas/slug:montreal/,Montreal,Canada,North America,45.50884,-73.58781,59.480000000000004,44.78000000000001,69.175
+Moscow,https://api.teleport.org/api/urban_areas/slug:moscow/,Moscow,Russia,Europe,55.75222,37.61556,80.99000000000001,65.71,88.755
+Mumbai,https://api.teleport.org/api/urban_areas/slug:mumbai/,Mumbai,India,Asia,19.07283,72.88261,98.25,34.29,49.68499999999999
+Munich,https://api.teleport.org/api/urban_areas/slug:munich/,Munich,Germany,Europe,48.13743,11.57549,46.48,51.55000000000001,73.36
+Nairobi,https://api.teleport.org/api/urban_areas/slug:nairobi/,Nairobi,Kenya,Africa,-1.28333,36.81667,84.32,18.89,26.7
+Nantes,https://api.teleport.org/api/urban_areas/slug:nantes/,Nantes,France,Europe,47.21725,-1.55336,50.21,48.67,43.510000000000005
+Naples,https://api.teleport.org/api/urban_areas/slug:naples/,Naples,Italy,Europe,40.85216,14.26811,58.099999999999994,53.14000000000001,60.45
+Nashville,https://api.teleport.org/api/urban_areas/slug:nashville/,Nashville,United States,North America,36.16589,-86.78444,57.42000000000001,66.37,70.2
+New Orleans,https://api.teleport.org/api/urban_areas/slug:new-orleans/,New Orleans,United States,North America,29.95465,-90.07507,49.91999999999999,64.53000000000002,71.985
+New York,https://api.teleport.org/api/urban_areas/slug:new-york/,New York,United States,North America,40.71427,-74.00597,23.42,70.985,100.0
+Nice,https://api.teleport.org/api/urban_areas/slug:nice/,Nice,France,Europe,43.70313,7.26608,44.75,64.72,47.794999999999995
+Nicosia,https://api.teleport.org/api/urban_areas/slug:nicosia/,Nicosia,Cyprus,Europe,35.17531,33.3642,63.010000000000005,26.545,69.49
+Oklahoma City,https://api.teleport.org/api/urban_areas/slug:oklahoma-city/,Oklahoma City,United States,North America,35.46756,-97.51643,63.94,76.89,53.76000000000001
+Omaha,https://api.teleport.org/api/urban_areas/slug:omaha/,Omaha,United States,North America,41.25626,-95.94043,59.940000000000005,63.065,49.42
+Orlando,https://api.teleport.org/api/urban_areas/slug:orlando/,Orlando,United States,North America,28.53834,-81.37924,52.839999999999996,48.86,59.295
+Osaka,https://api.teleport.org/api/urban_areas/slug:osaka/,Osaka,Japan,Asia,34.69374,135.50218,48.19,37.24,72.265
+Oslo,https://api.teleport.org/api/urban_areas/slug:oslo/,Oslo,Norway,Europe,59.91273,10.74609,10.380000000000003,79.705,58.99
+Ottawa,https://api.teleport.org/api/urban_areas/slug:ottawa/,Ottawa,Canada,North America,45.41117,-75.69812,60.27,62.67499999999999,60.92
+Oulu,https://api.teleport.org/api/urban_areas/slug:oulu/,Oulu,Finland,Europe,65.01236,25.46816,0.0,57.22999999999999,20.060000000000002
+Oxford,https://api.teleport.org/api/urban_areas/slug:oxford/,Oxford,United Kingdom,Europe,51.75222,-1.25596,49.41000000000001,61.545,54.95
+Palo Alto,https://api.teleport.org/api/urban_areas/slug:palo-alto/,Palo Alto,United States,North America,37.44188,-122.14302,0.0,71.42,0.0
+Panama,https://api.teleport.org/api/urban_areas/slug:panama/,Panama,Panama,North America,8.9936,-79.51973,0.0,31.900000000000006,55.565
+Paris,https://api.teleport.org/api/urban_areas/slug:paris/,Paris,France,Europe,48.85341,2.3488,36.64,97.16000000000001,98.16499999999999
+Perth,https://api.teleport.org/api/urban_areas/slug:perth/,Perth,Australia,Oceania,-31.95224,115.8614,47.95,41.785,45.114999999999995
+Philadelphia,https://api.teleport.org/api/urban_areas/slug:philadelphia/,Philadelphia,United States,North America,39.95233,-75.16379,44.220000000000006,74.42999999999999,84.92000000000002
+Phnom Penh,https://api.teleport.org/api/urban_areas/slug:phnom-penh/,Phnom Penh,Cambodia,Asia,11.56245,104.91601,80.01000000000002,33.949999999999996,54.07
+Phoenix,https://api.teleport.org/api/urban_areas/slug:phoenix/,Phoenix,United States,North America,33.44838,-112.07404,62.08,61.78,68.10000000000001
+Phuket,https://api.teleport.org/api/urban_areas/slug:phuket/,Phuket,Thailand,Asia,7.89059,98.3981,76.02000000000001,36.150000000000006,48.13499999999999
+Pittsburgh,https://api.teleport.org/api/urban_areas/slug:pittsburgh/,Pittsburgh,United States,North America,40.44062,-79.99589,47.95,86.69500000000001,68.59
+Portland ME,https://api.teleport.org/api/urban_areas/slug:portland-me/,Portland ME,United States,North America,43.66147,-70.25533,0.0,35.465,33.05
+Portland OR,https://api.teleport.org/api/urban_areas/slug:portland-or/,Portland OR,United States,North America,45.52345,-122.67621,49.24,59.685,62.195
+Porto,https://api.teleport.org/api/urban_areas/slug:porto/,Porto,Portugal,Europe,41.14961,-8.61099,74.22,44.94500000000001,56.25
+Porto Alegre,https://api.teleport.org/api/urban_areas/slug:porto-alegre/,Porto Alegre,Brazil,South America,-30.03306,-51.23,81.20000000000002,21.96,77.035
+Prague,https://api.teleport.org/api/urban_areas/slug:prague/,Prague,Czechia,Europe,50.08804,14.42076,75.69,60.904999999999994,84.64500000000001
+Providence,https://api.teleport.org/api/urban_areas/slug:providence/,Providence,United States,North America,41.82399,-71.41283,0.0,89.345,39.18500000000001
+Quebec,https://api.teleport.org/api/urban_areas/slug:quebec/,Quebec,Canada,Europe,46.81228,-71.21454,60.37,32.985,56.36500000000001
+Quito,https://api.teleport.org/api/urban_areas/slug:quito/,Quito,Ecuador,South America,-0.22985,-78.52495,78.22,34.815,48.015
+Raleigh,https://api.teleport.org/api/urban_areas/slug:raleigh/,Raleigh,United States,North America,35.7721,-78.63861,56.10000000000001,79.515,66.13
+Reykjavik,https://api.teleport.org/api/urban_areas/slug:reykjavik/,Reykjavik,Iceland,Europe,64.13548,-21.89541,10.0,67.42,50.205
+Richmond,https://api.teleport.org/api/urban_areas/slug:richmond/,Richmond,United States,North America,37.55376,-77.46026,59.489999999999995,76.455,63.385
+Riga,https://api.teleport.org/api/urban_areas/slug:riga/,Riga,Latvia,Europe,56.946,24.10589,73.28999999999999,58.41000000000001,77.065
+Rio De Janeiro,https://api.teleport.org/api/urban_areas/slug:rio-de-janeiro/,Rio De Janeiro,Brazil,South America,-22.90642,-43.18223,77.51,23.380000000000003,86.67500000000001
+Riyadh,https://api.teleport.org/api/urban_areas/slug:riyadh/,Riyadh,Saudi Arabia,Asia,24.68773,46.72185,78.06,41.3,58.435
+Rochester,https://api.teleport.org/api/urban_areas/slug:rochester/,Rochester,United States,North America,43.15478,-77.61556,54.879999999999995,55.510000000000005,53.35
+Rome,https://api.teleport.org/api/urban_areas/slug:rome/,Rome,Italy,Europe,41.89193,12.51133,53.230000000000004,44.91,91.1
+Rotterdam,https://api.teleport.org/api/urban_areas/slug:rotterdam/,Rotterdam,Netherlands,Europe,51.9225,4.47917,49.34000000000001,58.525000000000006,54.27499999999999
+Saint Petersburg,https://api.teleport.org/api/urban_areas/slug:saint-petersburg/,Saint Petersburg,Russia,Europe,59.93863,30.31413,86.73,56.425,96.53500000000001
+Salt Lake City,https://api.teleport.org/api/urban_areas/slug:salt-lake-city/,Salt Lake City,United States,North America,40.76078,-111.89105,61.720000000000006,68.10500000000002,59.32000000000001
+San Antonio,https://api.teleport.org/api/urban_areas/slug:san-antonio/,San Antonio,United States,North America,29.42412,-98.49363,66.83,80.745,66.955
+San Diego,https://api.teleport.org/api/urban_areas/slug:san-diego/,San Diego,United States,North America,32.71533,-117.15726,51.56,59.989999999999995,82.10000000000001
+San Francisco Bay Area,https://api.teleport.org/api/urban_areas/slug:san-francisco-bay-area/,San Francisco Bay Area,United States,North America,37.77493,-122.41942,26.18,56.05500000000001,94.07
+San Jose,https://api.teleport.org/api/urban_areas/slug:san-jose/,San Jose,Costa Rica,North America,9.93333,-84.08333,67.28,15.155000000000003,68.665
+San Juan,https://api.teleport.org/api/urban_areas/slug:san-juan/,San Juan,Puerto Rico,North America,18.46633,-66.10572,59.8,42.73499999999999,68.39500000000001
+San Luis Obispo,https://api.teleport.org/api/urban_areas/slug:san-luis-obispo/,San Luis Obispo,United States,North America,35.28275,-120.65962,0.0,79.35500000000002,27.765
+San Salvador,https://api.teleport.org/api/urban_areas/slug:san-salvador/,San Salvador,El Salvador,North America,13.68935,-89.18718,77.42999999999998,18.310000000000002,48.584999999999994
+Santiago,https://api.teleport.org/api/urban_areas/slug:santiago/,Santiago,Chile,South America,-33.45694,-70.64827,72.37,10.0,75.56
+Santo Domingo,https://api.teleport.org/api/urban_areas/slug:santo-domingo/,Santo Domingo,Dominican Republic,North America,18.47186,-69.89232,80.76000000000002,42.21,57.96500000000001
+Sao Paulo,https://api.teleport.org/api/urban_areas/slug:sao-paulo/,Sao Paulo,Brazil,South America,-23.5475,-46.63611,78.23000000000002,33.895,87.89499999999998
+Sarajevo,https://api.teleport.org/api/urban_areas/slug:sarajevo/,Sarajevo,Bosnia and Herzegovina,Europe,43.84864,18.35644,86.59,46.475,59.345
+Saskatoon,https://api.teleport.org/api/urban_areas/slug:saskatoon/,Saskatoon,Canada,North America,52.13238,-106.66892,50.42000000000001,48.900000000000006,10.0
+Seattle,https://api.teleport.org/api/urban_areas/slug:seattle/,Seattle,United States,North America,47.60621,-122.33207,37.9,49.404999999999994,81.155
+Seoul,https://api.teleport.org/api/urban_areas/slug:seoul/,Seoul,South Korea,Asia,37.566,126.9784,36.98000000000001,76.37,82.00000000000001
+Seville,https://api.teleport.org/api/urban_areas/slug:seville/,Seville,Spain,Europe,37.38283,-5.97317,69.61,61.894999999999996,74.16
+Shanghai,https://api.teleport.org/api/urban_areas/slug:shanghai/,Shanghai,China,Asia,31.22222,121.45806,71.79,26.36,66.93499999999999
+Singapore,https://api.teleport.org/api/urban_areas/slug:singapore/,Singapore,Singapore,Asia,1.28967,103.85007,34.89,84.47,74.225
+Skopje,https://api.teleport.org/api/urban_areas/slug:skopje/,Skopje,Macedonia,Europe,41.99646,21.43141,91.10000000000001,45.20499999999999,62.08000000000001
+Sofia,https://api.teleport.org/api/urban_areas/slug:sofia/,Sofia,Bulgaria,Europe,42.69751,23.32415,85.5,62.72500000000001,53.184999999999995
+St. Louis,https://api.teleport.org/api/urban_areas/slug:st-louis/,St. Louis,United States,North America,38.62727,-90.19789,55.03999999999999,89.09,76.42500000000001
+Stockholm,https://api.teleport.org/api/urban_areas/slug:stockholm/,Stockholm,Sweden,Europe,59.33258,18.0649,43.6,76.135,67.975
+Stuttgart,https://api.teleport.org/api/urban_areas/slug:stuttgart/,Stuttgart,Germany,Europe,48.78232,9.17702,56.73000000000002,51.239999999999995,55.56
+Sydney,https://api.teleport.org/api/urban_areas/slug:sydney/,Sydney,Australia,Oceania,-33.86785,151.20732,41.28,47.365,62.275
+Taipei,https://api.teleport.org/api/urban_areas/slug:taipei/,Taipei,Taiwan,Asia,25.04776,121.53185,56.44,52.315000000000005,72.63499999999999
+Tallinn,https://api.teleport.org/api/urban_areas/slug:tallinn/,Tallinn,Estonia,Europe,59.43696,24.75353,69.31,52.019999999999996,70.235
+Tampa Bay Area,https://api.teleport.org/api/urban_areas/slug:tampa-bay-area/,Tampa Bay Area,United States,North America,27.94752,-82.45843,52.53,71.95,64.33999999999999
+Tampere,https://api.teleport.org/api/urban_areas/slug:tampere/,Tampere,Finland,Europe,61.49911,23.78712,46.22,57.92000000000001,41.87000000000001
+Tartu,https://api.teleport.org/api/urban_areas/slug:tartu/,Tartu,Estonia,Europe,58.38062,26.72509,74.7,43.004999999999995,40.81
+Tashkent,https://api.teleport.org/api/urban_areas/slug:tashkent/,Tashkent,Uzbekistan,Asia,41.26465,69.21627,0.0,12.425,31.760000000000005
+Tbilisi,https://api.teleport.org/api/urban_areas/slug:tbilisi/,Tbilisi,Georgia,Europe,41.69411,44.83368,97.65,40.87,49.19
+Tehran,https://api.teleport.org/api/urban_areas/slug:tehran/,Tehran,Iran,Asia,35.69439,51.42151,95.44,15.759999999999998,65.21
+Tel Aviv,https://api.teleport.org/api/urban_areas/slug:tel-aviv/,Tel Aviv,Israel,Asia,32.08088,34.78057,43.70000000000001,25.659999999999997,53.335
+The Hague,https://api.teleport.org/api/urban_areas/slug:the-hague/,The Hague,Netherlands,Europe,52.07667,4.29861,46.529999999999994,65.135,50.144999999999996
+Thessaloniki,https://api.teleport.org/api/urban_areas/slug:thessaloniki/,Thessaloniki,Greece,Europe,40.64361,22.93086,66.0,25.96,76.89000000000001
+Tokyo,https://api.teleport.org/api/urban_areas/slug:tokyo/,Tokyo,Japan,Asia,35.6895,139.69171,34.31,48.35000000000001,93.42000000000002
+Toronto,https://api.teleport.org/api/urban_areas/slug:toronto/,Toronto,Canada,North America,43.70011,-79.4163,52.71,43.83,78.25999999999999
+Toulouse,https://api.teleport.org/api/urban_areas/slug:toulouse/,Toulouse,France,Europe,43.60426,1.44367,45.519999999999996,46.220000000000006,41.370000000000005
+Tunis,https://api.teleport.org/api/urban_areas/slug:tunis/,Tunis,Tunisia,Africa,36.81897,10.16579,99.98000000000002,10.725,57.425000000000004
+Turin,https://api.teleport.org/api/urban_areas/slug:turin/,Turin,Italy,Europe,45.07049,7.68682,56.120000000000005,23.689999999999998,70.61
+Turku,https://api.teleport.org/api/urban_areas/slug:turku/,Turku,Finland,Europe,60.45148,22.26869,50.7,66.825,50.975
+Uppsala,https://api.teleport.org/api/urban_areas/slug:uppsala/,Uppsala,Sweden,Europe,59.85882,17.63889,54.42,58.54,34.27
+Utrecht,https://api.teleport.org/api/urban_areas/slug:utrecht/,Utrecht,Netherlands,Europe,52.09083,5.12222,46.04,66.76,53.730000000000004
+Valencia,https://api.teleport.org/api/urban_areas/slug:valencia/,Valencia,Spain,Europe,39.46975,-0.37739,68.72,91.4,70.78000000000002
+Valletta,https://api.teleport.org/api/urban_areas/slug:valletta/,Valletta,Malta,Europe,35.89972,14.51472,0.0,32.015,58.269999999999996
+Vancouver,https://api.teleport.org/api/urban_areas/slug:vancouver/,Vancouver,Canada,North America,49.24966,-123.11934,52.59,45.50500000000001,57.17
+Victoria,https://api.teleport.org/api/urban_areas/slug:victoria/,Victoria,Canada,North America,48.43294,-123.3693,57.03,61.949999999999996,45.230000000000004
+Vienna,https://api.teleport.org/api/urban_areas/slug:vienna/,Vienna,Austria,Europe,48.20849,16.37208,51.11,61.730000000000004,85.21500000000002
+Vilnius,https://api.teleport.org/api/urban_areas/slug:vilnius/,Vilnius,Lithuania,Europe,54.68916,25.2798,75.76,79.265,51.985000000000014
+Warsaw,https://api.teleport.org/api/urban_areas/slug:warsaw/,Warsaw,Poland,Europe,52.22977,21.01178,81.92,60.0,73.35500000000002
+Washington D.C.,https://api.teleport.org/api/urban_areas/slug:washington-dc/,Washington D.C.,United States,North America,38.89511,-77.03637,35.949999999999996,38.25500000000001,100.0
+Wellington,https://api.teleport.org/api/urban_areas/slug:wellington/,Wellington,New Zealand,Oceania,-41.28664,174.77557,51.61,51.745000000000005,45.99
+Winnipeg,https://api.teleport.org/api/urban_areas/slug:winnipeg/,Winnipeg,Canada,North America,49.8844,-97.14704,58.81999999999999,49.025000000000006,46.879999999999995
+Wroclaw,https://api.teleport.org/api/urban_areas/slug:wroclaw/,Wroclaw,Poland,Europe,51.1,17.03333,84.34,57.61500000000001,47.495000000000005
+Yerevan,https://api.teleport.org/api/urban_areas/slug:yerevan/,Yerevan,Armenia,Asia,40.18111,44.51361,94.31,38.99999999999999,47.37000000000001
+Zagreb,https://api.teleport.org/api/urban_areas/slug:zagreb/,Zagreb,Croatia,Europe,45.81444,15.97798,71.94,50.335,49.94500000000001
+Zurich,https://api.teleport.org/api/urban_areas/slug:zurich/,Zurich,Switzerland,Europe,47.36667,8.55,10.0,72.675,49.655
