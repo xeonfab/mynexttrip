@@ -1,28 +1,13 @@
-console.log("<%= @cities.first.name %>")
-
+function refreshFeatureForm(innerHTML) {
+  const newFeatureForm = document.getElementById('feature-filter-container');
+  newFeatureForm.innerHTML = innerHTML;
+}
 
 function refreshIndex(innerHTML) {
-
+  const newIndex = document.getElementById('indexcontainer');
+  newIndex.innerHTML = innerHTML;
 }
 
-<% ... %>
-  refreshIndex('<%= j render) cities/index')
+  refreshFeatureForm('<%= j render "shared/feature-filter-container", cities: @cities %>');
 
------------------------------------
-
-function refreshForm(innerHTML) {
-  const newReviewForm = document.getElementById('new_review');
-  newReviewForm.innerHTML = innerHTML;
-}
-
-function addReview(reviewHTML) {
-  const reviews = document.getElementById('reviews');
-  reviews.insertAdjacentHTML('beforeend', reviewHTML);
-}
-
-<% if @review.errors.any? %>
-  refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: @review %>');
-<% else %>
-  addReview('<%= j render "reviews/show", review: @review %>');
-  refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: Review.new %>');
-<% end %>
+  refreshIndex('<%= j render "shared/indexcontainer", cities: @cities %>');

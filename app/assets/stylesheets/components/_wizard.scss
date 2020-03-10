@@ -7,6 +7,7 @@
   height: 100%;
   overflow: hidden;
 
+
   .btn-ghost {
     color: #4A4A4A;
     border: 1px solid #4A4A4A;
@@ -51,6 +52,7 @@
     left: 999999px;
     padding: 0 50px;
   }
+
 
 
   .wizard-steps-step-0 {
@@ -152,8 +154,10 @@
     transform: translate3d(-2000px, 700px, 0);
 
 
+
   }
   .wizard-steps-container.is--step-1 {
+
     transform: translate3d(-500px, -440px, 0);
   }
   .wizard-steps-container.is--step-2 {
@@ -173,7 +177,6 @@
     display: flex;
     justify-content: center;
   }
-
 
 
   .sentence-checkboxes {
@@ -220,6 +223,7 @@
     flex-wrap: wrap;
     justify-content: center;
 
+
     .month-checkboxes-input {
       opacity: 0;
       position: absolute;
@@ -243,6 +247,7 @@
       color: $blue;
       font-weight: bold;
     }
+
     .month-checkboxes button {
       padding-top: 20px;
     }
