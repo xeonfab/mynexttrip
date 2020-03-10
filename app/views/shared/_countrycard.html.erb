@@ -1,10 +1,8 @@
 <%= link_to country_path(country) do %>
   <div class="country-card">
     <%= image_tag country.photo, class: "country-card-image" %>
-        <% fahrenheit = city.climate.january.to_f %>
-    <% celcius = fahrenheit - 273.1 %>
-      <div>
-        <span class="country-card-temp"><%= celcius.round(2) %></span><br>
+    <div>
+      <span class="country-card-temp">celcius</span><br>
       <span class="country-card-air"><%= CityFeature.joins(:feature).find_by(features: { name:  "Air pollution" }, city: city).score  %></span>
       <span class="country-card-cost"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: city).score %></span>
     </div>
