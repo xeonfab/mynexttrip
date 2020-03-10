@@ -1,13 +1,14 @@
 .region-card {
     background-color: black;
     max-width: 400px;
-    min-height: 250px;
+    min-height: 271px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px 0; // Safe zone for the temperature.
     overflow: hidden;
+    border-radius: 4px;
 
   .region-card-image {
     position: absolute;

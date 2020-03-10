@@ -4,6 +4,7 @@ export const initWizard = () => {
       return;
     }
 
+
   const wizardHeight = wizardEl.offsetHeight;
   const introStepEl = wizardEl.querySelector('.js-intro-step');
   introStepEl.style.height = `${wizardHeight}px`;
