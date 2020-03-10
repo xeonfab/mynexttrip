@@ -364,7 +364,7 @@ puts "Making the Countries"
 
     #Internet score
     CityFeature.create!(
-        score: row[:internet_score]*100,
+        score: row[:internet_score],
         feature: internet_feature,
         city: City.find_by(name: row[:city_name])
       )
@@ -372,14 +372,14 @@ puts "Making the Countries"
 
   #Internet Access_Download
     CityFeature.create!(
-    score: row[:download_speed]*100,
+    score: row[:download_speed],
     feature: download_feature,
     city: City.find_by(name: row[:city_name])
     )
 
   #Internet Access_Upload
     CityFeature.create!(
-    score: row[:upload_speed]*100,
+    score: row[:upload_speed],
     feature: upload_feature,
     city: City.find_by(name: row[:city_name])
     )
@@ -387,7 +387,7 @@ puts "Making the Countries"
 
   #Air Quality
   CityFeature.create!(
-  score: row[:air_quality]*100,
+  score: row[:air_quality],
   feature: air_feature,
   city: City.find_by(name: row[:city_name])
   )
@@ -395,42 +395,42 @@ puts "Making the Countries"
 
   #Cleanliness
   CityFeature.create!(
-  score: row[:cleanliness]*100,
+  score: row[:cleanliness],
   feature: cleanliness_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   # #Drinking water quality
       CityFeature.create!(
-      score: row[:water_score]*100,
+      score: row[:water_score],
       feature: water_feature,
       city: City.find_by(name: row[:city_name])
       )
 
   #safety score
   CityFeature.create!(
-  score: row[:safety]*100,
+  score: row[:safety],
   feature: crime_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Coworking score
   CityFeature.create!(
-  score: row[:coworking_score]*100,
+  score: row[:coworking_score],
   feature: coworking_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   # #Heathlcare quality score
   CityFeature.create!(
-  score: row[:health_score]*100,
+  score: row[:health_score],
   feature: healthcare_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   # Create the Culture score
   CityFeature.create!(
-        score: row[:culture_score]*100,
+        score: row[:culture_score],
         feature: culture_feature,
         city: City.find_by(name: row[:city_name])
       )
@@ -438,35 +438,35 @@ puts "Making the Countries"
 
   #Culture Art galleries  score
   CityFeature.create!(
-  score: row[:art_score]*100,
+  score: row[:art_score],
   feature: art_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Culture Concerts score
   CityFeature.create!(
-  score: row[:concert_score]*100,
+  score: row[:concert_score],
   feature: concert_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Culture historical sites score
   CityFeature.create!(
-  score: row[:site_score]*100,
+  score: row[:site_score],
   feature: site_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Culture museum score
   CityFeature.create!(
-  score: row[:museum_score]*100,
+  score: row[:museum_score],
   feature: museum_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Culture sports score
   CityFeature.create!(
-  score: row[:sport_score]*100,
+  score: row[:sport_score],
   feature: sport_feature,
   city: City.find_by(name: row[:city_name])
   )
