@@ -5,16 +5,18 @@ require 'date'
 require 'csv'
 
 puts 'Cleaning database...'
+CityFeature.destroy_all
 Feature.destroy_all
+CityTheme.destroy_all
 Theme.destroy_all
 
-CityTheme.destroy_all
-CityFeature.destroy_all
+
+
 Climate.destroy_all
 
-
-City.destroy_all
 BookingProvider.destroy_all
+City.destroy_all
+
 
 
 Country.destroy_all
@@ -265,7 +267,8 @@ puts "Making the Countries"
     if Country.find_by(name: row[:country_name]).nil?
       new_country = Country.create!(
         name: row[:country_name],
-        region: Region.find_by(name: row[:region_name])
+        region: Region.find_by(name: row[:region_name]),
+        photo: "https://source.unsplash.com/700x400/?#{row[:country_name]},landscape"
         )
       p new_country
 
@@ -284,12 +287,13 @@ puts "Making the Countries"
       location:row[:location],
       country: Country.find_by(name: row[:country_name]),
       latitude: row[:latitude],
-      longitude: row[:longitude]
+      longitude: row[:longitude],
+      photo: "https://source.unsplash.com/700x400/?#{row[:city_name]},landscape"
       )
 
-      photo = URI.open("https://source.unsplash.com/700x400/?#{row[:city_name]},landscape")
-      new_city.photos.attach(io: photo, filename: "#{row[:city_name]}.jpeg", content_type: 'image/jpeg')
-      puts "#{new_city.name} created!"
+      # photo = URI.open("https://source.unsplash.com/700x400/?#{row[:city_name]},landscape")
+      #new_city.photos.attach(io: photo, filename: "#{row[:city_name]}.jpeg", content_type: 'image/jpeg')
+       puts "#{new_city.name} created!"
     end
 
 
