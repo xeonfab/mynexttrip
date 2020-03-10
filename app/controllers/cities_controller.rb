@@ -1,10 +1,17 @@
 class CitiesController < ApplicationController
 
   def index
-    @cities = City.geocoded
 
+
+    @cities = City.geocoded
     if params[:query].present?
+      search_by_nav(params[:query])
+    elsif params[:feature_results].present?
       search_by_query
+      respond_to do |format|
+        format.html { redirect_to cities_path }
+        format.js
+      end
     elsif params[:filter_results].present?
       search_by_theme_filter(params[:filter_results][:themes])
     # elsif
@@ -33,12 +40,25 @@ class CitiesController < ApplicationController
 
   private
 
+  def search_by_nav(params_name)
+    @cities = City.global_search(params_name)
+    no_search if @cities.empty?
+    @countries = [@cities.first.country]
+  end
+
+
   def search_by_query
-      @cities = City.global_search(params[:query])
-      @countries = [@cities.first.country]
+    # left side filter search
+    # Keep the theme params
+    # convert filter to look like [["cleanliness", 80], ["crime_rate", 60]]
+    # use map
+    @cities = City.with_scores(filter_params.to_h)
+    @countries = [@cities.first.country]
   end
 
   def search_by_theme_filter(user_theme_filtered_list)
+    # journey/home page search
+
     user_theme_filtered_list.delete("")
       user_month = params[:filter_results][:month]
       if user_theme_filtered_list.present? && user_month.present?
@@ -58,19 +78,21 @@ class CitiesController < ApplicationController
       end
   end
 
-def search_by_feature_filter(user_feature_filtered_list)
+    def no_search
+      @cities = City.all
+      @countries = Country.all
+    end
 
+    #  <ActionController::Parameters {"utf8"=>"✓", "feature_results"=><ActionController::Parameters {"cost_of_living"=>"51", "air_quality"=>"51", "water_quality"=>"77", "cleanliness"=>"36", "safety"=>"51", "culture"=>"51", "internet_speed"=>"51", "languages"=>[""], "month"=>""} permitted: true>, "commit"=>"search", "controller"=>"cities", "action"=>"index"} permitted: true>
+    def filter_params
+      params.require(:feature_results).permit(:cost_of_living, :air_quality, :water_quality, :cleanliness, :safety , :culture , :internet_speed)
+    end
 
+    def search_by_feature_filter(user_feature_filtered_list)
+    end
 
-end
+    def air_polution_score(air_polution_score)
+      #case score
 
-  def no_search
-    @cities = City.all
-    @countries = Country.all
-  end
-
-  def city_params
-    params.require(:city).permit(:name, :photo)
-  end
-
+    end
 end
