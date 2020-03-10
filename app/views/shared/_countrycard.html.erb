@@ -1,6 +1,6 @@
 <%= link_to country_path(country) do %>
   <div class="country-card">
-    <%= cl_image_tag country.photos.first.key, class: "country-card-image" %>
+    <%= image_tag country.photo, class: "country-card-image" %>
     <h3 class="country-card-temp">25°C</h3>
     <div class="country-card-content">
         <h2 class="country-card-title"> <%= country.name %></h2>
