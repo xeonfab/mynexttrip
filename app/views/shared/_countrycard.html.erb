@@ -3,8 +3,7 @@
     <%= image_tag country.photo, class: "country-card-image" %>
     <div>
       <span class="country-card-temp">celcius</span><br>
-      <span class="country-card-air"><%= CityFeature.joins(:feature).find_by(features: { name:  "Air pollution" }, city: city).score  %></span>
-      <span class="country-card-cost"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: city).score %></span>
+
     </div>
     <div class="country-card-content">
         <h2 class="country-card-title"> <%= country.name %></h2>
