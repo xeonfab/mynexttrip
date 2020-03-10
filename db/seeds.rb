@@ -311,7 +311,7 @@ puts "Making the Countries"
 
     CSV.foreach(filepath, csv_options) do |row|
       CityFeature.create!(
-        score: row[:cost_of_living_score],
+        score: row[:cost_of_living_score]*100,
         feature: cost_living_feature,
         city: City.find_by(name: row[:city_name])
       )
@@ -364,7 +364,7 @@ puts "Making the Countries"
 
     #Internet score
     CityFeature.create!(
-        score: row[:internet_score],
+        score: row[:internet_score]*100,
         feature: internet_feature,
         city: City.find_by(name: row[:city_name])
       )
@@ -372,14 +372,14 @@ puts "Making the Countries"
 
   #Internet Access_Download
     CityFeature.create!(
-    score: row[:download_speed],
+    score: row[:download_speed]*100,
     feature: download_feature,
     city: City.find_by(name: row[:city_name])
     )
 
   #Internet Access_Upload
     CityFeature.create!(
-    score: row[:upload_speed],
+    score: row[:upload_speed]*100,
     feature: upload_feature,
     city: City.find_by(name: row[:city_name])
     )
@@ -387,7 +387,7 @@ puts "Making the Countries"
 
   #Air Quality
   CityFeature.create!(
-  score: row[:air_quality],
+  score: row[:air_quality]*100,
   feature: air_feature,
   city: City.find_by(name: row[:city_name])
   )
@@ -395,78 +395,78 @@ puts "Making the Countries"
 
   #Cleanliness
   CityFeature.create!(
-  score: row[:cleanliness],
+  score: row[:cleanliness]*100,
   feature: cleanliness_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   # #Drinking water quality
       CityFeature.create!(
-      score: row[:water_score],
+      score: row[:water_score]*100,
       feature: water_feature,
       city: City.find_by(name: row[:city_name])
       )
 
   #safety score
   CityFeature.create!(
-  score: row[:safety],
+  score: row[:safety]*100,
   feature: crime_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Coworking score
   CityFeature.create!(
-  score: row[:coworking_score],
+  score: row[:coworking_score]*100,
   feature: coworking_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   # #Heathlcare quality score
   CityFeature.create!(
-  score: row[:health_score],
+  score: row[:health_score]*100,
   feature: healthcare_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   # Create the Culture score
   CityFeature.create!(
-        score: row[:culture_score],
+        score: row[:culture_score]*100,
         feature: culture_feature,
         city: City.find_by(name: row[:city_name])
       )
   puts "Culture score feature created - #{row[:city_name]}"
 
-  # #Culture Art galleries  score
+  #Culture Art galleries  score
   CityFeature.create!(
-  score: row[:art_score],
+  score: row[:art_score]*100,
   feature: art_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Culture Concerts score
   CityFeature.create!(
-  score: row[:concert_score],
+  score: row[:concert_score]*100,
   feature: concert_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Culture historical sites score
   CityFeature.create!(
-  score: row[:site_score],
+  score: row[:site_score]*100,
   feature: site_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Culture museum score
   CityFeature.create!(
-  score: row[:museum_score],
+  score: row[:museum_score]*100,
   feature: museum_feature,
   city: City.find_by(name: row[:city_name])
   )
 
   #Culture sports score
   CityFeature.create!(
-  score: row[:sport_score],
+  score: row[:sport_score]*100,
   feature: sport_feature,
   city: City.find_by(name: row[:city_name])
   )

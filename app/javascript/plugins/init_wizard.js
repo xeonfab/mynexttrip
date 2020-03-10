@@ -4,6 +4,10 @@ export const initWizard = () => {
       return;
     }
 
+
+  const wizardHeight = wizardEl.offsetHeight;
+  const introStepEl = wizardEl.querySelector('.js-intro-step');
+  introStepEl.style.height = `${wizardHeight}px`;
   const nextBtnEls = wizardEl.querySelectorAll('.js-wizard-next');
   const previousBtnEls = wizardEl.querySelectorAll('.js-wizard-previous')
   const wizardStepsEl = wizardEl.querySelector('.js-wizard-steps');

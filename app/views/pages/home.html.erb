@@ -1,38 +1,9 @@
-<!-- <div class="home-banner" style="background-image: url(<%= asset_path 'homepage.png' %>);">
-  <div class="inner-banner-container">
-    <div class="col">
-      <h1>What's the plan for your next trip?</h1>
-      <h2>Find, compare and easily plan your next travel destination</h2>
-    </div>
-    <div class="row justify-content-center">
-      <div class="home-search-card">
-          <%= simple_form_for :filter_results, url: cities_path, method: :get do |f| %>
-            <div>
-              <%= f.input :month, collection: %w(January February March April May June July August September October November December) %>
-            </div>
-            <div class="">
-              <%= f.input :themes, collection: %w[Skiing Romantic City Beach Culture], input_html: { multiple: true}, as: :check_boxes %>
-              <%= button_tag(type: 'submit', class: "submitbtn") do %>
-              <i class="fa fa-search"></i>
-              <% end %>
-            </div>
-          <% end %>
-      </div>
 
-
-    </div>
-    <div class="col">
-      <h2>350 Cities 190 Countries</h2>
-
-    </div>
-
-  </div> -->
-<!-- </div> -->
 <div style="height: 80vh">
  <%= render 'shared/onboarding-wizard' %>
 </div>
-<div class="container mt-5">
-  <h1 class="text-center mb-3">Regions to Discover</h1>
+<div class="container hompage-background pt-5">
+  <h1 class="text-center mb-3 homepage-subtitles">Regions to Discover</h1>
   <div class="row">
     <%  @regions.each do |region| %>
       <div class="col-md-3 mb-3">
@@ -40,29 +11,9 @@
       </div>
     <% end %>
   </div>
-  <div class="container my-5">
-      <div class="row align-items-center">
-        <div class="col-4 text-center">
-          <div>
-            <img class="home-thumbnail mb-3" src="https://images.unsplash.com/photo-1507691640734-887fa7be3377?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-            <h5 class="mt-3">Personalized Experiences</h5>
-          </div>
-        </div>
-        <div class="col-4 text-center">
-          <div>
-            <img class="home-thumbnail mb-3" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1533&q=80">
-            <h5 class="mt-3">Practical Information</h5>
-          </div>
-        </div>
-        <div class="col-4 text-center">
-          <div>
-            <img class="home-thumbnail mb-3" src="https://images.unsplash.com/photo-1580893246395-52aead8960dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" / alt="home">
-            <h5 class="mt-3">Booking Partners</h5>
-          </div>
-        </div>
-      </div>
-  </div>
-  <h1 class="text-center mb-3">Countries to Discover</h1>
+
+
+  <h1 class="text-center mb-3 homepage-subtitles">Countries to Discover</h1>
   <div class="row">
     <%  @countries.each do |country| %>
     <div class="col-md-3 mb-3">
@@ -70,12 +21,41 @@
     </div>
     <% end %>
   </div>
-  <h1 class="text-center mb-3">Cities to Discover</h1>
+  <h1 class="text-center mb-3 homepage-subtitles">Cities to Discover</h1>
   <div class="row">
     <%  @cities.each do |city| %>
       <div class="col-md-3 mb-3">
       <%= render partial: 'shared/citycard', locals: { city: city } %>
       </div>
     <% end %>
+  </div>
+</div>
+<div class="container align-items-center">
+  <h1>500+ personalised booking providers for your next trip</h1>
+  <h3>Find, compare and easily plan with MyNextTrip</h3>
+  <div class="row">
+    <div class="col-md-12">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
   </div>
 </div>
