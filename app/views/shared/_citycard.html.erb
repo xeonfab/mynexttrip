@@ -1,11 +1,11 @@
+
 <%= link_to city_path(city), target: :_blank do %>
   <div class="city-card">
       <%= image_tag city.photo, class: "city-card-image" %>
-
       <div>
         <span class="city-card-temp">celcius</span><br>
         <span class="city-card-air"><%= CityFeature.joins(:feature).find_by(features: { name:  "Air pollution" }, city: city).score  %></span>
-      <span class="city-card-cost"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: city).score %></span>
+        <span class="city-card-cost"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: city).score %></span>
     </div>
     <div class="city-card-content">
         <h2 class="city-card-title"> <%= city.name %></h2>
