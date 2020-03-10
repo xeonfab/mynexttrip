@@ -3,6 +3,7 @@ require 'open-uri'
 require 'byebug'
 require 'date'
 require "open-uri"
+require "csv"
 
 puts 'Cleaning database...'
 Feature.destroy_all
