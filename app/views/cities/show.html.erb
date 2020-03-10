@@ -1,159 +1,283 @@
 <%= render 'shared/banner' %>
 
 <div class="container-show container mt-5">
+
+  <h1 class="banner-heading-city"><%= @city.name %></h1>
+  <h2 class="banner-heading-country"><%= @city.country.name %></h2>
+
   <div class="row">
     <div class="container-show-inner col-md-9">
+          <p class="city-show-description"><%= @city.name %> besides being the biggest city in <%= @city.country.name %> and home to more than 50 volcanoes, is also ranked as one of the top 5 cities to live in when it comes to quality of life. One of the coolest things about this place is the amazing hiking route from the Pacific Ocean to the Tasman Sea in only 4 hours.  It is 16km long and attracts thousands of tourists each year. If you are searching for high-quality dining, you will be happy to discover that <%= @city.name %> has over 800 restaurants with many award-winning chefs from all over the world preparing delicious meals.
+
+The sky tower offers an amazing panoramic view over the city and has many awesome bars and restaurants. For a real <%= @city.name %> experience, there is the <%= @city.country.name %> Maritime Museum that includes 14 galleries and tells stories of the country’s maritime heritage. If you are on vacation with children, Kelly Tarlton’s Sea Life Aquarium with its friendly sea creatures such as penguins and sharks is a must-visit tourist spot. For a class in history in art, it is best to head out to the <%= @city.name %> War Memorial Museum and the <%= @city.name %> art gallery.</p>
+
           <div>
-               <h2>Cost of Living</h2>
-            <div class="card">
-              <div class="row text-center my-3 px-2">
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?pint" / alt="home">
-                  <p>Beer</p>
-                  <p>$5</p>
-                  <%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: city).score %>
+            <h2 class="city-show-sub-headers">Climate</h2>
+            <div class="city-info-text">
+              <div class="row text-center p-3">
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">January</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 20°C</p>
+                  </div>
+
                 </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?coffee" / alt="home">
-                  <p>Coffee</p>
-                  <p>$5</p>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">February</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 20°C</p>
+                  </div>
                 </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?sandwich" / alt="home">
-                  <p>Lunch</p>
-                  <p>$5</p>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">March</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 19°C</p>
+                  </div>
                 </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?plane" / alt="home">
-                  <p>One-way Ticket</p>
-                  <p>$5</p>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">April</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 17°C</p>
+                  </div>
                 </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?petrol" / alt="home">
-                  <p>Gasoline</p>
-                  <p>$5</p>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">May</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 14°C</p>
+                  </div>
                 </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?taxi" / alt="home">
-                  <p>Taxi</p>
-                  <p>$5</p>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">June</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 12°C</p>
+                  </div>
                 </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?waterbottle" / alt="home">
-                  <p>Water</p>
-                  <p>$5</p>
+              </div>
+              <div class="row text-center p-3">
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">July</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 11°C</p>
+                  </div>
+
+                </div>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">August</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 12°C</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">September</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 13°C</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">October</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 15°C</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">November</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 16°C</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="card cards-temp">
+                    <p class="climate-month">December</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i> 18°C</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <h2>Climate</h2>
-            <div class="card">
-              <div class="row text-center p-3">
-                <div class="col">
-                  <i class="fas fa-sun" style="font-size:48px; color:#eee;"></i>
+            <h2 class="city-show-sub-headers">Information</h2>
+            <div class="row p-3">
+              <div class="col-6 card p-2 m-0">
+                <div class="d-flex justify-content-between">
+                  <p class="show-info-title">Language</p>
+                  <p class="">DATA</p>
                 </div>
-                 <div class="col">
-                  <i class="fas fa-cloud-showers-heavy" style="font-size:48px; color:#eee;"></i>
+              </div>
+              <div class="col-6 card p-2 m-0">
+                <div class="d-flex justify-content-between">
+                  <p class="show-info-title">Safety</p>
+                  <p class="">DATA</p>
                 </div>
-                 <div class="col">
-                  <i class="fas fa-cloud-sun"  style="font-size:48px; color:#eee;"></i>
-                </div>
-
               </div>
             </div>
           </div>
         <div class="row">
           <div class="col-6">
-            <h2>Environment Quality</h2>
             <div class="card p-3">
-              <div class="row">
-                  <div class="col-md-8">
-                    Air quality
-                  </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
+              <div class="d-flex justify-content-between border-show">
+                <h2>Cost of Living</h2>
+                <div class="">
+                  <!-- % review.rating.times do  %> -->
+                      <i class="fas fa-star star1"></i>
+                  <!-- % end %> -->
+                </div>
+              </div>
+              <div class="row p-2">
+                <div class="d-flex justify-content-between width-100">
+                  <p class="show-subtitle">Beer</p>
+                  <p class="show-subtitle-data">DATA</p>
+                </div>
+              </div>
+               <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Cappuchino</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
               </div>
-               <div class="row">
-                  <div class="col-md-8">
-                    Drinking water quality
-                  </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
+               <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Bread</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
               </div>
-               <div class="row">
-                  <div class="col-md-8">
-                    Cleanliness
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Lunch</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">One-way Taxi</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
               </div>
             </div>
           </div>
           <div class="col-6">
-            <h2>Safety</h2>
             <div class="card p-3">
-              <div class="row">
-                  <div class="col-md-8">
-                    Crime Rate
+              <div class="d-flex justify-content-between border-show">
+                <h2>Culture</h2>
+                <div class="">
+                  <!-- % review.rating.times do  %> -->
+                      <i class="fas fa-star star1"></i>
+                  <!-- % end %> -->
+                </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Art Galleries</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Concerts</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Historical Sites</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Museums</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Sports</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row my-4">
           <div class="col-6">
-            <h2>Leisure & Culture</h2>
             <div class="card p-3">
-              <div class="row">
-                <div class="col-md-8">
-                  Museums
-                </div>
-                <div class="col-md-4 text-right">
-                  <span class="badge badge-danger">Very bad2</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-8">
-                  History
-                </div>
-                <div class="col-md-4 text-right">
-                  <span class="badge badge-warning">Average</span>
+              <div class="d-flex justify-content-between border-show">
+                <h2>Healthcare</h2>
+                <div class="">
+                  <!-- % review.rating.times do  %> -->
+                      <i class="fas fa-star star1"></i>
+                  <!-- % end %> -->
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-8">
-                  Sports Venues
+              <div class="row p-2">
+                <div class="d-flex justify-content-between width-100">
+                  <p class="show-subtitle">Air Quality</p>
+                  <p class="show-subtitle-data">DATA</p>
                 </div>
-                <div class="col-md-4 text-right">
-                  <span class="badge badge-danger">Very bad</span>
-                </div>
+              </div>
+               <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Cleanliness</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+               <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Drinking Water</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Lunch</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">One-way Taxi</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
               </div>
             </div>
           </div>
           <div class="col-6">
-            <h2>Internet Access</h2>
             <div class="card p-3">
-               <div class="row">
-                  <div class="col-md-8">
-                    Download Speed
-                  </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
+              <div class="d-flex justify-content-between border-show">
+                <h2>Internet Speed</h2>
+                <div class="">
+                  <!-- % review.rating.times do  %> -->
+                      <i class="fas fa-star star1"></i>
+                  <!-- % end %> -->
+                </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Art Galleries</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
               </div>
-              <div class="row">
-                  <div class="col-md-8">
-                    Upload Speed
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Concerts</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-danger">Very bad</span>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Historical Sites</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Museums</p>
+                    <p class="show-subtitle-data">DATA</p>
+                  </div>
+              </div>
+              <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100">
+                    <p class="show-subtitle">Sports</p>
+                    <p class="show-subtitle-data">DATA</p>
                   </div>
               </div>
             </div>

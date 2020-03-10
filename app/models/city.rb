@@ -24,7 +24,6 @@ class City < ApplicationRecord
   # City.with_scores({"cost_of_living"=>"51", "air_quality"=>"51"})
   def self.with_scores(filters)
     sql = filters.map do |filter_name, score|
-
       City.joins(city_features: :feature).where(city_features: { score: score.to_i..101, features: { name: filter_name.to_s.titleize.capitalize } })
 
     end.map { |relation| "(#{relation.to_sql})" }.join(" INTERSECT ")

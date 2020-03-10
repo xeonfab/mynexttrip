@@ -4,17 +4,6 @@
   width: 100%;
   position: relative;
 
-  .banner-heading-city {
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-  }
-  .banner-heading-country {
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 20px;
-  }
-
   .banner-underlay {
     position: absolute;
     top: 0;
@@ -66,4 +55,23 @@
     position: relative;
     z-index: 1;
   }
+}
+
+.banner-heading-city {
+  color: #003F5C;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 46px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.banner-heading-country {
+  color: #003F5C;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 26px;
 }
