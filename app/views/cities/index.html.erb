@@ -1,69 +1,11 @@
 <div class="index-container">
   <div class="index-container-column">
-    <div class="index-container-column-1">
-
-      <%= simple_form_for :feature_results, remote: true, url: cities_path, method: :get do |f| %>
-
-    <!-- to add once re-seeded: cost_of_living culture  -->
-    <!-- need to 'defailt sliders' so that your search goes back to what you filtered it to -->
-        <% filters = %i(air_pollution drinking_water cleanliness crime_rate internet) %>
-        <% filters.each do |filter| %>
-          <% default_score = params.dig(:feature_results, filter) || 50 %>
-          <i class="fas fa-star"></i>
-          <%= f.label filter, required: false, class: "label" %>
-          <br>
-          <%= f.range_field filter, min: 1, max: 100, value: default_score,  class: "slider", id: "slider_#{filter}" %>
-          <br>
-        <% end %>
-
-        <%= f.input :languages, collection: %w[English Spanish French], input_html: { multiple: true }, as: :check_boxes %>
-
-
-        <%= f.input :month, input_html: {required: true}, collection: %w(January February March April May June July August September October November December) %>
-        <%= f.button :submit, "search", class: "btn btn-flat"%>
-
-      <% end %>
+    <div id= "feature-filter-container">
+      <%= render "shared/feature-filter-container" %>
     </div>
 
-    <div class="index-container-map-cards">
-      <div class="index-container-column-2">
-        <div class="header">
-          <a href="#default" class="logo">My Next Trip</a>
-          <div class="header-right">
-            <%= link_to "All", cities_path %>
-            <%= link_to "Countries", countries_path %>
-            <%= link_to "Cities", cities_path %><p> <<< At the moment the "cities" button directs to the same index as the "All" button</p>
-          </div>
-        </div>
-        <div>
-          <button onclick="myFunction()">Map view</button>
-          <div id="myDIV">
-            <div
-            id="map"
-            style="width: 100%;
-            height: 600px;"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-            ></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <%  @cities.each do |city| %>
-          <div class="col-md-3 mb-3">
-            <%= render partial: 'shared/citycard', locals: { city: city } %>
-          </div>
-          <% end %>
-        </div>
-
-        <div class="row">
-          <%  @countries.each do |country| %>
-            <div class="col-md-3 mb-3">
-              <%= render partial: 'shared/countrycard', locals: { country: country } %>
-            </div>
-          <% end %>
-        </div>
-      </div>
+    <div id= "indexcontainer">
+      <%= render "shared/indexcontainer" %>
     </div>
   </div>
 </div>

@@ -2,7 +2,6 @@ class CitiesController < ApplicationController
 
   def index
 
-
     @cities = City.geocoded
     if params[:query].present?
       search_by_nav(params[:query])
@@ -53,7 +52,8 @@ class CitiesController < ApplicationController
     # convert filter to look like [["cleanliness", 80], ["crime_rate", 60]]
     # use map
     @cities = City.with_scores(filter_params.to_h)
-    @countries = [@cities.first.country]
+    country_ids = @cities.pluck(:country_id)
+    @countries = Country.where(id: country_ids)
   end
 
   def search_by_theme_filter(user_theme_filtered_list)
