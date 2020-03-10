@@ -4,7 +4,7 @@
 
     <div class="index-container-column-1">
 
-      <%= simple_form_for :feature_results, url: cities_path, method: :get do |f| %>
+      <%= simple_form_for :feature_results, remote: true, url: cities_path, method: :get do |f| %>
 
     <!-- to add once re-seeded: cost_of_living culture  -->
     <!-- need to 'defailt sliders' so that your search goes back to what you filtered it to -->
@@ -23,6 +23,7 @@
 
         <%= f.input :month, input_html: {required: true}, collection: %w(January February March April May June July August September October November December) %>
         <%= f.button :submit, "search", class: "btn btn-flat"%>
+
       <% end %>
     </div>
 
