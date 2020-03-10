@@ -58,6 +58,31 @@
 .city-info-text {
   font-family: Montserrat;
   font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+
+  color: #003F5C;
+
+}
+
+.city-info-content-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #003F5C;
+}
+
+.city-climate-text {
+  font-family: Montserrat;
+  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;

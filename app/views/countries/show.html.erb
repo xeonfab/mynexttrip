@@ -1,111 +1,278 @@
 <%= render 'shared/bannercountry' %>
-
 <div class="container-show container mt-5">
-
   <h1 class="banner-heading-city"><%= @country.name %></h1>
-
- <div class="row">
+  <div class="row">
     <div class="container-show-inner col-md-9">
+      <p class="city-show-description"></p>
       <div>
-        <h2>Cost of Living</h2>
-        <div class="card">
-          <div class="row text-center my-3 px-2">
-            <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?pint" / alt="home">
-                  <p>Beer</p>
-                  <p>$5</p>
-                </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?coffee" / alt="home">
-                  <p>Coffee</p>
-                  <p>$5</p>
-                </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?sandwich" / alt="home">
-                  <p>Lunch</p>
-                  <p>$5</p>
-                </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?plane" / alt="home">
-                  <p>One-way Ticket</p>
-                  <p>$5</p>
-                </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?petrol" / alt="home">
-                  <p>Gasoline</p>
-                  <p>$5</p>
-                </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?taxi" / alt="home">
-                  <p>Taxi</p>
-                  <p>$5</p>
-                </div>
-                <div class="col">
-                  <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?waterbottle" / alt="home">
-                  <p>Water</p>
-                  <p>$5</p>
-                </div>
-          </div>
-        </div>
-      </div>
-      <div>
-         <h2>Climate</h2>
-          <div class="card">
-            <div class="row text-center p-3">
-              <div class="col">
-                <i class="fas fa-sun" style="font-size:48px; color:#eee;"></i>
+        <h2 class="city-show-sub-headers">Climate</h2>
+        <div class="city-climate-text">
+          <div class="row text-center p-3">
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">January</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 20°C</p>
               </div>
-               <div class="col">
-                <i class="fas fa-cloud-showers-heavy" style="font-size:48px; color:#eee;"></i>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">February</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 20°C</p>
               </div>
-               <div class="col">
-                <i class="fas fa-cloud-sun"  style="font-size:48px; color:#eee;"></i>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">March</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 19°C</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">April</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 17°C</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">May</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 14°C</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">June</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 12°C</p>
               </div>
             </div>
           </div>
+          <div class="row text-center p-3">
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">July</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 11°C</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">August</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 12°C</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">September</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 13°C</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">October</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 15°C</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">November</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 16°C</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card cards-temp">
+                <p class="climate-month">December</p>
+                <p class="climate-temp"><i class="fas fa-sun"></i> 18°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="city-show-sub-headers">Information</h2>
+      <div class="row">
+        <div class="col-6">
+          <div class="card p-2 m-0">
+            <div class="city-info-text d-flex justify-content-between">
+              <p class="show-info-title">Language</p>
+              <p class="">DATA</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card p-2 m-0">
+            <div class="city-info-text d-flex justify-content-between">
+              <p class="show-info-title">Safety</p>
+              <p class="">DATA</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-6">
-          <h2>Environment Quality</h2>
           <div class="card p-3">
-            <div class="row">
-                  <div class="col-md-8">
-                    Air quality
-                  </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
-                  </div>
+            <div class="city-info-text d-flex justify-content-between border-show">
+              <h2>Cost of Living</h2>
+              <div class="">
+                <!-- % review.rating.times do  %> -->
+                <i class="fas fa-star star1"></i>
+                <!-- % end %> -->
               </div>
-               <div class="row">
-                  <div class="col-md-8">
-                    Drinking water quality
-                  </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
-                  </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Beer</p>
+                <p class="show-subtitle-data">DATA</p>
               </div>
-               <div class="row">
-                  <div class="col-md-8">
-                    Cleanliness
-                  </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
-                  </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Cappuchino</p>
+                <p class="show-subtitle-data">DATA</p>
               </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Bread</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Lunch</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">One-way Taxi</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
           </div>
-
         </div>
         <div class="col-6">
-          <h2>Safety</h2>
           <div class="card p-3">
-              <div class="row">
-                  <div class="col-md-8">
-                    Crime Rate
-                  </div>
-                  <div class="col-md-4 text-right">
-                    <span class="badge badge-success">Very good</span>
-                  </div>
+            <div class="city-info-text d-flex justify-content-between border-show">
+              <h2>Culture</h2>
+              <div class="">
+                <!-- % review.rating.times do  %> -->
+                <i class="fas fa-star star1"></i>
+                <!-- % end %> -->
               </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Art Galleries</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Concerts</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Historical Sites</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Museums</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Sports</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="col-6">
+          <div class="card p-3">
+            <div class="city-info-text d-flex justify-content-between border-show">
+              <h2>Healthcare</h2>
+              <div class="">
+                <!-- % review.rating.times do  %> -->
+                <i class="fas fa-star star1"></i>
+                <!-- % end %> -->
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Air Quality</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Cleanliness</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Drinking Water</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Lunch</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">One-way Taxi</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card p-3">
+            <div class="city-info-text d-flex justify-content-between border-show">
+              <h2>Internet Speed</h2>
+              <div class="">
+                <!-- % review.rating.times do  %> -->
+                <i class="fas fa-star star1"></i>
+                <!-- % end %> -->
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Art Galleries</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Concerts</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Historical Sites</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Museums</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="d-flex justify-content-between width-100 city-info-content-text">
+                <p class="show-subtitle">Sports</p>
+                <p class="show-subtitle-data">DATA</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -113,46 +280,29 @@
         <h2 class="my-3">Cities of <%= @country.name %></h2>
         <div class="row">
           <%  @cities.each do |city| %>
-            <div class="col-md-3 mb-3">
-              <%= render partial: 'shared/citycard', locals: { city: city } %>
-            </div>
+          <div class="col-md-3 mb-3">
+            <%= render partial: 'shared/citycard', locals: { city: city } %>
+          </div>
           <% end %>
+        </div>
+        <div class="my-4">
+          <div id="map" style="width: 100%;
+            height: 600px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        </div>
       </div>
-
-
-       </div>
-      <div class="col">
-          <div
-          id="map"
-          style="width: 100%;
-          height: 600px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
-      </div>
-
     </div>
     <div class="col-md-3">
       <div>
-        <div class="card justify-content-center p-3 mb-5">
-          <div>
-            <h2>X booking providers</h2>
-            <h3>available for your travel</h3>
-          </div>
-          <div class="avatar"></div>
+        <div class="card p-3 mb-5">
+          <h2>X booking providers</h2>
+          <h3>available for your travel</h3>
           <%= link_to "Booking providers", country_booking_providers_path(@country) , class: "btn-main-pink large" %>
         </div>
-
       </div>
       <div>
         <div data-skyscanner-widget="SearchWidget"></div>
         <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
       </div>
     </div>
-
   </div>
 </div>
-
-
-
-
