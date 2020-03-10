@@ -8,6 +8,10 @@ class CitiesController < ApplicationController
       search_by_nav(params[:query])
     elsif params[:feature_results].present?
       search_by_query
+      respond_to do |format|
+        format.html { redirect_to cities_path }
+        format.js
+      end
     elsif params[:filter_results].present?
       search_by_theme_filter(params[:filter_results][:themes])
     # elsif
