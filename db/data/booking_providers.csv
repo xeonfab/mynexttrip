@@ -1,29 +1,36 @@
-name,category,url,city
-Booking,Accomodation,https://www.booking.com/
-Hostelworld,Accomodation,https://www.hostelworld.com/
-Homeway,Accomodation,https://www.homeaway.com/
-Roadtrippers,Accomodation,https://roadtrippers.com/australia/
-Momondo,Accomodation,https://www.momondo.com.au/?ispredir=true
-Couchsurfing,Accomodation,https://www.couchsurfing.com/
-Agoda,Accomodation,https://www.agoda.com/?cid=-218
-WickedCampers ,Transport,https://www.wickedcampers.ca/
-Hopper,Transport,https://www.hopper.com/
-Rentalcars,Transport,https://www.rentalcarsconnect.com/
-Travelcar,Transport,https://www.travelcar.com/en-AU/
-Campermate,Transport,https://www.campermate.com.au/
-Hertz,Transport,https://www.hertz.com/rentacar/reservation/
-Viator,Activities,https://www.viator.com/fr-FR/distribution-partners?mcid=58463
-GetYourGuide,Activities,https://partner.getyourguide.com/en-us/travel-writers
-Musement,Activities,https://www.musement.com/fr/
-Ceetiz,Activities,https://www.ceetiz.fr/espace-partenaire
-Tripadvisor,Restaurant / Bars,https://www.tripadvisor.com/
-Evaneos,Local agencies,https://www.evaneos.co.uk/
-La maison du voyage,Local agencies,https://www.maisonsduvoyage.com/
-Comptoir,Local agencies, https://www.comptoir.fr/
-Workfrom,Working spaces,https://workfrom.co/
-Coworker,Working spaces,https://www.coworker.com/
-Skyscanner,Flight,https://www.skyscanner.com.au/?previousCultureSource=COOKIE&redirectedFrom=www.skyscanner.com
-Airfrance,Flight,http://airfrance.com/
-Air New Zealand,Flight,https://www.airnewzealand.com.au/
-Agoda,Flight,https://www.agoda.com/flights?cid=-218
-Rome2rio,Flight,https://www.rome2rio.com/
+name,category,url,city,country
+Booking,Accomodation,https://www.booking.com/,Auckland,New zealand
+Hostelworld,Accomodation,https://www.hostelworld.com/,Auckland,New zealand
+Homeway,Accomodation,https://www.homeaway.com/,Auckland,New zealand
+Roadtrippers,Accomodation,https://roadtrippers.com/australia/,Auckland,New zealand
+Momondo,Accomodation,https://www.momondo.com.au/?ispredir=true,Auckland,New zealand
+Couchsurfing,Accomodation,https://www.couchsurfing.com/,Auckland,New zealand
+Agoda,Accomodation,https://www.agoda.com/?cid=-218,Auckland,New zealand
+WickedCampers ,Transport,https://www.wickedcampers.ca/,Auckland,New zealand
+Hopper,Transport,https://www.hopper.com/,Auckland,New zealand
+Rentalcars,Transport,https://www.rentalcarsconnect.com/,Auckland,New zealand
+Travelcar,Transport,https://www.travelcar.com/en-AU/,Auckland,New zealand
+Campermate,Transport,https://www.campermate.com.au/,Auckland,New zealand
+Hertz,Transport,https://www.hertz.com/rentacar/reservation/,Auckland,New zealand
+Viator,Activities,https://www.viator.com/fr-FR/distribution-partners?mcid=58463,Auckland,New zealand
+GetYourGuide,Activities,https://partner.getyourguide.com/en-us/travel-writers,Auckland,New zealand
+Musement,Activities,https://www.musement.com/fr/,Auckland,New zealand
+Ceetiz,Activities,https://www.ceetiz.fr/espace-partenaire,Auckland,New zealand
+Tripadvisor,Restaurant / Bars,https://www.tripadvisor.com/,Auckland,New zealand
+Evaneos,Local agencies,https://www.evaneos.co.uk/,Auckland,New zealand
+La maison du voyage,Local agencies,https://www.maisonsduvoyage.com/,Auckland,New zealand
+Comptoir,Local agencies, https://www.comptoir.fr/,Auckland,New zealand
+Workfrom,Working spaces,https://workfrom.co/,Auckland,New zealand
+Coworker,Working spaces,https://www.coworker.com/,Auckland,New zealand
+Skyscanner,Flight,https://www.skyscanner.com.au/?previousCultureSource=COOKIE&redirectedFrom=www.skyscanner.com,Auckland,New zealand
+Air New Zealand,Flight,https://www.airnewzealand.com.au/,Auckland,New zealand
+Agoda,Flight,https://www.agoda.com/flights?cid=-218,Auckland,New zealand
+Rome2rio,Flight,https://www.rome2rio.com/,Auckland,New zealand
+Bookme,Activities,https://www.bookme.co.nz/,Auckland,New zealand
+Experienceoz,Activities,https://www.experienceoz.com.au/,Auckland,New zealand
+Virgin Australia,Flight,https://www.virginaustralia.com/,Auckland,New zealand
+Scoot,Flight,https://www.flyscoot.com/en,Auckland,New zealand
+Tigerair,Flight,https://tigerair.com.au/,Auckland,New zealand
+jetstar,Flight,https://www.jetstar.com/au/en,Auckland,New zealand
+Interislander,Transport,https://www.greatjourneysofnz.co.nz/,Auckland,New zealand
+Direct ferries,Transport,https://www.directferries.com/picton_wellington_ferry.htm,Auckland,New zealand
