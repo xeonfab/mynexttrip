@@ -1,8 +1,12 @@
 class CitiesController < ApplicationController
 
   def index
+
+
     @cities = City.geocoded
-    if params[:feature_results].present?
+    if params[:query].present?
+      search_by_nav(params[:query])
+    elsif params[:feature_results].present?
       search_by_query
     elsif params[:filter_results].present?
       search_by_theme_filter(params[:filter_results][:themes])
@@ -32,7 +36,15 @@ class CitiesController < ApplicationController
 
   private
 
+  def search_by_nav(params_name)
+    @cities = City.global_search(params_name)
+    no_search if @cities.empty?
+    @countries = [@cities.first.country]
+  end
+
+
   def search_by_query
+    # left side filter search
     # Keep the theme params
     # convert filter to look like [["cleanliness", 80], ["crime_rate", 60]]
     # use map
@@ -41,6 +53,8 @@ class CitiesController < ApplicationController
   end
 
   def search_by_theme_filter(user_theme_filtered_list)
+    # journey/home page search
+
     user_theme_filtered_list.delete("")
       user_month = params[:filter_results][:month]
       if user_theme_filtered_list.present? && user_month.present?
@@ -78,5 +92,3 @@ class CitiesController < ApplicationController
 
     end
 end
-
-

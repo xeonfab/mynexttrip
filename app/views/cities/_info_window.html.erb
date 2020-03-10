@@ -1,2 +1,11 @@
-<h2><%= city.name %></h2>
-<p><%= city.country.name %></p>
+<%= link_to city_path(city), target: :_blank do %>
+  <div class="city-card">
+      <%= cl_image_tag city.photos.first.key, class: "city-card-image"  %>
+
+    <h3 class="city-card-temp">25°C</h3>
+    <div class="city-card-content">
+        <h2 class="city-card-title"> <%= city.name %></h2>
+        <h3 class="city-card-country"><%= city.country.name %></h3>
+    </div>
+  </div>
+<% end %>
