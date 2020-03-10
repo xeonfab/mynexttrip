@@ -89,7 +89,7 @@ require 'byebug'
   else
     download = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-DOWNLOAD"}[0]
     if download.class == Hash
-        download_speed = download["float_value"]
+        download_speed = download["float_value"]*100
     else
        download_speed = nil
     end
@@ -97,7 +97,7 @@ require 'byebug'
       #Internet Access_Upload
     upload = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-UPLOAD"}[0]
    if upload.class == Hash
-      upload_speed = upload["float_value"]
+      upload_speed = upload["float_value"]*100
     else
       upload_speed = nil
     end
@@ -109,16 +109,16 @@ require 'byebug'
   else
 
     air = city_air_details[0]["data"].select {|element| element["id"] == "AIR-POLLUTION-TELESCORE"}[0]
-    air_score = air["float_value"]
+    air_score = air["float_value"]*100
 
       #Cleanliness
     clean = city_air_details[0]["data"].select {|element| element["id"] == "CLEANLINESS-TELESCORE"}[0]
-    clean_score = clean["float_value"]
+    clean_score = clean["float_value"]*100
 
       #Drinking water quality
     water = city_air_details[0]["data"].select {|element| element["id"] == "DRINKING-WATER-QUALITY-TELESCORE"}[0]
     if water.class == Hash
-      water_score = water["float_value"]
+      water_score = water["float_value"]*100
     else
       water_score = nil
     end
@@ -129,7 +129,7 @@ require 'byebug'
   if city_safety_details.empty?
   else
   crime = city_safety_details[0]["data"].select {|element| element["id"] == "CRIME-RATE-TELESCORE"}[0]
-  safety = crime["float_value"]
+  safety = crime["float_value"]*100
   end
 
     #Coworking score
@@ -137,7 +137,7 @@ require 'byebug'
   if city_space_details.empty?
   else
   coworking = city_space_details[0]["data"].select {|element| element["id"] == "COWORKING-SPACES-TELESCORE"}[0]
-  coworking_score = coworking["float_value"]
+  coworking_score = coworking["float_value"]*100
   end
 
     # #Heathlcare quality score
@@ -145,7 +145,7 @@ require 'byebug'
   if city_care_details.empty?
   else
   health = city_care_details[0]["data"].select {|element| element["id"] == "HEALTHCARE-QUALITY-TELESCORE"}[0]
-  health_score = health["float_value"]
+  health_score = health["float_value"]*100
   end
 
   #CULTURE
@@ -154,23 +154,23 @@ require 'byebug'
   else
   #Culture Art galleries  score
   art = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-ART-GALLERIES-TELESCORE"}[0]
-  art_score = art["float_value"]
+  art_score = art["float_value"]*100
 
   #Culture Concerts score
   concert = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-CONCERTS-TELESCORE"}[0]
-  concert_score = concert["float_value"]
+  concert_score = concert["float_value"]*100
 
   #Culture historical sites score
   site = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-HISTORICAL-SITES-TELESCORE"}[0]
-  site_score = site["float_value"]
+  site_score = site["float_value"]*100
 
   #Culture museum score
   museum = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-MUSEUMS-TELESCORE"}[0]
-  museum_score = museum["float_value"]
+  museum_score = museum["float_value"]*100
 
   #Culture sports score
   sport = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-SPORTS-TELESCORE"}[0]
-  sport_score = sport["float_value"]
+  sport_score = sport["float_value"]*100
   end
 
 

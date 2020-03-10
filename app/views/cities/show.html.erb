@@ -11,6 +11,7 @@
                   <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?pint" / alt="home">
                   <p>Beer</p>
                   <p>$5</p>
+                  <%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: city).score %>
                 </div>
                 <div class="col">
                   <img class="show-thumbnail mb-3" src="https://source.unsplash.com/random/500x500/?coffee" / alt="home">

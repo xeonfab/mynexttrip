@@ -58,4 +58,25 @@
     transform: scale(1.1);
     text-decoration: none;
   }
+
+      .country-card-air {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Montserrat;
+    position: absolute;
+    left: 60px;
+    bottom: 6px;
+  }
+
+      .country-card-cost {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Montserrat;
+    position: absolute;
+    left: 120px;
+    bottom: 6px;
+  }
+
 }
