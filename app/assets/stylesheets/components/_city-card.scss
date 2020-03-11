@@ -46,27 +46,40 @@
     font-family: Montserrat;
   }
 
+   &:hover .city-card-image {
+    transform: scale(1.1);
+    text-decoration: none;
+  }
+
+  .container-details {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-around;
+    bottom: 0;
+    padding: 4px;
+    margin-bottom: 4px;
+    margin-x: 5px;
+    background: rgba(250, 245, 228, 0.1);
+    border-radius: 4px;
+    }
+
   .city-card-temp {
     color: white;
     font-size: 14px;
     font-weight: bold;
     font-family: Montserrat;
-    position: absolute;
-    left: 10px;
-    bottom: 6px;
-  }
-   &:hover .city-card-image {
-    transform: scale(1.1)
+    z-index: 5
   }
 
     .city-card-air {
+
     color: white;
     font-size: 14px;
     font-weight: bold;
     font-family: Montserrat;
-    position: absolute;
-    left: 60px;
-    bottom: 6px;
+    z-index: 5
   }
 
       .city-card-cost {
@@ -74,10 +87,11 @@
     font-size: 14px;
     font-weight: bold;
     font-family: Montserrat;
-    position: absolute;
-    left: 120px;
-    bottom: 6px;
+    z-index: 5
   }
-
+  .show-page-logos {
+    border-radius: 50%;
+    border: 2px solid black;
+  }
 
 }

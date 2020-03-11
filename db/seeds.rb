@@ -304,12 +304,31 @@ puts "Making the Countries"
 
   # Select all data for each feature
 
+
+  #LANGUAGES
+  # csv_options = { headers: :first_row, header_converters: :symbol }
+  # filepath = File.join(__dir__, 'data/languages.csv')
+
+
+  #   CSV.foreach(filepath, csv_options) do |row|
+
+  #   #Languages speaking
+  #   CityFeature.create!(
+  #   score: row[:spoken_languages],
+  #   feature: language_feature,
+  #   city: City.find_by(name: row[:city_name])
+  #   )
+
+  #   end
+
+
   #COST OF LIVING
   csv_options = { headers: :first_row, header_converters: :symbol }
   filepath = File.join(__dir__, 'data/features.csv')
 
 
     CSV.foreach(filepath, csv_options) do |row|
+
       CityFeature.create!(
         score: row[:cost_of_living_score]*100,
         feature: cost_living_feature,
@@ -354,13 +373,6 @@ puts "Making the Countries"
       feature: taxi_feature,
       city: City.find_by(name: row[:city_name])
       )
-
-    #Languages speaking
-    CityFeature.create!(
-    score: row[:spoken_languages],
-    feature: language_feature,
-    city: City.find_by(name: row[:city_name])
-    )
 
     #Internet score
     CityFeature.create!(
