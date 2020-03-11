@@ -7,19 +7,37 @@
   height: 100%;
   overflow: hidden;
 
-
-  .btn-ghost {
-    color: #4A4A4A;
-    border: 1px solid #4A4A4A;
-    padding: 8px 24px;
-    border-radius: 50px;
-    font-weight: lighter;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
+.wizard-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 22px
+}
+  .btn-main-yellow {
+      margin-top: 35px;
+      color: #003F5C;
+      padding: 12px 40px;
+      transition: background 0.3s ease;
+      background-color: #F8B400;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.13);
+      border-radius: 5px;
+      text-align: left;
+      border: none;
+      font-size: 20px;
+      .large {
+        width: 336px;
+        height: 76px;
+      }
+     .small {
+        width: 278px;
+        height: 63px;
+      }
   }
 
-  .btn-ghost:hover {
-    opacity: 1;
+  .btn-main-yellow:hover {
+    color: white;
+    text-decoration: none;
   }
 
   .wizard-steps-container {
@@ -39,8 +57,8 @@
 
 
   .wizard-steps-step {
-    width: 700px;
-    height: 500px;
+    width: 1000px;
+    height: 900px;
     // border: 2px solid white;
     opacity: 1;
     transition: opacity 1s;
@@ -58,8 +76,8 @@
   .wizard-steps-step-0 {
     width: 95vw;
     height: 90vh;
-    top: -750px;
-    left: 2060px;
+    top: -704px;
+    left: 2035px;
     display: flex;
     .onboard-left {
       text-align: left;
@@ -89,26 +107,6 @@
       }
       .onboard-btn {
         text-align: left;
-
-        .btn-main-yellow {
-          margin-top: 35px;
-          color: #003F5C;
-          padding: 12px 40px;
-          transition: background 0.3s ease;
-          background-color: #F8B400;
-          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.13);
-          border-radius: 5px;
-          text-align: left;
-          .large {
-            width: 336px;
-            height: 76px;
-          }
-        }
-      }
-
-      .btn-main-yellow:hover {
-        color: white;
-        text-decoration: none;
       }
     }
 
@@ -128,24 +126,24 @@
   }
 
   .wizard-steps-step-1 {
-    top: 410px;
-    left: 428px;
+    top: 611px;
+    left: 368px;
   }
 
   .wizard-steps-step-2 {
-    top: 1400px;
-    left: 1400px;
+    top: 1200px;
+    left: 1250px;
     transform: rotate(-10deg);
   }
 
     .wizard-steps-step-3 {
-    top: 350px;
-    left: 1800px;
+    top: 160px;
+    left: 1850px;
   }
 
     .wizard-steps-step-4 {
-    top: 1960px;
-    left: 2175px;
+    top: 1796px;
+    left: 2021px;
     transform: rotate(-10deg)
   }
 
@@ -158,13 +156,13 @@
   }
   .wizard-steps-container.is--step-1 {
 
-    transform: translate3d(-500px, -440px, 0);
+    transform: translate3d(-236px, -680px, 0);
   }
   .wizard-steps-container.is--step-2 {
-    transform: translate3d(-1370px, -1290px, 0) rotate(10deg);
+    transform: translate3d(-1058px, -1284px, 0) rotate(10deg);
   }
   .wizard-steps-container.is--step-3 {
-    transform: translate3d(-1800px, -320px, 0);
+    transform: translate3d(-1984px, -320px, 0);
   }
   .wizard-steps-container.is--step-4 {
     transform: translate3d(-1950px, -1995px, 0) rotate(10deg);
@@ -176,6 +174,17 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    button:nth-child(2) {
+      margin-left: 10px;
+    }
+
+  }
+
+  .wizard-actions-thermometer {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    left: 80%;
   }
 
 
@@ -244,7 +253,7 @@
     .month-checkboxes-input:checked + .month-checkboxes-label {
       opacity: 1;
       background: rgba(255,255,255,0.8);
-      color: $blue;
+      color: #003F5C;
       font-weight: bold;
     }
 

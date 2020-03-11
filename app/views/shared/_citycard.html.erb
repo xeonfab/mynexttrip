@@ -1,19 +1,19 @@
 
-<%= link_to city_path(city) do %>
-  <div class="city-card">
-      <%= image_tag city.photo, class: "city-card-image" %>
-      <div class="container-details">
-        <div>
-          <p class="city-card-temp"><i class="fas fa-sun page-icon"></i><% fahrenheit = city.climate.january.to_f %><% celcius = fahrenheit - 273.1 %><%= celcius.round(1) %>°C</p>
-        </div>
-        <div>
-          <span class="city-card-cost"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living"}, city: city).nil? ? "$$$" : CityFeature.joins(:feature).find_by(features: { name: "Cost of living"}, city: city).cost_of_living_score %>
-          </span>
-        </div>
+<div class="city-card">
+  <%= link_to city_path(city), target: :_blank do %>
+  <% end %>
+    <%= image_tag city.photo, class: "city-card-image" %>
+    <div class="container-details">
+      <div>
+        <p class="city-card-temp"><i class="fas fa-sun page-icon"></i> <% fahrenheit = city.climate.january.to_f %><% celcius = fahrenheit - 273.1 %><%= celcius.round(1) %>°C</p>
       </div>
-    <div class="city-card-content">
-        <h2 class="city-card-title"> <%= city.name %></h2>
-        <h3 class="city-card-country"><%= city.country.name %></h3>
+      <div>
+        <span class="city-card-cost"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: city).cost_of_living_score %>
+        </span>
+      </div>
     </div>
+  <div class="city-card-content">
+      <h2 class="city-card-title"> <%= city.name %></h2>
+      <h3 class="city-card-country"><%= city.country.name %></h3>
   </div>
-<% end %>
+</div>
