@@ -47,7 +47,8 @@
   }
 
    &:hover .city-card-image {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    text-decoration: none;
   }
 
   .container-details {
@@ -88,8 +89,9 @@
     font-family: Montserrat;
     z-index: 5
   }
-  .page-icon {
-    color: #eee;
+  .show-page-logos {
+    border-radius: 50%;
+    border: 2px solid black;
   }
 
 }
