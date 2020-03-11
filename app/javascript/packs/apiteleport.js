@@ -4,8 +4,6 @@
 
 const url =`https://api.teleport.org/api/urban_areas/`;
 
-const list =
-
 fetch(url)
     .then(response => response.json())
     .then((data) => {
