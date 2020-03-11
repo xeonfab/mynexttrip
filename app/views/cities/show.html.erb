@@ -18,7 +18,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                 <div class="col-2">
                   <div class="card cards-temp">
                     <p class="climate-month">January</p>
-                    <p class="climate-temp"><i class="fas fa-sun"></i>2</p>
+                    <p class="climate-temp"><i class="fas fa-sun"></i>20°C</p>
                   </div>
 
                 </div>
@@ -99,7 +99,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
               <div class="col-6 card p-2 m-0">
                 <div class="city-info-text d-flex justify-content-between">
                   <p class="show-info-title">Language</p>
-                  <p class=""><%= CityFeature.joins(:feature).find_by(features: { name: "Spoken languages" }, city: @city).score  %></p>
+                  <p class="">English</p>
                 </div>
               </div>
               <div class="col-6 card p-2 m-0">
@@ -116,7 +116,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                 <h2>Cost of Living</h2>
                 <div class="">
                   <!-- % review.rating.times do  %> -->
-                      <i class="fas fa-star star1"></i>
+                      <i class="fas fa-star star1"><%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: @city).score  %></i>
                   <!-- % end %> -->
                 </div>
               </div>
@@ -135,7 +135,8 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Bread</p>
-                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Bread" }, city: @city).score  %></p>
+                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Bread" }, city: @city).score.round(2)  %></p>
+
                   </div>
               </div>
               <div class="row p-2">

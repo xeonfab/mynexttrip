@@ -12,7 +12,7 @@ require 'byebug'
 
   CSV.open(filepath, 'ab', csv_options) do |csv|
 
-    csv << ['city_name', 'cost_of_living_score', 'internet_score', 'culture_score', 'bread_price', 'cappucino_price', 'beer_price', 'lunch_price', 'taxi_price', 'spoken_languages', 'download_speed', 'upload_speed', 'air_quality', 'cleanliness', 'water_score', 'safety', 'coworking_score', 'health_score', 'art_score', 'concert_score', 'site_score', 'museum_score', 'sport_score']
+    csv << ['city_name', 'cost_of_living_score', 'internet_score', 'culture_score', 'bread_price', 'cappucino_price', 'beer_price', 'lunch_price', 'taxi_price', 'download_speed', 'upload_speed', 'air_quality', 'cleanliness', 'water_score', 'safety', 'coworking_score', 'health_score', 'art_score', 'concert_score', 'site_score', 'museum_score', 'sport_score']
 
     urban_areas_link = cities["_links"]["ua:item"].each do |city|
 
@@ -24,9 +24,9 @@ require 'byebug'
     cost_living = city_info["_links"]["ua:scores"]["href"]
     cost_living_serialized = open(cost_living).read
     cost = JSON.parse(cost_living_serialized)
-    cost_of_living = cost["categories"][1]["score_out_of_10"]
-    culture_score = cost["categories"][14]["score_out_of_10"]
-    internet_score = cost["categories"][13]["score_out_of_10"]
+    cost_of_living = cost["categories"][1]["score_out_of_10"].round(1)
+    culture_score = cost["categories"][14]["score_out_of_10"].round(1)
+    internet_score = cost["categories"][13]["score_out_of_10"].round(1)
 
     # FEATURES : Details with a new URL https://api.teleport.org/api/urban_areas/slug:amsterdam/details/
     details_url = city_info["_links"]["ua:details"]["href"]
@@ -40,48 +40,48 @@ require 'byebug'
     # Bread price
     bread = city_living_details[0]["data"].select {|element| element["id"] == "COST-BREAD"}[0]
     if bread.class == Hash
-      bread_price = bread["currency_dollar_value"]
+      bread_price = bread["currency_dollar_value"].round(1)
     else
       bread_price = nil
     end
 
     #Price Cappucino
     cappucino = city_living_details[0]["data"].select {|element| element["id"] == "COST-CAPPUCCINO"}[0]
-    cappucino_price = cappucino["currency_dollar_value"]
+    cappucino_price = cappucino["currency_dollar_value"].round(1)
 
     #Price Beer
     beer = city_living_details[0]["data"].select {|element| element["id"] == "COST-IMPORT-BEER"}[0]
     if beer.class == Hash
-      beer_price = beer["currency_dollar_value"]
+      beer_price = beer["currency_dollar_value"].round(1)
     else
       beer_price = nil
     end
 
     #Price Lunch
     lunch = city_living_details[0]["data"].select {|element| element["id"] == "COST-RESTAURANT-MEAL"}[0]
-    lunch_price = lunch["currency_dollar_value"]
+    lunch_price = lunch["currency_dollar_value"].round(0)
 
     #Price Taxi
     taxi = city_living_details[0]["data"].select {|element| element["id"] == "COST-TAXI"}[0]
        if taxi.class == Hash
-        taxi_price = taxi["currency_dollar_value"]
+        taxi_price = taxi["currency_dollar_value"].round(0)
       else
         taxi_price = nil
       end
   end
 
-    #LANGUAGES SPEAKING
-  city_languages_details = city_details["categories"].select { |data| data["id"] == "LANGUAGE"}
+  #   #LANGUAGES SPEAKING
+  # city_languages_details = city_details["categories"].select { |data| data["id"] == "LANGUAGE"}
 
-  if city_languages_details.empty?
-  else
-    spoken_language = city_languages_details[0]["data"].select {|element| element["id"] == "SPOKEN-LANGUAGES"}[0]
-    if spoken_language.class == Hash
-      languages = spoken_language["string_value"]
-    else
-       languages = nil
-    end
-  end
+  # if city_languages_details.empty?
+  # else
+  #   spoken_language = city_languages_details[0]["data"].select {|element| element["id"] == "SPOKEN-LANGUAGES"}[0]
+  #   if spoken_language.class == Hash
+  #     languages = spoken_language["string_value"]
+  #   else
+  #      languages = nil
+  #   end
+  # end
 
   #Internet Access_Download
   city_download_details = city_details["categories"].select { |data| data["id"] == "NETWORK"}
@@ -89,7 +89,7 @@ require 'byebug'
   else
     download = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-DOWNLOAD"}[0]
     if download.class == Hash
-        download_speed = download["float_value"]*100
+        download_speed = (download["float_value"]*100).round(0)
     else
        download_speed = nil
     end
@@ -97,7 +97,7 @@ require 'byebug'
       #Internet Access_Upload
     upload = city_download_details[0]["data"].select {|element| element["id"] == "NETWORK-UPLOAD"}[0]
    if upload.class == Hash
-      upload_speed = upload["float_value"]*100
+      upload_speed = (upload["float_value"]*100).round(0)
     else
       upload_speed = nil
     end
@@ -109,16 +109,16 @@ require 'byebug'
   else
 
     air = city_air_details[0]["data"].select {|element| element["id"] == "AIR-POLLUTION-TELESCORE"}[0]
-    air_score = air["float_value"]*100
+    air_score = (air["float_value"]*100).round(0)
 
       #Cleanliness
     clean = city_air_details[0]["data"].select {|element| element["id"] == "CLEANLINESS-TELESCORE"}[0]
-    clean_score = clean["float_value"]*100
+    clean_score = (clean["float_value"]*100).round(0)
 
       #Drinking water quality
     water = city_air_details[0]["data"].select {|element| element["id"] == "DRINKING-WATER-QUALITY-TELESCORE"}[0]
     if water.class == Hash
-      water_score = water["float_value"]*100
+      water_score = (water["float_value"]*100).round(0)
     else
       water_score = nil
     end
@@ -129,7 +129,7 @@ require 'byebug'
   if city_safety_details.empty?
   else
   crime = city_safety_details[0]["data"].select {|element| element["id"] == "CRIME-RATE-TELESCORE"}[0]
-  safety = crime["float_value"]*100
+  safety = (crime["float_value"]*100).round(0)
   end
 
     #Coworking score
@@ -137,7 +137,7 @@ require 'byebug'
   if city_space_details.empty?
   else
   coworking = city_space_details[0]["data"].select {|element| element["id"] == "COWORKING-SPACES-TELESCORE"}[0]
-  coworking_score = coworking["float_value"]*100
+  coworking_score = (coworking["float_value"]*100).round(0)
   end
 
     # #Heathlcare quality score
@@ -145,7 +145,7 @@ require 'byebug'
   if city_care_details.empty?
   else
   health = city_care_details[0]["data"].select {|element| element["id"] == "HEALTHCARE-QUALITY-TELESCORE"}[0]
-  health_score = health["float_value"]*100
+  health_score = (health["float_value"]*100).round(0)
   end
 
   #CULTURE
@@ -154,29 +154,29 @@ require 'byebug'
   else
   #Culture Art galleries  score
   art = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-ART-GALLERIES-TELESCORE"}[0]
-  art_score = art["float_value"]*100
+  art_score = (art["float_value"]*100).round(0)
 
   #Culture Concerts score
   concert = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-CONCERTS-TELESCORE"}[0]
-  concert_score = concert["float_value"]*100
+  concert_score = (concert["float_value"]*100).round(0)
 
   #Culture historical sites score
   site = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-HISTORICAL-SITES-TELESCORE"}[0]
-  site_score = site["float_value"]*100
+  site_score = (site["float_value"]*100).round(0)
 
   #Culture museum score
   museum = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-MUSEUMS-TELESCORE"}[0]
-  museum_score = museum["float_value"]*100
+  museum_score = (museum["float_value"]*100).round(0)
 
   #Culture sports score
   sport = city_culture_details[0]["data"].select {|element| element["id"] == "CULTURE-SPORTS-TELESCORE"}[0]
-  sport_score = sport["float_value"]*100
+  sport_score = (sport["float_value"]*100).round(0)
   end
 
 
 
     puts city["name"]
-    csv << [city["name"], cost_of_living, internet_score, culture_score, bread_price, cappucino_price, beer_price, lunch_price, taxi_price, languages, download_speed, upload_speed, air_score, clean_score, water_score, safety, coworking_score, art_score, concert_score, site_score, museum_score, sport_score]
+    csv << [city["name"], cost_of_living, internet_score, culture_score, bread_price, cappucino_price, beer_price, lunch_price, taxi_price, download_speed, upload_speed, air_score, clean_score, water_score, safety, coworking_score, art_score, concert_score, site_score, museum_score, sport_score]
 
     end
   end
