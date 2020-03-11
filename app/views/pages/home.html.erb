@@ -2,60 +2,32 @@
 <div style="height: 80vh">
  <%= render 'shared/onboarding-wizard' %>
 </div>
-<div class="container hompage-background pt-5">
-  <h1 class="text-center mb-3 homepage-subtitles">Regions to Discover</h1>
-  <div class="row">
-    <%  @regions.each do |region| %>
-      <div class="col-md-3 mb-3">
-        <%= render partial: 'shared/regioncard', locals: { region: region } %>
+<div class="homepage-background">
+  <div class="container pt-5">
+    <h1 class="text-center mb-3 homepage-subtitles">Regions to Discover</h1>
+    <div class="row">
+      <%  @regions.each do |region| %>
+        <div class="col-lg-3 mb-3">
+          <%= render partial: 'shared/regioncard', locals: { region: region } %>
+        </div>
+      <% end %>
+    </div>
+
+
+    <h1 class="text-center mb-3 homepage-subtitles">Countries to Discover</h1>
+    <div class="row">
+      <%  @countries.each do |country| %>
+      <div class="col-lg-3 mb-3">
+        <%= render partial: 'shared/countrycard', locals: { country: country } %>
       </div>
-    <% end %>
-  </div>
-
-
-  <h1 class="text-center mb-3 homepage-subtitles">Countries to Discover</h1>
-  <div class="row">
-    <%  @countries.each do |country| %>
-    <div class="col-md-3 mb-3">
-      <%= render partial: 'shared/countrycard', locals: { country: country } %>
+      <% end %>
     </div>
-    <% end %>
-  </div>
-  <h1 class="text-center mb-3 homepage-subtitles">Cities to Discover</h1>
-  <div class="row">
-    <%  @cities.each do |city| %>
-      <div class="col-md-3 mb-3">
-      <%= render partial: 'shared/citycard', locals: { city: city } %>
-      </div>
-    <% end %>
-  </div>
-</div>
-<div class="container align-items-center">
-  <h1>500+ personalised booking providers for your next trip</h1>
-  <h3>Find, compare and easily plan with MyNextTrip</h3>
-  <div class="row">
-    <div class="col-md-12">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-10">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-
-    </div>
+    <h1 class="text-center mb-3 homepage-subtitles">Cities to Discover</h1>
+    <div class="row">
+      <%  @cities.each do |city| %>
+        <div class="col-lg-3 mb-3">
+        <%= render partial: 'shared/citycard', locals: { city: city } %>
+        </div>
+      <% end %>
   </div>
 </div>

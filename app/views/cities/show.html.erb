@@ -253,17 +253,18 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
     <div class="col-md-3">
         <div class="card">
           <div class="booking-prov-amount">
-            <p>48 booking providers available for your travel</p>
-            <div class="show-page-logos">
+            <p class="booking-prov-text">48 booking providers available for your travel</p>
+            <div>
              <%= image_tag "wicked.jpeg", class: "avatar show-page-logos" %>
              <%= image_tag "workflow.jpeg", class: "avatar show-page-logos"%>
-             <%= image_tag "airnz.jpeg", class: "avatar"%>
-             <%= image_tag "agoda.png", class: "avatar"%>
+             <%= image_tag "airnz.jpeg", class: "avatar show-page-logos"%>
+             <%= image_tag "agoda.png", class: "avatar show-page-logos"%>
+             <%= image_tag "islander.jpeg", class: "avatar show-page-logos"%>
             </div>
-            <%= link_to "Booking providers", city_booking_providers_path(@city) , class: "btn-main-pink small" %>
+            <%= link_to "Booking providers", city_booking_providers_path(@city) , class: "btn-main-pink1 small booking-button" %>
           </div>
         </div>
-      <div>
+      <div class="sky-widget">
         <div data-skyscanner-widget="SearchWidget"></div>
         <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
       </div>
