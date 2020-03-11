@@ -238,32 +238,14 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
               </div>
               <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
-                    <p class="show-subtitle">Art Galleries</p>
-                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score  %></p>
+                    <p class="show-subtitle">Download Speed</p>
+                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Internet download" }, city: @city).score  %></p>
                   </div>
               </div>
               <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
-                    <p class="show-subtitle">Concerts</p>
-                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score  %></p>
-                  </div>
-              </div>
-              <div class="row p-2">
-                  <div class="d-flex justify-content-between width-100 city-info-content-text">
-                    <p class="show-subtitle">Historical Sites</p>
-                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score  %></p>
-                  </div>
-              </div>
-              <div class="row p-2">
-                  <div class="d-flex justify-content-between width-100 city-info-content-text">
-                    <p class="show-subtitle">Museums</p>
-                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score  %></p>
-                  </div>
-              </div>
-              <div class="row p-2">
-                  <div class="d-flex justify-content-between width-100 city-info-content-text">
-                    <p class="show-subtitle">Sports</p>
-                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score  %></p>
+                    <p class="show-subtitle">Upload Speed</p>
+                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Internet upload" }, city: @city).score  %></p>
                   </div>
               </div>
             </div>
@@ -280,13 +262,18 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
         </div>
     </div>
     <div class="col-md-3">
-      <div>
-        <div class="card p-3 mb-5">
-          <h2>X booking providers</h2>
-          <h3>available for your travel</h3>
-          <%= link_to "Booking providers", city_booking_providers_path(@city) , class: "btn-main-pink large" %>
+        <div class="card">
+          <div class="booking-prov-amount">
+            <p>48 booking providers available for your travel</p>
+            <div class="show-page-logos">
+             <%= image_tag "wicked.jpeg", class: "avatar show-page-logos" %>
+             <%= image_tag "workflow.jpeg", class: "avatar show-page-logos"%>
+             <%= image_tag "airnz.jpeg", class: "avatar"%>
+             <%= image_tag "agoda.png", class: "avatar"%>
+            </div>
+            <%= link_to "Booking providers", city_booking_providers_path(@city) , class: "btn-main-pink small" %>
+          </div>
         </div>
-      </div>
       <div>
         <div data-skyscanner-widget="SearchWidget"></div>
         <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
