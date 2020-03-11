@@ -1,9 +1,8 @@
-<div class="card booking-provider-card">
-
-  <%= image_tag bookingprovider.description, class: "booking-provider-image" %>
-  <div class="booking-provider-content">
-      <h5 class="booking-provider-title"><%= bookingprovider.name %></h5>
-        <p class="booking-provider-text"><%= bookingprovider.website %></p>
-
+<%= link_to bookingprovider.website, target: :_blank do %>
+  <div class="card booking-provider-card">
+    <%= image_tag bookingprovider.description, class: "booking-provider-image" %>
+    <div class="booking-provider-content">
+        <h5 class="booking-provider-title"><%= bookingprovider.name %></h5>
+    </div>
   </div>
-</div>
+<% end %>
