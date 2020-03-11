@@ -20,7 +20,6 @@ class CitiesController < ApplicationController
       search_by_theme_filter
     # elsif
     #   search_by_feature_filter
-    raise
     else
       no_search
       map_markers

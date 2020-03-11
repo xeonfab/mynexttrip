@@ -16,7 +16,8 @@ class City < ApplicationRecord
   pg_search_scope :global_search,
     against: [ :name ],
     associated_against: {
-      country: [ :name ]
+      country: [ :name ],
+      region: [ :name ]
     },
     using: {
       tsearch: { prefix: true }
@@ -40,15 +41,26 @@ class City < ApplicationRecord
       temp: 25,
       months: ["July", "August"]
     }
+
+    city_themes_months = {} # { july: 1, august: 1 }
+    climate_months = {} # { july: 25..1000, august: 25..1000 }
+
+    # Populate the city_themes_months hash and the climate_months hash
+    filters[:months].each do |month|
+      key = month.downcase.to_sym
+      city_themes_months[key] = 1
+      climate_months[key] = filters[:temp]..1000
+    end
+
+    # iterate over array (months) and creat a new pair
+
     # ["Beach", "Romantic"] holiday with a temp around "25C" in ["July", "August"]
-
-    City.joins(:themes).where(themes:{name: 'Beach'})
-        .joins(:city_themes).where(city_themes:{july: 1})
-        .joins(:climate).where(climates:{july: 300..1000})
-        .count
-
     # make it compatible with multiple months given in params
-    # Do one query for each given theme
+    City.joins(:themes).where(themes: { name: 'Beach'})
+        .joins(:city_themes).where(city_themes: city_themes_months)
+        .joins(:climate).where(climates: climate_months)
 
+    # TO DO
+    # Do one query for each given theme
   end
 end
