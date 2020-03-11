@@ -1,0 +1,54 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon1">
+  <%= link_to root_path, class: "navbar-brand" do %>
+  <% end %>
+
+  <div class="search-input">
+   <%= form_tag cities_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      placeholder: "Your Destination..",
+      class: "search-input-field" %>
+      <%= button_tag(type: 'submit', class: "search-input-btn") do %>
+      <i class="fa fa-search"></i>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle navbar-menu-item" type="button"
+        id="navbarDropdown"
+        data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+          Regions
+        </button>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+           <%= link_to "Africa", region_path(Region.find_by(name: "Africa").id), class: "dropdown-item" %>
+          <%= link_to "Asia", region_path(Region.find_by(name: "Asia").id), class: "dropdown-item" %>
+          <%= link_to "Oceania", region_path(Region.find_by(name: "Oceania").id), class: "dropdown-item" %>
+          <%= link_to "Europe", region_path(Region.find_by(name: "Europe").id), class: "dropdown-item" %>
+          <%= link_to "North America", region_path(Region.find_by(name: "North America").id), class: "dropdown-item" %>
+          <%= link_to "South America", region_path(Region.find_by(name: "South America").id), class: "dropdown-item" %>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <button class="dropdown-toggle navbar-menu-item navbar-menu-item--faded" type="button"
+        id="navbarDropdown"
+        data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        AUD
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "AUD Australian dollar", "#", class: "dropdown-item" %>
+          <%= link_to "£ Pound sterling", "#", class: "dropdown-item" %>
+          <%= link_to "€ Euro", "#", class: "dropdown-item" %>
+          <%= link_to "$ US dollar", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
