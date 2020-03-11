@@ -91,7 +91,7 @@
           <div class="card p-2 m-0">
             <div class="city-info-text d-flex justify-content-between">
               <p class="show-info-title">Language</p>
-              <p class="">DATA</p>
+              <p class="">English</p>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
           <div class="card p-2 m-0">
             <div class="city-info-text d-flex justify-content-between">
               <p class="show-info-title">Safety</p>
-              <p class="">DATA</p>
+              <p class=""><%= CityFeature.joins(:feature, :city).where(features: { name: "Crime rate" }, cities: { country_id: @country.id }).average(:score).to_i  %></p>
             </div>
           </div>
         </div>
@@ -118,79 +118,35 @@
             <div class="row p-2">
               <div class="d-flex justify-content-between width-100 city-info-content-text">
                 <p class="show-subtitle">Beer</p>
-                <p class="show-subtitle-data">DATA</p>
+                <p class="show-subtitle-data"><%= CityFeature.joins(:feature, :city).where(features: { name: "Beer" }, cities: { country_id: @country.id }).average(:score) %></p>
               </div>
             </div>
             <div class="row p-2">
               <div class="d-flex justify-content-between width-100 city-info-content-text">
                 <p class="show-subtitle">Cappuchino</p>
-                <p class="show-subtitle-data">DATA</p>
+                <p class="show-subtitle-data"><%= CityFeature.joins(:feature, :city).where(features: { name: "Cappucino" }, cities: { country_id: @country.id }).average(:score) %></p>
               </div>
             </div>
             <div class="row p-2">
               <div class="d-flex justify-content-between width-100 city-info-content-text">
                 <p class="show-subtitle">Bread</p>
-                <p class="show-subtitle-data">DATA</p>
+                <p class="show-subtitle-data"><%= CityFeature.joins(:feature, :city).where(features: { name: "Bread" }, cities: { country_id: @country.id }).average(:score) %></p>
               </div>
             </div>
             <div class="row p-2">
               <div class="d-flex justify-content-between width-100 city-info-content-text">
                 <p class="show-subtitle">Lunch</p>
-                <p class="show-subtitle-data">DATA</p>
+                <p class="show-subtitle-data"><%= CityFeature.joins(:feature, :city).where(features: { name: "Lunch" }, cities: { country_id: @country.id }).average(:score) %></p>
               </div>
             </div>
             <div class="row p-2">
               <div class="d-flex justify-content-between width-100 city-info-content-text">
                 <p class="show-subtitle">One-way Taxi</p>
-                <p class="show-subtitle-data">DATA</p>
+                <p class="show-subtitle-data"><%= CityFeature.joins(:feature, :city).where(features: { name: "Taxi ride" }, cities: { country_id: @country.id }).average(:score) %></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-6">
-          <div class="card p-3">
-            <div class="city-info-text d-flex justify-content-between border-show">
-              <h2>Culture</h2>
-              <div class="">
-                <!-- % review.rating.times do  %> -->
-                <i class="fas fa-star star1"></i>
-                <!-- % end %> -->
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Art Galleries</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Concerts</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Historical Sites</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Museums</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Sports</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row my-4">
         <div class="col-6">
           <div class="card p-3">
             <div class="city-info-text d-flex justify-content-between border-show">
@@ -202,80 +158,27 @@
               </div>
             </div>
             <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Air Quality</p>
-                <p class="show-subtitle-data">DATA</p>
+                <div class="d-flex justify-content-between width-100 city-info-content-text">
+                  <p class="show-subtitle">Air Quality</p>
+                  <p class="show-subtitle-data"><%= CityFeature.joins(:feature, :city).where(features: { name: "Air pollution" }, cities: { country_id: @country.id }).average(:score).to_i  %></p>
+                </div>
               </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Cleanliness</p>
-                <p class="show-subtitle-data">DATA</p>
+               <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100 city-info-content-text">
+                    <p class="show-subtitle">Cleanliness</p>
+                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature, :city).where(features: { name: "Cleanliness" }, cities: { country_id: @country.id }).average(:score).to_i  %></p>
+                  </div>
               </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Drinking Water</p>
-                <p class="show-subtitle-data">DATA</p>
+               <div class="row p-2">
+                  <div class="d-flex justify-content-between width-100 city-info-content-text">
+                    <p class="show-subtitle">Drinking Water</p>
+                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature, :city).where(features: { name: "Cleanliness" }, cities: { country_id: @country.id }).average(:score).to_i  %></p>
+                  </div>
               </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Lunch</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">One-way Taxi</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card p-3">
-            <div class="city-info-text d-flex justify-content-between border-show">
-              <h2>Internet Speed</h2>
-              <div class="">
-                <!-- % review.rating.times do  %> -->
-                <i class="fas fa-star star1"></i>
-                <!-- % end %> -->
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Art Galleries</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Concerts</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Historical Sites</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Museums</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
-            <div class="row p-2">
-              <div class="d-flex justify-content-between width-100 city-info-content-text">
-                <p class="show-subtitle">Sports</p>
-                <p class="show-subtitle-data">DATA</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+
       <div class="col">
         <h2 class="my-3">Cities of <%= @country.name %></h2>
         <div class="row">
