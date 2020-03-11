@@ -22,7 +22,11 @@
         </div>
     </div>
     <div class="wizard-steps-step wizard-steps-step-1">
+        <div>
+          <p class="wizard-title">1 / 4</p>
+        </div>
       <div class="sentence-checkboxes">
+
         I like
           <input type="checkbox" name="filter_results[themes][]" id="romantic" value="romantic" checked class="sentence-checkboxes-input">
           <label class="sentence-checkboxes-label" for="romantic">romance,</label>
@@ -51,15 +55,15 @@
       </div>
       <div class="wizard-actions">
         <!-- <button class="js-wizard-previous" type="button">Previous</button> -->
-        <button class="js-wizard-previous btn-ghost" type="button">Previous</button>
-        <button class="js-wizard-next btn-ghost" type="button">Next</button>
+        <button class="js-wizard-previous btn-main-yellow small text-size" type="button">Previous</button>
+        <button class="js-wizard-next btn-main-yellow small text-size" type="button">Next</button>
       </div>
         <!-- <p><input type="submit" value="Submit"></p> -->
     </div>
 
     <div class="wizard-steps-step wizard-steps-step-2">
-      Step 2
-      <p>When do you want to travel?</p>
+      <p class="wizard-title">Step 2 (of 4)</p>
+      <p class="wizard-title">When do you want to travel?</p>
       <div class="month-checkboxes">
 
           <input type="checkbox" name="filter_results[month][]" id="january" value="January" class="month-checkboxes-input">
@@ -99,14 +103,14 @@
          <label class="month-checkboxes-label" for="december">December</label>
       </div>
       <div class="wizard-actions">
-        <button class="js-wizard-previous btn-ghost" type="button">Previous</button>
-        <button class="js-wizard-next btn-ghost" type="button">Next</button>
+        <button class="js-wizard-previous btn-main-yellow small text-size" type="button">Previous</button>
+        <button class="js-wizard-next btn-main-yellow small text-size" type="button">Next</button>
       </div>
     </div>
 
     <div class="wizard-steps-step wizard-steps-step-3">
-      Step 3
-      <p>How hot?</p>
+      <p class="wizard-title">Step 3 (of 4)</p>
+      <p class="wizard-title">What temperature do you like?</p>
       <div class="temp-checkboxes">
         <div class="temp-checkboxes-thermometer">
           <div class="temp-checkboxes-options">
@@ -126,17 +130,16 @@
           </div>
         </div>
       </div>
-      <div class="wizard-actions">
-
-          <button class="js-wizard-previous btn-ghost" type="button">Previous</button>
-          <button class="js-wizard-next btn-ghost" type="button">Next</button>
+      <div class="wizard-actions wizard-actions-thermometer">
+          <button class="js-wizard-previous btn-main-yellow small" type="button">Previous</button>
+          <button class="js-wizard-next btn-main-yellow small" type="button">Next</button>
         </div>
       <!-- <p><input type="submit" value="Submit"></p> -->
     </div>
 
     <div class="wizard-steps-step wizard-steps-step-4 ">
-      Step 4
-      <p>How hot?</p>
+      <p class="wizard-title">Step 4 (of 4)</p>
+      <p class="wizard-title mb-4">What continent do you want to visit?</p>
       <div class="continent-checkboxes">
           <input type="checkbox" name="region" id="europe" value="europe" class="continent-checkboxes-input">
           <label class="continent-checkboxes-label continent-checkboxes-label-europe" for="europe">
@@ -176,8 +179,8 @@
 
     </div>
     <div class="wizard-actions">
-      <button class="js-wizard-previous btn-ghost" type="button">Previous</button>
-      <button class="btn-ghost" type="submit">Submit</button>
+      <button class="js-wizard-previous btn-main-yellow small" type="button">Previous</button>
+      <button class="btn-main-yellow small" type="submit">Submit</button>
     </div>
 
   </div>
