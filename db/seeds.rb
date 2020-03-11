@@ -5,22 +5,22 @@ require 'date'
 require 'csv'
 
 puts 'Cleaning database...'
-CityFeature.destroy_all
-Feature.destroy_all
-CityTheme.destroy_all
-Theme.destroy_all
+# CityFeature.destroy_all
+# Feature.destroy_all
+# CityTheme.destroy_all
+# Theme.destroy_all
 
 
 
-Climate.destroy_all
+# Climate.destroy_all
 
 BookingProvider.destroy_all
-City.destroy_all
+# City.destroy_all
 
 
 
-Country.destroy_all
-Region.destroy_all
+# Country.destroy_all
+# Region.destroy_all
 
 
 
@@ -990,9 +990,29 @@ CSV.foreach(filepath, csv_options) do |row|
   name: row[:name],
   category: row[:category],
   website: row[:url],
+  description: row[:description],
   city: City.find_by(name: row[:city]),
   country: Country.find_by(name: row[:country])
   )
 end
 
 
+cities_without = City.includes(:climate).where(climates: {id: nil})
+
+cities_without.each do |city|
+Climate.create!(
+      january: 20,
+      february: 15,
+      march: 10,
+      april: 10,
+      may: 10,
+      june: 10,
+      july: 25,
+      august: 25,
+      september: 15,
+      october: 15,
+      november: 10,
+      december: 10,
+      city: city
+    )
+end
