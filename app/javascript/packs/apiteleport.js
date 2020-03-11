@@ -10,7 +10,7 @@ fetch(url)
       data.forEach((element) => {
         const info = `<li>${element.href} posted by ${element.name}</li>`;
         list.insertAdjacentHTML("afterbegin", info);
-        console.log(element)
+        console.log(element);
       });
 });
 
