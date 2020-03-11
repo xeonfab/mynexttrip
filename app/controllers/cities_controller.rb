@@ -5,27 +5,26 @@ class CitiesController < ApplicationController
     @cities = City.geocoded
     if params[:query].present?
       search_by_nav(params[:query])
+      map_markers
+
     elsif params[:feature_results].present?
       search_by_query
       respond_to do |format|
         format.html { redirect_to cities_path }
+        map_markers
+
         format.js
       end
     elsif params[:filter_results].present?
       search_by_theme_filter(params[:filter_results][:themes])
+      map_markers
     # elsif
     #   search_by_feature_filter
     else
       no_search
+      map_markers
     end
-    @markers = @cities.map do |city|
-      {
-        lat: city.latitude,
-        lng: city.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { city: city })
-        # image_url: helpers.asset_url('')
-      }
-      end
+
   end
 
   def show
@@ -38,6 +37,23 @@ class CitiesController < ApplicationController
   end
 
   private
+
+  def map_markers
+    @markers = @cities.map do |city|
+      {
+        lat: city.latitude,
+        lng: city.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { city: city }),
+        # image_url: helpers.asset_url('')
+        image_url: helpers.asset_url('bluemarker.png')
+      }
+    end
+  end
+
+  def map_markers_ajax
+    @markers
+  end
+
 
   def search_by_nav(params_name)
     @cities = City.global_search(params_name)

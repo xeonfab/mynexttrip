@@ -1,5 +1,5 @@
-function myFunction() {
-  var x = document.getElementById("myDIV");
+function mapHide() {
+  var x = document.getElementById("map");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
