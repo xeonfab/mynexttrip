@@ -4,15 +4,11 @@
       <%= image_tag city.photo, class: "city-card-image" %>
       <div class="container-details">
         <div>
-          <p><i class="fas fa-sun page-icon"></i></p>
+          <p class="city-card-temp"><i class="fas fa-sun page-icon"></i><% fahrenheit = city.climate.january.to_f %><% celcius = fahrenheit - 273.1 %><%= celcius.round(1) %>°C</p>
         </div>
         <div>
-          <p>Air</p>
-          <span class="city-card-air"><%= CityFeature.joins(:feature).find_by(features: { name:  "Air pollution" }, city: city).score  %></span>
-        </div>
-        <div>
-          <p><i class="fas fa-dollar-sign page-icon"></i></p>
-          <span class="city-card-cost"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: city).score %></span>
+          <span class="city-card-cost"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: city).cost_of_living_score %>
+          </span>
         </div>
       </div>
     <div class="city-card-content">
@@ -21,5 +17,3 @@
     </div>
   </div>
 <% end %>
-
-
