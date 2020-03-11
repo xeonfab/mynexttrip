@@ -16,7 +16,8 @@ class City < ApplicationRecord
   pg_search_scope :global_search,
     against: [ :name ],
     associated_against: {
-      country: [ :name ]
+      country: [ :name ],
+      region: [ :name ]
     },
     using: {
       tsearch: { prefix: true }
