@@ -44,6 +44,7 @@ class City < ApplicationRecord
 
     city_themes_months = {} # { july: 1, august: 1 }
     climate_months = {} # { july: 25..1000, august: 25..1000 }
+    region_names = {}
 
     # Populate the city_themes_months hash and the climate_months hash
     filters[:months].each do |month|
@@ -52,15 +53,24 @@ class City < ApplicationRecord
       climate_months[key] = filters[:temp]..1000
     end
 
-    # iterate over array (months) and creat a new pair
+    # filter_results[:themes].each do |theme|
+    #   key = theme.downcase.to_sym
+
+    # end
+
+    # iterate over array (months) and create a new pair
 
     # ["Beach", "Romantic"] holiday with a temp around "25C" in ["July", "August"]
     # make it compatible with multiple months given in params
-    City.joins(:themes).where(themes: { name: 'Beach'})
+    City.joins(:themes).where(themes: [:filter_results[:themes]])
         .joins(:city_themes).where(city_themes: city_themes_months)
         .joins(:climate).where(climates: climate_months)
+        .joins(:region).where(regions: region_names)
 
     # TO DO
     # Do one query for each given theme
   end
 end
+
+
+# Model.where(id: [array of values])
