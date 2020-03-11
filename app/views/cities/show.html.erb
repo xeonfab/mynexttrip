@@ -105,8 +105,8 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
               <div class="col-6 card p-2 m-0">
                 <div class="city-info-text d-flex justify-content-between">
                   <p class="show-info-title">Safety</p>
-                  <p class=""><%= CityFeature.joins(:feature).find_by(features: { name: "Crime rate" }, city: @city).safety_score  %></p>
 
+                  <p class=""><%= CityFeature.joins(:feature).find_by(features: { name: "Crime rate" }, city: @city).safety_score  %></p>
                 </div>
               </div>
             </div>
@@ -117,7 +117,8 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                 <h2>Cost of Living</h2>
                 <div class="">
                   <!-- % review.rating.times do  %> -->
-                    <%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: @city).cost_of_living_score %></i>
+
+                    <%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: @city).cost_of_living_score %></i>
                   <!-- % end %> -->
                 </div>
               </div>
@@ -125,14 +126,12 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                 <div class="d-flex justify-content-between width-100 city-info-content-text">
                   <p class="show-subtitle">Beer</p>
                   <p class="show-subtitle-data">$ <%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: @city).score  %></p>
-
                 </div>
               </div>
                <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Cappuchino</p>
                     <p class="show-subtitle-data">$ <%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score  %></p>
-
                   </div>
               </div>
                <div class="row p-2">

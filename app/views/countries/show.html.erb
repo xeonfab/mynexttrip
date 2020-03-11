@@ -111,7 +111,7 @@
               <h2>Cost of Living</h2>
               <div class="">
                 <!-- % review.rating.times do  %> -->
-                <i class="fas fa-star star1"></i>
+                <i class="fas fa-star star1"><%= CityFeature.joins(:feature, :city).where(features: { name: "Cost of living" }, cities: { country_id: @country.id }).average(:score)</i>
                 <!-- % end %> -->
               </div>
             </div>
