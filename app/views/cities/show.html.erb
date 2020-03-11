@@ -105,7 +105,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
               <div class="col-6 card p-2 m-0">
                 <div class="city-info-text d-flex justify-content-between">
                   <p class="show-info-title">Safety</p>
-                  <p class=""><%= CityFeature.joins(:feature).find_by(features: { name: "Crime rate" }, city: @city).score.to_i  %></p>
+                  <p class=""><%= CityFeature.joins(:feature).find_by(features: { name: "Crime rate" }, city: @city).score.to_i %></p>
                 </div>
               </div>
             </div>
@@ -116,33 +116,33 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                 <h2>Cost of Living</h2>
                 <div class="">
                   <!-- % review.rating.times do  %> -->
-                      <i class="fas fa-star star1"><%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: @city).score  %></i>
+                      <i class="fas fa-star star1"><%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: @city).score %></i>
                   <!-- % end %> -->
                 </div>
               </div>
               <div class="row p-2">
                 <div class="d-flex justify-content-between width-100 city-info-content-text">
                   <p class="show-subtitle">Beer</p>
-                  <p class="show-subtitle-data">$<%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: @city).score  %></p>
+                  <p class="show-subtitle-data">$<%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: @city).score %></p>
                 </div>
               </div>
                <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Cappuchino</p>
-                    <p class="show-subtitle-data">$<%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score  %></p>
+                    <p class="show-subtitle-data">$<%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score %></p>
                   </div>
               </div>
                <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Bread</p>
-                    <p class="show-subtitle-data">$<%= CityFeature.joins(:feature).find_by(features: { name: "Bread" }, city: @city).score.round(2)  %></p>
+                    <p class="show-subtitle-data">$<%= CityFeature.joins(:feature).find_by(features: { name: "Bread" }, city: @city).score.round(2) %></p>
 
                   </div>
               </div>
               <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Lunch</p>
-                    <p class="show-subtitle-data">$<%= CityFeature.joins(:feature).find_by(features: { name: "Lunch" }, city: @city).score.to_i  %></p>
+                    <p class="show-subtitle-data">$<%= CityFeature.joins(:feature).find_by(features: { name: "Lunch" }, city: @city).score.to_i %></p>
                   </div>
               </div>
               <div class="row p-2">

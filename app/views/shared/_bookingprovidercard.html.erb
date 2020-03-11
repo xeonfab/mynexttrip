@@ -1,10 +1,9 @@
 <div class="card booking-provider-card">
 
-  <img class="booking-provider-image" src="https://www.underconsideration.com/brandnew/archives/skyscanner_2019_logo.png" />
+  <%= image_tag bookingprovider.description, class: "booking-provider-image" %>
   <div class="booking-provider-content">
       <h5 class="booking-provider-title"><%= bookingprovider.name %></h5>
         <p class="booking-provider-text"><%= bookingprovider.website %></p>
-        <!-- <p class="booking-provider-text"><%= bookingprovider.description %></p> -->
-        <p class="booking-provider-text"><%= bookingprovider.category %></p>
+
   </div>
 </div>
