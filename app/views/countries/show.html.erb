@@ -197,8 +197,14 @@
     <div class="col-md-3">
       <div>
         <div class="card p-3 mb-5">
-          <h2>X booking providers</h2>
-          <h3>available for your travel</h3>
+          <p>143 booking providers available for your travel</p>
+          <div class="show-page-logos">
+             <%= image_tag "wicked.jpeg", class: "avatar show-page-logos" %>
+             <%= image_tag "workflow.jpeg", class: "avatar show-page-logos"%>
+             <%= image_tag "airnz.jpeg", class: "avatar show-page-logos"%>
+             <%= image_tag "agoda.png", class: "avatar show-page-logos"%>
+             <%= image_tag "islander.jpeg", class: "avatar show-page-logos"%>
+          </div>
           <%= link_to "Booking providers", country_booking_providers_path(@country) , class: "btn-main-pink large" %>
         </div>
       </div>
