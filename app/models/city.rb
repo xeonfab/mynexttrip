@@ -3,6 +3,7 @@ class City < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
   belongs_to :country
   has_one :climate
+  has_one :region, through: :country
   has_many :booking_providers
   has_many :city_themes
   has_many :themes, through: :city_themes
@@ -29,5 +30,25 @@ class City < ApplicationRecord
     end.map { |relation| "(#{relation.to_sql})" }.join(" INTERSECT ")
 
     find_by_sql(sql)
+  end
+
+
+  # Returns a list of cities that meet the user's criteria of travel theme, month, and temperature
+  def self.initial_search(filters)
+    filters = {
+      themes: ["Beach", "Romantic", "Countryside"],
+      temp: 25,
+      months: ["July", "August"]
+    }
+    # ["Beach", "Romantic"] holiday with a temp around "25C" in ["July", "August"]
+
+    City.joins(:themes).where(themes:{name: 'Beach'})
+        .joins(:city_themes).where(city_themes:{july: 1})
+        .joins(:climate).where(climates:{july: 300..1000})
+        .count
+
+    # make it compatible with multiple months given in params
+    # Do one query for each given theme
+
   end
 end
