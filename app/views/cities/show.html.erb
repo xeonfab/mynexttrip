@@ -105,7 +105,6 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
               <div class="col-6 card p-2 m-0">
                 <div class="city-info-text d-flex justify-content-between">
                   <p class="show-info-title">Safety</p>
-
                   <p class=""><%= CityFeature.joins(:feature).find_by(features: { name: "Crime rate" }, city: @city).safety_score  %></p>
                 </div>
               </div>
@@ -138,7 +137,6 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Bread</p>
                     <p class="show-subtitle-data">$ <%= CityFeature.joins(:feature).find_by(features: { name: "Bread" }, city: @city).score.round(2)  %></p>
-
                   </div>
               </div>
               <div class="row p-2">
@@ -214,6 +212,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Drinking Water</p>
+
                     <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Drinking water" }, city: @city).star_score  %></p>
                   </div>
               </div>

@@ -8,6 +8,8 @@ function refreshIndex(innerHTML) {
   newIndex.innerHTML = innerHTML;
 }
 
-  refreshFeatureForm('<%= j render "shared/feature-filter-container", cities: @cities %>');
+refreshFeatureForm('<%= j render "shared/feature-filter-container", cities: @cities %>');
 
-  refreshIndex('<%= j render "shared/indexcontainer", cities: @cities %>');
+refreshIndex('<%= j render "shared/indexcontainer" %>');
+
+window.initMapbox();
