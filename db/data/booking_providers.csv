@@ -1,36 +1,34 @@
-name,category,url,city,country
-Booking,Accomodation,https://www.booking.com/,Auckland,New zealand
-Hostelworld,Accomodation,https://www.hostelworld.com/,Auckland,New zealand
-Homeway,Accomodation,https://www.homeaway.com/,Auckland,New zealand
-Roadtrippers,Accomodation,https://roadtrippers.com/australia/,Auckland,New zealand
-Momondo,Accomodation,https://www.momondo.com.au/?ispredir=true,Auckland,New zealand
-Couchsurfing,Accomodation,https://www.couchsurfing.com/,Auckland,New zealand
-Agoda,Accomodation,https://www.agoda.com/?cid=-218,Auckland,New zealand
-WickedCampers ,Transport,https://www.wickedcampers.ca/,Auckland,New zealand
-Hopper,Transport,https://www.hopper.com/,Auckland,New zealand
-Rentalcars,Transport,https://www.rentalcarsconnect.com/,Auckland,New zealand
-Travelcar,Transport,https://www.travelcar.com/en-AU/,Auckland,New zealand
-Campermate,Transport,https://www.campermate.com.au/,Auckland,New zealand
-Hertz,Transport,https://www.hertz.com/rentacar/reservation/,Auckland,New zealand
-Viator,Activities,https://www.viator.com/fr-FR/distribution-partners?mcid=58463,Auckland,New zealand
-GetYourGuide,Activities,https://partner.getyourguide.com/en-us/travel-writers,Auckland,New zealand
-Musement,Activities,https://www.musement.com/fr/,Auckland,New zealand
-Ceetiz,Activities,https://www.ceetiz.fr/espace-partenaire,Auckland,New zealand
-Tripadvisor,Restaurant / Bars,https://www.tripadvisor.com/,Auckland,New zealand
-Evaneos,Local agencies,https://www.evaneos.co.uk/,Auckland,New zealand
-La maison du voyage,Local agencies,https://www.maisonsduvoyage.com/,Auckland,New zealand
-Comptoir,Local agencies, https://www.comptoir.fr/,Auckland,New zealand
-Workfrom,Working spaces,https://workfrom.co/,Auckland,New zealand
-Coworker,Working spaces,https://www.coworker.com/,Auckland,New zealand
-Skyscanner,Flight,https://www.skyscanner.com.au/?previousCultureSource=COOKIE&redirectedFrom=www.skyscanner.com,Auckland,New zealand
-Air New Zealand,Flight,https://www.airnewzealand.com.au/,Auckland,New zealand
-Agoda,Flight,https://www.agoda.com/flights?cid=-218,Auckland,New zealand
-Rome2rio,Flight,https://www.rome2rio.com/,Auckland,New zealand
-Bookme,Activities,https://www.bookme.co.nz/,Auckland,New zealand
-Experienceoz,Activities,https://www.experienceoz.com.au/,Auckland,New zealand
-Virgin Australia,Flight,https://www.virginaustralia.com/,Auckland,New zealand
-Scoot,Flight,https://www.flyscoot.com/en,Auckland,New zealand
-Tigerair,Flight,https://tigerair.com.au/,Auckland,New zealand
-jetstar,Flight,https://www.jetstar.com/au/en,Auckland,New zealand
-Interislander,Transport,https://www.greatjourneysofnz.co.nz/,Auckland,New zealand
-Direct ferries,Transport,https://www.directferries.com/picton_wellington_ferry.htm,Auckland,New zealand
+name,category,url,city,country,description
+Booking,Accomodation,https://www.booking.com/,Auckland,New zealand,https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ABooking.com_logo.svg&psig=AOvVaw0oYzqVibKrlfIWV5K_1Xtb&ust=1583966026001000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLD327f7kOgCFQAAAAAdAAAAABAD,
+Hostelworld,Accomodation,https://www.hostelworld.com/,Auckland,New zealand,https://www.staywyse.org/wp-content/uploads/sites/14/2017/04/Hostelworld-logo.png,
+Homeway,Accomodation,https://www.homeaway.com/,Auckland,New zealand,https://www.maidcleaningnashville.com/wp-content/uploads/2017/05/homeaway-logo.png,
+Roadtrippers,Accomodation,https://roadtrippers.com/australia/,Auckland,New zealand,https://seekvectorlogo.com/wp-content/uploads/2018/05/roadtrippers-vector-logo.png,
+Momondo,Accomodation,https://www.momondo.com.au/?ispredir=true,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9ZoapWPbd5OzLL6_97za0tlli90rbJII3yosLzipl9sxJka8O,
+Couchsurfing,Accomodation,https://www.couchsurfing.com/,Auckland,New zealand,https://upload.wikimedia.org/wikipedia/commons/8/86/Couchsurfing_logo.png,
+Agoda,Accomodation,https://www.agoda.com/?cid=-218,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSv4QE0RRnB-EVbQ-Fd7U9_xBLOtCr4oK2-GuFmHJuNvT9jwQPz,
+WickedCampers ,Transport,https://www.wickedcampers.ca/,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTN3ntpfOTZV94H4RRJIq18S1N7NvKgyOD_C992ekp5YqZfhR_3,
+Hopper,Transport,https://www.hopper.com/,Auckland,New zealand,https://www.androidguys.com/wp-content/uploads/2015/09/p8Khlb-y3Mb8PYHJBbf_oUsnsD-JFySiTtfS7k3CHA4.png,
+Rentalcars,Transport,https://www.rentalcarsconnect.com/,Auckland,New zealand,https://seekvectorlogo.com/wp-content/uploads/2018/01/rentalcars-com-vector-logo-small.png,
+Travelcar,Transport,https://www.travelcar.com/en-AU/,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSTJFRR-VwQFUOYl22p1N9YNFGckBhI4OaTlNu342d9wewHspOm,
+Campermate,Transport,https://www.campermate.com.au/,Auckland,New zealand,https://www.hastingsdc.govt.nz/assets/Articles/_resampled/ScaleWidthWyI1MDAiXQ-campermate-1.jpg,
+Hertz,Transport,https://www.hertz.com/rentacar/reservation/,Auckland,New zealand,https://www.travelweekly-asia.com/uploadedImages/Industry/Ground_Transportation/xhhertzgsa291019-Hertz.jpg?width=1540&height=866&mode=crop&Anchor=MiddleCenter,
+Viator,Activities,https://www.viator.com/fr-FR/distribution-partners?mcid=58463,Auckland,New zealand,https://cdn-blog.honeyfund.com/wp-content/uploads/2017/03/Viator.gif,
+GetYourGuide,Activities,https://partner.getyourguide.com/en-us/travel-writers,Auckland,New zealand,https://www.phocuswire.com/uploadedImages/Articles/Interviews/2019/November/38280490_10155558070401080_7958542002549686272_o.png?width=270&height=270&scale=both&mode=crop,
+Musement,Activities,https://www.musement.com/fr/,Auckland,New zealand,https://www.logosvgpng.com/wp-content/uploads/2018/04/musement-logo-vector.png,
+Ceetiz,Activities,https://www.ceetiz.fr/espace-partenaire,Auckland,New zealand,https://media-cdn.tripadvisor.com/media/photo-s/17/b3/8b/48/caption.jpg,
+Tripadvisor,Restaurant / Bars,https://www.tripadvisor.com/,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGV8qXBcdwBcyj65kw2dOa1OuX9wH4ueLPxnfqjYaVvwEyxSvq,
+Evaneos,Local agencies,https://www.evaneos.co.uk/,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAmVDiqqVdZGD9oFHwvNy1SjeZpfOCqJcLbzmqKHXFBehqhuFm,
+Comptoir,Local agencies, https://www.comptoir.fr/,Auckland,New zealand,https://pbs.twimg.com/profile_images/1163477417345859586/aR4AQn5W_400x400.jpg,
+Workfrom,Working spaces,https://workfrom.co/,Auckland,New zealand,https://www.capespace.com/wp-content/uploads/2019/10/Workfrom_logo.png,
+Coworker,Working spaces,https://www.coworker.com/,Auckland,New zealand,https://mk0nomadpickcom4na4j.kinstacdn.com/wp-content/uploads/2018/04/Coworker.svg,
+Skyscanner,Flight,https://www.skyscanner.com.au/?previousCultureSource=COOKIE&redirectedFrom=www.skyscanner.com,Auckland,New zealand,https://mumbrella.com.au/wp-content/uploads/2019/09/Skyscanner-2019-Logo.jpg,
+Air New Zealand,Flight,https://www.airnewzealand.com.au/,Auckland,New zealand,https://i2.wp.com/www.travelmonitor.com.au/wp-content/uploads/2018/04/Air-New-Zealand-logo.jpg?fit=800%2C533&ssl=1,
+Rome2rio,Flight,https://www.rome2rio.com/,Auckland,New zealand,https://i1.wp.com/www.dakinihideaways.com.au/wp-content/uploads/2016/06/Rome2rio-logo-whitebg.png?fit=874%2C246,
+Bookme,Activities,https://www.bookme.co.nz/,Auckland,New zealand,https://cdn.dribbble.com/users/977639/screenshots/2309431/bookme1.png,
+Experienceoz,Activities,https://www.experienceoz.com.au/,Auckland,New zealand,https://www.thrifty.com.au/-/media/thrifty/logos/experience_oz_logo.png?h=240&la=en&mw=440&w=440&hash=9F8EC637B3B6E8B78F99707FD1E3BF1D,
+Virgin Australia,Flight,https://www.virginaustralia.com/,Auckland,New zealand,https://www.travelmonitor.com.au/wp-content/uploads/2016/12/virgin-banner-1.jpg,
+Scoot,Flight,https://www.flyscoot.com/en,Auckland,New zealand,https://www.travelmonitor.com.au/wp-content/uploads/2018/01/Scoot-logo.jpg,
+Tigerair,Flight,https://tigerair.com.au/,Auckland,New zealand,https://www.whitsundaytransfers.com/wp-content/uploads/2015/07/logo-tigerair.jpg,
+jetstar,Flight,https://www.jetstar.com/au/en,Auckland,New zealand,https://www.whitsundaytransfers.com/wp-content/uploads/2015/07/logo-jetstar.jpg,
+Interislander,Transport,https://www.greatjourneysofnz.co.nz/,Auckland,New zealand,https://nzcycletrail.com/assets/Partners/4364605f0f/aa-traveler-v4.jpg,
+Direct ferries,Transport,https://www.directferries.com/picton_wellington_ferry.htm,Auckland,New zealand,https://lh3.googleusercontent.com/hd7wdhUzN5mR-DIDpvB3G3jRklQiuV7LzNV3pHXhvDSz1aQ93in-5iGT4-AKp9vMIP0y,

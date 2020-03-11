@@ -116,7 +116,8 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                 <h2>Cost of Living</h2>
                 <div class="">
                   <!-- % review.rating.times do  %> -->
-                    <%= CityFeature.joins(:feature).find_by(features: { name: "Beer" }, city: @city).cost_of_living_score %></i>
+
+                    <%= CityFeature.joins(:feature).find_by(features: { name: "Cost of living" }, city: @city).cost_of_living_score %></i>
                   <!-- % end %> -->
                 </div>
               </div>

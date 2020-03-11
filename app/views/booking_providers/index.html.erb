@@ -13,11 +13,23 @@
             <span class="badge badge-secondary badges-booking-provider"> Mountains </span>
           </div>
       </div>
+
+      <div>
+        <h2 class="booking-provider-text">Flights</h2>
         <div class="row">
-          <%  @bookingproviders.each do |bookingprovider| %>
+          <%  @bookingproviders.where(category: "Flight").each do |bookingprovider| %>
             <div class="m-2">
               <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
             </div>
           <% end %>
-        </div>
+      </div>
+        <h2 class="booking-provider-text">Accomodations</h2>
+        <div class="row">
+          <%  @bookingproviders.where(category: "Accomodation").each do |bookingprovider| %>
+            <div class="m-2">
+              <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
+            </div>
+          <% end %>
+      </div>
+
 </div>
