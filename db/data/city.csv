@@ -32,7 +32,6 @@ Berlin,https://api.teleport.org/api/urban_areas/slug:berlin/,Berlin,Germany,Euro
 Bern,https://api.teleport.org/api/urban_areas/slug:bern/,Bern,Switzerland,Europe,46.94809,7.44744,10.0,61.145,42.45
 Bilbao,https://api.teleport.org/api/urban_areas/slug:bilbao/,Bilbao,Spain,Europe,43.26271,-2.92528,56.379999999999995,57.56,60.13999999999999
 Birmingham,https://api.teleport.org/api/urban_areas/slug:birmingham/,Birmingham,United Kingdom,Europe,52.48142,-1.89983,58.14,59.40000000000001,44.35000000000001
-Birmingham AL,https://api.teleport.org/api/urban_areas/slug:birmingham-al/,Birmingham AL,United States,North America,33.52066,-86.80249,51.33,51.605,53.834999999999994
 Bogota,https://api.teleport.org/api/urban_areas/slug:bogota/,Bogota,Colombia,South America,4.60971,-74.08175,90.79999999999998,29.760000000000005,62.15
 Boise,https://api.teleport.org/api/urban_areas/slug:boise/,Boise,United States,North America,43.6135,-116.20345,65.78,34.42,41.995
 Bologna,https://api.teleport.org/api/urban_areas/slug:bologna/,Bologna,Italy,Europe,44.49381,11.33875,51.89,77.10499999999999,57.36000000000001
@@ -67,7 +66,6 @@ Chisinau,https://api.teleport.org/api/urban_areas/slug:chisinau/,Chisinau,Moldov
 Christchurch,https://api.teleport.org/api/urban_areas/slug:christchurch/,Christchurch,New Zealand,Oceania,-43.53333,172.63333,50.96,59.22,32.23500000000001
 Cincinnati,https://api.teleport.org/api/urban_areas/slug:cincinnati/,Cincinnati,United States,North America,39.12711,-84.51439,61.080000000000005,65.12000000000002,61.180000000000014
 Cleveland,https://api.teleport.org/api/urban_areas/slug:cleveland/,Cleveland,United States,North America,41.4995,-81.69541,55.949999999999996,54.76500000000001,56.96500000000001
-Cluj-Napoca,https://api.teleport.org/api/urban_areas/slug:cluj-napoca/,Cluj-Napoca,Romania,Europe,46.76667,23.6,87.94,86.655,26.275000000000006
 Cologne,https://api.teleport.org/api/urban_areas/slug:cologne/,Cologne,Germany,Europe,50.93333,6.95,56.06999999999999,56.660000000000004,53.224999999999994
 Colorado Springs,https://api.teleport.org/api/urban_areas/slug:colorado-springs/,Colorado Springs,United States,North America,38.83388,-104.82136,53.75,59.225,38.120000000000005
 Columbus,https://api.teleport.org/api/urban_areas/slug:columbus/,Columbus,United States,North America,39.96118,-82.99879,57.460000000000015,45.535,64.66
