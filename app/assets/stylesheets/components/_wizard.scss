@@ -131,7 +131,7 @@
   }
 
   .wizard-steps-step-2 {
-    top: 1180px;
+    top: 1168px;
     left: 1250px;
     transform: rotate(-10deg);
   }
@@ -165,7 +165,7 @@
     transform: translate3d(-1984px, -320px, 0);
   }
   .wizard-steps-container.is--step-4 {
-    transform: translate3d(-1950px, -1995px, 0) rotate(10deg);
+    transform: translate3d(-1950px, -2052px, 0) rotate(10deg);
   }
   .wizard-actions {
     // position: absolute;
@@ -185,6 +185,13 @@
     top: 50%;
     width: auto;
     left: 80%;
+  }
+
+  .wizard-actions-world {
+    position: absolute;
+    top: 70%;
+    width: auto;
+    left: 41%;
   }
 
 

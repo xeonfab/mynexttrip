@@ -3,17 +3,20 @@
   <div class="d-flex flex-row justify-content-between">
 
   </div>
-
+  <div class="container">
   <% if @countries.blank? %>
-    <h1>Sorry, your search yeilded no results. Please try again.</h1>
+    <p>Sorry, your search yeilded no results.</p>
+    <p>Please try again.</p>
     <% else %>
-      <p>We found <%= @cities.size %> relevant cities</p>
+
       <div class="header">
         <div class="header-right">
-          <%= link_to "All", cities_path, class: "btn-main-yellow small"%>
-          <%= link_to "Countries", countries_path, class: "btn-main-yellow small" %>
-          <%= link_to "Cities", cities_path, class: "btn-main-yellow small"%>
-          <button onclick="mapHide()" class="btn-main-yellow small">MAP</button>
+          <div class="d-flex">
+            <span class="filter-title" style="font-weight: bold"><%= @cities.size %> cities</span>
+          </div>
+          <div>
+            <button onclick="mapHide()" class="btn-main-yellow small">See Map</button>
+          </div>
         </div>
       </div>
 
@@ -25,24 +28,28 @@
         height: 600px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        class="mapbox-gl mapboxgl-map"
+        class="mapbox-gl mapboxgl-map map-index"
         ></div>
       </div>
-
+      <br>
+      <!-- <h1 class="mb-3 homepage-subtitles-index-city">Cities</h1> -->
       <div class="row">
         <%  @cities.each do |city| %>
-        <div class="col-lg-3 mb-3">
+        <div class="col-lg-3 col-md-4 mb-3">
           <%= render partial: 'shared/citycard', locals: { city: city } %>
         </div>
         <% end %>
       </div>
 
+      <h1 class="homepage-subtitles-index-country">Countries</h1>
       <div class="row">
+
         <%  @countries.each do |country| %>
-          <div class="col-lg-3 mb-3">
+          <div class="col-lg-3 col-md-4 mb-3">
             <%= render partial: 'shared/countrycard', locals: { country: country } %>
           </div>
         <% end %>
       </div>
     <% end %>
+  </div>
 </div>
