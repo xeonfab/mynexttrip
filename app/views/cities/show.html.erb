@@ -189,7 +189,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
               <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Sports</p>
-                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Sports" }, city: @city).star_score  %></p>
+                    <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Museums" }, city: @city).star_score  %></p>
                   </div>
               </div>
             </div>
@@ -242,6 +242,9 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
             </div>
           </div>
         </div>
+        <div>
+          <%= image_tag "thingstodo.jpeg", class: "my-4" %>
+        </div>
         <div class="my-4">
           <div
           id="map"
@@ -255,7 +258,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
     <div class="col-md-3">
         <div class="card">
           <div class="booking-prov-amount">
-            <p class="booking-prov-text">48 booking providers available for your travel</p>
+            <p class="booking-prov-text">25 booking providers available for your travel</p>
             <div>
              <%= image_tag "wicked.jpeg", class: "avatar show-page-logos" %>
              <%= image_tag "workflow.jpeg", class: "avatar show-page-logos"%>
