@@ -14,7 +14,7 @@
           </div>
       </div>
 
-      <div>
+      <div class="row block">
         <h2 class="booking-provider-text">Flights</h2>
         <div class="row">
           <%  @bookingproviders.where(category: "Flight").each do |bookingprovider| %>
@@ -22,7 +22,9 @@
               <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
             </div>
           <% end %>
-      </div>
+        </div>
+
+      <div class="row">
         <h2 class="booking-provider-text">Accomodations</h2>
         <div class="row">
           <%  @bookingproviders.where(category: "Accomodation").each do |bookingprovider| %>
@@ -30,8 +32,10 @@
               <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
             </div>
           <% end %>
+        </div>
       </div>
-      </div>
+
+      <div>
         <h2 class="booking-provider-text">Activities</h2>
         <div class="row">
           <%  @bookingproviders.where(category: "Activities").each do |bookingprovider| %>
@@ -39,8 +43,10 @@
               <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
             </div>
           <% end %>
+        </div>
       </div>
-      <div>
+
+      <div class="row">
         <h2 class="booking-provider-text">Transports</h2>
         <div class="row">
           <%  @bookingproviders.where(category: "Transport").each do |bookingprovider| %>
@@ -48,8 +54,10 @@
               <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
             </div>
           <% end %>
+        </div>
       </div>
-      </div>
+
+      <div class="row">
         <h2 class="booking-provider-text">Local guides</h2>
         <div class="row">
           <%  @bookingproviders.where(category: "Local agencies").each do |bookingprovider| %>
@@ -57,8 +65,10 @@
               <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
             </div>
           <% end %>
+        </div>
       </div>
-      <div>
+
+      <div class="row">
         <h2 class="booking-provider-text">Working Spaces</h2>
         <div class="row">
           <%  @bookingproviders.where(category: "Working spaces").each do |bookingprovider| %>
@@ -66,6 +76,6 @@
               <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
             </div>
           <% end %>
+        </div>
       </div>
-
 </div>

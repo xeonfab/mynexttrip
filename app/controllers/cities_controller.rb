@@ -45,7 +45,7 @@ class CitiesController < ApplicationController
         lng: city.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { city: city }),
         # image_url: helpers.asset_url('')
-        image_url: helpers.asset_url('bluemarker.png')
+        image_url: helpers.asset_url('bluemarker1.png')
       }
     end
   end
@@ -75,6 +75,8 @@ class CitiesController < ApplicationController
   def search_by_theme_filter
     # journey/home page search
     @cities = City.initial_search(params[:filter_results])
+    country_ids = @cities.pluck(:country_id)
+    @countries = Country.where(id: country_ids)
     # no search result as well
   end
 
@@ -88,11 +90,7 @@ class CitiesController < ApplicationController
       params.require(:feature_results).permit(:cost_of_living, :air_quality, :water_quality, :cleanliness, :safety , :culture , :internet_speed)
     end
 
-    def search_by_feature_filter(user_feature_filtered_list)
-    end
-
-    def air_polution_score(air_polution_score)
-      #case score
-
+    def theme_params
+      params.require(:filter_results).permit(:themes, :temp, :months, :regions)
     end
 end

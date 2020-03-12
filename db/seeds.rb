@@ -5,22 +5,22 @@ require 'date'
 require 'csv'
 
 puts 'Cleaning database...'
-# CityFeature.destroy_all
-# Feature.destroy_all
-# CityTheme.destroy_all
-# Theme.destroy_all
+CityFeature.destroy_all
+Feature.destroy_all
+CityTheme.destroy_all
+Theme.destroy_all
 
 
 
-# Climate.destroy_all
+Climate.destroy_all
 
 BookingProvider.destroy_all
-# City.destroy_all
+City.destroy_all
 
 
 
-# Country.destroy_all
-# Region.destroy_all
+Country.destroy_all
+Region.destroy_all
 
 
 
