@@ -3,9 +3,7 @@
   width: 100%;
   position: relative;
   .btn-main-yellow {
-      margin-top: 35px;
       color: #003F5C;
-      padding: 12px 40px;
       transition: background 0.3s ease;
       background-color: #F8B400;
       box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.13);
@@ -18,9 +16,25 @@
         height: 76px;
       }
      .small {
-        width: 200px;
-        height: 40px;
+        width: 131px;
+        height: 36px;
       }
+  }
+  .btn-filter {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #003F5C;
+    width: 148px;
+    height: 24px;
+    .yellow {
+      background-color: #F8B400;
+      width: 120px;
+      height: 30px;
+    }
+
   }
   #feature-filter-container {
     width: 18%;
@@ -33,9 +47,11 @@
   }
   .index-container-column-1 {
     flex: 1;
+    padding: 10px;
   }
   .index-container-column-2 {
     flex: 3;
+    padding: 12px;
   }
 
 }
@@ -64,7 +80,7 @@
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #4CAF50; /* Green background */
+  background-color: #F8B400; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
@@ -86,5 +102,76 @@
 
 }
 
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px #F8B400 solid;
+}
+.header-right1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  // border-bottom: 2px #F8B400 solid;
+}
 
+
+
+.homepage-subtitles-index-city {
+  color: #003F5C;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 49px;
+  position: relative;
+
+  &:after{
+    content: "";
+    position: absolute;
+    width: 82px;
+    height: 1px;
+    background: #F8B400;
+    left: 0%;
+    bottom: 0px;
+  }
+}
+
+
+.homepage-subtitles-index-country {
+  color: #003F5C;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 49px;
+  position: relative;
+
+  &:after{
+    content: "";
+    position: absolute;
+    width: 144px;
+    height: 1px;
+    background: #F8B400;
+    left: 0%;
+    bottom: 0px;
+
+  }
+}
+
+.filter-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #003F5C;
+}
+
+.map-index {
+  padding-top: 8px;
+}
 

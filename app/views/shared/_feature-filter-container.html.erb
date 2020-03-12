@@ -1,26 +1,33 @@
 <div class="index-container-column-1">
-
+  <br>
   <%= simple_form_for :feature_results, remote: true, url: cities_path, method: :get do |f| %>
 
 <!-- to add once re-seeded: cost_of_living culture  -->
 <!-- need to 'defailt sliders' so that your search goes back to what you filtered it to -->
 
     <br>
+    <p class="filter-title">Use the filters below:</p>
     <% filters = %i(air_pollution drinking_water cleanliness crime_rate internet cost_of_living culture) %>
     <% filters.each do |filter| %>
       <% default_score = params.dig(:feature_results, filter) || 0 %>
-      <i class="fas fa-star"></i>
-      <%= f.label filter, required: false, class: "label" %>
+      <i class="fas fa-star" ></i>
+      <%= f.label filter, required: false, class: "label filter-font" %>
       <br>
-      <%= f.range_field filter, min: 0, max: 100, value: default_score,  class: "slider", id: "slider_#{filter}" %>
+      <%= f.range_field filter, min: 0, max: 100, value: default_score,  class: "slider filter-font", id: "slider_#{filter}" %>
       <br>
     <% end %>
 
-    <%= f.input :month, input_html: {required: true}, collection: %w(January February March April May June July August September October November December) %>
-
     <%= f.button :submit, "Search", class: "btn-main-yellow small"%>
   <% end %>
+
+  <div class="p-6">
+    <div><%= link_to "<strong>All countries</strong>".html_safe, countries_path, class: "btn-filter yellow py-6" %></div>
+    <div><%= link_to "All cities", cities_path, class: "btn-filter yellow py-6"%></div>
+  </div>
+
 </div>
+
+
 
 
 
