@@ -1,9 +1,9 @@
 name,category,url,city,country,description
-Booking,Accomodation,https://www.booking.com/,Auckland,New zealand,https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ABooking.com_logo.svg&psig=AOvVaw0oYzqVibKrlfIWV5K_1Xtb&ust=1583966026001000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLD327f7kOgCFQAAAAAdAAAAABAD,
-Hostelworld,Accomodation,https://www.hostelworld.com/,Auckland,New zealand,https://images.app.goo.gl/J1C6tdRfHTdAG79KA,
+Booking,Accomodation,https://www.booking.com/,Auckland,New zealand,logos/booking.png,
+Hostelworld,Accomodation,https://www.hostelworld.com/,Auckland,New zealand,logos/hostelworld.png,
 Homeway,Accomodation,https://www.homeaway.com/,Auckland,New zealand,https://www.maidcleaningnashville.com/wp-content/uploads/2017/05/homeaway-logo.png,
 Roadtrippers,Accomodation,https://roadtrippers.com/australia/,Auckland,New zealand,https://seekvectorlogo.com/wp-content/uploads/2018/05/roadtrippers-vector-logo.png,
-Momondo,Accomodation,https://www.momondo.com.au/?ispredir=true,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9ZoapWPbd5OzLL6_97za0tlli90rbJII3yosLzipl9sxJka8O,
+Momondo,Accomodation,https://www.momondo.com.au/?ispredir=true,Auckland,New zealand,logos/momondo.png
 Couchsurfing,Accomodation,https://www.couchsurfing.com/,Auckland,New zealand,https://upload.wikimedia.org/wikipedia/commons/8/86/Couchsurfing_logo.png,
 Agoda,Accomodation,https://www.agoda.com/?cid=-218,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSv4QE0RRnB-EVbQ-Fd7U9_xBLOtCr4oK2-GuFmHJuNvT9jwQPz,
 WickedCampers ,Transport,https://www.wickedcampers.ca/,Auckland,New zealand,https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTN3ntpfOTZV94H4RRJIq18S1N7NvKgyOD_C992ekp5YqZfhR_3,
@@ -23,7 +23,7 @@ Workfrom,Working spaces,https://workfrom.co/,Auckland,New zealand,https://www.ca
 Coworker,Working spaces,https://www.coworker.com/,Auckland,New zealand,https://mk0nomadpickcom4na4j.kinstacdn.com/wp-content/uploads/2018/04/Coworker.svg,
 Skyscanner,Flight,https://www.skyscanner.com.au/?previousCultureSource=COOKIE&redirectedFrom=www.skyscanner.com,Auckland,New zealand,https://mumbrella.com.au/wp-content/uploads/2019/09/Skyscanner-2019-Logo.jpg,
 Air New Zealand,Flight,https://www.airnewzealand.com.au/,Auckland,New zealand,https://i2.wp.com/www.travelmonitor.com.au/wp-content/uploads/2018/04/Air-New-Zealand-logo.jpg?fit=800%2C533&ssl=1,
-Rome2rio,Flight,https://www.rome2rio.com/,Auckland,New zealand,https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.halcyonyachts.com%2Ftop_tips_for_travel%2Frome2rio%2F&psig=AOvVaw1DEeHtzsQLgZCDWi7qyG7W&ust=1584066506697000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCwpeDxk-gCFQAAAAAdAAAAABAJ,
+Rome2rio,Flight,https://www.rome2rio.com/,Auckland,New zealand,logos/rome2rio.png,
 Bookme,Activities,https://www.bookme.co.nz/,Auckland,New zealand,https://cdn.dribbble.com/users/977639/screenshots/2309431/bookme1.png,
 Experienceoz,Activities,https://www.experienceoz.com.au/,Auckland,New zealand,https://www.thrifty.com.au/-/media/thrifty/logos/experience_oz_logo.png?h=240&la=en&mw=440&w=440&hash=9F8EC637B3B6E8B78F99707FD1E3BF1D,
 Virgin Australia,Flight,https://www.virginaustralia.com/,Auckland,New zealand,https://www.travelmonitor.com.au/wp-content/uploads/2016/12/virgin-banner-1.jpg,
