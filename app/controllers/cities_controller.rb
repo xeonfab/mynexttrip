@@ -18,6 +18,7 @@ class CitiesController < ApplicationController
       end
     elsif params[:filter_results].present?
       search_by_theme_filter
+      map_markers
     # elsif
     #   search_by_feature_filter
     else
