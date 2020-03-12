@@ -36,41 +36,40 @@ class City < ApplicationRecord
 
   # Returns a list of cities that meet the user's criteria of travel theme, month, and temperature
   def self.initial_search(filters)
-    filters = {
-      themes: ["Beach", "Romantic", "Countryside"],
-      temp: 25,
-      months: ["July", "August"]
-    }
+    filters = filters.permit!.to_h
+    # need to use the params
+    # filters = {
+    #   themes: ["Beach"],
+    #   temp: 25,
+    #   months: ["July"],
+    #   regions: ['Europe']
+    # }
 
     city_themes_months = {} # { july: 1, august: 1 }
     climate_months = {} # { july: 25..1000, august: 25..1000 }
-    region_names = {}
 
     # Populate the city_themes_months hash and the climate_months hash
     filters[:months].each do |month|
       key = month.downcase.to_sym
       city_themes_months[key] = 1
-      climate_months[key] = filters[:temp]..1000
+      climate_months[key] = filters[:temp].to_i..1000
     end
-
     # filter_results[:themes].each do |theme|
     #   key = theme.downcase.to_sym
-
-    # end
 
     # iterate over array (months) and create a new pair
 
     # ["Beach", "Romantic"] holiday with a temp around "25C" in ["July", "August"]
     # make it compatible with multiple months given in params
-    City.joins(:themes).where(themes: [:filter_results[:themes]])
-        .joins(:city_themes).where(city_themes: city_themes_months)
-        .joins(:climate).where(climates: climate_months)
-        .joins(:region).where(regions: region_names)
 
-    # TO DO
-    # Do one query for each given theme
+    sql = filters[:themes].map do |theme|
+      City.joins(:themes).where(themes: { name: theme.capitalize })
+          .joins(:city_themes).where(city_themes: city_themes_months)
+          .joins(:climate).where(climates: climate_months)
+          .joins(:region).where(regions: { name: filters[:regions].map(&:capitalize) })
+    end.map { |relation| "(#{relation.to_sql})" }.join(" INTERSECT ")
+
+    find_by_sql(sql)
   end
 end
 
-
-# Model.where(id: [array of values])

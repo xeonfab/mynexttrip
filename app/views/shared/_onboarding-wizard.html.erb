@@ -38,7 +38,7 @@
           <input type="checkbox" name="filter_results[themes][]" id="beach" checked value="beach" class="sentence-checkboxes-input">
           <label class="sentence-checkboxes-label" for="beach">beaches,</label>
 
-          <input type="checkbox" name="filter_results[themes]" id="culture" value="culture" class="sentence-checkboxes-input">
+          <input type="checkbox" name="filter_results[themes][]" id="culture" value="culture" class="sentence-checkboxes-input">
           <label class="sentence-checkboxes-label" for="culture">culture,</label>
 
           <input type="checkbox" name="filter_results[themes][]" id="mountains" value="mountains" class="sentence-checkboxes-input">
@@ -67,40 +67,40 @@
       <p class="wizard-title">When do you want to travel?</p>
       <div class="month-checkboxes">
 
-          <input type="checkbox" name="filter_results[month][]" id="january" value="January" class="month-checkboxes-input">
+          <input type="checkbox" name="filter_results[months][]" id="january" value="January" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="january">January</label>
 
-          <input type="checkbox" name="filter_results[month][]" id="february" value="February" class="month-checkboxes-input">
+          <input type="checkbox" name="filter_results[months][]" id="february" value="February" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="february">February</label>
 
-          <input type="checkbox" name="filter_results[month][]" id="march" value="March" class="month-checkboxes-input">
+          <input type="checkbox" name="filter_results[months][]" id="march" value="March" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="march">March</label>
 
-          <input type="checkbox" name="filter_results[month][]" id="april" value="April" class="month-checkboxes-input">
+          <input type="checkbox" name="filter_results[months][]" id="april" value="April" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="april">April</label>
 
-          <input type="checkbox" name="filter_results[month][]" id="may" value="May" class="month-checkboxes-input">
+          <input type="checkbox" name="filter_results[months][]" id="may" value="May" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="may">May</label>
 
-         <input type="checkbox" name="filter_results[month][]" id="june" value="June" class="month-checkboxes-input">
+         <input type="checkbox" name="filter_results[months][]" id="june" value="June" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="june">June</label>
 
-          <input type="checkbox" name="filter_results[month][]" id="july" value="July" class="month-checkboxes-input">
+          <input type="checkbox" name="filter_results[months][]" id="july" value="July" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="july">July</label>
 
-         <input type="checkbox" name="filter_results[month][]" id="august" value="August" class="month-checkboxes-input">
+         <input type="checkbox" name="filter_results[months][]" id="august" value="August" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="august">August</label>
 
-         <input type="checkbox" name="filter_results[month][]" id="september" value="September" class="month-checkboxes-input">
+         <input type="checkbox" name="filter_results[months][]" id="september" value="September" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="september">September</label>
 
-          <input type="checkbox" name="filter_results[month][]" id="october" value="October" class="month-checkboxes-input">
+          <input type="checkbox" name="filter_results[months][]" id="october" value="October" class="month-checkboxes-input">
           <label class="month-checkboxes-label" for="october">October</label>
 
-         <input type="checkbox" name="filter_results[month][]" id="november" value="November" class="month-checkboxes-input">
+         <input type="checkbox" name="filter_results[months][]" id="november" value="November" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="november">November</label>
 
-         <input type="checkbox" name="filter_results[month][]" id="december" value="December" class="month-checkboxes-input">
+         <input type="checkbox" name="filter_results[months][]" id="december" value="December" class="month-checkboxes-input">
          <label class="month-checkboxes-label" for="december">December</label>
       </div>
       <div class="wizard-actions">
@@ -115,16 +115,16 @@
       <div class="temp-checkboxes">
         <div class="temp-checkboxes-thermometer">
           <div class="temp-checkboxes-options">
-            <input type="radio" name="filter_results[temp]" id="hot" value="hot" class="temp-checkboxes-input">
+            <input type="radio" name="filter_results[temp]" id="hot" value="25" class="temp-checkboxes-input">
             <label class="temp-checkboxes-label temp-checkboxes-label-top" for="hot">Hot 25°C+</label>
 
-            <input type="radio" name="filter_results[temp]" id="warm" value="warm" class="temp-checkboxes-input">
+            <input type="radio" name="filter_results[temp]" id="warm" value="20" class="temp-checkboxes-input">
             <label class="temp-checkboxes-label" for="warm">Warm 20°C+</label>
 
-            <input type="radio" name="filter_results[temp]" id="mild" value="mild" class="temp-checkboxes-input">
+            <input type="radio" name="filter_results[temp]" id="mild" value="15" class="temp-checkboxes-input">
             <label class="temp-checkboxes-label" for="mild">Mild 15°C+</label>
 
-            <input type="radio" name="filter_results[temp]" id="cool" value="cool" class="temp-checkboxes-input">
+            <input type="radio" name="filter_results[temp]" id="cool" value="10" class="temp-checkboxes-input">
             <label class="temp-checkboxes-label" for="cool">Cool 10°C+</label>
 
             <div class="temp-checkboxes-thermometer-inner"></div>
@@ -142,37 +142,37 @@
       <p class="wizard-title">4 / 4</p>
       <p class="wizard-title mb-4">What continent do you want to visit?</p>
       <div class="continent-checkboxes">
-          <input type="checkbox" name="region" id="europe" value="europe" class="continent-checkboxes-input">
+          <input type="checkbox" name="filter_results[regions][]" id="europe" value="europe" class="continent-checkboxes-input">
           <label class="continent-checkboxes-label continent-checkboxes-label-europe" for="europe">
             <img src="<%= asset_path 'europe.svg' %>" alt="Europe"/>
             <span>Europe</span>
           </label>
 
-          <input type="checkbox" name="region" id="north_america" value="north america" class="continent-checkboxes-input">
+          <input type="checkbox" name="filter_results[regions][]" id="north_america" value="north america" class="continent-checkboxes-input">
           <label class="continent-checkboxes-label continent-checkboxes-label-north-america" for="north_america">
             <img src="<%= asset_path 'north_america.svg' %>" alt="North America"/>
             <span>North America</span>
           </label>
 
-          <input type="checkbox" name="region" id="south_america" value="south america" class="continent-checkboxes-input">
+          <input type="checkbox" name="filter_results[regions][]" id="south_america" value="south america" class="continent-checkboxes-input">
           <label class="continent-checkboxes-label continent-checkboxes-label-south-america" for="south_america">
             <img src="<%= asset_path 'south_america.svg' %>" alt="South America"/>
             <span>South America</span>
           </label>
 
-          <input type="checkbox" name="region" id="africa" value="africa" class="continent-checkboxes-input">
+          <input type="checkbox" name="filter_results[regions][]" id="africa" value="africa" class="continent-checkboxes-input">
           <label class="continent-checkboxes-label continent-checkboxes-label-africa" for="africa">
             <img src="<%= asset_path 'africa.svg' %>" alt="Africa"/>
             <span>Africa</span>
           </label>
 
-          <input type="checkbox" name="region" id="asia" value="asia" class="continent-checkboxes-input">
+          <input type="checkbox" name="filter_results[regions][]" id="asia" value="asia" class="continent-checkboxes-input">
           <label class="continent-checkboxes-label continent-checkboxes-label-asia" for="asia">
             <img src="<%= asset_path 'asia.svg' %>" alt="Asia"/>
             <span>Asia</span>
           </label>
 
-          <input type="checkbox" name="region" id="oceania" value="oceania" class="continent-checkboxes-input">
+          <input type="checkbox" name="filter_results[regions][]" id="oceania" value="oceania" class="continent-checkboxes-input">
           <label class="continent-checkboxes-label continent-checkboxes-label-oceania" for="oceania">
             <img src="<%= asset_path 'australia.svg' %>" alt="Oceania"/>
             <span>Oceania</span>
@@ -183,7 +183,6 @@
       <button class="js-wizard-previous btn-main-yellow small" type="button">Previous</button>
       <button class="btn-main-yellow small" type="submit">Submit</button>
     </div>
-
   </div>
 </form>
 
