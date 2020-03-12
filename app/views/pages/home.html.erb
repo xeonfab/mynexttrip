@@ -3,31 +3,31 @@
  <%= render 'shared/onboarding-wizard' %>
 </div>
 <div class="homepage-background">
-  <div class="container pt-5">
-    <h1 class="text-center mb-3 homepage-subtitles">Regions to Discover</h1>
-    <div class="row">
+  <div class="container pt-5 mb-5">
+    <h1 class="text-center mb-5 homepage-subtitles">Regions to Discover</h1>
+    <div class="row mb-5">
       <%  @regions.each do |region| %>
-        <div class="col-lg-3 mb-3">
+        <div class="col-lg-3 mb-4">
           <%= render partial: 'shared/regioncard', locals: { region: region } %>
         </div>
       <% end %>
     </div>
 
 
-    <h1 class="text-center mb-3 homepage-subtitles">Countries to Discover</h1>
-    <div class="space">
+    <h1 class="text-center mb-5 homepage-subtitles">Countries to Discover</h1>
+    <div class="space mb-5">
       <div class="row">
         <%  @countries.each do |country| %>
-        <div class="col-lg-3 mb-3">
+        <div class="col-lg-3 mb-4">
           <%= render partial: 'shared/countrycard', locals: { country: country } %>
         </div>
         <% end %>
       </div>
     </div>
-    <h1 class="text-center mb-3 homepage-subtitles">Cities to Discover</h1>
+    <h1 class="text-center mb-5 homepage-subtitles">Cities to Discover</h1>
     <div class="row">
       <%  @cities.each do |city| %>
-        <div class="col-lg-3 mb-3">
+        <div class="col-lg-3 mb-4">
         <%= render partial: 'shared/citycard', locals: { city: city } %>
         </div>
       <% end %>
