@@ -9,6 +9,7 @@
     padding: 40px 0; // Safe zone for the temperature.
     overflow: hidden;
     border-radius: 4px;
+    z-index: 1;
 
   .region-card-image {
     position: absolute;
