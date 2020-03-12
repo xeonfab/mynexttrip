@@ -1,6 +1,5 @@
 require 'json'
 require 'open-uri'
-require 'byebug'
 require 'date'
 require 'csv'
 
@@ -315,7 +314,7 @@ puts "Making the Countries"
   #   #Languages speaking
   #   CityFeature.create!(
   #   score: row[:spoken_languages],
-  #   feature: language_feature,
+  #   : language_feature,
   #   city: City.find_by(name: row[:city_name])
   #   )
 
