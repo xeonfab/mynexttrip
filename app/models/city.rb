@@ -36,7 +36,6 @@ class City < ApplicationRecord
 
   # Returns a list of cities that meet the user's criteria of travel theme, month, and temperature
   def self.initial_search(filters)
-    filters = filters.permit!.to_h
     # need to use the params
     # filters = {
     #   themes: ["Beach"],
