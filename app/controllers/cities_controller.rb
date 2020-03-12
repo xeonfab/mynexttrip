@@ -45,7 +45,7 @@ class CitiesController < ApplicationController
         lng: city.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { city: city }),
         # image_url: helpers.asset_url('')
-        image_url: helpers.asset_url('bluemarker.png')
+        image_url: helpers.asset_url('bluemarker1.png')
       }
     end
   end

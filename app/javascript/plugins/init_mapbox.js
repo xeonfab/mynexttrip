@@ -42,11 +42,12 @@ const initMapbox = () => {
   const fitMapToMarkers = (map, markers) => {
     const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-    map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+    map.fitBounds(bounds, { padding: 70, maxZoom: 12 });
   };
 
   if (mapElement) {
     const map = buildMap();
+    window.tripmap = map
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
