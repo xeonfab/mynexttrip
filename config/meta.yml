@@ -1,0 +1,5 @@
+meta_product_name: "My Next Trip"
+meta_title: "My Next Trip - What’s the plan for your next trip ?"
+meta_description: "Compare, find and plan easily your next travel destination"
+meta_image: "dbugger.jpg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
