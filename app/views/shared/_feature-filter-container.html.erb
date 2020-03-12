@@ -4,7 +4,8 @@
 
 <!-- to add once re-seeded: cost_of_living culture  -->
 <!-- need to 'defailt sliders' so that your search goes back to what you filtered it to -->
-    <%= f.button :submit, "search", class: "btn btn-flat"%>
+
+    <br>
     <% filters = %i(air_pollution drinking_water cleanliness crime_rate internet cost_of_living culture) %>
     <% filters.each do |filter| %>
       <% default_score = params.dig(:feature_results, filter) || 0 %>
@@ -17,6 +18,7 @@
 
     <%= f.input :month, input_html: {required: true}, collection: %w(January February March April May June July August September October November December) %>
 
+    <%= f.button :submit, "Search", class: "btn-main-yellow small"%>
   <% end %>
 </div>
 

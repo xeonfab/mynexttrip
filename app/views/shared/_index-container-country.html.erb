@@ -1,0 +1,33 @@
+<div class="index-container-column-2">
+
+  <div class="d-flex flex-row justify-content-between">
+
+  </div>
+      <div class="header">
+        <div class="header-right">
+          <%= link_to "All", cities_path %>
+          <%= link_to "Countries", countries_path %>
+          <%= link_to "Cities", cities_path %>
+        </div>
+      </div>
+
+      <button onclick="mapHide()">MAP</button>
+      <div mapHide = "mapHide">
+        <div
+        id="map"
+        style="width: 100%; display: none;
+        height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        class="mapbox-gl mapboxgl-map"
+        ></div>
+      </div>
+
+      <div class="row">
+        <%  @countries.each do |country| %>
+          <div class="col-lg-3 mb-3">
+            <%= render partial: 'shared/countrycard', locals: { country: country } %>
+          </div>
+        <% end %>
+      </div>
+</div>
