@@ -1,13 +1,16 @@
 <%= render 'shared/bannercountry' %>
 <div class="container-show container mt-5">
   <h1 class="banner-heading-city"><%= @country.name %></h1>
+
   <div class="row">
     <div class="container-show-inner col-md-9">
-      <p class="city-show-description"></p>
+       <p class="city-show-description"> New Zealand is an adventure sports junkie's dream. The Tolkien-worthy landscape seems tailor made for adrenaline, and the country that invented bungee jumping takes their adventure seriously. A magical landscape of wild snow-capped mountains, shining lakes, and roaring rivers serves as a giant playground filled with world-class "tramping," skiing, and rafting. When you're done, marvel at the thermal wonders of Rotorua or set out in search of whales and dolphins. While there may be more sheep than people, the friendly English-speaking Kiwis will make you wish there were more of them.
+
+</p>
       <div>
         <h2 class="city-show-sub-headers">Climate</h2>
         <div class="city-climate-text">
-          <div class="row text-center p-3">
+          <div class="row text-center mb-3">
             <div class="col-2">
               <div class="card cards-temp">
                 <p class="climate-month">January</p>
@@ -45,7 +48,7 @@
               </div>
             </div>
           </div>
-          <div class="row text-center p-3">
+          <div class="row text-center mb-3">
             <div class="col-2">
               <div class="card cards-temp">
                 <p class="climate-month">July</p>
@@ -86,27 +89,27 @@
         </div>
       </div>
       <h2 class="city-show-sub-headers">Information</h2>
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-6">
-          <div class="card p-2 m-0">
+          <div class="card p-2 m-0 rounded-show-box">
             <div class="city-info-text d-flex justify-content-between">
               <p class="show-info-title">Language</p>
-              <p class="">English</p>
+              <p class="show-info-title">English</p>
             </div>
           </div>
         </div>
         <div class="col-6">
-          <div class="card p-2 m-0">
+          <div class="card p-2 m-0 rounded-show-box">
             <div class="city-info-text d-flex justify-content-between">
               <p class="show-info-title">Safety</p>
-              <p class=""><%= int_as_safety_score(CityFeature.joins(:feature, :city).where(features: { name: "Crime rate" }, cities: { country_id: @country.id }).average(:score).to_i) %></p>
+              <p class="show-info-title"><%= int_as_safety_score(CityFeature.joins(:feature, :city).where(features: { name: "Crime rate" }, cities: { country_id: @country.id }).average(:score).to_i) %></p>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-6">
-          <div class="card p-3">
+          <div class="card p-3 rounded-show-box">
             <div class="city-info-text d-flex justify-content-between border-show">
               <h2>Cost of Living</h2>
               <%= int_as_cost_of_living_score(CityFeature.joins(:feature, :city).where(features: { name: "Cost of living" }, cities: { country_id: @country.id }).average(:score)) %></i>
@@ -144,7 +147,7 @@
           </div>
         </div>
         <div class="col-6">
-          <div class="card p-3">
+          <div class="card p-3 rounded-show-box">
             <div class="city-info-text d-flex justify-content-between border-show">
               <h2>Healthcare</h2>
             </div>
@@ -180,8 +183,6 @@
           <% end %>
         </div>
         <div class="my-4">
-          <div id="map" style="width: 100%;
-            height: 600px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
         </div>
       </div>
     </div>

@@ -63,9 +63,11 @@
   line-height: 20px;
   display: flex;
   align-items: center;
-
   color: #003F5C;
+}
 
+.show-info-title {
+  margin-top: 1rem;
 }
 
 .city-info-content-text {
@@ -76,8 +78,10 @@
   line-height: 17px;
   display: flex;
   align-items: center;
-
   color: #003F5C;
+  padding-right: 14px;
+  padding-left: 14px;
+
 }
 
 .city-climate-text {
@@ -86,6 +90,12 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-
   color: #003F5C;
+  // padding-right: 14px;
+  // padding-left: 14px;
+}
+
+.rounded-show-box {
+  border-radius: 4px !important;
+
 }
