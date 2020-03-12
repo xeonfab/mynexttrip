@@ -128,7 +128,7 @@ upload_feature = Feature.create!(
   )
 
 air_feature = Feature.create!(
-  name: "Air pollution",
+  name: "Air quality",
   weight: 80
   )
 
@@ -143,7 +143,7 @@ water_feature = Feature.create!(
   )
 
 crime_feature = Feature.create!(
-  name: "Crime rate",
+  name: "Safety",
   weight: 80
   )
 
@@ -189,7 +189,7 @@ cost_living_feature = Feature.create!(
   )
 
 culture_feature = Feature.create!(
-  name: "Culture",
+  name: "Cultural activities",
   weight: 80
   )
 

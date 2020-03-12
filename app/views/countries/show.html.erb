@@ -102,7 +102,7 @@
           <div class="card p-2 m-0 rounded-show-box">
             <div class="city-info-text d-flex justify-content-between">
               <p class="show-info-title">Safety</p>
-              <p class="show-info-title"><%= int_as_safety_score(CityFeature.joins(:feature, :city).where(features: { name: "Crime rate" }, cities: { country_id: @country.id }).average(:score).to_i) %></p>
+              <p class="show-info-title"><%= int_as_safety_score(CityFeature.joins(:feature, :city).where(features: { name: "Safety" }, cities: { country_id: @country.id }).average(:score).to_i) %></p>
             </div>
           </div>
         </div>
@@ -154,7 +154,7 @@
             <div class="row p-2">
                 <div class="d-flex justify-content-between width-100 city-info-content-text">
                   <p class="show-subtitle">Air Quality</p>
-                  <p class="show-subtitle-data"><%= int_as_stars(CityFeature.joins(:feature, :city).where(features: { name: "Air pollution" }, cities: { country_id: @country.id }).average(:score).to_i) %></p>
+                  <p class="show-subtitle-data"><%= int_as_stars(CityFeature.joins(:feature, :city).where(features: { name: "Air quality" }, cities: { country_id: @country.id }).average(:score).to_i) %></p>
                 </div>
               </div>
                <div class="row p-2">
@@ -166,7 +166,7 @@
                <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
                     <p class="show-subtitle">Drinking Water</p>
-                    <p class="show-subtitle-data"><%= int_as_stars(CityFeature.joins(:feature, :city).where(features: { name: "Cleanliness" }, cities: { country_id: @country.id }).average(:score).to_i)  %></p>
+                    <p class="show-subtitle-data"><%= int_as_stars(CityFeature.joins(:feature, :city).where(features: { name: "Drinking water" }, cities: { country_id: @country.id }).average(:score).to_i)  %></p>
                   </div>
               </div>
           </div>

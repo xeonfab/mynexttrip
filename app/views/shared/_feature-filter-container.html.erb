@@ -9,7 +9,7 @@
     <% end %>
     <br>
     <p class="filter-title">Use the filters below:</p>
-    <% filters = %i(air_pollution drinking_water cleanliness crime_rate internet cost_of_living culture) %>
+    <% filters = %i(air_quality drinking_water cleanliness safety internet cost_of_living cultural_activities) %>
     <% filters.each do |filter| %>
       <% default_score = params.dig(:feature_results, filter) || 0 %>
       <i class="fas fa-star" ></i>

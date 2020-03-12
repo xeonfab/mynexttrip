@@ -108,7 +108,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
                 <div class="card p-2 m-0 rounded-show-box">
                 <div class="city-info-text d-flex justify-content-between align-items-center">
                     <p class="show-info-title">Safety</p>
-                    <p class="show-info-title"><%= CityFeature.joins(:feature).find_by(features: { name: "Crime rate" }, city: @city).safety_score  %></p>
+                    <p class="show-info-title"><%= CityFeature.joins(:feature).find_by(features: { name: "Safety" }, city: @city).safety_score  %></p>
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
               </div>
                <div class="row p-2">
                   <div class="d-flex justify-content-between width-100 city-info-content-text">
-                    <p class="show-subtitle">Cappuchino</p>
+                    <p class="show-subtitle">Cappuccino</p>
                     <p class="show-subtitle-data">$ <%= CityFeature.joins(:feature).find_by(features: { name: "Cappucino" }, city: @city).score  %></p>
                   </div>
               </div>
@@ -204,7 +204,7 @@ The sky tower offers an amazing panoramic view over the city and has many awesom
               <div class="row p-2">
                 <div class="d-flex justify-content-between width-100 city-info-content-text">
                   <p class="show-subtitle">Air Quality</p>
-                  <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Air pollution" }, city: @city).star_score  %></p>
+                  <p class="show-subtitle-data"><%= CityFeature.joins(:feature).find_by(features: { name: "Air quality" }, city: @city).star_score  %></p>
                 </div>
               </div>
                <div class="row p-2">
