@@ -1,6 +1,7 @@
 .booking-provider-card {
     background-color: white;
-    width: 250px;
+    width: 100%;
+    max-width: 400px;
     height: 145px;
     position: relative;
     overflow: hidden;
@@ -39,22 +40,69 @@
   }
 }
 
+.booking-container {
+  background: #023952;
+  box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
 
 .booking-provider-h2{
   padding: 12px;
   margin: 0px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  color: white;
 }
 
 .booking-provider-h3 {
   padding: 12px;
   margin: 0px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #FFFFFF;
+
 }
+
+.booking-provider-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  color: #FFFFFF;
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  &:after {
+    opacity: 0.6;
+    content: "";
+    position: absolute;
+    width: 101px;
+    height: 1px;
+    background: white;
+    left: calc(100% + 25px);
+    bottom: 45%;
+  }
+}
+
 
 .badges-booking-provider {
   font-size: 16px;
   border-radius: 5px;
   margin: 2px;
-  background-color: #003F5C;
+  background-color: #F8B400;
 }
 
+// .margin-row-booking-prov {
+//   width: 98%;
+//   margin-left: 2.5%;
+// }
 
