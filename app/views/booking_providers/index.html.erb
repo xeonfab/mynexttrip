@@ -1,83 +1,84 @@
 <div class="background">
-<div class="container">
-      <div class="container header d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-baseline">
-            <h2 class="booking-provider-h2 pr-2"><%= @booking_place.name %> </h2>
-            <h3 class="booking-provider-h3"><%= @booking_place.country.name if @booking_place.class == City %></h3>
+  <div class="container">
+        <br>
+        <div class="container booking-container header d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-baseline">
+              <h2 class="booking-provider-h2 pr-2"><%= @booking_place.name %> </h2>
+              <h3 class="booking-provider-h3"><%= @booking_place.country.name if @booking_place.class == City %></h3>
+            </div>
+            <div class="align-items-center">
+              <span class="badge badge-secondary badges-booking-provider"> Oceania </span>
+              <span class="badge badge-secondary badges-booking-provider"> March </span>
+              <span class="badge badge-secondary badges-booking-provider"> Countryside </span>
+              <span class="badge badge-secondary badges-booking-provider"> Culture </span>
+              <span class="badge badge-secondary badges-booking-provider"> Mountains </span>
+            </div>
+        </div>
+        <br>
+        <div class="block">
+          <h2 class="booking-provider-text">Flights</h2>
+          <div class="row margin-row-booking-prov">
+            <%  @bookingproviders.where(category: "Flight").each do |bookingprovider| %>
+              <div class="col-lg-3 mb-4">
+                <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
+              </div>
+            <% end %>
           </div>
-          <div class="align-items-center">
-            <span class="badge badge-secondary badges-booking-provider"> Oceania </span>
-            <span class="badge badge-secondary badges-booking-provider"> March </span>
-            <span class="badge badge-secondary badges-booking-provider"> Countryside </span>
-            <span class="badge badge-secondary badges-booking-provider"> Culture </span>
-            <span class="badge badge-secondary badges-booking-provider"> Mountains </span>
+        </div>
+
+        <div>
+          <h2 class="booking-provider-text">Accomodations</h2>
+          <div class="row margin-row-booking-prov">
+            <%  @bookingproviders.where(category: "Accomodation").each do |bookingprovider| %>
+              <div class="col-lg-3 mb-4">
+                <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
+              </div>
+            <% end %>
           </div>
-      </div>
-
-      <div class="row block">
-        <h2 class="booking-provider-text">Flights</h2>
-        <div class="row">
-          <%  @bookingproviders.where(category: "Flight").each do |bookingprovider| %>
-            <div class="m-2">
-              <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
-            </div>
-          <% end %>
         </div>
-      </div>
 
-      <div class="row">
-        <h2 class="booking-provider-text">Accomodations</h2>
-        <div class="row">
-          <%  @bookingproviders.where(category: "Accomodation").each do |bookingprovider| %>
-            <div class="m-2">
-              <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
-            </div>
-          <% end %>
+        <div>
+          <h2 class="booking-provider-text">Activities</h2>
+          <div class="row">
+            <%  @bookingproviders.where(category: "Activities").each do |bookingprovider| %>
+              <div class="col-lg-3 mb-4">
+                <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
+              </div>
+            <% end %>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <h2 class="booking-provider-text">Activities</h2>
-        <div class="row">
-          <%  @bookingproviders.where(category: "Activities").each do |bookingprovider| %>
-            <div class="m-2">
-              <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
-            </div>
-          <% end %>
+        <div>
+          <h2 class="booking-provider-text">Transports</h2>
+          <div class="row">
+            <%  @bookingproviders.where(category: "Transport").each do |bookingprovider| %>
+              <div class="col-lg-3 mb-4">
+                <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
+              </div>
+            <% end %>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <h2 class="booking-provider-text">Transports</h2>
-        <div class="row">
-          <%  @bookingproviders.where(category: "Transport").each do |bookingprovider| %>
-            <div class="m-2">
-              <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
-            </div>
-          <% end %>
+        <div>
+          <h2 class="booking-provider-text">Local guides</h2>
+          <div class="row">
+            <%  @bookingproviders.where(category: "Local agencies").each do |bookingprovider| %>
+              <div class="col-lg-3 mb-4">
+                <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
+              </div>
+            <% end %>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <h2 class="booking-provider-text">Local guides</h2>
-        <div class="row">
-          <%  @bookingproviders.where(category: "Local agencies").each do |bookingprovider| %>
-            <div class="m-2">
-              <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
-            </div>
-          <% end %>
+        <div>
+          <h2 class="booking-provider-text">Working Spaces</h2>
+          <div class="row">
+            <%  @bookingproviders.where(category: "Working spaces").each do |bookingprovider| %>
+              <div class="col-lg-3 mb-4">
+                <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
+              </div>
+            <% end %>
+          </div>
         </div>
-      </div>
-
-      <div class="row">
-        <h2 class="booking-provider-text">Working Spaces</h2>
-        <div class="row">
-          <%  @bookingproviders.where(category: "Working spaces").each do |bookingprovider| %>
-            <div class="m-2">
-              <%= render partial: 'shared/bookingprovidercard', locals: { bookingprovider: bookingprovider } %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-</div>
+  </div>
 </div>
