@@ -1,28 +1,27 @@
 <div class="index-container-column-2">
 
-
   <div class="d-flex flex-row justify-content-between">
 
   </div>
 
-  <% if @cities.blank? %>
+  <% if @countries.blank? %>
     <h1>Sorry, your search yeilded no results. Please try again.</h1>
     <% else %>
-      <%= @cities.size %>
+      <p>We found <%= @cities.size %> relevant cities</p>
       <div class="header">
-        <a href="#default" class="logo">My Next Trip</a>
         <div class="header-right">
-          <%= link_to "All", cities_path %>
-          <%= link_to "Countries", countries_path %>
-          <%= link_to "Cities", cities_path %><p> <<< At the moment the "cities" button directs to the same index as the "All" button</p>
+          <%= link_to "All", cities_path, class: "btn-main-yellow small"%>
+          <%= link_to "Countries", countries_path, class: "btn-main-yellow small" %>
+          <%= link_to "Cities", cities_path, class: "btn-main-yellow small"%>
+          <button onclick="mapHide()" class="btn-main-yellow small">MAP</button>
         </div>
       </div>
 
-      <button onclick="mapHide()">MAP</button>
+
       <div mapHide = "mapHide">
         <div
         id="map"
-        style="width: 100%;
+        style="width: 100%; visibility: hidden; position: absolute;
         height: 600px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -32,7 +31,7 @@
 
       <div class="row">
         <%  @cities.each do |city| %>
-        <div class="col-md-3 mb-3">
+        <div class="col-lg-3 mb-3">
           <%= render partial: 'shared/citycard', locals: { city: city } %>
         </div>
         <% end %>
@@ -40,11 +39,10 @@
 
       <div class="row">
         <%  @countries.each do |country| %>
-          <div class="col-md-3 mb-3">
+          <div class="col-lg-3 mb-3">
             <%= render partial: 'shared/countrycard', locals: { country: country } %>
           </div>
         <% end %>
       </div>
     <% end %>
 </div>
-
