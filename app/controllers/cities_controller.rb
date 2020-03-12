@@ -3,7 +3,7 @@ class CitiesController < ApplicationController
   def index
     # raise
 
-    @cities = City.geocoded
+    # @cities = City.geocoded
     if params[:query].present?
       search_by_nav(params[:query])
       map_markers
@@ -67,14 +67,16 @@ class CitiesController < ApplicationController
     # Keep the theme params
     # convert filter to look like [["cleanliness", 80], ["crime_rate", 60]]
     # use map
-    @cities = City.with_scores(filter_params.to_h)
+    city_ids = params[:feature_results][:city_ids].map(&:to_i)
+    @cities = City.with_scores(filter_params.to_h).select { |city| city_ids.include?(city.id) }
     country_ids = @cities.pluck(:country_id)
     @countries = Country.where(id: country_ids)
   end
 
   def search_by_theme_filter
     # journey/home page search
-    @cities = City.initial_search(params[:filter_results])
+    filters = params[:filter_results].permit!.to_h
+    @cities = City.initial_search(filters)
     country_ids = @cities.pluck(:country_id)
     @countries = Country.where(id: country_ids)
     # no search result as well
